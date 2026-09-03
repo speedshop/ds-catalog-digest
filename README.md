@@ -1,25 +1,32 @@
 # DeepSWE Catalog Digest
 
-A public, machine-readable model-selection catalog derived from the official DeepSWE leaderboard. It publishes comparable Smart, Fast, and Cheap measurements plus verified Pi Provider Routes.
+This repository publishes a public model-selection catalog. The catalog uses data from the official DeepSWE leaderboard.
+
+Use the catalog to compare model configurations and select a Pi Provider Route.
 
 ## Features
 
-- **Smart:** DeepSWE pass@1
-- **Fast:** mean end-to-end trial duration per task
-- **Cheap:** mean reported inference cost per task
-- Exact model and reasoning-effort variants
-- Source provider, mini-swe-agent harness, trial counts, and confidence intervals in provenance
-- Explicit, fingerprinted Pi Provider Route aliases
+The catalog contains three metrics:
 
-The stable catalog is [`catalog/model-selection-catalog.json`](catalog/model-selection-catalog.json). Its format is documented in [`CONTRACT.md`](CONTRACT.md).
+- **Smart** is the DeepSWE pass@1 score. A higher value is better.
+- **Fast** is the mean task time in seconds. A lower value is better.
+- **Cheap** is the mean reported task cost in US dollars. A lower value is better.
+
+Each Model Variant identifies one model checkpoint and one reasoning effort. Its provenance records the source provider, the mini-swe-agent harness, trial counts, and the confidence interval.
+
+The catalog also contains verified Pi Provider Routes. A route identifies a provider, model ID, and thinking level.
+
+Read the stable catalog at [`catalog/model-selection-catalog.json`](catalog/model-selection-catalog.json). Read [`CONTRACT.md`](CONTRACT.md) for the schema rules.
 
 ## Installation
 
-Requirements:
+Install these tools:
 
-- Python 3.13+
-- Node.js 22+
+- Python 3.13 or later
+- Node.js 22 or later
 - [mise](https://mise.jdx.dev/)
+
+Then run these commands:
 
 ```fish
 git clone https://github.com/speedshop/ds-catalog-digest.git
@@ -28,17 +35,17 @@ mise install
 mise run install
 ```
 
-No API credentials are required. The build downloads checksum-pinned public DeepSWE artifacts and public Pi provider catalogs.
+The build does not require API credentials.
 
 ## Usage
 
-Build the catalog and route-maintenance artifacts:
+Build the catalog:
 
 ```console
 $ mise run build
 ```
 
-Validate the result:
+Validate the catalog:
 
 ```fish
 python scripts/validate_catalog.py \
@@ -46,7 +53,7 @@ python scripts/validate_catalog.py \
   dist/schema.json
 ```
 
-The build writes:
+The build writes these files:
 
 - `dist/model-selection-catalog.json`
 - `dist/model-aliases.json`
@@ -55,13 +62,23 @@ The build writes:
 - `dist/route-candidates.json`
 - `dist/ALIAS_AUDIT.md`
 
-## Reproducibility
+## Source control
 
-[`sources/deepswe-v1.1.json`](sources/deepswe-v1.1.json) pins the release, artifact URLs, and SHA-256 checksums. A checksum mismatch fails the build rather than silently importing changed data.
+[`sources/deepswe-v1.1.json`](sources/deepswe-v1.1.json) identifies the source release. It also records each artifact URL and SHA-256 checksum.
 
-The daily publication workflow refreshes Pi Provider Routes, validates the catalog, updates stable artifacts, and opens managed issues for unresolved or stale route mappings.
+The build verifies each checksum. The build stops if an artifact changed.
+
+The daily workflow performs these tasks:
+
+1. Refresh the public Pi Provider Route catalog.
+2. Build and validate the model-selection catalog.
+3. Check the generated files for restricted source data and secrets.
+4. Publish the stable files.
+5. Open an issue for each unresolved or changed route.
 
 ## Development
+
+Run all checks before you submit a change:
 
 ```fish
 mise run test
@@ -69,12 +86,16 @@ mise run lint
 mise run build
 ```
 
-Route Decisions live in [`mappings/route-decisions.json`](mappings/route-decisions.json). Only accepted decisions whose fingerprints still match the current Pi catalog are published.
+Record Route Decisions in [`mappings/route-decisions.json`](mappings/route-decisions.json). The publisher accepts a route only while its fingerprint matches the current Pi catalog.
+
+Preserve the exact checkpoint and reasoning effort. Do not infer a missing score. Do not replace one reasoning effort with another effort.
 
 ## Contributing
 
-Changes should preserve exact checkpoint and reasoning-effort identity, reproducible source acquisition, and attribution. Never infer scores or substitute one reasoning effort for another.
+Submit a focused pull request. Include tests for behavior changes. Preserve source checksums, provenance, and attribution.
 
 ## License
 
-Repository code is MIT-licensed. Generated DeepSWE-derived data is CC BY 4.0. See [`DATA_LICENSE.md`](DATA_LICENSE.md) for attribution and redistribution terms.
+The repository code uses the MIT License. The generated DeepSWE data uses the CC BY 4.0 license.
+
+Read [`DATA_LICENSE.md`](DATA_LICENSE.md) for the required attribution and distribution terms.
