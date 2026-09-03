@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "release": "v1.1",
+  "leaderboardUrl": "https://deepswe.datacurve.ai/artifacts/v1.1/leaderboard-live.json",
+  "leaderboardSha256": "ddee8c4ce1bc8e92b642632e6a92e5ab6e7046bec5f9f7c03947556716828947",
+  "trialsUrl": "https://deepswe.datacurve.ai/artifacts/v1.1/trials.json",
+  "trialsSha256": "43025a77b75b6aad34a158ec8ac8bd63c030653b31e79f926fbb7c28ed93c346",
+  "datasetUrl": "https://huggingface.co/datasets/datacurve/deep-swe-leaderboard",
+  "methodologyUrl": "https://deepswe.datacurve.ai/",
+  "license": "CC-BY-4.0",
+  "attribution": "DeepSWE leaderboard data by Datacurve, licensed under CC BY 4.0"
+}

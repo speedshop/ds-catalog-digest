@@ -1,0 +1,3836 @@
+{
+  "schemaVersion": 1,
+  "variants": {
+    "deepswe:config:mini_swe_agent_gemini_3_8_flash_high": [
+      {
+        "provider": "openrouter",
+        "modelId": "google/gemini-3.8-flash",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      }
+    ],
+    "deepswe:config:mini_swe_agent_claude_opus_5_max": [
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "au.anthropic.claude-opus-5",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "eu.anthropic.claude-opus-5",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "global.anthropic.claude-opus-5",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "jp.anthropic.claude-opus-5",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "us.anthropic.claude-opus-5",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "anthropic",
+        "modelId": "claude-opus-5",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "cloudflare-ai-gateway",
+        "modelId": "claude-opus-5",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "github-copilot",
+        "modelId": "claude-opus-5",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "opencode",
+        "modelId": "claude-opus-5",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "anthropic/claude-opus-5",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "anthropic/claude-opus-5:batch",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "vercel-ai-gateway",
+        "modelId": "anthropic/claude-opus-5",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      }
+    ],
+    "deepswe:config:mini_swe_agent_claude_opus_5_xhigh": [
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "au.anthropic.claude-opus-5",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "eu.anthropic.claude-opus-5",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "global.anthropic.claude-opus-5",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "jp.anthropic.claude-opus-5",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "us.anthropic.claude-opus-5",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "anthropic",
+        "modelId": "claude-opus-5",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "cloudflare-ai-gateway",
+        "modelId": "claude-opus-5",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "github-copilot",
+        "modelId": "claude-opus-5",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "opencode",
+        "modelId": "claude-opus-5",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "anthropic/claude-opus-5",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "anthropic/claude-opus-5:batch",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "vercel-ai-gateway",
+        "modelId": "anthropic/claude-opus-5",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      }
+    ],
+    "deepswe:config:mini_swe_agent_claude_opus_5_high": [
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "au.anthropic.claude-opus-5",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "eu.anthropic.claude-opus-5",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "global.anthropic.claude-opus-5",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "jp.anthropic.claude-opus-5",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "us.anthropic.claude-opus-5",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "anthropic",
+        "modelId": "claude-opus-5",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "cloudflare-ai-gateway",
+        "modelId": "claude-opus-5",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "github-copilot",
+        "modelId": "claude-opus-5",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "opencode",
+        "modelId": "claude-opus-5",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "anthropic/claude-opus-5",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "anthropic/claude-opus-5:batch",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "vercel-ai-gateway",
+        "modelId": "anthropic/claude-opus-5",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      }
+    ],
+    "deepswe:config:mini_swe_agent_gpt_5_6_sol_max": [
+      {
+        "provider": "azure-openai-responses",
+        "modelId": "gpt-5.6-sol",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "cloudflare-ai-gateway",
+        "modelId": "gpt-5.6-sol",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "github-copilot",
+        "modelId": "gpt-5.6-sol",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openai",
+        "modelId": "gpt-5.6-sol",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openai-codex",
+        "modelId": "gpt-5.6-sol",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "opencode",
+        "modelId": "gpt-5.6-sol",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "openai/gpt-5.6-sol",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "openai/gpt-5.6-sol:batch",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      }
+    ],
+    "deepswe:config:mini_swe_agent_gemini_3_8_flash_medium": [
+      {
+        "provider": "openrouter",
+        "modelId": "google/gemini-3.8-flash",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      }
+    ],
+    "deepswe:config:mini_swe_agent_gpt_5_6_sol_xhigh": [
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "global.openai.gpt-5.6-sol",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "openai.gpt-5.6-sol",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "azure-openai-responses",
+        "modelId": "gpt-5.6-sol",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "cloudflare-ai-gateway",
+        "modelId": "gpt-5.6-sol",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "github-copilot",
+        "modelId": "gpt-5.6-sol",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openai",
+        "modelId": "gpt-5.6-sol",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openai-codex",
+        "modelId": "gpt-5.6-sol",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "opencode",
+        "modelId": "gpt-5.6-sol",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "openai/gpt-5.6-sol",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "openai/gpt-5.6-sol:batch",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "vercel-ai-gateway",
+        "modelId": "openai/gpt-5.6-sol",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      }
+    ],
+    "deepswe:config:mini_swe_agent_claude_fable_5_xhigh": [
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "anthropic.claude-fable-5",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "eu.anthropic.claude-fable-5",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "global.anthropic.claude-fable-5",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "us.anthropic.claude-fable-5",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "anthropic",
+        "modelId": "claude-fable-5",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "cloudflare-ai-gateway",
+        "modelId": "claude-fable-5",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "github-copilot",
+        "modelId": "claude-fable-5",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "opencode",
+        "modelId": "claude-fable-5",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "anthropic/claude-fable-5",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "anthropic/claude-fable-5:batch",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "vercel-ai-gateway",
+        "modelId": "anthropic/claude-fable-5",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      }
+    ],
+    "deepswe:config:mini_swe_agent_claude_fable_5_max": [
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "anthropic.claude-fable-5",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "eu.anthropic.claude-fable-5",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "global.anthropic.claude-fable-5",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "us.anthropic.claude-fable-5",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "anthropic",
+        "modelId": "claude-fable-5",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "cloudflare-ai-gateway",
+        "modelId": "claude-fable-5",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "github-copilot",
+        "modelId": "claude-fable-5",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "opencode",
+        "modelId": "claude-fable-5",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "anthropic/claude-fable-5",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "anthropic/claude-fable-5:batch",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "vercel-ai-gateway",
+        "modelId": "anthropic/claude-fable-5",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      }
+    ],
+    "deepswe:config:mini_swe_agent_gpt_5_6_terra_max": [
+      {
+        "provider": "azure-openai-responses",
+        "modelId": "gpt-5.6-terra",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "cloudflare-ai-gateway",
+        "modelId": "gpt-5.6-terra",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "github-copilot",
+        "modelId": "gpt-5.6-terra",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openai",
+        "modelId": "gpt-5.6-terra",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openai-codex",
+        "modelId": "gpt-5.6-terra",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "opencode",
+        "modelId": "gpt-5.6-terra",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "openai/gpt-5.6-terra",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "openai/gpt-5.6-terra:batch",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      }
+    ],
+    "deepswe:config:mini_swe_agent_gpt_5_6_sol_high": [
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "global.openai.gpt-5.6-sol",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "openai.gpt-5.6-sol",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "azure-openai-responses",
+        "modelId": "gpt-5.6-sol",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "cloudflare-ai-gateway",
+        "modelId": "gpt-5.6-sol",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "github-copilot",
+        "modelId": "gpt-5.6-sol",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openai",
+        "modelId": "gpt-5.6-sol",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openai-codex",
+        "modelId": "gpt-5.6-sol",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "opencode",
+        "modelId": "gpt-5.6-sol",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "openai/gpt-5.6-sol",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "openai/gpt-5.6-sol:batch",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "vercel-ai-gateway",
+        "modelId": "openai/gpt-5.6-sol",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      }
+    ],
+    "deepswe:config:mini_swe_agent_glm_5_3_max": [
+      {
+        "provider": "baseten",
+        "modelId": "zai-org/GLM-5.3",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "huggingface",
+        "modelId": "zai-org/GLM-5.3",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "opencode-go",
+        "modelId": "glm-5.3",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "z-ai/glm-5.3",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "zai",
+        "modelId": "glm-5.3",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "zai-coding-cn",
+        "modelId": "glm-5.3",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      }
+    ],
+    "deepswe:config:mini_swe_agent_claude_opus_5_medium": [
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "au.anthropic.claude-opus-5",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "eu.anthropic.claude-opus-5",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "global.anthropic.claude-opus-5",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "jp.anthropic.claude-opus-5",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "us.anthropic.claude-opus-5",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "anthropic",
+        "modelId": "claude-opus-5",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "cloudflare-ai-gateway",
+        "modelId": "claude-opus-5",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "github-copilot",
+        "modelId": "claude-opus-5",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "opencode",
+        "modelId": "claude-opus-5",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "anthropic/claude-opus-5",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "anthropic/claude-opus-5:batch",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "vercel-ai-gateway",
+        "modelId": "anthropic/claude-opus-5",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      }
+    ],
+    "deepswe:config:mini_swe_agent_claude_fable_5_high": [
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "anthropic.claude-fable-5",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "eu.anthropic.claude-fable-5",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "global.anthropic.claude-fable-5",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "us.anthropic.claude-fable-5",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "anthropic",
+        "modelId": "claude-fable-5",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "cloudflare-ai-gateway",
+        "modelId": "claude-fable-5",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "github-copilot",
+        "modelId": "claude-fable-5",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "opencode",
+        "modelId": "claude-fable-5",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "anthropic/claude-fable-5",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "anthropic/claude-fable-5:batch",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "vercel-ai-gateway",
+        "modelId": "anthropic/claude-fable-5",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      }
+    ],
+    "deepswe:config:mini_swe_agent_kimi_k3_max": [
+      {
+        "provider": "baseten",
+        "modelId": "moonshotai/Kimi-K3",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "fireworks",
+        "modelId": "accounts/fireworks/models/kimi-k3",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "huggingface",
+        "modelId": "moonshotai/Kimi-K3",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "moonshotai",
+        "modelId": "kimi-k3",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "moonshotai-cn",
+        "modelId": "kimi-k3",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "opencode",
+        "modelId": "kimi-k3",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "opencode-go",
+        "modelId": "kimi-k3",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "moonshotai/kimi-k3",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "moonshotai/kimi-k3:batch",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      }
+    ],
+    "deepswe:config:mini_swe_agent_grok_4_6_medium": [
+      {
+        "provider": "github-copilot",
+        "modelId": "grok-4.6",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "opencode",
+        "modelId": "grok-4.6",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "opencode-go",
+        "modelId": "grok-4.6",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "x-ai/grok-4.6",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "vercel-ai-gateway",
+        "modelId": "spacexai/grok-4.6",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "vercel-ai-gateway",
+        "modelId": "xai/grok-4.6",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "xai",
+        "modelId": "grok-4.6",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      }
+    ],
+    "deepswe:config:mini_swe_agent_gpt_5_6_luna_max": [
+      {
+        "provider": "azure-openai-responses",
+        "modelId": "gpt-5.6-luna",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "cloudflare-ai-gateway",
+        "modelId": "gpt-5.6-luna",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "github-copilot",
+        "modelId": "gpt-5.6-luna",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openai",
+        "modelId": "gpt-5.6-luna",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openai-codex",
+        "modelId": "gpt-5.6-luna",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "opencode",
+        "modelId": "gpt-5.6-luna",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "opencode-go",
+        "modelId": "gpt-5.6-luna",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "openai/gpt-5.6-luna",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "openai/gpt-5.6-luna:batch",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      }
+    ],
+    "deepswe:config:mini_swe_agent_gpt_5_5_xhigh": [
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "openai.gpt-5.5",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "azure-openai-responses",
+        "modelId": "gpt-5.5",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "cloudflare-ai-gateway",
+        "modelId": "gpt-5.5",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "github-copilot",
+        "modelId": "gpt-5.5",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openai",
+        "modelId": "gpt-5.5",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openai-codex",
+        "modelId": "gpt-5.5",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "opencode",
+        "modelId": "gpt-5.5",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "openai/gpt-5.5",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "openai/gpt-5.5:batch",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "vercel-ai-gateway",
+        "modelId": "openai/gpt-5.5",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      }
+    ],
+    "deepswe:config:mini_swe_agent_grok_4_6_xhigh": [
+      {
+        "provider": "github-copilot",
+        "modelId": "grok-4.6",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "opencode",
+        "modelId": "grok-4.6",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "opencode-go",
+        "modelId": "grok-4.6",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "x-ai/grok-4.6",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "xai",
+        "modelId": "grok-4.6",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      }
+    ],
+    "deepswe:config:mini_swe_agent_gemini_3_7_flash_medium": [
+      {
+        "provider": "github-copilot",
+        "modelId": "gemini-3.7-flash",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "google",
+        "modelId": "gemini-3.7-flash",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "google-vertex",
+        "modelId": "gemini-3.7-flash",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "opencode",
+        "modelId": "gemini-3.7-flash",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "google/gemini-3.7-flash",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "google/gemini-3.7-flash:batch",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "vercel-ai-gateway",
+        "modelId": "google/gemini-3.7-flash",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      }
+    ],
+    "deepswe:config:mini_swe_agent_claude_fable_5_medium": [
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "anthropic.claude-fable-5",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "eu.anthropic.claude-fable-5",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "global.anthropic.claude-fable-5",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "us.anthropic.claude-fable-5",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "anthropic",
+        "modelId": "claude-fable-5",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "cloudflare-ai-gateway",
+        "modelId": "claude-fable-5",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "github-copilot",
+        "modelId": "claude-fable-5",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "opencode",
+        "modelId": "claude-fable-5",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "anthropic/claude-fable-5",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "anthropic/claude-fable-5:batch",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "vercel-ai-gateway",
+        "modelId": "anthropic/claude-fable-5",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      }
+    ],
+    "deepswe:config:mini_swe_agent_gemini_3_7_flash_high": [
+      {
+        "provider": "github-copilot",
+        "modelId": "gemini-3.7-flash",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "google",
+        "modelId": "gemini-3.7-flash",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "google-vertex",
+        "modelId": "gemini-3.7-flash",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "opencode",
+        "modelId": "gemini-3.7-flash",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "google/gemini-3.7-flash",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "google/gemini-3.7-flash:batch",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "vercel-ai-gateway",
+        "modelId": "google/gemini-3.7-flash",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      }
+    ],
+    "deepswe:config:mini_swe_agent_grok_4_6_high": [
+      {
+        "provider": "github-copilot",
+        "modelId": "grok-4.6",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "opencode",
+        "modelId": "grok-4.6",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "opencode-go",
+        "modelId": "grok-4.6",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "x-ai/grok-4.6",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "vercel-ai-gateway",
+        "modelId": "spacexai/grok-4.6",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "vercel-ai-gateway",
+        "modelId": "xai/grok-4.6",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "xai",
+        "modelId": "grok-4.6",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      }
+    ],
+    "deepswe:config:mini_swe_agent_gpt_5_5_high": [
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "openai.gpt-5.5",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "azure-openai-responses",
+        "modelId": "gpt-5.5",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "cloudflare-ai-gateway",
+        "modelId": "gpt-5.5",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "github-copilot",
+        "modelId": "gpt-5.5",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openai",
+        "modelId": "gpt-5.5",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openai-codex",
+        "modelId": "gpt-5.5",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "opencode",
+        "modelId": "gpt-5.5",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "openai/gpt-5.5",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "openai/gpt-5.5:batch",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "vercel-ai-gateway",
+        "modelId": "openai/gpt-5.5",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      }
+    ],
+    "deepswe:config:mini_swe_agent_glm_5_3_flash_max": [
+      {
+        "provider": "baseten",
+        "modelId": "zai-org/GLM-5.3-Flash",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "huggingface",
+        "modelId": "zai-org/GLM-5.3-Flash",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "opencode-go",
+        "modelId": "glm-5.3-flash",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "z-ai/glm-5.3-flash",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "z-ai/glm-5.3-flash:batch",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "zai",
+        "modelId": "glm-5.3-flash",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "zai-coding-cn",
+        "modelId": "glm-5.3-flash",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      }
+    ],
+    "deepswe:config:mini_swe_agent_deepseek_v4_pro_max": [
+      {
+        "provider": "baseten",
+        "modelId": "deepseek-ai/DeepSeek-V4-Pro",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "deepseek",
+        "modelId": "deepseek-v4-pro",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "opencode",
+        "modelId": "deepseek-v4-pro",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "opencode-go",
+        "modelId": "deepseek-v4-pro",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "qwen-token-plan",
+        "modelId": "deepseek-v4-pro",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "qwen-token-plan-cn",
+        "modelId": "deepseek-v4-pro",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "qwen-token-plan-individual",
+        "modelId": "deepseek-v4-pro",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      }
+    ],
+    "deepswe:config:mini_swe_agent_gpt_5_6_sol_medium": [
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "global.openai.gpt-5.6-sol",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "openai.gpt-5.6-sol",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "azure-openai-responses",
+        "modelId": "gpt-5.6-sol",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "cloudflare-ai-gateway",
+        "modelId": "gpt-5.6-sol",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "github-copilot",
+        "modelId": "gpt-5.6-sol",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openai",
+        "modelId": "gpt-5.6-sol",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openai-codex",
+        "modelId": "gpt-5.6-sol",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "opencode",
+        "modelId": "gpt-5.6-sol",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "openai/gpt-5.6-sol",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "openai/gpt-5.6-sol:batch",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "vercel-ai-gateway",
+        "modelId": "openai/gpt-5.6-sol",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      }
+    ],
+    "deepswe:config:mini_swe_agent_gpt_5_6_terra_xhigh": [
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "global.openai.gpt-5.6-terra",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "openai.gpt-5.6-terra",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "azure-openai-responses",
+        "modelId": "gpt-5.6-terra",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "cloudflare-ai-gateway",
+        "modelId": "gpt-5.6-terra",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "github-copilot",
+        "modelId": "gpt-5.6-terra",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openai",
+        "modelId": "gpt-5.6-terra",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openai-codex",
+        "modelId": "gpt-5.6-terra",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "opencode",
+        "modelId": "gpt-5.6-terra",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "openai/gpt-5.6-terra",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "openai/gpt-5.6-terra:batch",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "vercel-ai-gateway",
+        "modelId": "openai/gpt-5.6-terra",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      }
+    ],
+    "deepswe:config:mini_swe_agent_claude_fable_5_low": [
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "anthropic.claude-fable-5",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "eu.anthropic.claude-fable-5",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "global.anthropic.claude-fable-5",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "us.anthropic.claude-fable-5",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "anthropic",
+        "modelId": "claude-fable-5",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "cloudflare-ai-gateway",
+        "modelId": "claude-fable-5",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "github-copilot",
+        "modelId": "claude-fable-5",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "opencode",
+        "modelId": "claude-fable-5",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "anthropic/claude-fable-5",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "anthropic/claude-fable-5:batch",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "vercel-ai-gateway",
+        "modelId": "anthropic/claude-fable-5",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      }
+    ],
+    "deepswe:config:mini_swe_agent_claude_opus_4_8_max": [
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "anthropic.claude-opus-4-8",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "au.anthropic.claude-opus-4-8",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "eu.anthropic.claude-opus-4-8",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "global.anthropic.claude-opus-4-8",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "jp.anthropic.claude-opus-4-8",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "us.anthropic.claude-opus-4-8",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "anthropic",
+        "modelId": "claude-opus-4-8",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "cloudflare-ai-gateway",
+        "modelId": "claude-opus-4-8",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "cloudflare-ai-gateway",
+        "modelId": "claude-opus-4.8",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "github-copilot",
+        "modelId": "claude-opus-4.8",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "opencode",
+        "modelId": "claude-opus-4-8",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "anthropic/claude-opus-4.8",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "anthropic/claude-opus-4.8:batch",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "vercel-ai-gateway",
+        "modelId": "anthropic/claude-opus-4.8",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      }
+    ],
+    "deepswe:config:mini_swe_agent_claude_opus_5_low": [
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "au.anthropic.claude-opus-5",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "eu.anthropic.claude-opus-5",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "global.anthropic.claude-opus-5",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "jp.anthropic.claude-opus-5",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "us.anthropic.claude-opus-5",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "anthropic",
+        "modelId": "claude-opus-5",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "cloudflare-ai-gateway",
+        "modelId": "claude-opus-5",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "github-copilot",
+        "modelId": "claude-opus-5",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "opencode",
+        "modelId": "claude-opus-5",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "anthropic/claude-opus-5",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "anthropic/claude-opus-5:batch",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "vercel-ai-gateway",
+        "modelId": "anthropic/claude-opus-5",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      }
+    ],
+    "deepswe:config:mini_swe_agent_qwen3_8_max_xhigh": [
+      {
+        "provider": "opencode-go",
+        "modelId": "qwen3.8-max",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "qwen/qwen3.8-max",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "qwen-token-plan",
+        "modelId": "qwen3.8-max",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "qwen-token-plan-cn",
+        "modelId": "qwen3.8-max",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "qwen-token-plan-individual",
+        "modelId": "qwen3.8-max",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      }
+    ],
+    "deepswe:config:mini_swe_agent_gpt_5_6_luna_xhigh": [
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "global.openai.gpt-5.6-luna",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "openai.gpt-5.6-luna",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "azure-openai-responses",
+        "modelId": "gpt-5.6-luna",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "cloudflare-ai-gateway",
+        "modelId": "gpt-5.6-luna",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "github-copilot",
+        "modelId": "gpt-5.6-luna",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openai",
+        "modelId": "gpt-5.6-luna",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openai-codex",
+        "modelId": "gpt-5.6-luna",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "opencode",
+        "modelId": "gpt-5.6-luna",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "opencode-go",
+        "modelId": "gpt-5.6-luna",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "openai/gpt-5.6-luna",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "openai/gpt-5.6-luna:batch",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "vercel-ai-gateway",
+        "modelId": "openai/gpt-5.6-luna",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      }
+    ],
+    "deepswe:config:mini_swe_agent_muse_spark_1_2_xhigh": [
+      {
+        "provider": "opencode",
+        "modelId": "muse-spark-1.2",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "meta/muse-spark-1.2",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      }
+    ],
+    "deepswe:config:mini_swe_agent_claude_opus_4_8_xhigh": [
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "anthropic.claude-opus-4-8",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "au.anthropic.claude-opus-4-8",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "eu.anthropic.claude-opus-4-8",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "global.anthropic.claude-opus-4-8",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "jp.anthropic.claude-opus-4-8",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "us.anthropic.claude-opus-4-8",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "anthropic",
+        "modelId": "claude-opus-4-8",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "cloudflare-ai-gateway",
+        "modelId": "claude-opus-4-8",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "cloudflare-ai-gateway",
+        "modelId": "claude-opus-4.8",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "github-copilot",
+        "modelId": "claude-opus-4.8",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "opencode",
+        "modelId": "claude-opus-4-8",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "anthropic/claude-opus-4.8",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "anthropic/claude-opus-4.8:batch",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "vercel-ai-gateway",
+        "modelId": "anthropic/claude-opus-4.8",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      }
+    ],
+    "deepswe:config:mini_swe_agent_gpt_5_5_medium": [
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "openai.gpt-5.5",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "azure-openai-responses",
+        "modelId": "gpt-5.5",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "cloudflare-ai-gateway",
+        "modelId": "gpt-5.5",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "github-copilot",
+        "modelId": "gpt-5.5",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openai",
+        "modelId": "gpt-5.5",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openai-codex",
+        "modelId": "gpt-5.5",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "opencode",
+        "modelId": "gpt-5.5",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "openai/gpt-5.5",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "openai/gpt-5.5:batch",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "vercel-ai-gateway",
+        "modelId": "openai/gpt-5.5",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      }
+    ],
+    "deepswe:config:mini_swe_agent_claude_sonnet_5_max": [
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "anthropic.claude-sonnet-5",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "au.anthropic.claude-sonnet-5",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "eu.anthropic.claude-sonnet-5",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "global.anthropic.claude-sonnet-5",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "jp.anthropic.claude-sonnet-5",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "us.anthropic.claude-sonnet-5",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "anthropic",
+        "modelId": "claude-sonnet-5",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "cloudflare-ai-gateway",
+        "modelId": "claude-sonnet-5",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "github-copilot",
+        "modelId": "claude-sonnet-5",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "opencode",
+        "modelId": "claude-sonnet-5",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "anthropic/claude-sonnet-5",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "anthropic/claude-sonnet-5:batch",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "vercel-ai-gateway",
+        "modelId": "anthropic/claude-sonnet-5",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      }
+    ],
+    "deepswe:config:mini_swe_agent_gemini_3_7_flash_low": [
+      {
+        "provider": "github-copilot",
+        "modelId": "gemini-3.7-flash",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "google",
+        "modelId": "gemini-3.7-flash",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "google-vertex",
+        "modelId": "gemini-3.7-flash",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "opencode",
+        "modelId": "gemini-3.7-flash",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "google/gemini-3.7-flash",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "google/gemini-3.7-flash:batch",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "vercel-ai-gateway",
+        "modelId": "google/gemini-3.7-flash",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      }
+    ],
+    "deepswe:config:mini_swe_agent_gpt_5_6_terra_high": [
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "global.openai.gpt-5.6-terra",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "openai.gpt-5.6-terra",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "azure-openai-responses",
+        "modelId": "gpt-5.6-terra",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "cloudflare-ai-gateway",
+        "modelId": "gpt-5.6-terra",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "github-copilot",
+        "modelId": "gpt-5.6-terra",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openai",
+        "modelId": "gpt-5.6-terra",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openai-codex",
+        "modelId": "gpt-5.6-terra",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "opencode",
+        "modelId": "gpt-5.6-terra",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "openai/gpt-5.6-terra",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "openai/gpt-5.6-terra:batch",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "vercel-ai-gateway",
+        "modelId": "openai/gpt-5.6-terra",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      }
+    ],
+    "deepswe:config:mini_swe_agent_grok_4_5_high": [
+      {
+        "provider": "github-copilot",
+        "modelId": "grok-4.5",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "opencode",
+        "modelId": "grok-4.5",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "opencode-go",
+        "modelId": "grok-4.5",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "x-ai/grok-4.5",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "vercel-ai-gateway",
+        "modelId": "spacexai/grok-4.5",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "vercel-ai-gateway",
+        "modelId": "xai/grok-4.5",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "xai",
+        "modelId": "grok-4.5",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      }
+    ],
+    "deepswe:config:mini_swe_agent_deepseek_v4_flash_max": [
+      {
+        "provider": "deepseek",
+        "modelId": "deepseek-v4-flash",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "opencode",
+        "modelId": "deepseek-v4-flash",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "opencode-go",
+        "modelId": "deepseek-v4-flash",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "qwen-token-plan",
+        "modelId": "deepseek-v4-flash",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "qwen-token-plan-cn",
+        "modelId": "deepseek-v4-flash",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      }
+    ],
+    "deepswe:config:mini_swe_agent_muse_spark_1_1_xhigh": [
+      {
+        "provider": "openrouter",
+        "modelId": "meta/muse-spark-1.1",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      }
+    ],
+    "deepswe:config:mini_swe_agent_claude_opus_4_8_high": [
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "anthropic.claude-opus-4-8",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "au.anthropic.claude-opus-4-8",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "eu.anthropic.claude-opus-4-8",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "global.anthropic.claude-opus-4-8",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "jp.anthropic.claude-opus-4-8",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "us.anthropic.claude-opus-4-8",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "anthropic",
+        "modelId": "claude-opus-4-8",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "cloudflare-ai-gateway",
+        "modelId": "claude-opus-4-8",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "cloudflare-ai-gateway",
+        "modelId": "claude-opus-4.8",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "github-copilot",
+        "modelId": "claude-opus-4.8",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "opencode",
+        "modelId": "claude-opus-4-8",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "anthropic/claude-opus-4.8",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "anthropic/claude-opus-4.8:batch",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "vercel-ai-gateway",
+        "modelId": "anthropic/claude-opus-4.8",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      }
+    ],
+    "deepswe:config:mini_swe_agent_gpt_5_4_xhigh": [
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "openai.gpt-5.4",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "azure-openai-responses",
+        "modelId": "gpt-5.4",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "cloudflare-ai-gateway",
+        "modelId": "gpt-5.4",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "github-copilot",
+        "modelId": "gpt-5.4",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openai",
+        "modelId": "gpt-5.4",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openai-codex",
+        "modelId": "gpt-5.4",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "opencode",
+        "modelId": "gpt-5.4",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "openai/gpt-5.4",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "openai/gpt-5.4:batch",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "vercel-ai-gateway",
+        "modelId": "openai/gpt-5.4",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      }
+    ],
+    "deepswe:config:mini_swe_agent_claude_sonnet_5_xhigh": [
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "anthropic.claude-sonnet-5",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "au.anthropic.claude-sonnet-5",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "eu.anthropic.claude-sonnet-5",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "global.anthropic.claude-sonnet-5",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "jp.anthropic.claude-sonnet-5",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "us.anthropic.claude-sonnet-5",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "anthropic",
+        "modelId": "claude-sonnet-5",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "cloudflare-ai-gateway",
+        "modelId": "claude-sonnet-5",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "github-copilot",
+        "modelId": "claude-sonnet-5",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "opencode",
+        "modelId": "claude-sonnet-5",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "anthropic/claude-sonnet-5",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "anthropic/claude-sonnet-5:batch",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "vercel-ai-gateway",
+        "modelId": "anthropic/claude-sonnet-5",
+        "piThinkingLevel": "xhigh",
+        "equivalence": "verified"
+      }
+    ],
+    "deepswe:config:mini_swe_agent_claude_opus_4_8_medium": [
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "anthropic.claude-opus-4-8",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "au.anthropic.claude-opus-4-8",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "eu.anthropic.claude-opus-4-8",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "global.anthropic.claude-opus-4-8",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "jp.anthropic.claude-opus-4-8",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "us.anthropic.claude-opus-4-8",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "anthropic",
+        "modelId": "claude-opus-4-8",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "cloudflare-ai-gateway",
+        "modelId": "claude-opus-4-8",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "cloudflare-ai-gateway",
+        "modelId": "claude-opus-4.8",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "github-copilot",
+        "modelId": "claude-opus-4.8",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "opencode",
+        "modelId": "claude-opus-4-8",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "anthropic/claude-opus-4.8",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "anthropic/claude-opus-4.8:batch",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "vercel-ai-gateway",
+        "modelId": "anthropic/claude-opus-4.8",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      }
+    ],
+    "deepswe:config:mini_swe_agent_claude_sonnet_5_high": [
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "anthropic.claude-sonnet-5",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "au.anthropic.claude-sonnet-5",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "eu.anthropic.claude-sonnet-5",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "global.anthropic.claude-sonnet-5",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "jp.anthropic.claude-sonnet-5",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "us.anthropic.claude-sonnet-5",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "anthropic",
+        "modelId": "claude-sonnet-5",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "cloudflare-ai-gateway",
+        "modelId": "claude-sonnet-5",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "github-copilot",
+        "modelId": "claude-sonnet-5",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "opencode",
+        "modelId": "claude-sonnet-5",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "anthropic/claude-sonnet-5",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "anthropic/claude-sonnet-5:batch",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "vercel-ai-gateway",
+        "modelId": "anthropic/claude-sonnet-5",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      }
+    ],
+    "deepswe:config:mini_swe_agent_gemini_3_6_flash_high": [
+      {
+        "provider": "github-copilot",
+        "modelId": "gemini-3.6-flash",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "google",
+        "modelId": "gemini-3.6-flash",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "google-vertex",
+        "modelId": "gemini-3.6-flash",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "opencode",
+        "modelId": "gemini-3.6-flash",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "google/gemini-3.6-flash",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "google/gemini-3.6-flash:batch",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "vercel-ai-gateway",
+        "modelId": "google/gemini-3.6-flash",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      }
+    ],
+    "deepswe:config:mini_swe_agent_gpt_5_6_sol_low": [
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "global.openai.gpt-5.6-sol",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "openai.gpt-5.6-sol",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "azure-openai-responses",
+        "modelId": "gpt-5.6-sol",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "cloudflare-ai-gateway",
+        "modelId": "gpt-5.6-sol",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "github-copilot",
+        "modelId": "gpt-5.6-sol",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openai",
+        "modelId": "gpt-5.6-sol",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openai-codex",
+        "modelId": "gpt-5.6-sol",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "opencode",
+        "modelId": "gpt-5.6-sol",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "openai/gpt-5.6-sol",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "openai/gpt-5.6-sol:batch",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "vercel-ai-gateway",
+        "modelId": "openai/gpt-5.6-sol",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      }
+    ],
+    "deepswe:config:mini_swe_agent_gpt_5_6_luna_high": [
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "global.openai.gpt-5.6-luna",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "openai.gpt-5.6-luna",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "azure-openai-responses",
+        "modelId": "gpt-5.6-luna",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "cloudflare-ai-gateway",
+        "modelId": "gpt-5.6-luna",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "github-copilot",
+        "modelId": "gpt-5.6-luna",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openai",
+        "modelId": "gpt-5.6-luna",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openai-codex",
+        "modelId": "gpt-5.6-luna",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "opencode",
+        "modelId": "gpt-5.6-luna",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "opencode-go",
+        "modelId": "gpt-5.6-luna",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "openai/gpt-5.6-luna",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "openai/gpt-5.6-luna:batch",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "vercel-ai-gateway",
+        "modelId": "openai/gpt-5.6-luna",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      }
+    ],
+    "deepswe:config:mini_swe_agent_glm_5_2_max": [
+      {
+        "provider": "baseten",
+        "modelId": "zai-org/GLM-5.2",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "opencode",
+        "modelId": "glm-5.2",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "opencode-go",
+        "modelId": "glm-5.2",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "qwen-token-plan",
+        "modelId": "glm-5.2",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "qwen-token-plan-cn",
+        "modelId": "glm-5.2",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "qwen-token-plan-individual",
+        "modelId": "glm-5.2",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "zai",
+        "modelId": "glm-5.2",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "zai-coding-cn",
+        "modelId": "glm-5.2",
+        "piThinkingLevel": "max",
+        "equivalence": "verified"
+      }
+    ],
+    "deepswe:config:mini_swe_agent_grok_4_6_low": [
+      {
+        "provider": "github-copilot",
+        "modelId": "grok-4.6",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "opencode",
+        "modelId": "grok-4.6",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "opencode-go",
+        "modelId": "grok-4.6",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "x-ai/grok-4.6",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "vercel-ai-gateway",
+        "modelId": "spacexai/grok-4.6",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "vercel-ai-gateway",
+        "modelId": "xai/grok-4.6",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "xai",
+        "modelId": "grok-4.6",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      }
+    ],
+    "deepswe:config:mini_swe_agent_claude_opus_4_8_low": [
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "anthropic.claude-opus-4-8",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "au.anthropic.claude-opus-4-8",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "eu.anthropic.claude-opus-4-8",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "global.anthropic.claude-opus-4-8",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "jp.anthropic.claude-opus-4-8",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "us.anthropic.claude-opus-4-8",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "anthropic",
+        "modelId": "claude-opus-4-8",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "cloudflare-ai-gateway",
+        "modelId": "claude-opus-4-8",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "cloudflare-ai-gateway",
+        "modelId": "claude-opus-4.8",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "github-copilot",
+        "modelId": "claude-opus-4.8",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "opencode",
+        "modelId": "claude-opus-4-8",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "anthropic/claude-opus-4.8",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "anthropic/claude-opus-4.8:batch",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "vercel-ai-gateway",
+        "modelId": "anthropic/claude-opus-4.8",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      }
+    ],
+    "deepswe:config:mini_swe_agent_claude_sonnet_5_medium": [
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "anthropic.claude-sonnet-5",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "au.anthropic.claude-sonnet-5",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "eu.anthropic.claude-sonnet-5",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "global.anthropic.claude-sonnet-5",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "jp.anthropic.claude-sonnet-5",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "us.anthropic.claude-sonnet-5",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "anthropic",
+        "modelId": "claude-sonnet-5",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "cloudflare-ai-gateway",
+        "modelId": "claude-sonnet-5",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "github-copilot",
+        "modelId": "claude-sonnet-5",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "opencode",
+        "modelId": "claude-sonnet-5",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "anthropic/claude-sonnet-5",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "anthropic/claude-sonnet-5:batch",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "vercel-ai-gateway",
+        "modelId": "anthropic/claude-sonnet-5",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      }
+    ],
+    "deepswe:config:mini_swe_agent_glm_5_2_high": [
+      {
+        "provider": "baseten",
+        "modelId": "zai-org/GLM-5.2",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "cloudflare-ai-gateway",
+        "modelId": "workers-ai/@cf/zai-org/glm-5.2",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "cloudflare-workers-ai",
+        "modelId": "@cf/zai-org/glm-5.2",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "huggingface",
+        "modelId": "zai-org/GLM-5.2",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "nvidia",
+        "modelId": "z-ai/glm-5.2",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "opencode",
+        "modelId": "glm-5.2",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "opencode-go",
+        "modelId": "glm-5.2",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "z-ai/glm-5.2",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "z-ai/glm-5.2:batch",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "qwen-token-plan",
+        "modelId": "glm-5.2",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "qwen-token-plan-cn",
+        "modelId": "glm-5.2",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "qwen-token-plan-individual",
+        "modelId": "glm-5.2",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "together",
+        "modelId": "zai-org/GLM-5.2",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "vercel-ai-gateway",
+        "modelId": "zai/glm-5.2",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "zai",
+        "modelId": "glm-5.2",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "zai-coding-cn",
+        "modelId": "glm-5.2",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      }
+    ],
+    "deepswe:config:mini_swe_agent_gemini_3_5_flash_high": [
+      {
+        "provider": "github-copilot",
+        "modelId": "gemini-3.5-flash",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "google",
+        "modelId": "gemini-3.5-flash",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "google-vertex",
+        "modelId": "gemini-3.5-flash",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "opencode",
+        "modelId": "gemini-3.5-flash",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "google/gemini-3.5-flash",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "google/gemini-3.5-flash:batch",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "vercel-ai-gateway",
+        "modelId": "google/gemini-3.5-flash",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      }
+    ],
+    "deepswe:config:mini_swe_agent_gpt_5_6_terra_medium": [
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "global.openai.gpt-5.6-terra",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "openai.gpt-5.6-terra",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "azure-openai-responses",
+        "modelId": "gpt-5.6-terra",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "cloudflare-ai-gateway",
+        "modelId": "gpt-5.6-terra",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "github-copilot",
+        "modelId": "gpt-5.6-terra",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openai",
+        "modelId": "gpt-5.6-terra",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openai-codex",
+        "modelId": "gpt-5.6-terra",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "opencode",
+        "modelId": "gpt-5.6-terra",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "openai/gpt-5.6-terra",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "openai/gpt-5.6-terra:batch",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "vercel-ai-gateway",
+        "modelId": "openai/gpt-5.6-terra",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      }
+    ],
+    "deepswe:config:mini_swe_agent_kimi_k2_7_code_default": [],
+    "deepswe:config:mini_swe_agent_claude_sonnet_5_low": [
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "anthropic.claude-sonnet-5",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "au.anthropic.claude-sonnet-5",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "eu.anthropic.claude-sonnet-5",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "global.anthropic.claude-sonnet-5",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "jp.anthropic.claude-sonnet-5",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "us.anthropic.claude-sonnet-5",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "anthropic",
+        "modelId": "claude-sonnet-5",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "cloudflare-ai-gateway",
+        "modelId": "claude-sonnet-5",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "github-copilot",
+        "modelId": "claude-sonnet-5",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "opencode",
+        "modelId": "claude-sonnet-5",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "anthropic/claude-sonnet-5",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "anthropic/claude-sonnet-5:batch",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "vercel-ai-gateway",
+        "modelId": "anthropic/claude-sonnet-5",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      }
+    ],
+    "deepswe:config:mini_swe_agent_claude_sonnet_4_6_high": [
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "anthropic.claude-sonnet-4-6",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "au.anthropic.claude-sonnet-4-6",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "eu.anthropic.claude-sonnet-4-6",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "global.anthropic.claude-sonnet-4-6",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "jp.anthropic.claude-sonnet-4-6",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "us.anthropic.claude-sonnet-4-6",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "anthropic",
+        "modelId": "claude-sonnet-4-6",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "cloudflare-ai-gateway",
+        "modelId": "claude-sonnet-4-6",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "cloudflare-ai-gateway",
+        "modelId": "claude-sonnet-4.6",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "github-copilot",
+        "modelId": "claude-sonnet-4.6",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "opencode",
+        "modelId": "claude-sonnet-4-6",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "anthropic/claude-sonnet-4.6",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "anthropic/claude-sonnet-4.6:batch",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "vercel-ai-gateway",
+        "modelId": "anthropic/claude-sonnet-4.6",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      }
+    ],
+    "deepswe:config:mini_swe_agent_gpt_5_5_low": [
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "openai.gpt-5.5",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "azure-openai-responses",
+        "modelId": "gpt-5.5",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "cloudflare-ai-gateway",
+        "modelId": "gpt-5.5",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "github-copilot",
+        "modelId": "gpt-5.5",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openai",
+        "modelId": "gpt-5.5",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openai-codex",
+        "modelId": "gpt-5.5",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "opencode",
+        "modelId": "gpt-5.5",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "openai/gpt-5.5",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "openai/gpt-5.5:batch",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "vercel-ai-gateway",
+        "modelId": "openai/gpt-5.5",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      }
+    ],
+    "deepswe:config:mini_swe_agent_gpt_5_6_terra_low": [
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "global.openai.gpt-5.6-terra",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "openai.gpt-5.6-terra",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "azure-openai-responses",
+        "modelId": "gpt-5.6-terra",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "cloudflare-ai-gateway",
+        "modelId": "gpt-5.6-terra",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "github-copilot",
+        "modelId": "gpt-5.6-terra",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openai",
+        "modelId": "gpt-5.6-terra",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openai-codex",
+        "modelId": "gpt-5.6-terra",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "opencode",
+        "modelId": "gpt-5.6-terra",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "openai/gpt-5.6-terra",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "openai/gpt-5.6-terra:batch",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "vercel-ai-gateway",
+        "modelId": "openai/gpt-5.6-terra",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      }
+    ],
+    "deepswe:config:mini_swe_agent_gemini_3_1_pro_preview_high": [
+      {
+        "provider": "github-copilot",
+        "modelId": "gemini-3.1-pro-preview",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "google",
+        "modelId": "gemini-3.1-pro-preview",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "google-vertex",
+        "modelId": "gemini-3.1-pro-preview",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "google/gemini-3.1-pro-preview",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "google/gemini-3.1-pro-preview:batch",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "vercel-ai-gateway",
+        "modelId": "google/gemini-3.1-pro-preview",
+        "piThinkingLevel": "high",
+        "equivalence": "verified"
+      }
+    ],
+    "deepswe:config:mini_swe_agent_gpt_5_6_luna_medium": [
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "global.openai.gpt-5.6-luna",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "openai.gpt-5.6-luna",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "azure-openai-responses",
+        "modelId": "gpt-5.6-luna",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "cloudflare-ai-gateway",
+        "modelId": "gpt-5.6-luna",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "github-copilot",
+        "modelId": "gpt-5.6-luna",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openai",
+        "modelId": "gpt-5.6-luna",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openai-codex",
+        "modelId": "gpt-5.6-luna",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "opencode",
+        "modelId": "gpt-5.6-luna",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "opencode-go",
+        "modelId": "gpt-5.6-luna",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "openai/gpt-5.6-luna",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "openai/gpt-5.6-luna:batch",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "vercel-ai-gateway",
+        "modelId": "openai/gpt-5.6-luna",
+        "piThinkingLevel": "medium",
+        "equivalence": "verified"
+      }
+    ],
+    "deepswe:config:mini_swe_agent_gpt_5_6_luna_low": [
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "global.openai.gpt-5.6-luna",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "amazon-bedrock",
+        "modelId": "openai.gpt-5.6-luna",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "azure-openai-responses",
+        "modelId": "gpt-5.6-luna",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "cloudflare-ai-gateway",
+        "modelId": "gpt-5.6-luna",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "github-copilot",
+        "modelId": "gpt-5.6-luna",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openai",
+        "modelId": "gpt-5.6-luna",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openai-codex",
+        "modelId": "gpt-5.6-luna",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "opencode",
+        "modelId": "gpt-5.6-luna",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "opencode-go",
+        "modelId": "gpt-5.6-luna",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "openai/gpt-5.6-luna",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "openrouter",
+        "modelId": "openai/gpt-5.6-luna:batch",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      },
+      {
+        "provider": "vercel-ai-gateway",
+        "modelId": "openai/gpt-5.6-luna",
+        "piThinkingLevel": "low",
+        "equivalence": "verified"
+      }
+    ]
+  }
+}

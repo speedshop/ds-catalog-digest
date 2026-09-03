@@ -1,0 +1,13 @@
+amends "package://github.com/jdx/hk/releases/download/v1.39.0/hk@1.39.0#/Config.pkl"
+
+hooks {
+  ["pre-commit"] {
+    steps {
+      ["lint"] { check = "mise run lint:python" }
+      ["json"] { check = "mise run lint:json" }
+      ["source-safety"] { check = "mise run lint:forbidden-source" }
+      ["secrets"] { check = "mise run lint:secrets" }
+      ["test"] { check = "mise run test" }
+    }
+  }
+}

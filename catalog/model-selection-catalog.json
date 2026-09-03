@@ -1,0 +1,6026 @@
+{
+  "schemaVersion": 1,
+  "catalog": {
+    "id": "deepswe-v1.1",
+    "name": "DeepSWE v1.1",
+    "version": "v1.1",
+    "generatedAt": "2026-09-03T00:47:52.536275Z",
+    "sourceUpdatedAt": "2026-09-02T15:18:19Z",
+    "distribution": {
+      "classification": "redistributable",
+      "termsUrl": "https://huggingface.co/datasets/datacurve/deep-swe-leaderboard",
+      "attribution": "DeepSWE leaderboard data by Datacurve, licensed under CC BY 4.0",
+      "allowRedistribution": true
+    },
+    "metricDefinitions": {
+      "smart": {
+        "unit": "pass-rate",
+        "better": "higher",
+        "task": "DeepSWE task pass@1",
+        "methodologyUrl": "https://deepswe.datacurve.ai/"
+      },
+      "fast": {
+        "unit": "seconds-per-deepswe-task",
+        "better": "lower",
+        "task": "Mean end-to-end DeepSWE trial duration",
+        "methodologyUrl": "https://deepswe.datacurve.ai/"
+      },
+      "cheap": {
+        "unit": "USD-per-deepswe-task",
+        "better": "lower",
+        "task": "Mean reported inference cost per DeepSWE trial",
+        "methodologyUrl": "https://deepswe.datacurve.ai/"
+      }
+    },
+    "provenance": {
+      "source": "DeepSWE",
+      "datasetUrl": "https://huggingface.co/datasets/datacurve/deep-swe-leaderboard",
+      "leaderboardUrl": "https://deepswe.datacurve.ai/artifacts/v1.1/leaderboard-live.json",
+      "leaderboardSha256": "ddee8c4ce1bc8e92b642632e6a92e5ab6e7046bec5f9f7c03947556716828947",
+      "trialsSha256": "43025a77b75b6aad34a158ec8ac8bd63c030653b31e79f926fbb7c28ed93c346",
+      "release": "v1.1",
+      "license": "CC-BY-4.0",
+      "configurationCount": 65,
+      "taskCount": 113,
+      "harnesses": [
+        "mini-swe-agent"
+      ]
+    }
+  },
+  "variants": [
+    {
+      "id": "deepswe:config:mini_swe_agent_claude_fable_5_high",
+      "creator": "Anthropic",
+      "displayName": "Claude Fable 5 (high)",
+      "checkpoint": "claude-fable-5",
+      "quantization": null,
+      "reasoning": {
+        "label": "high"
+      },
+      "metrics": {
+        "smart": 0.686046511627907,
+        "fast": 1062.3037221116278,
+        "cheap": 9.177638214788733
+      },
+      "aliases": [
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "anthropic.claude-fable-5",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "eu.anthropic.claude-fable-5",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "global.anthropic.claude-fable-5",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "us.anthropic.claude-fable-5",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "anthropic",
+          "modelId": "claude-fable-5",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "cloudflare-ai-gateway",
+          "modelId": "claude-fable-5",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "github-copilot",
+          "modelId": "claude-fable-5",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "opencode",
+          "modelId": "claude-fable-5",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "anthropic/claude-fable-5",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "anthropic/claude-fable-5:batch",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "vercel-ai-gateway",
+          "modelId": "anthropic/claude-fable-5",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        }
+      ],
+      "provenance": {
+        "source": "DeepSWE",
+        "sourceConfig": "mini_swe_agent_claude_fable_5_high",
+        "sourceModel": "claude-fable-5",
+        "sourceProvider": "vertex_ai",
+        "harness": "mini-swe-agent",
+        "attempted": 430,
+        "passed": 295,
+        "tasksAttempted": 113,
+        "runs": 4,
+        "smartConfidenceInterval95": [
+          0.674838084453603,
+          0.6972549388022109
+        ],
+        "smartAggregation": "pass_at_1",
+        "fastAggregation": "mean_duration_seconds",
+        "cheapAggregation": "mean_cost_usd"
+      }
+    },
+    {
+      "id": "deepswe:config:mini_swe_agent_claude_fable_5_low",
+      "creator": "Anthropic",
+      "displayName": "Claude Fable 5 (low)",
+      "checkpoint": "claude-fable-5",
+      "quantization": null,
+      "reasoning": {
+        "label": "low"
+      },
+      "metrics": {
+        "smart": 0.5958429561200924,
+        "fast": 634.7057336951501,
+        "cheap": 3.757873125874126
+      },
+      "aliases": [
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "anthropic.claude-fable-5",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "eu.anthropic.claude-fable-5",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "global.anthropic.claude-fable-5",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "us.anthropic.claude-fable-5",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "anthropic",
+          "modelId": "claude-fable-5",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "cloudflare-ai-gateway",
+          "modelId": "claude-fable-5",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "github-copilot",
+          "modelId": "claude-fable-5",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "opencode",
+          "modelId": "claude-fable-5",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "anthropic/claude-fable-5",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "anthropic/claude-fable-5:batch",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "vercel-ai-gateway",
+          "modelId": "anthropic/claude-fable-5",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        }
+      ],
+      "provenance": {
+        "source": "DeepSWE",
+        "sourceConfig": "mini_swe_agent_claude_fable_5_low",
+        "sourceModel": "claude-fable-5",
+        "sourceProvider": "vertex_ai",
+        "harness": "mini-swe-agent",
+        "attempted": 433,
+        "passed": 258,
+        "tasksAttempted": 113,
+        "runs": 4,
+        "smartConfidenceInterval95": [
+          0.5679029016687951,
+          0.6237830105713897
+        ],
+        "smartAggregation": "pass_at_1",
+        "fastAggregation": "mean_duration_seconds",
+        "cheapAggregation": "mean_cost_usd"
+      }
+    },
+    {
+      "id": "deepswe:config:mini_swe_agent_claude_fable_5_max",
+      "creator": "Anthropic",
+      "displayName": "Claude Fable 5 (max)",
+      "checkpoint": "claude-fable-5",
+      "quantization": null,
+      "reasoning": {
+        "label": "max"
+      },
+      "metrics": {
+        "smart": 0.6972477064220184,
+        "fast": 2092.0106240022938,
+        "cheap": 21.634702092592594
+      },
+      "aliases": [
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "anthropic.claude-fable-5",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "eu.anthropic.claude-fable-5",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "global.anthropic.claude-fable-5",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "us.anthropic.claude-fable-5",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "anthropic",
+          "modelId": "claude-fable-5",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "cloudflare-ai-gateway",
+          "modelId": "claude-fable-5",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "github-copilot",
+          "modelId": "claude-fable-5",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "opencode",
+          "modelId": "claude-fable-5",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "anthropic/claude-fable-5",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "anthropic/claude-fable-5:batch",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "vercel-ai-gateway",
+          "modelId": "anthropic/claude-fable-5",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        }
+      ],
+      "provenance": {
+        "source": "DeepSWE",
+        "sourceConfig": "mini_swe_agent_claude_fable_5_max",
+        "sourceModel": "claude-fable-5",
+        "sourceProvider": "vertex_ai",
+        "harness": "mini-swe-agent",
+        "attempted": 436,
+        "passed": 304,
+        "tasksAttempted": 113,
+        "runs": 4,
+        "smartConfidenceInterval95": [
+          0.656912963913939,
+          0.7375824489300977
+        ],
+        "smartAggregation": "pass_at_1",
+        "fastAggregation": "mean_duration_seconds",
+        "cheapAggregation": "mean_cost_usd"
+      }
+    },
+    {
+      "id": "deepswe:config:mini_swe_agent_claude_fable_5_medium",
+      "creator": "Anthropic",
+      "displayName": "Claude Fable 5 (medium)",
+      "checkpoint": "claude-fable-5",
+      "quantization": null,
+      "reasoning": {
+        "label": "medium"
+      },
+      "metrics": {
+        "smart": 0.6536697247706422,
+        "fast": 810.8967150733945,
+        "cheap": 6.088186528935186
+      },
+      "aliases": [
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "anthropic.claude-fable-5",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "eu.anthropic.claude-fable-5",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "global.anthropic.claude-fable-5",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "us.anthropic.claude-fable-5",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "anthropic",
+          "modelId": "claude-fable-5",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "cloudflare-ai-gateway",
+          "modelId": "claude-fable-5",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "github-copilot",
+          "modelId": "claude-fable-5",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "opencode",
+          "modelId": "claude-fable-5",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "anthropic/claude-fable-5",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "anthropic/claude-fable-5:batch",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "vercel-ai-gateway",
+          "modelId": "anthropic/claude-fable-5",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        }
+      ],
+      "provenance": {
+        "source": "DeepSWE",
+        "sourceConfig": "mini_swe_agent_claude_fable_5_medium",
+        "sourceModel": "claude-fable-5",
+        "sourceProvider": "vertex_ai",
+        "harness": "mini-swe-agent",
+        "attempted": 436,
+        "passed": 285,
+        "tasksAttempted": 113,
+        "runs": 4,
+        "smartConfidenceInterval95": [
+          0.6094504359782605,
+          0.6978890135630239
+        ],
+        "smartAggregation": "pass_at_1",
+        "fastAggregation": "mean_duration_seconds",
+        "cheapAggregation": "mean_cost_usd"
+      }
+    },
+    {
+      "id": "deepswe:config:mini_swe_agent_claude_fable_5_xhigh",
+      "creator": "Anthropic",
+      "displayName": "Claude Fable 5 (xhigh)",
+      "checkpoint": "claude-fable-5",
+      "quantization": null,
+      "reasoning": {
+        "label": "xhigh"
+      },
+      "metrics": {
+        "smart": 0.6991150442477876,
+        "fast": 1411.5830643938054,
+        "cheap": 13.414521495535714
+      },
+      "aliases": [
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "anthropic.claude-fable-5",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "eu.anthropic.claude-fable-5",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "global.anthropic.claude-fable-5",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "us.anthropic.claude-fable-5",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "anthropic",
+          "modelId": "claude-fable-5",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "cloudflare-ai-gateway",
+          "modelId": "claude-fable-5",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "github-copilot",
+          "modelId": "claude-fable-5",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "opencode",
+          "modelId": "claude-fable-5",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "anthropic/claude-fable-5",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "anthropic/claude-fable-5:batch",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "vercel-ai-gateway",
+          "modelId": "anthropic/claude-fable-5",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        }
+      ],
+      "provenance": {
+        "source": "DeepSWE",
+        "sourceConfig": "mini_swe_agent_claude_fable_5_xhigh",
+        "sourceModel": "claude-fable-5",
+        "sourceProvider": "vertex_ai",
+        "harness": "mini-swe-agent",
+        "attempted": 452,
+        "passed": 316,
+        "tasksAttempted": 113,
+        "runs": 4,
+        "smartConfidenceInterval95": [
+          0.6666658684930744,
+          0.7315642200025008
+        ],
+        "smartAggregation": "pass_at_1",
+        "fastAggregation": "mean_duration_seconds",
+        "cheapAggregation": "mean_cost_usd"
+      }
+    },
+    {
+      "id": "deepswe:config:mini_swe_agent_claude_opus_4_8_high",
+      "creator": "Anthropic",
+      "displayName": "Claude Opus 4.8 (high)",
+      "checkpoint": "claude-opus-4-8",
+      "quantization": null,
+      "reasoning": {
+        "label": "high"
+      },
+      "metrics": {
+        "smart": 0.5176991150442478,
+        "fast": 1066.903783732301,
+        "cheap": 4.281940017699115
+      },
+      "aliases": [
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "anthropic.claude-opus-4-8",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "au.anthropic.claude-opus-4-8",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "eu.anthropic.claude-opus-4-8",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "global.anthropic.claude-opus-4-8",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "jp.anthropic.claude-opus-4-8",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "us.anthropic.claude-opus-4-8",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "anthropic",
+          "modelId": "claude-opus-4-8",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "cloudflare-ai-gateway",
+          "modelId": "claude-opus-4-8",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "cloudflare-ai-gateway",
+          "modelId": "claude-opus-4.8",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "github-copilot",
+          "modelId": "claude-opus-4.8",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "opencode",
+          "modelId": "claude-opus-4-8",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "anthropic/claude-opus-4.8",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "anthropic/claude-opus-4.8:batch",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "vercel-ai-gateway",
+          "modelId": "anthropic/claude-opus-4.8",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        }
+      ],
+      "provenance": {
+        "source": "DeepSWE",
+        "sourceConfig": "mini_swe_agent_claude_opus_4_8_high",
+        "sourceModel": "claude-opus-4-8",
+        "sourceProvider": "anthropic",
+        "harness": "mini-swe-agent",
+        "attempted": 452,
+        "passed": 234,
+        "tasksAttempted": 113,
+        "runs": 4,
+        "smartConfidenceInterval95": [
+          0.4720830235866894,
+          0.5633152065018062
+        ],
+        "smartAggregation": "pass_at_1",
+        "fastAggregation": "mean_duration_seconds",
+        "cheapAggregation": "mean_cost_usd"
+      }
+    },
+    {
+      "id": "deepswe:config:mini_swe_agent_claude_opus_4_8_low",
+      "creator": "Anthropic",
+      "displayName": "Claude Opus 4.8 (low)",
+      "checkpoint": "claude-opus-4-8",
+      "quantization": null,
+      "reasoning": {
+        "label": "low"
+      },
+      "metrics": {
+        "smart": 0.4079822616407982,
+        "fast": 651.8271712993347,
+        "cheap": 2.293369216740577
+      },
+      "aliases": [
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "anthropic.claude-opus-4-8",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "au.anthropic.claude-opus-4-8",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "eu.anthropic.claude-opus-4-8",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "global.anthropic.claude-opus-4-8",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "jp.anthropic.claude-opus-4-8",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "us.anthropic.claude-opus-4-8",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "anthropic",
+          "modelId": "claude-opus-4-8",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "cloudflare-ai-gateway",
+          "modelId": "claude-opus-4-8",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "cloudflare-ai-gateway",
+          "modelId": "claude-opus-4.8",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "github-copilot",
+          "modelId": "claude-opus-4.8",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "opencode",
+          "modelId": "claude-opus-4-8",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "anthropic/claude-opus-4.8",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "anthropic/claude-opus-4.8:batch",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "vercel-ai-gateway",
+          "modelId": "anthropic/claude-opus-4.8",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        }
+      ],
+      "provenance": {
+        "source": "DeepSWE",
+        "sourceConfig": "mini_swe_agent_claude_opus_4_8_low",
+        "sourceModel": "claude-opus-4-8",
+        "sourceProvider": "anthropic",
+        "harness": "mini-swe-agent",
+        "attempted": 451,
+        "passed": 184,
+        "tasksAttempted": 113,
+        "runs": 4,
+        "smartConfidenceInterval95": [
+          0.3933464140551067,
+          0.42261810922648974
+        ],
+        "smartAggregation": "pass_at_1",
+        "fastAggregation": "mean_duration_seconds",
+        "cheapAggregation": "mean_cost_usd"
+      }
+    },
+    {
+      "id": "deepswe:config:mini_swe_agent_claude_opus_4_8_max",
+      "creator": "Anthropic",
+      "displayName": "Claude Opus 4.8 (max)",
+      "checkpoint": "claude-opus-4-8",
+      "quantization": null,
+      "reasoning": {
+        "label": "max"
+      },
+      "metrics": {
+        "smart": 0.5897435897435898,
+        "fast": 3492.740812641026,
+        "cheap": 13.222583593240094
+      },
+      "aliases": [
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "anthropic.claude-opus-4-8",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "au.anthropic.claude-opus-4-8",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "eu.anthropic.claude-opus-4-8",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "global.anthropic.claude-opus-4-8",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "jp.anthropic.claude-opus-4-8",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "us.anthropic.claude-opus-4-8",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "anthropic",
+          "modelId": "claude-opus-4-8",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "cloudflare-ai-gateway",
+          "modelId": "claude-opus-4-8",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "cloudflare-ai-gateway",
+          "modelId": "claude-opus-4.8",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "github-copilot",
+          "modelId": "claude-opus-4.8",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "opencode",
+          "modelId": "claude-opus-4-8",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "anthropic/claude-opus-4.8",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "anthropic/claude-opus-4.8:batch",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "vercel-ai-gateway",
+          "modelId": "anthropic/claude-opus-4.8",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        }
+      ],
+      "provenance": {
+        "source": "DeepSWE",
+        "sourceConfig": "mini_swe_agent_claude_opus_4_8_max",
+        "sourceModel": "claude-opus-4-8",
+        "sourceProvider": "anthropic",
+        "harness": "mini-swe-agent",
+        "attempted": 429,
+        "passed": 253,
+        "tasksAttempted": 111,
+        "runs": 4,
+        "smartConfidenceInterval95": [
+          0.5720954362692973,
+          0.6073917432178823
+        ],
+        "smartAggregation": "pass_at_1",
+        "fastAggregation": "mean_duration_seconds",
+        "cheapAggregation": "mean_cost_usd"
+      }
+    },
+    {
+      "id": "deepswe:config:mini_swe_agent_claude_opus_4_8_medium",
+      "creator": "Anthropic",
+      "displayName": "Claude Opus 4.8 (medium)",
+      "checkpoint": "claude-opus-4-8",
+      "quantization": null,
+      "reasoning": {
+        "label": "medium"
+      },
+      "metrics": {
+        "smart": 0.48672566371681414,
+        "fast": 880.0083837986726,
+        "cheap": 3.4438571028761062
+      },
+      "aliases": [
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "anthropic.claude-opus-4-8",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "au.anthropic.claude-opus-4-8",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "eu.anthropic.claude-opus-4-8",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "global.anthropic.claude-opus-4-8",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "jp.anthropic.claude-opus-4-8",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "us.anthropic.claude-opus-4-8",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "anthropic",
+          "modelId": "claude-opus-4-8",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "cloudflare-ai-gateway",
+          "modelId": "claude-opus-4-8",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "cloudflare-ai-gateway",
+          "modelId": "claude-opus-4.8",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "github-copilot",
+          "modelId": "claude-opus-4.8",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "opencode",
+          "modelId": "claude-opus-4-8",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "anthropic/claude-opus-4.8",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "anthropic/claude-opus-4.8:batch",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "vercel-ai-gateway",
+          "modelId": "anthropic/claude-opus-4.8",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        }
+      ],
+      "provenance": {
+        "source": "DeepSWE",
+        "sourceConfig": "mini_swe_agent_claude_opus_4_8_medium",
+        "sourceModel": "claude-opus-4-8",
+        "sourceProvider": "anthropic",
+        "harness": "mini-swe-agent",
+        "attempted": 452,
+        "passed": 220,
+        "tasksAttempted": 113,
+        "runs": 4,
+        "smartConfidenceInterval95": [
+          0.4643336050994396,
+          0.5091177223341886
+        ],
+        "smartAggregation": "pass_at_1",
+        "fastAggregation": "mean_duration_seconds",
+        "cheapAggregation": "mean_cost_usd"
+      }
+    },
+    {
+      "id": "deepswe:config:mini_swe_agent_claude_opus_4_8_xhigh",
+      "creator": "Anthropic",
+      "displayName": "Claude Opus 4.8 (xhigh)",
+      "checkpoint": "claude-opus-4-8",
+      "quantization": null,
+      "reasoning": {
+        "label": "xhigh"
+      },
+      "metrics": {
+        "smart": 0.5436241610738255,
+        "fast": 2198.774075261745,
+        "cheap": 8.006355704138702
+      },
+      "aliases": [
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "anthropic.claude-opus-4-8",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "au.anthropic.claude-opus-4-8",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "eu.anthropic.claude-opus-4-8",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "global.anthropic.claude-opus-4-8",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "jp.anthropic.claude-opus-4-8",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "us.anthropic.claude-opus-4-8",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "anthropic",
+          "modelId": "claude-opus-4-8",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "cloudflare-ai-gateway",
+          "modelId": "claude-opus-4-8",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "cloudflare-ai-gateway",
+          "modelId": "claude-opus-4.8",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "github-copilot",
+          "modelId": "claude-opus-4.8",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "opencode",
+          "modelId": "claude-opus-4-8",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "anthropic/claude-opus-4.8",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "anthropic/claude-opus-4.8:batch",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "vercel-ai-gateway",
+          "modelId": "anthropic/claude-opus-4.8",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        }
+      ],
+      "provenance": {
+        "source": "DeepSWE",
+        "sourceConfig": "mini_swe_agent_claude_opus_4_8_xhigh",
+        "sourceModel": "claude-opus-4-8",
+        "sourceProvider": "anthropic",
+        "harness": "mini-swe-agent",
+        "attempted": 447,
+        "passed": 243,
+        "tasksAttempted": 113,
+        "runs": 4,
+        "smartConfidenceInterval95": [
+          0.5064898547928808,
+          0.5807584673547702
+        ],
+        "smartAggregation": "pass_at_1",
+        "fastAggregation": "mean_duration_seconds",
+        "cheapAggregation": "mean_cost_usd"
+      }
+    },
+    {
+      "id": "deepswe:config:mini_swe_agent_claude_opus_5_high",
+      "creator": "Anthropic",
+      "displayName": "Claude Opus 5 (high)",
+      "checkpoint": "claude-opus-5",
+      "quantization": null,
+      "reasoning": {
+        "label": "high"
+      },
+      "metrics": {
+        "smart": 0.7282850779510023,
+        "fast": 1163.8627881514476,
+        "cheap": 6.076084489977728
+      },
+      "aliases": [
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "au.anthropic.claude-opus-5",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "eu.anthropic.claude-opus-5",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "global.anthropic.claude-opus-5",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "jp.anthropic.claude-opus-5",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "us.anthropic.claude-opus-5",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "anthropic",
+          "modelId": "claude-opus-5",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "cloudflare-ai-gateway",
+          "modelId": "claude-opus-5",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "github-copilot",
+          "modelId": "claude-opus-5",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "opencode",
+          "modelId": "claude-opus-5",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "anthropic/claude-opus-5",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "anthropic/claude-opus-5:batch",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "vercel-ai-gateway",
+          "modelId": "anthropic/claude-opus-5",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        }
+      ],
+      "provenance": {
+        "source": "DeepSWE",
+        "sourceConfig": "mini_swe_agent_claude_opus_5_high",
+        "sourceModel": "claude-opus-5",
+        "sourceProvider": "vertex_ai",
+        "harness": "mini-swe-agent",
+        "attempted": 449,
+        "passed": 327,
+        "tasksAttempted": 113,
+        "runs": 4,
+        "smartConfidenceInterval95": [
+          0.7088307563794007,
+          0.7477393995226038
+        ],
+        "smartAggregation": "pass_at_1",
+        "fastAggregation": "mean_duration_seconds",
+        "cheapAggregation": "mean_cost_usd"
+      }
+    },
+    {
+      "id": "deepswe:config:mini_swe_agent_claude_opus_5_low",
+      "creator": "Anthropic",
+      "displayName": "Claude Opus 5 (low)",
+      "checkpoint": "claude-opus-5",
+      "quantization": null,
+      "reasoning": {
+        "label": "low"
+      },
+      "metrics": {
+        "smart": 0.5812917594654788,
+        "fast": 468.87542417149217,
+        "cheap": 1.6626223919821828
+      },
+      "aliases": [
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "au.anthropic.claude-opus-5",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "eu.anthropic.claude-opus-5",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "global.anthropic.claude-opus-5",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "jp.anthropic.claude-opus-5",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "us.anthropic.claude-opus-5",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "anthropic",
+          "modelId": "claude-opus-5",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "cloudflare-ai-gateway",
+          "modelId": "claude-opus-5",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "github-copilot",
+          "modelId": "claude-opus-5",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "opencode",
+          "modelId": "claude-opus-5",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "anthropic/claude-opus-5",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "anthropic/claude-opus-5:batch",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "vercel-ai-gateway",
+          "modelId": "anthropic/claude-opus-5",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        }
+      ],
+      "provenance": {
+        "source": "DeepSWE",
+        "sourceConfig": "mini_swe_agent_claude_opus_5_low",
+        "sourceModel": "claude-opus-5",
+        "sourceProvider": "vertex_ai",
+        "harness": "mini-swe-agent",
+        "attempted": 449,
+        "passed": 261,
+        "tasksAttempted": 113,
+        "runs": 4,
+        "smartConfidenceInterval95": [
+          0.5579848799986361,
+          0.6045986389323216
+        ],
+        "smartAggregation": "pass_at_1",
+        "fastAggregation": "mean_duration_seconds",
+        "cheapAggregation": "mean_cost_usd"
+      }
+    },
+    {
+      "id": "deepswe:config:mini_swe_agent_claude_opus_5_max",
+      "creator": "Anthropic",
+      "displayName": "Claude Opus 5 (max)",
+      "checkpoint": "claude-opus-5",
+      "quantization": null,
+      "reasoning": {
+        "label": "max"
+      },
+      "metrics": {
+        "smart": 0.7364864864864865,
+        "fast": 1911.819866231982,
+        "cheap": 11.837583271396396
+      },
+      "aliases": [
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "au.anthropic.claude-opus-5",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "eu.anthropic.claude-opus-5",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "global.anthropic.claude-opus-5",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "jp.anthropic.claude-opus-5",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "us.anthropic.claude-opus-5",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "anthropic",
+          "modelId": "claude-opus-5",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "cloudflare-ai-gateway",
+          "modelId": "claude-opus-5",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "github-copilot",
+          "modelId": "claude-opus-5",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "opencode",
+          "modelId": "claude-opus-5",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "anthropic/claude-opus-5",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "anthropic/claude-opus-5:batch",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "vercel-ai-gateway",
+          "modelId": "anthropic/claude-opus-5",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        }
+      ],
+      "provenance": {
+        "source": "DeepSWE",
+        "sourceConfig": "mini_swe_agent_claude_opus_5_max",
+        "sourceModel": "claude-opus-5",
+        "sourceProvider": "vertex_ai",
+        "harness": "mini-swe-agent",
+        "attempted": 444,
+        "passed": 327,
+        "tasksAttempted": 113,
+        "runs": 4,
+        "smartConfidenceInterval95": [
+          0.6977633822227692,
+          0.7752095907502038
+        ],
+        "smartAggregation": "pass_at_1",
+        "fastAggregation": "mean_duration_seconds",
+        "cheapAggregation": "mean_cost_usd"
+      }
+    },
+    {
+      "id": "deepswe:config:mini_swe_agent_claude_opus_5_medium",
+      "creator": "Anthropic",
+      "displayName": "Claude Opus 5 (medium)",
+      "checkpoint": "claude-opus-5",
+      "quantization": null,
+      "reasoning": {
+        "label": "medium"
+      },
+      "metrics": {
+        "smart": 0.6890380313199105,
+        "fast": 759.2254874630873,
+        "cheap": 3.28978764541387
+      },
+      "aliases": [
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "au.anthropic.claude-opus-5",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "eu.anthropic.claude-opus-5",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "global.anthropic.claude-opus-5",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "jp.anthropic.claude-opus-5",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "us.anthropic.claude-opus-5",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "anthropic",
+          "modelId": "claude-opus-5",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "cloudflare-ai-gateway",
+          "modelId": "claude-opus-5",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "github-copilot",
+          "modelId": "claude-opus-5",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "opencode",
+          "modelId": "claude-opus-5",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "anthropic/claude-opus-5",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "anthropic/claude-opus-5:batch",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "vercel-ai-gateway",
+          "modelId": "anthropic/claude-opus-5",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        }
+      ],
+      "provenance": {
+        "source": "DeepSWE",
+        "sourceConfig": "mini_swe_agent_claude_opus_5_medium",
+        "sourceModel": "claude-opus-5",
+        "sourceProvider": "vertex_ai",
+        "harness": "mini-swe-agent",
+        "attempted": 447,
+        "passed": 308,
+        "tasksAttempted": 113,
+        "runs": 4,
+        "smartConfidenceInterval95": [
+          0.6773124446609795,
+          0.7007636179788415
+        ],
+        "smartAggregation": "pass_at_1",
+        "fastAggregation": "mean_duration_seconds",
+        "cheapAggregation": "mean_cost_usd"
+      }
+    },
+    {
+      "id": "deepswe:config:mini_swe_agent_claude_opus_5_xhigh",
+      "creator": "Anthropic",
+      "displayName": "Claude Opus 5 (xhigh)",
+      "checkpoint": "claude-opus-5",
+      "quantization": null,
+      "reasoning": {
+        "label": "xhigh"
+      },
+      "metrics": {
+        "smart": 0.7315436241610739,
+        "fast": 1559.5597273221476,
+        "cheap": 9.07220232326622
+      },
+      "aliases": [
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "au.anthropic.claude-opus-5",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "eu.anthropic.claude-opus-5",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "global.anthropic.claude-opus-5",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "jp.anthropic.claude-opus-5",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "us.anthropic.claude-opus-5",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "anthropic",
+          "modelId": "claude-opus-5",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "cloudflare-ai-gateway",
+          "modelId": "claude-opus-5",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "github-copilot",
+          "modelId": "claude-opus-5",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "opencode",
+          "modelId": "claude-opus-5",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "anthropic/claude-opus-5",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "anthropic/claude-opus-5:batch",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "vercel-ai-gateway",
+          "modelId": "anthropic/claude-opus-5",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        }
+      ],
+      "provenance": {
+        "source": "DeepSWE",
+        "sourceConfig": "mini_swe_agent_claude_opus_5_xhigh",
+        "sourceModel": "claude-opus-5",
+        "sourceProvider": "vertex_ai",
+        "harness": "mini-swe-agent",
+        "attempted": 447,
+        "passed": 327,
+        "tasksAttempted": 113,
+        "runs": 4,
+        "smartConfidenceInterval95": [
+          0.7009338059446892,
+          0.7621534423774585
+        ],
+        "smartAggregation": "pass_at_1",
+        "fastAggregation": "mean_duration_seconds",
+        "cheapAggregation": "mean_cost_usd"
+      }
+    },
+    {
+      "id": "deepswe:config:mini_swe_agent_claude_sonnet_4_6_high",
+      "creator": "Anthropic",
+      "displayName": "Claude Sonnet 4.6 (high)",
+      "checkpoint": "claude-sonnet-4-6",
+      "quantization": null,
+      "reasoning": {
+        "label": "high"
+      },
+      "metrics": {
+        "smart": 0.29933481152993346,
+        "fast": 2815.01307943459,
+        "cheap": 5.5223517987804875
+      },
+      "aliases": [
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "anthropic.claude-sonnet-4-6",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "au.anthropic.claude-sonnet-4-6",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "eu.anthropic.claude-sonnet-4-6",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "global.anthropic.claude-sonnet-4-6",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "jp.anthropic.claude-sonnet-4-6",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "us.anthropic.claude-sonnet-4-6",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "anthropic",
+          "modelId": "claude-sonnet-4-6",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "cloudflare-ai-gateway",
+          "modelId": "claude-sonnet-4-6",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "cloudflare-ai-gateway",
+          "modelId": "claude-sonnet-4.6",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "github-copilot",
+          "modelId": "claude-sonnet-4.6",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "opencode",
+          "modelId": "claude-sonnet-4-6",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "anthropic/claude-sonnet-4.6",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "anthropic/claude-sonnet-4.6:batch",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "vercel-ai-gateway",
+          "modelId": "anthropic/claude-sonnet-4.6",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        }
+      ],
+      "provenance": {
+        "source": "DeepSWE",
+        "sourceConfig": "mini_swe_agent_claude_sonnet_4_6_high",
+        "sourceModel": "claude-sonnet-4-6",
+        "sourceProvider": "anthropic",
+        "harness": "mini-swe-agent",
+        "attempted": 451,
+        "passed": 135,
+        "tasksAttempted": 113,
+        "runs": 4,
+        "smartConfidenceInterval95": [
+          0.2584133988380421,
+          0.34025622422182483
+        ],
+        "smartAggregation": "pass_at_1",
+        "fastAggregation": "mean_duration_seconds",
+        "cheapAggregation": "mean_cost_usd"
+      }
+    },
+    {
+      "id": "deepswe:config:mini_swe_agent_claude_sonnet_5_high",
+      "creator": "Anthropic",
+      "displayName": "Claude Sonnet 5 (high)",
+      "checkpoint": "claude-sonnet-5",
+      "quantization": null,
+      "reasoning": {
+        "label": "high"
+      },
+      "metrics": {
+        "smart": 0.4823008849557522,
+        "fast": 1728.2193087920355,
+        "cheap": 7.425560161197339
+      },
+      "aliases": [
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "anthropic.claude-sonnet-5",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "au.anthropic.claude-sonnet-5",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "eu.anthropic.claude-sonnet-5",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "global.anthropic.claude-sonnet-5",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "jp.anthropic.claude-sonnet-5",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "us.anthropic.claude-sonnet-5",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "anthropic",
+          "modelId": "claude-sonnet-5",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "cloudflare-ai-gateway",
+          "modelId": "claude-sonnet-5",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "github-copilot",
+          "modelId": "claude-sonnet-5",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "opencode",
+          "modelId": "claude-sonnet-5",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "anthropic/claude-sonnet-5",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "anthropic/claude-sonnet-5:batch",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "vercel-ai-gateway",
+          "modelId": "anthropic/claude-sonnet-5",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        }
+      ],
+      "provenance": {
+        "source": "DeepSWE",
+        "sourceConfig": "mini_swe_agent_claude_sonnet_5_high",
+        "sourceModel": "claude-sonnet-5",
+        "sourceProvider": "anthropic",
+        "harness": "mini-swe-agent",
+        "attempted": 452,
+        "passed": 218,
+        "tasksAttempted": 113,
+        "runs": 4,
+        "smartConfidenceInterval95": [
+          0.4372377362536038,
+          0.5273640336579006
+        ],
+        "smartAggregation": "pass_at_1",
+        "fastAggregation": "mean_duration_seconds",
+        "cheapAggregation": "mean_cost_usd"
+      }
+    },
+    {
+      "id": "deepswe:config:mini_swe_agent_claude_sonnet_5_low",
+      "creator": "Anthropic",
+      "displayName": "Claude Sonnet 5 (low)",
+      "checkpoint": "claude-sonnet-5",
+      "quantization": null,
+      "reasoning": {
+        "label": "low"
+      },
+      "metrics": {
+        "smart": 0.3051224944320713,
+        "fast": 734.9105084298441,
+        "cheap": 2.1865550832962137
+      },
+      "aliases": [
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "anthropic.claude-sonnet-5",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "au.anthropic.claude-sonnet-5",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "eu.anthropic.claude-sonnet-5",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "global.anthropic.claude-sonnet-5",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "jp.anthropic.claude-sonnet-5",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "us.anthropic.claude-sonnet-5",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "anthropic",
+          "modelId": "claude-sonnet-5",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "cloudflare-ai-gateway",
+          "modelId": "claude-sonnet-5",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "github-copilot",
+          "modelId": "claude-sonnet-5",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "opencode",
+          "modelId": "claude-sonnet-5",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "anthropic/claude-sonnet-5",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "anthropic/claude-sonnet-5:batch",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "vercel-ai-gateway",
+          "modelId": "anthropic/claude-sonnet-5",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        }
+      ],
+      "provenance": {
+        "source": "DeepSWE",
+        "sourceConfig": "mini_swe_agent_claude_sonnet_5_low",
+        "sourceModel": "claude-sonnet-5",
+        "sourceProvider": "anthropic",
+        "harness": "mini-swe-agent",
+        "attempted": 449,
+        "passed": 137,
+        "tasksAttempted": 113,
+        "runs": 4,
+        "smartConfidenceInterval95": [
+          0.2938623190176438,
+          0.31638266984649877
+        ],
+        "smartAggregation": "pass_at_1",
+        "fastAggregation": "mean_duration_seconds",
+        "cheapAggregation": "mean_cost_usd"
+      }
+    },
+    {
+      "id": "deepswe:config:mini_swe_agent_claude_sonnet_5_max",
+      "creator": "Anthropic",
+      "displayName": "Claude Sonnet 5 (max)",
+      "checkpoint": "claude-sonnet-5",
+      "quantization": null,
+      "reasoning": {
+        "label": "max"
+      },
+      "metrics": {
+        "smart": 0.5384615384615384,
+        "fast": 4803.543157789592,
+        "cheap": 26.399858950791852
+      },
+      "aliases": [
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "anthropic.claude-sonnet-5",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "au.anthropic.claude-sonnet-5",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "eu.anthropic.claude-sonnet-5",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "global.anthropic.claude-sonnet-5",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "jp.anthropic.claude-sonnet-5",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "us.anthropic.claude-sonnet-5",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "anthropic",
+          "modelId": "claude-sonnet-5",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "cloudflare-ai-gateway",
+          "modelId": "claude-sonnet-5",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "github-copilot",
+          "modelId": "claude-sonnet-5",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "opencode",
+          "modelId": "claude-sonnet-5",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "anthropic/claude-sonnet-5",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "anthropic/claude-sonnet-5:batch",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "vercel-ai-gateway",
+          "modelId": "anthropic/claude-sonnet-5",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        }
+      ],
+      "provenance": {
+        "source": "DeepSWE",
+        "sourceConfig": "mini_swe_agent_claude_sonnet_5_max",
+        "sourceModel": "claude-sonnet-5",
+        "sourceProvider": "anthropic",
+        "harness": "mini-swe-agent",
+        "attempted": 442,
+        "passed": 238,
+        "tasksAttempted": 113,
+        "runs": 4,
+        "smartConfidenceInterval95": [
+          0.4960923737597946,
+          0.5808307031632823
+        ],
+        "smartAggregation": "pass_at_1",
+        "fastAggregation": "mean_duration_seconds",
+        "cheapAggregation": "mean_cost_usd"
+      }
+    },
+    {
+      "id": "deepswe:config:mini_swe_agent_claude_sonnet_5_medium",
+      "creator": "Anthropic",
+      "displayName": "Claude Sonnet 5 (medium)",
+      "checkpoint": "claude-sonnet-5",
+      "quantization": null,
+      "reasoning": {
+        "label": "medium"
+      },
+      "metrics": {
+        "smart": 0.3977777777777778,
+        "fast": 1121.270593551111,
+        "cheap": 4.079036229
+      },
+      "aliases": [
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "anthropic.claude-sonnet-5",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "au.anthropic.claude-sonnet-5",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "eu.anthropic.claude-sonnet-5",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "global.anthropic.claude-sonnet-5",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "jp.anthropic.claude-sonnet-5",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "us.anthropic.claude-sonnet-5",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "anthropic",
+          "modelId": "claude-sonnet-5",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "cloudflare-ai-gateway",
+          "modelId": "claude-sonnet-5",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "github-copilot",
+          "modelId": "claude-sonnet-5",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "opencode",
+          "modelId": "claude-sonnet-5",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "anthropic/claude-sonnet-5",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "anthropic/claude-sonnet-5:batch",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "vercel-ai-gateway",
+          "modelId": "anthropic/claude-sonnet-5",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        }
+      ],
+      "provenance": {
+        "source": "DeepSWE",
+        "sourceConfig": "mini_swe_agent_claude_sonnet_5_medium",
+        "sourceModel": "claude-sonnet-5",
+        "sourceProvider": "anthropic",
+        "harness": "mini-swe-agent",
+        "attempted": 450,
+        "passed": 179,
+        "tasksAttempted": 113,
+        "runs": 4,
+        "smartConfidenceInterval95": [
+          0.3665020157144805,
+          0.4290535398410751
+        ],
+        "smartAggregation": "pass_at_1",
+        "fastAggregation": "mean_duration_seconds",
+        "cheapAggregation": "mean_cost_usd"
+      }
+    },
+    {
+      "id": "deepswe:config:mini_swe_agent_claude_sonnet_5_xhigh",
+      "creator": "Anthropic",
+      "displayName": "Claude Sonnet 5 (xhigh)",
+      "checkpoint": "claude-sonnet-5",
+      "quantization": null,
+      "reasoning": {
+        "label": "xhigh"
+      },
+      "metrics": {
+        "smart": 0.49667405764966743,
+        "fast": 2414.4529098159646,
+        "cheap": 11.890634540022173
+      },
+      "aliases": [
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "anthropic.claude-sonnet-5",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "au.anthropic.claude-sonnet-5",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "eu.anthropic.claude-sonnet-5",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "global.anthropic.claude-sonnet-5",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "jp.anthropic.claude-sonnet-5",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "us.anthropic.claude-sonnet-5",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "anthropic",
+          "modelId": "claude-sonnet-5",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "cloudflare-ai-gateway",
+          "modelId": "claude-sonnet-5",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "github-copilot",
+          "modelId": "claude-sonnet-5",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "opencode",
+          "modelId": "claude-sonnet-5",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "anthropic/claude-sonnet-5",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "anthropic/claude-sonnet-5:batch",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "vercel-ai-gateway",
+          "modelId": "anthropic/claude-sonnet-5",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        }
+      ],
+      "provenance": {
+        "source": "DeepSWE",
+        "sourceConfig": "mini_swe_agent_claude_sonnet_5_xhigh",
+        "sourceModel": "claude-sonnet-5",
+        "sourceProvider": "anthropic",
+        "harness": "mini-swe-agent",
+        "attempted": 451,
+        "passed": 224,
+        "tasksAttempted": 113,
+        "runs": 4,
+        "smartConfidenceInterval95": [
+          0.4621285677328888,
+          0.5312195475664461
+        ],
+        "smartAggregation": "pass_at_1",
+        "fastAggregation": "mean_duration_seconds",
+        "cheapAggregation": "mean_cost_usd"
+      }
+    },
+    {
+      "id": "deepswe:config:mini_swe_agent_deepseek_v4_flash_max",
+      "creator": "DeepSeek",
+      "displayName": "DeepSeek V4 Flash (max)",
+      "checkpoint": "deepseek-v4-flash",
+      "quantization": null,
+      "reasoning": {
+        "label": "max"
+      },
+      "metrics": {
+        "smart": 0.5331858407079646,
+        "fast": 1438.9961937522125,
+        "cheap": 0.10023560370265487
+      },
+      "aliases": [
+        {
+          "provider": "deepseek",
+          "modelId": "deepseek-v4-flash",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "opencode",
+          "modelId": "deepseek-v4-flash",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "opencode-go",
+          "modelId": "deepseek-v4-flash",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "qwen-token-plan",
+          "modelId": "deepseek-v4-flash",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "qwen-token-plan-cn",
+          "modelId": "deepseek-v4-flash",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        }
+      ],
+      "provenance": {
+        "source": "DeepSWE",
+        "sourceConfig": "mini_swe_agent_deepseek_v4_flash_max",
+        "sourceModel": "deepseek-v4-flash",
+        "sourceProvider": "deepseek",
+        "harness": "mini-swe-agent",
+        "attempted": 452,
+        "passed": 241,
+        "tasksAttempted": 113,
+        "runs": 4,
+        "smartConfidenceInterval95": [
+          0.4975163385576403,
+          0.5688553428582889
+        ],
+        "smartAggregation": "pass_at_1",
+        "fastAggregation": "mean_duration_seconds",
+        "cheapAggregation": "mean_cost_usd"
+      }
+    },
+    {
+      "id": "deepswe:config:mini_swe_agent_deepseek_v4_pro_max",
+      "creator": "DeepSeek",
+      "displayName": "DeepSeek V4 Pro (max)",
+      "checkpoint": "deepseek-v4-pro",
+      "quantization": null,
+      "reasoning": {
+        "label": "max"
+      },
+      "metrics": {
+        "smart": 0.6283185840707964,
+        "fast": 2212.510104011062,
+        "cheap": 0.24138687892256638
+      },
+      "aliases": [
+        {
+          "provider": "baseten",
+          "modelId": "deepseek-ai/DeepSeek-V4-Pro",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "deepseek",
+          "modelId": "deepseek-v4-pro",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "opencode",
+          "modelId": "deepseek-v4-pro",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "opencode-go",
+          "modelId": "deepseek-v4-pro",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "qwen-token-plan",
+          "modelId": "deepseek-v4-pro",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "qwen-token-plan-cn",
+          "modelId": "deepseek-v4-pro",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "qwen-token-plan-individual",
+          "modelId": "deepseek-v4-pro",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        }
+      ],
+      "provenance": {
+        "source": "DeepSWE",
+        "sourceConfig": "mini_swe_agent_deepseek_v4_pro_max",
+        "sourceModel": "deepseek-v4-pro",
+        "sourceProvider": "deepseek",
+        "harness": "mini-swe-agent",
+        "attempted": 452,
+        "passed": 284,
+        "tasksAttempted": 113,
+        "runs": 4,
+        "smartConfidenceInterval95": [
+          0.5649842780985077,
+          0.6916528900430852
+        ],
+        "smartAggregation": "pass_at_1",
+        "fastAggregation": "mean_duration_seconds",
+        "cheapAggregation": "mean_cost_usd"
+      }
+    },
+    {
+      "id": "deepswe:config:mini_swe_agent_gemini_3_1_pro_preview_high",
+      "creator": "Google",
+      "displayName": "Gemini 3.1 Pro Preview (high)",
+      "checkpoint": "gemini-3-1-pro-preview",
+      "quantization": null,
+      "reasoning": {
+        "label": "high"
+      },
+      "metrics": {
+        "smart": 0.1172566371681416,
+        "fast": 867.7979107013274,
+        "cheap": 2.1434045568888886
+      },
+      "aliases": [
+        {
+          "provider": "github-copilot",
+          "modelId": "gemini-3.1-pro-preview",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "google",
+          "modelId": "gemini-3.1-pro-preview",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "google-vertex",
+          "modelId": "gemini-3.1-pro-preview",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "google/gemini-3.1-pro-preview",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "google/gemini-3.1-pro-preview:batch",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "vercel-ai-gateway",
+          "modelId": "google/gemini-3.1-pro-preview",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        }
+      ],
+      "provenance": {
+        "source": "DeepSWE",
+        "sourceConfig": "mini_swe_agent_gemini_3_1_pro_preview_high",
+        "sourceModel": "gemini-3-1-pro-preview",
+        "sourceProvider": "vertex_ai",
+        "harness": "mini-swe-agent",
+        "attempted": 452,
+        "passed": 53,
+        "tasksAttempted": 113,
+        "runs": 4,
+        "smartConfidenceInterval95": [
+          0.10244568255705315,
+          0.13206759177923005
+        ],
+        "smartAggregation": "pass_at_1",
+        "fastAggregation": "mean_duration_seconds",
+        "cheapAggregation": "mean_cost_usd"
+      }
+    },
+    {
+      "id": "deepswe:config:mini_swe_agent_gemini_3_5_flash_high",
+      "creator": "Google",
+      "displayName": "Gemini 3.5 Flash (high)",
+      "checkpoint": "gemini-3-5-flash",
+      "quantization": null,
+      "reasoning": {
+        "label": "high"
+      },
+      "metrics": {
+        "smart": 0.3606194690265487,
+        "fast": 1125.1601607057523,
+        "cheap": 3.4467114588691796
+      },
+      "aliases": [
+        {
+          "provider": "github-copilot",
+          "modelId": "gemini-3.5-flash",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "google",
+          "modelId": "gemini-3.5-flash",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "google-vertex",
+          "modelId": "gemini-3.5-flash",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "opencode",
+          "modelId": "gemini-3.5-flash",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "google/gemini-3.5-flash",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "google/gemini-3.5-flash:batch",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "vercel-ai-gateway",
+          "modelId": "google/gemini-3.5-flash",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        }
+      ],
+      "provenance": {
+        "source": "DeepSWE",
+        "sourceConfig": "mini_swe_agent_gemini_3_5_flash_high",
+        "sourceModel": "gemini-3-5-flash",
+        "sourceProvider": "vertex_ai",
+        "harness": "mini-swe-agent",
+        "attempted": 452,
+        "passed": 163,
+        "tasksAttempted": 113,
+        "runs": 4,
+        "smartConfidenceInterval95": [
+          0.3209564389213443,
+          0.40028249913175307
+        ],
+        "smartAggregation": "pass_at_1",
+        "fastAggregation": "mean_duration_seconds",
+        "cheapAggregation": "mean_cost_usd"
+      }
+    },
+    {
+      "id": "deepswe:config:mini_swe_agent_gemini_3_6_flash_high",
+      "creator": "Google",
+      "displayName": "Gemini 3.6 Flash (high)",
+      "checkpoint": "gemini-3-6-flash",
+      "quantization": null,
+      "reasoning": {
+        "label": "high"
+      },
+      "metrics": {
+        "smart": 0.4668141592920354,
+        "fast": 1477.8607510707964,
+        "cheap": 4.419013277333334
+      },
+      "aliases": [
+        {
+          "provider": "github-copilot",
+          "modelId": "gemini-3.6-flash",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "google",
+          "modelId": "gemini-3.6-flash",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "google-vertex",
+          "modelId": "gemini-3.6-flash",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "opencode",
+          "modelId": "gemini-3.6-flash",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "google/gemini-3.6-flash",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "google/gemini-3.6-flash:batch",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "vercel-ai-gateway",
+          "modelId": "google/gemini-3.6-flash",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        }
+      ],
+      "provenance": {
+        "source": "DeepSWE",
+        "sourceConfig": "mini_swe_agent_gemini_3_6_flash_high",
+        "sourceModel": "gemini-3-6-flash",
+        "sourceProvider": "vertex_ai",
+        "harness": "mini-swe-agent",
+        "attempted": 452,
+        "passed": 211,
+        "tasksAttempted": 113,
+        "runs": 4,
+        "smartConfidenceInterval95": [
+          0.4297656202995626,
+          0.5038626982845081
+        ],
+        "smartAggregation": "pass_at_1",
+        "fastAggregation": "mean_duration_seconds",
+        "cheapAggregation": "mean_cost_usd"
+      }
+    },
+    {
+      "id": "deepswe:config:mini_swe_agent_gemini_3_7_flash_high",
+      "creator": "Google",
+      "displayName": "Gemini 3.7 Flash (high)",
+      "checkpoint": "gemini-3-7-flash",
+      "quantization": null,
+      "reasoning": {
+        "label": "high"
+      },
+      "metrics": {
+        "smart": 0.6526548672566371,
+        "fast": 1244.9565387986725,
+        "cheap": 2.1762860351216813
+      },
+      "aliases": [
+        {
+          "provider": "github-copilot",
+          "modelId": "gemini-3.7-flash",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "google",
+          "modelId": "gemini-3.7-flash",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "google-vertex",
+          "modelId": "gemini-3.7-flash",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "opencode",
+          "modelId": "gemini-3.7-flash",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "google/gemini-3.7-flash",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "google/gemini-3.7-flash:batch",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "vercel-ai-gateway",
+          "modelId": "google/gemini-3.7-flash",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        }
+      ],
+      "provenance": {
+        "source": "DeepSWE",
+        "sourceConfig": "mini_swe_agent_gemini_3_7_flash_high",
+        "sourceModel": "gemini-3-7-flash",
+        "sourceProvider": "gemini",
+        "harness": "mini-swe-agent",
+        "attempted": 452,
+        "passed": 295,
+        "tasksAttempted": 113,
+        "runs": 4,
+        "smartConfidenceInterval95": [
+          0.6347762421887939,
+          0.6705334923244803
+        ],
+        "smartAggregation": "pass_at_1",
+        "fastAggregation": "mean_duration_seconds",
+        "cheapAggregation": "mean_cost_usd"
+      }
+    },
+    {
+      "id": "deepswe:config:mini_swe_agent_gemini_3_7_flash_low",
+      "creator": "Google",
+      "displayName": "Gemini 3.7 Flash (low)",
+      "checkpoint": "gemini-3-7-flash",
+      "quantization": null,
+      "reasoning": {
+        "label": "low"
+      },
+      "metrics": {
+        "smart": 0.5376106194690266,
+        "fast": 1252.0731730707964,
+        "cheap": 1.8322645629424779
+      },
+      "aliases": [
+        {
+          "provider": "github-copilot",
+          "modelId": "gemini-3.7-flash",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "google",
+          "modelId": "gemini-3.7-flash",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "google-vertex",
+          "modelId": "gemini-3.7-flash",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "opencode",
+          "modelId": "gemini-3.7-flash",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "google/gemini-3.7-flash",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "google/gemini-3.7-flash:batch",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "vercel-ai-gateway",
+          "modelId": "google/gemini-3.7-flash",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        }
+      ],
+      "provenance": {
+        "source": "DeepSWE",
+        "sourceConfig": "mini_swe_agent_gemini_3_7_flash_low",
+        "sourceModel": "gemini-3-7-flash",
+        "sourceProvider": "gemini",
+        "harness": "mini-swe-agent",
+        "attempted": 452,
+        "passed": 243,
+        "tasksAttempted": 113,
+        "runs": 4,
+        "smartConfidenceInterval95": [
+          0.5117141286507079,
+          0.5635071102873452
+        ],
+        "smartAggregation": "pass_at_1",
+        "fastAggregation": "mean_duration_seconds",
+        "cheapAggregation": "mean_cost_usd"
+      }
+    },
+    {
+      "id": "deepswe:config:mini_swe_agent_gemini_3_7_flash_medium",
+      "creator": "Google",
+      "displayName": "Gemini 3.7 Flash (medium)",
+      "checkpoint": "gemini-3-7-flash",
+      "quantization": null,
+      "reasoning": {
+        "label": "medium"
+      },
+      "metrics": {
+        "smart": 0.6548672566371682,
+        "fast": 1240.376194079646,
+        "cheap": 2.0251351826880533
+      },
+      "aliases": [
+        {
+          "provider": "github-copilot",
+          "modelId": "gemini-3.7-flash",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "google",
+          "modelId": "gemini-3.7-flash",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "google-vertex",
+          "modelId": "gemini-3.7-flash",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "opencode",
+          "modelId": "gemini-3.7-flash",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "google/gemini-3.7-flash",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "google/gemini-3.7-flash:batch",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "vercel-ai-gateway",
+          "modelId": "google/gemini-3.7-flash",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        }
+      ],
+      "provenance": {
+        "source": "DeepSWE",
+        "sourceConfig": "mini_swe_agent_gemini_3_7_flash_medium",
+        "sourceModel": "gemini-3-7-flash",
+        "sourceProvider": "gemini",
+        "harness": "mini-swe-agent",
+        "attempted": 452,
+        "passed": 296,
+        "tasksAttempted": 113,
+        "runs": 4,
+        "smartConfidenceInterval95": [
+          0.624001933873013,
+          0.6857325794013234
+        ],
+        "smartAggregation": "pass_at_1",
+        "fastAggregation": "mean_duration_seconds",
+        "cheapAggregation": "mean_cost_usd"
+      }
+    },
+    {
+      "id": "deepswe:config:mini_swe_agent_gemini_3_8_flash_high",
+      "creator": "Google",
+      "displayName": "Gemini 3.8 Flash (high)",
+      "checkpoint": "gemini-3-8-flash",
+      "quantization": null,
+      "reasoning": {
+        "label": "high"
+      },
+      "metrics": {
+        "smart": 0.738255033557047,
+        "fast": 686.7691519843399,
+        "cheap": 2.362349413758389
+      },
+      "aliases": [
+        {
+          "provider": "openrouter",
+          "modelId": "google/gemini-3.8-flash",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        }
+      ],
+      "provenance": {
+        "source": "DeepSWE",
+        "sourceConfig": "mini_swe_agent_gemini_3_8_flash_high",
+        "sourceModel": "gemini-3-8-flash",
+        "sourceProvider": "vertex_ai",
+        "harness": "mini-swe-agent",
+        "attempted": 447,
+        "passed": 330,
+        "tasksAttempted": 113,
+        "runs": 4,
+        "smartConfidenceInterval95": [
+          0.7240819014906883,
+          0.7524281656234058
+        ],
+        "smartAggregation": "pass_at_1",
+        "fastAggregation": "mean_duration_seconds",
+        "cheapAggregation": "mean_cost_usd"
+      }
+    },
+    {
+      "id": "deepswe:config:mini_swe_agent_gemini_3_8_flash_medium",
+      "creator": "Google",
+      "displayName": "Gemini 3.8 Flash (medium)",
+      "checkpoint": "gemini-3-8-flash",
+      "quantization": null,
+      "reasoning": {
+        "label": "medium"
+      },
+      "metrics": {
+        "smart": 0.7101769911504425,
+        "fast": 826.5496385464602,
+        "cheap": 1.9671024789823006
+      },
+      "aliases": [
+        {
+          "provider": "openrouter",
+          "modelId": "google/gemini-3.8-flash",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        }
+      ],
+      "provenance": {
+        "source": "DeepSWE",
+        "sourceConfig": "mini_swe_agent_gemini_3_8_flash_medium",
+        "sourceModel": "gemini-3-8-flash",
+        "sourceProvider": "vertex_ai",
+        "harness": "mini-swe-agent",
+        "attempted": 452,
+        "passed": 321,
+        "tasksAttempted": 113,
+        "runs": 4,
+        "smartConfidenceInterval95": [
+          0.6873689454216633,
+          0.7329850368792218
+        ],
+        "smartAggregation": "pass_at_1",
+        "fastAggregation": "mean_duration_seconds",
+        "cheapAggregation": "mean_cost_usd"
+      }
+    },
+    {
+      "id": "deepswe:config:mini_swe_agent_glm_5_2_high",
+      "creator": "Z AI",
+      "displayName": "GLM-5.2 (high)",
+      "checkpoint": "glm-5-2",
+      "quantization": null,
+      "reasoning": {
+        "label": "high"
+      },
+      "metrics": {
+        "smart": 0.36283185840707965,
+        "fast": 1794.4733617809734,
+        "cheap": 2.8355164725663715
+      },
+      "aliases": [
+        {
+          "provider": "baseten",
+          "modelId": "zai-org/GLM-5.2",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "cloudflare-ai-gateway",
+          "modelId": "workers-ai/@cf/zai-org/glm-5.2",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "cloudflare-workers-ai",
+          "modelId": "@cf/zai-org/glm-5.2",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "huggingface",
+          "modelId": "zai-org/GLM-5.2",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "nvidia",
+          "modelId": "z-ai/glm-5.2",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "opencode",
+          "modelId": "glm-5.2",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "opencode-go",
+          "modelId": "glm-5.2",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "z-ai/glm-5.2",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "z-ai/glm-5.2:batch",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "qwen-token-plan",
+          "modelId": "glm-5.2",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "qwen-token-plan-cn",
+          "modelId": "glm-5.2",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "qwen-token-plan-individual",
+          "modelId": "glm-5.2",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "together",
+          "modelId": "zai-org/GLM-5.2",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "vercel-ai-gateway",
+          "modelId": "zai/glm-5.2",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "zai",
+          "modelId": "glm-5.2",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "zai-coding-cn",
+          "modelId": "glm-5.2",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        }
+      ],
+      "provenance": {
+        "source": "DeepSWE",
+        "sourceConfig": "mini_swe_agent_glm_5_2_high",
+        "sourceModel": "glm-5-2",
+        "sourceProvider": "zai",
+        "harness": "mini-swe-agent",
+        "attempted": 452,
+        "passed": 164,
+        "tasksAttempted": 113,
+        "runs": 4,
+        "smartConfidenceInterval95": [
+          0.3153311289278631,
+          0.41033258788629623
+        ],
+        "smartAggregation": "pass_at_1",
+        "fastAggregation": "mean_duration_seconds",
+        "cheapAggregation": "mean_cost_usd"
+      }
+    },
+    {
+      "id": "deepswe:config:mini_swe_agent_glm_5_2_max",
+      "creator": "Z AI",
+      "displayName": "GLM-5.2 (max)",
+      "checkpoint": "glm-5-2",
+      "quantization": null,
+      "reasoning": {
+        "label": "max"
+      },
+      "metrics": {
+        "smart": 0.43777777777777777,
+        "fast": 2629.2083211311115,
+        "cheap": 3.9199075743111114
+      },
+      "aliases": [
+        {
+          "provider": "baseten",
+          "modelId": "zai-org/GLM-5.2",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "opencode",
+          "modelId": "glm-5.2",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "opencode-go",
+          "modelId": "glm-5.2",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "qwen-token-plan",
+          "modelId": "glm-5.2",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "qwen-token-plan-cn",
+          "modelId": "glm-5.2",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "qwen-token-plan-individual",
+          "modelId": "glm-5.2",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "zai",
+          "modelId": "glm-5.2",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "zai-coding-cn",
+          "modelId": "glm-5.2",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        }
+      ],
+      "provenance": {
+        "source": "DeepSWE",
+        "sourceConfig": "mini_swe_agent_glm_5_2_max",
+        "sourceModel": "glm-5-2",
+        "sourceProvider": "zai",
+        "harness": "mini-swe-agent",
+        "attempted": 450,
+        "passed": 197,
+        "tasksAttempted": 113,
+        "runs": 4,
+        "smartConfidenceInterval95": [
+          0.42052148157196967,
+          0.45503407398358586
+        ],
+        "smartAggregation": "pass_at_1",
+        "fastAggregation": "mean_duration_seconds",
+        "cheapAggregation": "mean_cost_usd"
+      }
+    },
+    {
+      "id": "deepswe:config:mini_swe_agent_glm_5_3_flash_max",
+      "creator": "Z AI",
+      "displayName": "GLM-5.3-Flash (max)",
+      "checkpoint": "glm-5-3-flash",
+      "quantization": null,
+      "reasoning": {
+        "label": "max"
+      },
+      "metrics": {
+        "smart": 0.6339285714285714,
+        "fast": 1537.7995419129463,
+        "cheap": 0.48196371245535713
+      },
+      "aliases": [
+        {
+          "provider": "baseten",
+          "modelId": "zai-org/GLM-5.3-Flash",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "huggingface",
+          "modelId": "zai-org/GLM-5.3-Flash",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "opencode-go",
+          "modelId": "glm-5.3-flash",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "z-ai/glm-5.3-flash",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "z-ai/glm-5.3-flash:batch",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "zai",
+          "modelId": "glm-5.3-flash",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "zai-coding-cn",
+          "modelId": "glm-5.3-flash",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        }
+      ],
+      "provenance": {
+        "source": "DeepSWE",
+        "sourceConfig": "mini_swe_agent_glm_5_3_flash_max",
+        "sourceModel": "glm-5-3-flash",
+        "sourceProvider": "anthropic",
+        "harness": "mini-swe-agent",
+        "attempted": 448,
+        "passed": 284,
+        "tasksAttempted": 113,
+        "runs": 4,
+        "smartConfidenceInterval95": [
+          0.590148863911635,
+          0.6777082789455078
+        ],
+        "smartAggregation": "pass_at_1",
+        "fastAggregation": "mean_duration_seconds",
+        "cheapAggregation": "mean_cost_usd"
+      }
+    },
+    {
+      "id": "deepswe:config:mini_swe_agent_glm_5_3_max",
+      "creator": "Z AI",
+      "displayName": "GLM-5.3 (max)",
+      "checkpoint": "glm-5-3",
+      "quantization": null,
+      "reasoning": {
+        "label": "max"
+      },
+      "metrics": {
+        "smart": 0.6895787139689579,
+        "fast": 2116.1784804168515,
+        "cheap": 3.9933584893126386
+      },
+      "aliases": [
+        {
+          "provider": "baseten",
+          "modelId": "zai-org/GLM-5.3",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "huggingface",
+          "modelId": "zai-org/GLM-5.3",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "opencode-go",
+          "modelId": "glm-5.3",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "z-ai/glm-5.3",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "zai",
+          "modelId": "glm-5.3",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "zai-coding-cn",
+          "modelId": "glm-5.3",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        }
+      ],
+      "provenance": {
+        "source": "DeepSWE",
+        "sourceConfig": "mini_swe_agent_glm_5_3_max",
+        "sourceModel": "glm-5-3",
+        "sourceProvider": "zai",
+        "harness": "mini-swe-agent",
+        "attempted": 451,
+        "passed": 311,
+        "tasksAttempted": 113,
+        "runs": 4,
+        "smartConfidenceInterval95": [
+          0.6593922012533708,
+          0.7197652266845449
+        ],
+        "smartAggregation": "pass_at_1",
+        "fastAggregation": "mean_duration_seconds",
+        "cheapAggregation": "mean_cost_usd"
+      }
+    },
+    {
+      "id": "deepswe:config:mini_swe_agent_gpt_5_4_xhigh",
+      "creator": "OpenAI",
+      "displayName": "GPT-5.4 (xhigh)",
+      "checkpoint": "gpt-5-4",
+      "quantization": null,
+      "reasoning": {
+        "label": "xhigh"
+      },
+      "metrics": {
+        "smart": 0.5176991150442478,
+        "fast": 1368.707164818584,
+        "cheap": 5.6524577245575225
+      },
+      "aliases": [
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "openai.gpt-5.4",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "azure-openai-responses",
+          "modelId": "gpt-5.4",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "cloudflare-ai-gateway",
+          "modelId": "gpt-5.4",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "github-copilot",
+          "modelId": "gpt-5.4",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openai",
+          "modelId": "gpt-5.4",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openai-codex",
+          "modelId": "gpt-5.4",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "opencode",
+          "modelId": "gpt-5.4",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "openai/gpt-5.4",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "openai/gpt-5.4:batch",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "vercel-ai-gateway",
+          "modelId": "openai/gpt-5.4",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        }
+      ],
+      "provenance": {
+        "source": "DeepSWE",
+        "sourceConfig": "mini_swe_agent_gpt_5_4_xhigh",
+        "sourceModel": "gpt-5-4",
+        "sourceProvider": "openai",
+        "harness": "mini-swe-agent",
+        "attempted": 452,
+        "passed": 234,
+        "tasksAttempted": 113,
+        "runs": 4,
+        "smartConfidenceInterval95": [
+          0.502678065476865,
+          0.5327201646116306
+        ],
+        "smartAggregation": "pass_at_1",
+        "fastAggregation": "mean_duration_seconds",
+        "cheapAggregation": "mean_cost_usd"
+      }
+    },
+    {
+      "id": "deepswe:config:mini_swe_agent_gpt_5_5_high",
+      "creator": "OpenAI",
+      "displayName": "GPT-5.5 (high)",
+      "checkpoint": "gpt-5-5",
+      "quantization": null,
+      "reasoning": {
+        "label": "high"
+      },
+      "metrics": {
+        "smart": 0.6438053097345132,
+        "fast": 2048.0589126172567,
+        "cheap": 5.100437004424779
+      },
+      "aliases": [
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "openai.gpt-5.5",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "azure-openai-responses",
+          "modelId": "gpt-5.5",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "cloudflare-ai-gateway",
+          "modelId": "gpt-5.5",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "github-copilot",
+          "modelId": "gpt-5.5",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openai",
+          "modelId": "gpt-5.5",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openai-codex",
+          "modelId": "gpt-5.5",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "opencode",
+          "modelId": "gpt-5.5",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "openai/gpt-5.5",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "openai/gpt-5.5:batch",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "vercel-ai-gateway",
+          "modelId": "openai/gpt-5.5",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        }
+      ],
+      "provenance": {
+        "source": "DeepSWE",
+        "sourceConfig": "mini_swe_agent_gpt_5_5_high",
+        "sourceModel": "gpt-5-5",
+        "sourceProvider": "openai",
+        "harness": "mini-swe-agent",
+        "attempted": 452,
+        "passed": 291,
+        "tasksAttempted": 113,
+        "runs": 4,
+        "smartConfidenceInterval95": [
+          0.6126368832394585,
+          0.6749737362295679
+        ],
+        "smartAggregation": "pass_at_1",
+        "fastAggregation": "mean_duration_seconds",
+        "cheapAggregation": "mean_cost_usd"
+      }
+    },
+    {
+      "id": "deepswe:config:mini_swe_agent_gpt_5_5_low",
+      "creator": "OpenAI",
+      "displayName": "GPT-5.5 (low)",
+      "checkpoint": "gpt-5-5",
+      "quantization": null,
+      "reasoning": {
+        "label": "low"
+      },
+      "metrics": {
+        "smart": 0.26991150442477874,
+        "fast": 569.9958436615044,
+        "cheap": 1.2002025442477877
+      },
+      "aliases": [
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "openai.gpt-5.5",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "azure-openai-responses",
+          "modelId": "gpt-5.5",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "cloudflare-ai-gateway",
+          "modelId": "gpt-5.5",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "github-copilot",
+          "modelId": "gpt-5.5",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openai",
+          "modelId": "gpt-5.5",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openai-codex",
+          "modelId": "gpt-5.5",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "opencode",
+          "modelId": "gpt-5.5",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "openai/gpt-5.5",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "openai/gpt-5.5:batch",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "vercel-ai-gateway",
+          "modelId": "openai/gpt-5.5",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        }
+      ],
+      "provenance": {
+        "source": "DeepSWE",
+        "sourceConfig": "mini_swe_agent_gpt_5_5_low",
+        "sourceModel": "gpt-5-5",
+        "sourceProvider": "openai",
+        "harness": "mini-swe-agent",
+        "attempted": 452,
+        "passed": 122,
+        "tasksAttempted": 113,
+        "runs": 4,
+        "smartConfidenceInterval95": [
+          0.24696647220470694,
+          0.29285653664485056
+        ],
+        "smartAggregation": "pass_at_1",
+        "fastAggregation": "mean_duration_seconds",
+        "cheapAggregation": "mean_cost_usd"
+      }
+    },
+    {
+      "id": "deepswe:config:mini_swe_agent_gpt_5_5_medium",
+      "creator": "OpenAI",
+      "displayName": "GPT-5.5 (medium)",
+      "checkpoint": "gpt-5-5",
+      "quantization": null,
+      "reasoning": {
+        "label": "medium"
+      },
+      "metrics": {
+        "smart": 0.5398230088495575,
+        "fast": 1288.995063800885,
+        "cheap": 2.749342734513274
+      },
+      "aliases": [
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "openai.gpt-5.5",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "azure-openai-responses",
+          "modelId": "gpt-5.5",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "cloudflare-ai-gateway",
+          "modelId": "gpt-5.5",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "github-copilot",
+          "modelId": "gpt-5.5",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openai",
+          "modelId": "gpt-5.5",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openai-codex",
+          "modelId": "gpt-5.5",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "opencode",
+          "modelId": "gpt-5.5",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "openai/gpt-5.5",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "openai/gpt-5.5:batch",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "vercel-ai-gateway",
+          "modelId": "openai/gpt-5.5",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        }
+      ],
+      "provenance": {
+        "source": "DeepSWE",
+        "sourceConfig": "mini_swe_agent_gpt_5_5_medium",
+        "sourceModel": "gpt-5-5",
+        "sourceProvider": "openai",
+        "harness": "mini-swe-agent",
+        "attempted": 452,
+        "passed": 244,
+        "tasksAttempted": 113,
+        "runs": 4,
+        "smartConfidenceInterval95": [
+          0.5142921338966476,
+          0.5653538838024673
+        ],
+        "smartAggregation": "pass_at_1",
+        "fastAggregation": "mean_duration_seconds",
+        "cheapAggregation": "mean_cost_usd"
+      }
+    },
+    {
+      "id": "deepswe:config:mini_swe_agent_gpt_5_5_xhigh",
+      "creator": "OpenAI",
+      "displayName": "GPT-5.5 (xhigh)",
+      "checkpoint": "gpt-5-5",
+      "quantization": null,
+      "reasoning": {
+        "label": "xhigh"
+      },
+      "metrics": {
+        "smart": 0.6703539823008849,
+        "fast": 1806.3251869889382,
+        "cheap": 7.226236674778761
+      },
+      "aliases": [
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "openai.gpt-5.5",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "azure-openai-responses",
+          "modelId": "gpt-5.5",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "cloudflare-ai-gateway",
+          "modelId": "gpt-5.5",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "github-copilot",
+          "modelId": "gpt-5.5",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openai",
+          "modelId": "gpt-5.5",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openai-codex",
+          "modelId": "gpt-5.5",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "opencode",
+          "modelId": "gpt-5.5",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "openai/gpt-5.5",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "openai/gpt-5.5:batch",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "vercel-ai-gateway",
+          "modelId": "openai/gpt-5.5",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        }
+      ],
+      "provenance": {
+        "source": "DeepSWE",
+        "sourceConfig": "mini_swe_agent_gpt_5_5_xhigh",
+        "sourceModel": "gpt-5-5",
+        "sourceProvider": "openai",
+        "harness": "mini-swe-agent",
+        "attempted": 452,
+        "passed": 303,
+        "tasksAttempted": 113,
+        "runs": 4,
+        "smartConfidenceInterval95": [
+          0.6056975188917963,
+          0.7350104457099735
+        ],
+        "smartAggregation": "pass_at_1",
+        "fastAggregation": "mean_duration_seconds",
+        "cheapAggregation": "mean_cost_usd"
+      }
+    },
+    {
+      "id": "deepswe:config:mini_swe_agent_gpt_5_6_luna_high",
+      "creator": "OpenAI",
+      "displayName": "GPT-5.6 Luna (high)",
+      "checkpoint": "gpt-5-6-luna",
+      "quantization": null,
+      "reasoning": {
+        "label": "high"
+      },
+      "metrics": {
+        "smart": 0.4424778761061947,
+        "fast": 473.83880740929203,
+        "cheap": 0.7779007499999999
+      },
+      "aliases": [
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "global.openai.gpt-5.6-luna",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "openai.gpt-5.6-luna",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "azure-openai-responses",
+          "modelId": "gpt-5.6-luna",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "cloudflare-ai-gateway",
+          "modelId": "gpt-5.6-luna",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "github-copilot",
+          "modelId": "gpt-5.6-luna",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openai",
+          "modelId": "gpt-5.6-luna",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openai-codex",
+          "modelId": "gpt-5.6-luna",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "opencode",
+          "modelId": "gpt-5.6-luna",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "opencode-go",
+          "modelId": "gpt-5.6-luna",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "openai/gpt-5.6-luna",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "openai/gpt-5.6-luna:batch",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "vercel-ai-gateway",
+          "modelId": "openai/gpt-5.6-luna",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        }
+      ],
+      "provenance": {
+        "source": "DeepSWE",
+        "sourceConfig": "mini_swe_agent_gpt_5_6_luna_high",
+        "sourceModel": "gpt-5-6-luna",
+        "sourceProvider": "openai",
+        "harness": "mini-swe-agent",
+        "attempted": 452,
+        "passed": 200,
+        "tasksAttempted": 113,
+        "runs": 4,
+        "smartConfidenceInterval95": [
+          0.4132822036270294,
+          0.47167354858536004
+        ],
+        "smartAggregation": "pass_at_1",
+        "fastAggregation": "mean_duration_seconds",
+        "cheapAggregation": "mean_cost_usd"
+      }
+    },
+    {
+      "id": "deepswe:config:mini_swe_agent_gpt_5_6_luna_low",
+      "creator": "OpenAI",
+      "displayName": "GPT-5.6 Luna (low)",
+      "checkpoint": "gpt-5-6-luna",
+      "quantization": null,
+      "reasoning": {
+        "label": "low"
+      },
+      "metrics": {
+        "smart": 0.015486725663716814,
+        "fast": 77.14656007522123,
+        "cheap": 0.07240623938053097
+      },
+      "aliases": [
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "global.openai.gpt-5.6-luna",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "openai.gpt-5.6-luna",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "azure-openai-responses",
+          "modelId": "gpt-5.6-luna",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "cloudflare-ai-gateway",
+          "modelId": "gpt-5.6-luna",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "github-copilot",
+          "modelId": "gpt-5.6-luna",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openai",
+          "modelId": "gpt-5.6-luna",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openai-codex",
+          "modelId": "gpt-5.6-luna",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "opencode",
+          "modelId": "gpt-5.6-luna",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "opencode-go",
+          "modelId": "gpt-5.6-luna",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "openai/gpt-5.6-luna",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "openai/gpt-5.6-luna:batch",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "vercel-ai-gateway",
+          "modelId": "openai/gpt-5.6-luna",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        }
+      ],
+      "provenance": {
+        "source": "DeepSWE",
+        "sourceConfig": "mini_swe_agent_gpt_5_6_luna_low",
+        "sourceModel": "gpt-5-6-luna",
+        "sourceProvider": "openai",
+        "harness": "mini-swe-agent",
+        "attempted": 452,
+        "passed": 7,
+        "tasksAttempted": 113,
+        "runs": 4,
+        "smartConfidenceInterval95": [
+          0.0071835281016603,
+          0.023789923225773328
+        ],
+        "smartAggregation": "pass_at_1",
+        "fastAggregation": "mean_duration_seconds",
+        "cheapAggregation": "mean_cost_usd"
+      }
+    },
+    {
+      "id": "deepswe:config:mini_swe_agent_gpt_5_6_luna_max",
+      "creator": "OpenAI",
+      "displayName": "GPT-5.6 Luna (max)",
+      "checkpoint": "gpt-5-6-luna",
+      "quantization": null,
+      "reasoning": {
+        "label": "max"
+      },
+      "metrics": {
+        "smart": 0.671875,
+        "fast": 1122.9470243995536,
+        "cheap": 3.028116810267857
+      },
+      "aliases": [
+        {
+          "provider": "azure-openai-responses",
+          "modelId": "gpt-5.6-luna",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "cloudflare-ai-gateway",
+          "modelId": "gpt-5.6-luna",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "github-copilot",
+          "modelId": "gpt-5.6-luna",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openai",
+          "modelId": "gpt-5.6-luna",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openai-codex",
+          "modelId": "gpt-5.6-luna",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "opencode",
+          "modelId": "gpt-5.6-luna",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "opencode-go",
+          "modelId": "gpt-5.6-luna",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "openai/gpt-5.6-luna",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "openai/gpt-5.6-luna:batch",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        }
+      ],
+      "provenance": {
+        "source": "DeepSWE",
+        "sourceConfig": "mini_swe_agent_gpt_5_6_luna_max",
+        "sourceModel": "gpt-5-6-luna",
+        "sourceProvider": "openai",
+        "harness": "mini-swe-agent",
+        "attempted": 448,
+        "passed": 301,
+        "tasksAttempted": 113,
+        "runs": 4,
+        "smartConfidenceInterval95": [
+          0.6319549876432895,
+          0.7117950123567105
+        ],
+        "smartAggregation": "pass_at_1",
+        "fastAggregation": "mean_duration_seconds",
+        "cheapAggregation": "mean_cost_usd"
+      }
+    },
+    {
+      "id": "deepswe:config:mini_swe_agent_gpt_5_6_luna_medium",
+      "creator": "OpenAI",
+      "displayName": "GPT-5.6 Luna (medium)",
+      "checkpoint": "gpt-5-6-luna",
+      "quantization": null,
+      "reasoning": {
+        "label": "medium"
+      },
+      "metrics": {
+        "smart": 0.11283185840707964,
+        "fast": 181.5252541438053,
+        "cheap": 0.21630978982300886
+      },
+      "aliases": [
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "global.openai.gpt-5.6-luna",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "openai.gpt-5.6-luna",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "azure-openai-responses",
+          "modelId": "gpt-5.6-luna",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "cloudflare-ai-gateway",
+          "modelId": "gpt-5.6-luna",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "github-copilot",
+          "modelId": "gpt-5.6-luna",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openai",
+          "modelId": "gpt-5.6-luna",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openai-codex",
+          "modelId": "gpt-5.6-luna",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "opencode",
+          "modelId": "gpt-5.6-luna",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "opencode-go",
+          "modelId": "gpt-5.6-luna",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "openai/gpt-5.6-luna",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "openai/gpt-5.6-luna:batch",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "vercel-ai-gateway",
+          "modelId": "openai/gpt-5.6-luna",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        }
+      ],
+      "provenance": {
+        "source": "DeepSWE",
+        "sourceConfig": "mini_swe_agent_gpt_5_6_luna_medium",
+        "sourceModel": "gpt-5-6-luna",
+        "sourceProvider": "openai",
+        "harness": "mini-swe-agent",
+        "attempted": 452,
+        "passed": 51,
+        "tasksAttempted": 113,
+        "runs": 4,
+        "smartConfidenceInterval95": [
+          0.10452866084502313,
+          0.12113505596913615
+        ],
+        "smartAggregation": "pass_at_1",
+        "fastAggregation": "mean_duration_seconds",
+        "cheapAggregation": "mean_cost_usd"
+      }
+    },
+    {
+      "id": "deepswe:config:mini_swe_agent_gpt_5_6_luna_xhigh",
+      "creator": "OpenAI",
+      "displayName": "GPT-5.6 Luna (xhigh)",
+      "checkpoint": "gpt-5-6-luna",
+      "quantization": null,
+      "reasoning": {
+        "label": "xhigh"
+      },
+      "metrics": {
+        "smart": 0.5685840707964602,
+        "fast": 731.6846703871681,
+        "cheap": 1.5356192685840708
+      },
+      "aliases": [
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "global.openai.gpt-5.6-luna",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "openai.gpt-5.6-luna",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "azure-openai-responses",
+          "modelId": "gpt-5.6-luna",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "cloudflare-ai-gateway",
+          "modelId": "gpt-5.6-luna",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "github-copilot",
+          "modelId": "gpt-5.6-luna",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openai",
+          "modelId": "gpt-5.6-luna",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openai-codex",
+          "modelId": "gpt-5.6-luna",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "opencode",
+          "modelId": "gpt-5.6-luna",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "opencode-go",
+          "modelId": "gpt-5.6-luna",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "openai/gpt-5.6-luna",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "openai/gpt-5.6-luna:batch",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "vercel-ai-gateway",
+          "modelId": "openai/gpt-5.6-luna",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        }
+      ],
+      "provenance": {
+        "source": "DeepSWE",
+        "sourceConfig": "mini_swe_agent_gpt_5_6_luna_xhigh",
+        "sourceModel": "gpt-5-6-luna",
+        "sourceProvider": "openai",
+        "harness": "mini-swe-agent",
+        "attempted": 452,
+        "passed": 257,
+        "tasksAttempted": 113,
+        "runs": 4,
+        "smartConfidenceInterval95": [
+          0.5469030532683623,
+          0.5902650883245582
+        ],
+        "smartAggregation": "pass_at_1",
+        "fastAggregation": "mean_duration_seconds",
+        "cheapAggregation": "mean_cost_usd"
+      }
+    },
+    {
+      "id": "deepswe:config:mini_swe_agent_gpt_5_6_sol_high",
+      "creator": "OpenAI",
+      "displayName": "GPT-5.6 Sol (high)",
+      "checkpoint": "gpt-5-6-sol",
+      "quantization": null,
+      "reasoning": {
+        "label": "high"
+      },
+      "metrics": {
+        "smart": 0.6940133037694013,
+        "fast": 594.230510789357,
+        "cheap": 3.4698331108647453
+      },
+      "aliases": [
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "global.openai.gpt-5.6-sol",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "openai.gpt-5.6-sol",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "azure-openai-responses",
+          "modelId": "gpt-5.6-sol",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "cloudflare-ai-gateway",
+          "modelId": "gpt-5.6-sol",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "github-copilot",
+          "modelId": "gpt-5.6-sol",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openai",
+          "modelId": "gpt-5.6-sol",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openai-codex",
+          "modelId": "gpt-5.6-sol",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "opencode",
+          "modelId": "gpt-5.6-sol",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "openai/gpt-5.6-sol",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "openai/gpt-5.6-sol:batch",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "vercel-ai-gateway",
+          "modelId": "openai/gpt-5.6-sol",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        }
+      ],
+      "provenance": {
+        "source": "DeepSWE",
+        "sourceConfig": "mini_swe_agent_gpt_5_6_sol_high",
+        "sourceModel": "gpt-5-6-sol",
+        "sourceProvider": "openai",
+        "harness": "mini-swe-agent",
+        "attempted": 451,
+        "passed": 313,
+        "tasksAttempted": 113,
+        "runs": 4,
+        "smartConfidenceInterval95": [
+          0.679691851565629,
+          0.7083347559731736
+        ],
+        "smartAggregation": "pass_at_1",
+        "fastAggregation": "mean_duration_seconds",
+        "cheapAggregation": "mean_cost_usd"
+      }
+    },
+    {
+      "id": "deepswe:config:mini_swe_agent_gpt_5_6_sol_low",
+      "creator": "OpenAI",
+      "displayName": "GPT-5.6 Sol (low)",
+      "checkpoint": "gpt-5-6-sol",
+      "quantization": null,
+      "reasoning": {
+        "label": "low"
+      },
+      "metrics": {
+        "smart": 0.45353982300884954,
+        "fast": 262.2510164579646,
+        "cheap": 1.0742664646017699
+      },
+      "aliases": [
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "global.openai.gpt-5.6-sol",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "openai.gpt-5.6-sol",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "azure-openai-responses",
+          "modelId": "gpt-5.6-sol",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "cloudflare-ai-gateway",
+          "modelId": "gpt-5.6-sol",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "github-copilot",
+          "modelId": "gpt-5.6-sol",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openai",
+          "modelId": "gpt-5.6-sol",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openai-codex",
+          "modelId": "gpt-5.6-sol",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "opencode",
+          "modelId": "gpt-5.6-sol",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "openai/gpt-5.6-sol",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "openai/gpt-5.6-sol:batch",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "vercel-ai-gateway",
+          "modelId": "openai/gpt-5.6-sol",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        }
+      ],
+      "provenance": {
+        "source": "DeepSWE",
+        "sourceConfig": "mini_swe_agent_gpt_5_6_sol_low",
+        "sourceModel": "gpt-5-6-sol",
+        "sourceProvider": "openai",
+        "harness": "mini-swe-agent",
+        "attempted": 452,
+        "passed": 205,
+        "tasksAttempted": 113,
+        "runs": 4,
+        "smartConfidenceInterval95": [
+          0.42965787629426033,
+          0.47742176972343875
+        ],
+        "smartAggregation": "pass_at_1",
+        "fastAggregation": "mean_duration_seconds",
+        "cheapAggregation": "mean_cost_usd"
+      }
+    },
+    {
+      "id": "deepswe:config:mini_swe_agent_gpt_5_6_sol_max",
+      "creator": "OpenAI",
+      "displayName": "GPT-5.6 Sol (max)",
+      "checkpoint": "gpt-5-6-sol",
+      "quantization": null,
+      "reasoning": {
+        "label": "max"
+      },
+      "metrics": {
+        "smart": 0.7266666666666667,
+        "fast": 1128.624910331111,
+        "cheap": 8.386436346666667
+      },
+      "aliases": [
+        {
+          "provider": "azure-openai-responses",
+          "modelId": "gpt-5.6-sol",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "cloudflare-ai-gateway",
+          "modelId": "gpt-5.6-sol",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "github-copilot",
+          "modelId": "gpt-5.6-sol",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openai",
+          "modelId": "gpt-5.6-sol",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openai-codex",
+          "modelId": "gpt-5.6-sol",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "opencode",
+          "modelId": "gpt-5.6-sol",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "openai/gpt-5.6-sol",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "openai/gpt-5.6-sol:batch",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        }
+      ],
+      "provenance": {
+        "source": "DeepSWE",
+        "sourceConfig": "mini_swe_agent_gpt_5_6_sol_max",
+        "sourceModel": "gpt-5-6-sol",
+        "sourceProvider": "openai",
+        "harness": "mini-swe-agent",
+        "attempted": 450,
+        "passed": 327,
+        "tasksAttempted": 113,
+        "runs": 4,
+        "smartConfidenceInterval95": [
+          0.6983684441682949,
+          0.7549648891650385
+        ],
+        "smartAggregation": "pass_at_1",
+        "fastAggregation": "mean_duration_seconds",
+        "cheapAggregation": "mean_cost_usd"
+      }
+    },
+    {
+      "id": "deepswe:config:mini_swe_agent_gpt_5_6_sol_medium",
+      "creator": "OpenAI",
+      "displayName": "GPT-5.6 Sol (medium)",
+      "checkpoint": "gpt-5-6-sol",
+      "quantization": null,
+      "reasoning": {
+        "label": "medium"
+      },
+      "metrics": {
+        "smart": 0.6106194690265486,
+        "fast": 423.3752944181416,
+        "cheap": 1.8620318075221238
+      },
+      "aliases": [
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "global.openai.gpt-5.6-sol",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "openai.gpt-5.6-sol",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "azure-openai-responses",
+          "modelId": "gpt-5.6-sol",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "cloudflare-ai-gateway",
+          "modelId": "gpt-5.6-sol",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "github-copilot",
+          "modelId": "gpt-5.6-sol",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openai",
+          "modelId": "gpt-5.6-sol",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openai-codex",
+          "modelId": "gpt-5.6-sol",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "opencode",
+          "modelId": "gpt-5.6-sol",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "openai/gpt-5.6-sol",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "openai/gpt-5.6-sol:batch",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "vercel-ai-gateway",
+          "modelId": "openai/gpt-5.6-sol",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        }
+      ],
+      "provenance": {
+        "source": "DeepSWE",
+        "sourceConfig": "mini_swe_agent_gpt_5_6_sol_medium",
+        "sourceModel": "gpt-5-6-sol",
+        "sourceProvider": "openai",
+        "harness": "mini-swe-agent",
+        "attempted": 452,
+        "passed": 276,
+        "tasksAttempted": 113,
+        "runs": 4,
+        "smartConfidenceInterval95": [
+          0.5947858925334765,
+          0.6264530455196208
+        ],
+        "smartAggregation": "pass_at_1",
+        "fastAggregation": "mean_duration_seconds",
+        "cheapAggregation": "mean_cost_usd"
+      }
+    },
+    {
+      "id": "deepswe:config:mini_swe_agent_gpt_5_6_sol_xhigh",
+      "creator": "OpenAI",
+      "displayName": "GPT-5.6 Sol (xhigh)",
+      "checkpoint": "gpt-5-6-sol",
+      "quantization": null,
+      "reasoning": {
+        "label": "xhigh"
+      },
+      "metrics": {
+        "smart": 0.7073170731707317,
+        "fast": 800.5459875388026,
+        "cheap": 4.703663860310422
+      },
+      "aliases": [
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "global.openai.gpt-5.6-sol",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "openai.gpt-5.6-sol",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "azure-openai-responses",
+          "modelId": "gpt-5.6-sol",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "cloudflare-ai-gateway",
+          "modelId": "gpt-5.6-sol",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "github-copilot",
+          "modelId": "gpt-5.6-sol",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openai",
+          "modelId": "gpt-5.6-sol",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openai-codex",
+          "modelId": "gpt-5.6-sol",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "opencode",
+          "modelId": "gpt-5.6-sol",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "openai/gpt-5.6-sol",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "openai/gpt-5.6-sol:batch",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "vercel-ai-gateway",
+          "modelId": "openai/gpt-5.6-sol",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        }
+      ],
+      "provenance": {
+        "source": "DeepSWE",
+        "sourceConfig": "mini_swe_agent_gpt_5_6_sol_xhigh",
+        "sourceModel": "gpt-5-6-sol",
+        "sourceProvider": "openai",
+        "harness": "mini-swe-agent",
+        "attempted": 451,
+        "passed": 319,
+        "tasksAttempted": 113,
+        "runs": 4,
+        "smartConfidenceInterval95": [
+          0.6991259559533886,
+          0.7155081903880748
+        ],
+        "smartAggregation": "pass_at_1",
+        "fastAggregation": "mean_duration_seconds",
+        "cheapAggregation": "mean_cost_usd"
+      }
+    },
+    {
+      "id": "deepswe:config:mini_swe_agent_gpt_5_6_terra_high",
+      "creator": "OpenAI",
+      "displayName": "GPT-5.6 Terra (high)",
+      "checkpoint": "gpt-5-6-terra",
+      "quantization": null,
+      "reasoning": {
+        "label": "high"
+      },
+      "metrics": {
+        "smart": 0.5376106194690266,
+        "fast": 364.2859819269911,
+        "cheap": 1.1343762765486725
+      },
+      "aliases": [
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "global.openai.gpt-5.6-terra",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "openai.gpt-5.6-terra",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "azure-openai-responses",
+          "modelId": "gpt-5.6-terra",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "cloudflare-ai-gateway",
+          "modelId": "gpt-5.6-terra",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "github-copilot",
+          "modelId": "gpt-5.6-terra",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openai",
+          "modelId": "gpt-5.6-terra",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openai-codex",
+          "modelId": "gpt-5.6-terra",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "opencode",
+          "modelId": "gpt-5.6-terra",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "openai/gpt-5.6-terra",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "openai/gpt-5.6-terra:batch",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "vercel-ai-gateway",
+          "modelId": "openai/gpt-5.6-terra",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        }
+      ],
+      "provenance": {
+        "source": "DeepSWE",
+        "sourceConfig": "mini_swe_agent_gpt_5_6_terra_high",
+        "sourceModel": "gpt-5-6-terra",
+        "sourceProvider": "openai",
+        "harness": "mini-swe-agent",
+        "attempted": 452,
+        "passed": 243,
+        "tasksAttempted": 113,
+        "runs": 4,
+        "smartConfidenceInterval95": [
+          0.49432091479689105,
+          0.5809003241411621
+        ],
+        "smartAggregation": "pass_at_1",
+        "fastAggregation": "mean_duration_seconds",
+        "cheapAggregation": "mean_cost_usd"
+      }
+    },
+    {
+      "id": "deepswe:config:mini_swe_agent_gpt_5_6_terra_low",
+      "creator": "OpenAI",
+      "displayName": "GPT-5.6 Terra (low)",
+      "checkpoint": "gpt-5-6-terra",
+      "quantization": null,
+      "reasoning": {
+        "label": "low"
+      },
+      "metrics": {
+        "smart": 0.24053452115812918,
+        "fast": 176.52513473942093,
+        "cheap": 0.4277452605790646
+      },
+      "aliases": [
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "global.openai.gpt-5.6-terra",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "openai.gpt-5.6-terra",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "azure-openai-responses",
+          "modelId": "gpt-5.6-terra",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "cloudflare-ai-gateway",
+          "modelId": "gpt-5.6-terra",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "github-copilot",
+          "modelId": "gpt-5.6-terra",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openai",
+          "modelId": "gpt-5.6-terra",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openai-codex",
+          "modelId": "gpt-5.6-terra",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "opencode",
+          "modelId": "gpt-5.6-terra",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "openai/gpt-5.6-terra",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "openai/gpt-5.6-terra:batch",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "vercel-ai-gateway",
+          "modelId": "openai/gpt-5.6-terra",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        }
+      ],
+      "provenance": {
+        "source": "DeepSWE",
+        "sourceConfig": "mini_swe_agent_gpt_5_6_terra_low",
+        "sourceModel": "gpt-5-6-terra",
+        "sourceProvider": "openai",
+        "harness": "mini-swe-agent",
+        "attempted": 449,
+        "passed": 108,
+        "tasksAttempted": 113,
+        "runs": 4,
+        "smartConfidenceInterval95": [
+          0.23276690748868134,
+          0.24830213482757701
+        ],
+        "smartAggregation": "pass_at_1",
+        "fastAggregation": "mean_duration_seconds",
+        "cheapAggregation": "mean_cost_usd"
+      }
+    },
+    {
+      "id": "deepswe:config:mini_swe_agent_gpt_5_6_terra_max",
+      "creator": "OpenAI",
+      "displayName": "GPT-5.6 Terra (max)",
+      "checkpoint": "gpt-5-6-terra",
+      "quantization": null,
+      "reasoning": {
+        "label": "max"
+      },
+      "metrics": {
+        "smart": 0.6962305986696231,
+        "fast": 1016.6698429312638,
+        "cheap": 4.945847263858093
+      },
+      "aliases": [
+        {
+          "provider": "azure-openai-responses",
+          "modelId": "gpt-5.6-terra",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "cloudflare-ai-gateway",
+          "modelId": "gpt-5.6-terra",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "github-copilot",
+          "modelId": "gpt-5.6-terra",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openai",
+          "modelId": "gpt-5.6-terra",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openai-codex",
+          "modelId": "gpt-5.6-terra",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "opencode",
+          "modelId": "gpt-5.6-terra",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "openai/gpt-5.6-terra",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "openai/gpt-5.6-terra:batch",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        }
+      ],
+      "provenance": {
+        "source": "DeepSWE",
+        "sourceConfig": "mini_swe_agent_gpt_5_6_terra_max",
+        "sourceModel": "gpt-5-6-terra",
+        "sourceProvider": "openai",
+        "harness": "mini-swe-agent",
+        "attempted": 451,
+        "passed": 314,
+        "tasksAttempted": 113,
+        "runs": 4,
+        "smartConfidenceInterval95": [
+          0.6706612091651647,
+          0.7217999881740815
+        ],
+        "smartAggregation": "pass_at_1",
+        "fastAggregation": "mean_duration_seconds",
+        "cheapAggregation": "mean_cost_usd"
+      }
+    },
+    {
+      "id": "deepswe:config:mini_swe_agent_gpt_5_6_terra_medium",
+      "creator": "OpenAI",
+      "displayName": "GPT-5.6 Terra (medium)",
+      "checkpoint": "gpt-5-6-terra",
+      "quantization": null,
+      "reasoning": {
+        "label": "medium"
+      },
+      "metrics": {
+        "smart": 0.3511111111111111,
+        "fast": 229.60274282444442,
+        "cheap": 0.5832493688888889
+      },
+      "aliases": [
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "global.openai.gpt-5.6-terra",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "openai.gpt-5.6-terra",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "azure-openai-responses",
+          "modelId": "gpt-5.6-terra",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "cloudflare-ai-gateway",
+          "modelId": "gpt-5.6-terra",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "github-copilot",
+          "modelId": "gpt-5.6-terra",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openai",
+          "modelId": "gpt-5.6-terra",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openai-codex",
+          "modelId": "gpt-5.6-terra",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "opencode",
+          "modelId": "gpt-5.6-terra",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "openai/gpt-5.6-terra",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "openai/gpt-5.6-terra:batch",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "vercel-ai-gateway",
+          "modelId": "openai/gpt-5.6-terra",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        }
+      ],
+      "provenance": {
+        "source": "DeepSWE",
+        "sourceConfig": "mini_swe_agent_gpt_5_6_terra_medium",
+        "sourceModel": "gpt-5-6-terra",
+        "sourceProvider": "openai",
+        "harness": "mini-swe-agent",
+        "attempted": 450,
+        "passed": 158,
+        "tasksAttempted": 113,
+        "runs": 4,
+        "smartConfidenceInterval95": [
+          0.3172914680770448,
+          0.3849307541451774
+        ],
+        "smartAggregation": "pass_at_1",
+        "fastAggregation": "mean_duration_seconds",
+        "cheapAggregation": "mean_cost_usd"
+      }
+    },
+    {
+      "id": "deepswe:config:mini_swe_agent_gpt_5_6_terra_xhigh",
+      "creator": "OpenAI",
+      "displayName": "GPT-5.6 Terra (xhigh)",
+      "checkpoint": "gpt-5-6-terra",
+      "quantization": null,
+      "reasoning": {
+        "label": "xhigh"
+      },
+      "metrics": {
+        "smart": 0.6017699115044248,
+        "fast": 584.0832282876107,
+        "cheap": 2.127191725663717
+      },
+      "aliases": [
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "global.openai.gpt-5.6-terra",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "amazon-bedrock",
+          "modelId": "openai.gpt-5.6-terra",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "azure-openai-responses",
+          "modelId": "gpt-5.6-terra",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "cloudflare-ai-gateway",
+          "modelId": "gpt-5.6-terra",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "github-copilot",
+          "modelId": "gpt-5.6-terra",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openai",
+          "modelId": "gpt-5.6-terra",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openai-codex",
+          "modelId": "gpt-5.6-terra",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "opencode",
+          "modelId": "gpt-5.6-terra",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "openai/gpt-5.6-terra",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "openai/gpt-5.6-terra:batch",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "vercel-ai-gateway",
+          "modelId": "openai/gpt-5.6-terra",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        }
+      ],
+      "provenance": {
+        "source": "DeepSWE",
+        "sourceConfig": "mini_swe_agent_gpt_5_6_terra_xhigh",
+        "sourceModel": "gpt-5-6-terra",
+        "sourceProvider": "openai",
+        "harness": "mini-swe-agent",
+        "attempted": 452,
+        "passed": 272,
+        "tasksAttempted": 113,
+        "runs": 4,
+        "smartConfidenceInterval95": [
+          0.5805269394851535,
+          0.6230128835236961
+        ],
+        "smartAggregation": "pass_at_1",
+        "fastAggregation": "mean_duration_seconds",
+        "cheapAggregation": "mean_cost_usd"
+      }
+    },
+    {
+      "id": "deepswe:config:mini_swe_agent_grok_4_5_high",
+      "creator": "xAI",
+      "displayName": "Grok 4.5 (high)",
+      "checkpoint": "grok-4-5",
+      "quantization": null,
+      "reasoning": {
+        "label": "high"
+      },
+      "metrics": {
+        "smart": 0.5376106194690266,
+        "fast": 484.7029359800885,
+        "cheap": 2.4157481725663716
+      },
+      "aliases": [
+        {
+          "provider": "github-copilot",
+          "modelId": "grok-4.5",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "opencode",
+          "modelId": "grok-4.5",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "opencode-go",
+          "modelId": "grok-4.5",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "x-ai/grok-4.5",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "vercel-ai-gateway",
+          "modelId": "spacexai/grok-4.5",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "vercel-ai-gateway",
+          "modelId": "xai/grok-4.5",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "xai",
+          "modelId": "grok-4.5",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        }
+      ],
+      "provenance": {
+        "source": "DeepSWE",
+        "sourceConfig": "mini_swe_agent_grok_4_5_high",
+        "sourceModel": "grok-4-5",
+        "sourceProvider": "xai",
+        "harness": "mini-swe-agent",
+        "attempted": 452,
+        "passed": 243,
+        "tasksAttempted": 113,
+        "runs": 4,
+        "smartConfidenceInterval95": [
+          0.5148025737402474,
+          0.5604186651978057
+        ],
+        "smartAggregation": "pass_at_1",
+        "fastAggregation": "mean_duration_seconds",
+        "cheapAggregation": "mean_cost_usd"
+      }
+    },
+    {
+      "id": "deepswe:config:mini_swe_agent_grok_4_6_high",
+      "creator": "xAI",
+      "displayName": "Grok 4.6 (high)",
+      "checkpoint": "grok-4-6",
+      "quantization": null,
+      "reasoning": {
+        "label": "high"
+      },
+      "metrics": {
+        "smart": 0.6518847006651884,
+        "fast": 1083.6365204833703,
+        "cheap": 4.3848732239467845
+      },
+      "aliases": [
+        {
+          "provider": "github-copilot",
+          "modelId": "grok-4.6",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "opencode",
+          "modelId": "grok-4.6",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "opencode-go",
+          "modelId": "grok-4.6",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "x-ai/grok-4.6",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "vercel-ai-gateway",
+          "modelId": "spacexai/grok-4.6",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "vercel-ai-gateway",
+          "modelId": "xai/grok-4.6",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "xai",
+          "modelId": "grok-4.6",
+          "piThinkingLevel": "high",
+          "equivalence": "verified"
+        }
+      ],
+      "provenance": {
+        "source": "DeepSWE",
+        "sourceConfig": "mini_swe_agent_grok_4_6_high",
+        "sourceModel": "grok-4-6",
+        "sourceProvider": "xai",
+        "harness": "mini-swe-agent",
+        "attempted": 451,
+        "passed": 294,
+        "tasksAttempted": 113,
+        "runs": 4,
+        "smartConfidenceInterval95": [
+          0.6365486924786155,
+          0.6672207088517614
+        ],
+        "smartAggregation": "pass_at_1",
+        "fastAggregation": "mean_duration_seconds",
+        "cheapAggregation": "mean_cost_usd"
+      }
+    },
+    {
+      "id": "deepswe:config:mini_swe_agent_grok_4_6_low",
+      "creator": "xAI",
+      "displayName": "Grok 4.6 (low)",
+      "checkpoint": "grok-4-6",
+      "quantization": null,
+      "reasoning": {
+        "label": "low"
+      },
+      "metrics": {
+        "smart": 0.41648106904231624,
+        "fast": 325.05958362360803,
+        "cheap": 1.0423604231625836
+      },
+      "aliases": [
+        {
+          "provider": "github-copilot",
+          "modelId": "grok-4.6",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "opencode",
+          "modelId": "grok-4.6",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "opencode-go",
+          "modelId": "grok-4.6",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "x-ai/grok-4.6",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "vercel-ai-gateway",
+          "modelId": "spacexai/grok-4.6",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "vercel-ai-gateway",
+          "modelId": "xai/grok-4.6",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "xai",
+          "modelId": "grok-4.6",
+          "piThinkingLevel": "low",
+          "equivalence": "verified"
+        }
+      ],
+      "provenance": {
+        "source": "DeepSWE",
+        "sourceConfig": "mini_swe_agent_grok_4_6_low",
+        "sourceModel": "grok-4-6",
+        "sourceProvider": "xai",
+        "harness": "mini-swe-agent",
+        "attempted": 449,
+        "passed": 187,
+        "tasksAttempted": 113,
+        "runs": 4,
+        "smartConfidenceInterval95": [
+          0.3932945513980172,
+          0.43966758668661526
+        ],
+        "smartAggregation": "pass_at_1",
+        "fastAggregation": "mean_duration_seconds",
+        "cheapAggregation": "mean_cost_usd"
+      }
+    },
+    {
+      "id": "deepswe:config:mini_swe_agent_grok_4_6_medium",
+      "creator": "xAI",
+      "displayName": "Grok 4.6 (medium)",
+      "checkpoint": "grok-4-6",
+      "quantization": null,
+      "reasoning": {
+        "label": "medium"
+      },
+      "metrics": {
+        "smart": 0.6747787610619469,
+        "fast": 895.5380579646018,
+        "cheap": 3.4489837522123894
+      },
+      "aliases": [
+        {
+          "provider": "github-copilot",
+          "modelId": "grok-4.6",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "opencode",
+          "modelId": "grok-4.6",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "opencode-go",
+          "modelId": "grok-4.6",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "x-ai/grok-4.6",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "vercel-ai-gateway",
+          "modelId": "spacexai/grok-4.6",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "vercel-ai-gateway",
+          "modelId": "xai/grok-4.6",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "xai",
+          "modelId": "grok-4.6",
+          "piThinkingLevel": "medium",
+          "equivalence": "verified"
+        }
+      ],
+      "provenance": {
+        "source": "DeepSWE",
+        "sourceConfig": "mini_swe_agent_grok_4_6_medium",
+        "sourceModel": "grok-4-6",
+        "sourceProvider": "xai",
+        "harness": "mini-swe-agent",
+        "attempted": 452,
+        "passed": 305,
+        "tasksAttempted": 113,
+        "runs": 4,
+        "smartConfidenceInterval95": [
+          0.6519707153331677,
+          0.697586806790726
+        ],
+        "smartAggregation": "pass_at_1",
+        "fastAggregation": "mean_duration_seconds",
+        "cheapAggregation": "mean_cost_usd"
+      }
+    },
+    {
+      "id": "deepswe:config:mini_swe_agent_grok_4_6_xhigh",
+      "creator": "xAI",
+      "displayName": "Grok 4.6 (xhigh)",
+      "checkpoint": "grok-4-6",
+      "quantization": null,
+      "reasoning": {
+        "label": "xhigh"
+      },
+      "metrics": {
+        "smart": 0.6674057649667405,
+        "fast": 1272.3478393858093,
+        "cheap": 5.497668745011087
+      },
+      "aliases": [
+        {
+          "provider": "github-copilot",
+          "modelId": "grok-4.6",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "opencode",
+          "modelId": "grok-4.6",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "opencode-go",
+          "modelId": "grok-4.6",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "x-ai/grok-4.6",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "xai",
+          "modelId": "grok-4.6",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        }
+      ],
+      "provenance": {
+        "source": "DeepSWE",
+        "sourceConfig": "mini_swe_agent_grok_4_6_xhigh",
+        "sourceModel": "grok-4-6",
+        "sourceProvider": "xai",
+        "harness": "mini-swe-agent",
+        "attempted": 451,
+        "passed": 301,
+        "tasksAttempted": 113,
+        "runs": 4,
+        "smartConfidenceInterval95": [
+          0.64564892272269,
+          0.689162607210791
+        ],
+        "smartAggregation": "pass_at_1",
+        "fastAggregation": "mean_duration_seconds",
+        "cheapAggregation": "mean_cost_usd"
+      }
+    },
+    {
+      "id": "deepswe:config:mini_swe_agent_kimi_k2_7_code_default",
+      "creator": "Moonshot AI",
+      "displayName": "Kimi K2.7 Code",
+      "checkpoint": "kimi-k2-7-code",
+      "quantization": null,
+      "reasoning": null,
+      "metrics": {
+        "smart": 0.3053097345132743,
+        "fast": 2163.7950712809734,
+        "cheap": 2.815536243274336
+      },
+      "aliases": [],
+      "provenance": {
+        "source": "DeepSWE",
+        "sourceConfig": "mini_swe_agent_kimi_k2_7_code_default",
+        "sourceModel": "kimi-k2-7-code",
+        "sourceProvider": "openrouter",
+        "harness": "mini-swe-agent",
+        "attempted": 452,
+        "passed": 138,
+        "tasksAttempted": 113,
+        "runs": 4,
+        "smartConfidenceInterval95": [
+          0.3003027179908134,
+          0.31031675103573525
+        ],
+        "smartAggregation": "pass_at_1",
+        "fastAggregation": "mean_duration_seconds",
+        "cheapAggregation": "mean_cost_usd"
+      }
+    },
+    {
+      "id": "deepswe:config:mini_swe_agent_kimi_k3_max",
+      "creator": "Moonshot AI",
+      "displayName": "Kimi K3 (max)",
+      "checkpoint": "kimi-k3",
+      "quantization": null,
+      "reasoning": {
+        "label": "max"
+      },
+      "metrics": {
+        "smart": 0.6851441241685144,
+        "fast": 4541.447376412417,
+        "cheap": 4.654682129933482
+      },
+      "aliases": [
+        {
+          "provider": "baseten",
+          "modelId": "moonshotai/Kimi-K3",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "fireworks",
+          "modelId": "accounts/fireworks/models/kimi-k3",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "huggingface",
+          "modelId": "moonshotai/Kimi-K3",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "moonshotai",
+          "modelId": "kimi-k3",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "moonshotai-cn",
+          "modelId": "kimi-k3",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "opencode",
+          "modelId": "kimi-k3",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "opencode-go",
+          "modelId": "kimi-k3",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "moonshotai/kimi-k3",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "moonshotai/kimi-k3:batch",
+          "piThinkingLevel": "max",
+          "equivalence": "verified"
+        }
+      ],
+      "provenance": {
+        "source": "DeepSWE",
+        "sourceConfig": "mini_swe_agent_kimi_k3_max",
+        "sourceModel": "kimi-k3",
+        "sourceProvider": "moonshot",
+        "harness": "mini-swe-agent",
+        "attempted": 451,
+        "passed": 309,
+        "tasksAttempted": 113,
+        "runs": 4,
+        "smartConfidenceInterval95": [
+          0.6397739833756912,
+          0.7305142649613376
+        ],
+        "smartAggregation": "pass_at_1",
+        "fastAggregation": "mean_duration_seconds",
+        "cheapAggregation": "mean_cost_usd"
+      }
+    },
+    {
+      "id": "deepswe:config:mini_swe_agent_muse_spark_1_1_xhigh",
+      "creator": "Meta",
+      "displayName": "Muse Spark 1.1 (xhigh)",
+      "checkpoint": "muse-spark-1-1",
+      "quantization": null,
+      "reasoning": {
+        "label": "xhigh"
+      },
+      "metrics": {
+        "smart": 0.5331858407079646,
+        "fast": 897.5133296747788,
+        "cheap": 2.361142644469026
+      },
+      "aliases": [
+        {
+          "provider": "openrouter",
+          "modelId": "meta/muse-spark-1.1",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        }
+      ],
+      "provenance": {
+        "source": "DeepSWE",
+        "sourceConfig": "mini_swe_agent_muse_spark_1_1_xhigh",
+        "sourceModel": "muse-spark-1-1",
+        "sourceProvider": "openai",
+        "harness": "mini-swe-agent",
+        "attempted": 452,
+        "passed": 241,
+        "tasksAttempted": 113,
+        "runs": 4,
+        "smartConfidenceInterval95": [
+          0.5028324161686275,
+          0.5635392652473017
+        ],
+        "smartAggregation": "pass_at_1",
+        "fastAggregation": "mean_duration_seconds",
+        "cheapAggregation": "mean_cost_usd"
+      }
+    },
+    {
+      "id": "deepswe:config:mini_swe_agent_muse_spark_1_2_xhigh",
+      "creator": "Meta",
+      "displayName": "Muse Spark 1.2 (xhigh)",
+      "checkpoint": "muse-spark-1-2",
+      "quantization": null,
+      "reasoning": {
+        "label": "xhigh"
+      },
+      "metrics": {
+        "smart": 0.5486725663716814,
+        "fast": 927.8692516349557,
+        "cheap": 3.6955048180309733
+      },
+      "aliases": [
+        {
+          "provider": "opencode",
+          "modelId": "muse-spark-1.2",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "meta/muse-spark-1.2",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        }
+      ],
+      "provenance": {
+        "source": "DeepSWE",
+        "sourceConfig": "mini_swe_agent_muse_spark_1_2_xhigh",
+        "sourceModel": "muse-spark-1-2",
+        "sourceProvider": "openrouter",
+        "harness": "mini-swe-agent",
+        "attempted": 452,
+        "passed": 248,
+        "tasksAttempted": 113,
+        "runs": 4,
+        "smartConfidenceInterval95": [
+          0.5274295943524101,
+          0.5699155383909527
+        ],
+        "smartAggregation": "pass_at_1",
+        "fastAggregation": "mean_duration_seconds",
+        "cheapAggregation": "mean_cost_usd"
+      }
+    },
+    {
+      "id": "deepswe:config:mini_swe_agent_qwen3_8_max_xhigh",
+      "creator": "Alibaba",
+      "displayName": "Qwen3.8 Max (xhigh)",
+      "checkpoint": "qwen3-8-max",
+      "quantization": null,
+      "reasoning": {
+        "label": "xhigh"
+      },
+      "metrics": {
+        "smart": 0.5746102449888641,
+        "fast": 2567.2746634654786,
+        "cheap": 3.7290646500445437
+      },
+      "aliases": [
+        {
+          "provider": "opencode-go",
+          "modelId": "qwen3.8-max",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "openrouter",
+          "modelId": "qwen/qwen3.8-max",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "qwen-token-plan",
+          "modelId": "qwen3.8-max",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "qwen-token-plan-cn",
+          "modelId": "qwen3.8-max",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        },
+        {
+          "provider": "qwen-token-plan-individual",
+          "modelId": "qwen3.8-max",
+          "piThinkingLevel": "xhigh",
+          "equivalence": "verified"
+        }
+      ],
+      "provenance": {
+        "source": "DeepSWE",
+        "sourceConfig": "mini_swe_agent_qwen3_8_max_xhigh",
+        "sourceModel": "qwen3-8-max",
+        "sourceProvider": "openrouter",
+        "harness": "mini-swe-agent",
+        "attempted": 449,
+        "passed": 258,
+        "tasksAttempted": 113,
+        "runs": 4,
+        "smartConfidenceInterval95": [
+          0.5479823182637887,
+          0.6012381717139396
+        ],
+        "smartAggregation": "pass_at_1",
+        "fastAggregation": "mean_duration_seconds",
+        "cheapAggregation": "mean_cost_usd"
+      }
+    }
+  ]
+}

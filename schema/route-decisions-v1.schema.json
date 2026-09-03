@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:ds-catalog-digest:route-decisions:v1",
+  "title": "Route Decision Registry",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "variants"],
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "variants": {
+      "type": "object",
+      "propertyNames": { "pattern": "^deepswe:config:.+" },
+      "additionalProperties": {
+        "type": "array",
+        "minItems": 1,
+        "items": { "$ref": "#/$defs/decision" }
+      }
+    }
+  },
+  "$defs": {
+    "route": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["provider", "modelId", "piThinkingLevel"],
+      "properties": {
+        "provider": { "type": "string", "minLength": 1 },
+        "modelId": { "type": "string", "minLength": 1 },
+        "piThinkingLevel": {
+          "enum": ["off", "minimal", "low", "medium", "high", "xhigh", "max"]
+        }
+      }
+    },
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "reference"],
+      "properties": {
+        "type": {
+          "enum": ["official-documentation", "upstream-weights", "provider-documentation", "pi-source", "legacy-manual-review"]
+        },
+        "reference": { "type": "string", "minLength": 1 }
+      }
+    },
+    "decision": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "outcome",
+        "route",
+        "reason",
+        "routeFingerprint",
+        "identityEvidence",
+        "invocationEvidence",
+        "note"
+      ],
+      "properties": {
+        "outcome": { "enum": ["accepted", "rejected"] },
+        "route": {
+          "oneOf": [
+            { "type": "null" },
+            { "$ref": "#/$defs/route" }
+          ]
+        },
+        "reason": {
+          "type": ["string", "null"],
+          "enum": [
+            null,
+            "missing_route",
+            "checkpoint_mismatch",
+            "effort_unknown",
+            "level_unsupported",
+            "modality_mismatch",
+            "smoke_test_failed"
+          ]
+        },
+        "routeFingerprint": { "type": ["string", "null"] },
+        "identityEvidence": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/evidence" }
+        },
+        "invocationEvidence": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/evidence" }
+        },
+        "note": { "type": "string" }
+      }
+    }
+  }
+}

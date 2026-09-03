@@ -1,0 +1,7 @@
+.env
+__pycache__/
+*.pyc
+node_modules/
+dist/
+pi-catalog/agent/auth.json
+pi-catalog/agent/models-store.json

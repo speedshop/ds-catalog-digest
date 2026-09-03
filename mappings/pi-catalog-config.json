@@ -1,0 +1,8 @@
+{
+  "schemaVersion": 1,
+  "piPackage": "@earendil-works/pi-coding-agent",
+  "piVersion": "0.84.2",
+  "remoteCatalogBaseUrl": "https://pi.dev",
+  "agentDir": "pi-catalog/agent",
+  "cwd": "pi-catalog/project"
+}
