@@ -55,6 +55,9 @@ jobs:
       - name: Build catalog and route artifacts
         run: python scripts/build_catalog.py --output-dir dist --pi-catalog dist/pi-model-catalog.json
 
+      - name: Check generated public-source boundary
+        run: python scripts/check_forbidden_source.py
+
       - name: Validate published contract
         run: python scripts/validate_catalog.py dist/model-selection-catalog.json dist/schema.json
 

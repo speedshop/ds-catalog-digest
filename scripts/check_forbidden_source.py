@@ -4,7 +4,7 @@
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-SKIP_PARTS = {".git", "node_modules", "dist", "__pycache__"}
+SKIP_PARTS = {".git", "node_modules", "__pycache__"}
 FORBIDDEN = (
     "artificial" + " analysis",
     "artificial" + "analysis",

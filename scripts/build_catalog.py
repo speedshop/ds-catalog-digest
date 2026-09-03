@@ -134,6 +134,7 @@ def build_catalog(leaderboard, manifest, pi_catalog, decisions, generated_at=Non
                 "source": "DeepSWE",
                 "datasetUrl": manifest["datasetUrl"],
                 "leaderboardUrl": manifest["leaderboardUrl"],
+                "trialsUrl": manifest["trialsUrl"],
                 "leaderboardSha256": manifest["leaderboardSha256"],
                 "trialsSha256": manifest["trialsSha256"],
                 "release": manifest["release"],

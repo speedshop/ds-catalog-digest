@@ -100,17 +100,18 @@ def candidate_queue(rows, pi_catalog, decisions, stale):
             for decision in decisions.get(source_id, [])
             if decision.get("route")
         }
+        stale_routes = stale_by_variant.get(source_id, [])
+        stale_keys = {(item["provider"], item["modelId"], row["reasoning_effort"]) for item in stale_routes}
         discovered = []
         for route in matching_routes(row, pi_catalog):
             key = (route["provider"], route["modelId"], row["reasoning_effort"])
-            if key not in existing_routes:
+            if key not in existing_routes or key in stale_keys:
                 discovered.append({
                     "provider": route["provider"],
                     "modelId": route["modelId"],
                     "piThinkingLevel": row["reasoning_effort"],
                     "routeFingerprint": route_fingerprint(route),
                 })
-        stale_routes = stale_by_variant.get(source_id, [])
         if not discovered and not stale_routes and existing_routes:
             continue
         reason = "route_changed" if stale_routes else "route_discovered" if discovered else "missing_route"

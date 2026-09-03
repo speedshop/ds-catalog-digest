@@ -5,7 +5,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 
-from route_mappings import canonical_model_id, compile_aliases, route_fingerprint, variant_id
+from route_mappings import candidate_queue, canonical_model_id, compile_aliases, route_fingerprint, variant_id
 
 
 class RouteMappingsTest(unittest.TestCase):
@@ -60,6 +60,20 @@ class RouteMappingsTest(unittest.TestCase):
         aliases, stale = compile_aliases([row], {"routes": [route]}, {variant_id(row): [decision]})
         self.assertEqual("verified", aliases[variant_id(row)][0]["equivalence"])
         self.assertEqual([], stale)
+
+    def test_stale_decision_proposes_current_fingerprint(self):
+        row = self.row()
+        route = self.route()
+        decision = {
+            "outcome": "accepted",
+            "route": {"provider": "openai", "modelId": "gpt-5.5", "piThinkingLevel": "low"},
+            "routeFingerprint": "sha256:stale",
+        }
+        decisions = {variant_id(row): [decision]}
+        _, stale = compile_aliases([row], {"routes": [route]}, decisions)
+        candidate = candidate_queue([row], {"routes": [route]}, decisions, stale)["candidates"][0]
+        self.assertEqual("route_changed", candidate["reason"])
+        self.assertEqual(route_fingerprint(route), candidate["routes"][0]["routeFingerprint"])
 
 
 if __name__ == "__main__":

@@ -37,6 +37,7 @@ class CatalogTest(unittest.TestCase):
             "release": "v1.1",
             "datasetUrl": "https://example.com/data",
             "leaderboardUrl": "https://example.com/leaderboard",
+            "trialsUrl": "https://example.com/trials",
             "leaderboardSha256": "a" * 64,
             "trialsSha256": "b" * 64,
             "methodologyUrl": "https://example.com/method",
@@ -49,6 +50,7 @@ class CatalogTest(unittest.TestCase):
         self.assertEqual({"smart": 0.5, "fast": 10.0, "cheap": 1.25}, variant["metrics"])
         self.assertEqual("deepswe:config:mini_swe_agent_gpt_5_5_low", variant["id"])
         self.assertEqual("openai", variant["provenance"]["sourceProvider"])
+        self.assertEqual("https://example.com/trials", catalog["catalog"]["provenance"]["trialsUrl"])
 
     def test_published_catalog_validates(self):
         schema = json.loads((ROOT / "schema/model-selection-catalog-v1.schema.json").read_text())
