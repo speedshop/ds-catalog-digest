@@ -67,7 +67,7 @@ class CatalogTest(unittest.TestCase):
         catalog = json.loads((ROOT / "catalog/model-selection-catalog.json").read_text())
         validator_class = validator_for(schema)
         validator_class(schema, format_checker=FormatChecker()).validate(catalog)
-        self.assertEqual(65, len(catalog["variants"]))
+        self.assertEqual(70, len(catalog["variants"]))
 
     def test_published_catalog_matches_deterministic_rebuild(self):
         catalog_path = ROOT / "catalog/model-selection-catalog.json"

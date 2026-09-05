@@ -43,6 +43,7 @@ MODEL_NAMES = {
     "gpt-5-6-luna": "GPT-5.6 Luna",
     "gpt-5-6-sol": "GPT-5.6 Sol",
     "gpt-5-6-terra": "GPT-5.6 Terra",
+    "gpt-6-astra": "GPT-6 Astra",
     "grok-4-5": "Grok 4.5",
     "grok-4-6": "Grok 4.6",
     "kimi-k2-7-code": "Kimi K2.7 Code",
