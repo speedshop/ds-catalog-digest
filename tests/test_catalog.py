@@ -9,6 +9,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 
 from build_catalog import build_catalog
+from route_mappings import load_decisions
 
 
 class CatalogTest(unittest.TestCase):
@@ -65,6 +66,46 @@ class CatalogTest(unittest.TestCase):
         catalog = json.loads((ROOT / "catalog/model-selection-catalog.json").read_text())
         Draft202012Validator(schema, format_checker=FormatChecker()).validate(catalog)
         self.assertEqual(65, len(catalog["variants"]))
+
+    def test_published_catalog_matches_deterministic_rebuild(self):
+        catalog_path = ROOT / "catalog/model-selection-catalog.json"
+        published = json.loads(catalog_path.read_text())
+        leaderboard = {
+            "generated_at": published["catalog"]["sourceUpdatedAt"],
+            "n_tasks_in_set": published["catalog"]["provenance"]["taskCount"],
+            "rows": [],
+        }
+        for variant in published["variants"]:
+            provenance = variant["provenance"]
+            leaderboard["rows"].append({
+                "config": provenance["sourceConfig"],
+                "model": provenance["sourceModel"],
+                "provider": provenance["sourceProvider"],
+                "harness": provenance["harness"],
+                "reasoning_effort": (variant.get("reasoning") or {}).get("label"),
+                "pass_at_1": variant["metrics"]["smart"],
+                "mean_duration_seconds": variant["metrics"]["fast"],
+                "mean_cost_usd": variant["metrics"]["cheap"],
+                "n_attempted": provenance["attempted"],
+                "n_passed": provenance["passed"],
+                "n_tasks_attempted": provenance["tasksAttempted"],
+                "n_runs": provenance["runs"],
+                "ci_lo": provenance["smartConfidenceInterval95"][0],
+                "ci_hi": provenance["smartConfidenceInterval95"][1],
+            })
+
+        manifest = json.loads((ROOT / "sources/deepswe-v1.1.json").read_text())
+        pi_catalog = json.loads((ROOT / "mappings/pi-model-catalog.json").read_text())
+        decisions = load_decisions(ROOT / "mappings/route-decisions.json")
+        rebuilt, _, _, _ = build_catalog(
+            leaderboard,
+            manifest,
+            pi_catalog,
+            decisions,
+            published["catalog"]["generatedAt"],
+        )
+        rebuilt_bytes = json.dumps(rebuilt, indent=2, sort_keys=False) + "\n"
+        self.assertEqual(catalog_path.read_text(), rebuilt_bytes)
 
 
 if __name__ == "__main__":
