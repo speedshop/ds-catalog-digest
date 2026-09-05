@@ -4,8 +4,8 @@
     "id": "deepswe-v1.1",
     "name": "DeepSWE v1.1",
     "version": "v1.1",
-    "generatedAt": "2026-09-03T06:41:09.777801Z",
-    "sourceUpdatedAt": "2026-09-02T15:18:19Z",
+    "generatedAt": "2026-09-05T23:52:36.870279Z",
+    "sourceUpdatedAt": "2026-09-03T22:24:37.984682+00:00",
     "distribution": {
       "classification": "redistributable",
       "termsUrl": "https://huggingface.co/datasets/datacurve/deep-swe-leaderboard",
@@ -37,11 +37,11 @@
       "datasetUrl": "https://huggingface.co/datasets/datacurve/deep-swe-leaderboard",
       "leaderboardUrl": "https://deepswe.datacurve.ai/artifacts/v1.1/leaderboard-live.json",
       "trialsUrl": "https://deepswe.datacurve.ai/artifacts/v1.1/trials.json",
-      "leaderboardSha256": "ddee8c4ce1bc8e92b642632e6a92e5ab6e7046bec5f9f7c03947556716828947",
-      "trialsSha256": "43025a77b75b6aad34a158ec8ac8bd63c030653b31e79f926fbb7c28ed93c346",
+      "leaderboardSha256": "005cbedb49f988ba3f0d9636300862ad7ace93ce1992b37faf9945fe5b383415",
+      "trialsSha256": "82ce1362e3a3e70aef67e3565849e3fea42861ab32900f45052cccb5675d51bf",
       "release": "v1.1",
       "license": "CC-BY-4.0",
-      "configurationCount": 65,
+      "configurationCount": 70,
       "taskCount": 113,
       "harnesses": [
         "mini-swe-agent"
@@ -6140,6 +6140,246 @@
         "smartConfidenceInterval95": [
           0.5805269394851535,
           0.6230128835236961
+        ],
+        "smartAggregation": "pass_at_1",
+        "fastAggregation": "mean_duration_seconds",
+        "cheapAggregation": "mean_cost_usd"
+      }
+    },
+    {
+      "id": "deepswe:config:mini_swe_agent_gpt_6_astra_high",
+      "creator": "OpenAI",
+      "displayName": "GPT-6 Astra (high)",
+      "checkpoint": "gpt-6-astra",
+      "quantization": null,
+      "reasoning": {
+        "label": "high"
+      },
+      "metrics": {
+        "smart": 0.7323008849557522,
+        "fast": 1038.6858407079646,
+        "cheap": 5.723721956194691
+      },
+      "metricOrigins": {
+        "smart": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "fast": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "cheap": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        }
+      },
+      "aliases": [],
+      "provenance": {
+        "source": "DeepSWE",
+        "sourceConfig": "mini_swe_agent_gpt_6_astra_high",
+        "sourceModel": "gpt-6-astra",
+        "sourceProvider": "openai",
+        "harness": "mini-swe-agent",
+        "attempted": 452,
+        "passed": 331,
+        "tasksAttempted": 113,
+        "runs": 4,
+        "smartConfidenceInterval95": [
+          0.6980659243770221,
+          0.7665358455344823
+        ],
+        "smartAggregation": "pass_at_1",
+        "fastAggregation": "mean_duration_seconds",
+        "cheapAggregation": "mean_cost_usd"
+      }
+    },
+    {
+      "id": "deepswe:config:mini_swe_agent_gpt_6_astra_low",
+      "creator": "OpenAI",
+      "displayName": "GPT-6 Astra (low)",
+      "checkpoint": "gpt-6-astra",
+      "quantization": null,
+      "reasoning": {
+        "label": "low"
+      },
+      "metrics": {
+        "smart": 0.6703539823008849,
+        "fast": 613.4247787610619,
+        "cheap": 2.188762706637168
+      },
+      "metricOrigins": {
+        "smart": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "fast": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "cheap": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        }
+      },
+      "aliases": [],
+      "provenance": {
+        "source": "DeepSWE",
+        "sourceConfig": "mini_swe_agent_gpt_6_astra_low",
+        "sourceModel": "gpt-6-astra",
+        "sourceProvider": "openai",
+        "harness": "mini-swe-agent",
+        "attempted": 452,
+        "passed": 303,
+        "tasksAttempted": 113,
+        "runs": 4,
+        "smartConfidenceInterval95": [
+          0.6573453717840262,
+          0.6833625928177437
+        ],
+        "smartAggregation": "pass_at_1",
+        "fastAggregation": "mean_duration_seconds",
+        "cheapAggregation": "mean_cost_usd"
+      }
+    },
+    {
+      "id": "deepswe:config:mini_swe_agent_gpt_6_astra_max",
+      "creator": "OpenAI",
+      "displayName": "GPT-6 Astra (max)",
+      "checkpoint": "gpt-6-astra",
+      "quantization": null,
+      "reasoning": {
+        "label": "max"
+      },
+      "metrics": {
+        "smart": 0.7323008849557522,
+        "fast": 1982.966814159292,
+        "cheap": 12.369032401327434
+      },
+      "metricOrigins": {
+        "smart": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "fast": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "cheap": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        }
+      },
+      "aliases": [],
+      "provenance": {
+        "source": "DeepSWE",
+        "sourceConfig": "mini_swe_agent_gpt_6_astra_max",
+        "sourceModel": "gpt-6-astra",
+        "sourceProvider": "openai",
+        "harness": "mini-swe-agent",
+        "attempted": 452,
+        "passed": 331,
+        "tasksAttempted": 113,
+        "runs": 4,
+        "smartConfidenceInterval95": [
+          0.7239976873936956,
+          0.7406040825178087
+        ],
+        "smartAggregation": "pass_at_1",
+        "fastAggregation": "mean_duration_seconds",
+        "cheapAggregation": "mean_cost_usd"
+      }
+    },
+    {
+      "id": "deepswe:config:mini_swe_agent_gpt_6_astra_medium",
+      "creator": "OpenAI",
+      "displayName": "GPT-6 Astra (medium)",
+      "checkpoint": "gpt-6-astra",
+      "quantization": null,
+      "reasoning": {
+        "label": "medium"
+      },
+      "metrics": {
+        "smart": 0.7278761061946902,
+        "fast": 883.9358407079646,
+        "cheap": 4.379527705752213
+      },
+      "metricOrigins": {
+        "smart": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "fast": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "cheap": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        }
+      },
+      "aliases": [],
+      "provenance": {
+        "source": "DeepSWE",
+        "sourceConfig": "mini_swe_agent_gpt_6_astra_medium",
+        "sourceModel": "gpt-6-astra",
+        "sourceProvider": "openai",
+        "harness": "mini-swe-agent",
+        "attempted": 452,
+        "passed": 329,
+        "tasksAttempted": 113,
+        "runs": 4,
+        "smartConfidenceInterval95": [
+          0.7019796153763715,
+          0.7537725970130089
+        ],
+        "smartAggregation": "pass_at_1",
+        "fastAggregation": "mean_duration_seconds",
+        "cheapAggregation": "mean_cost_usd"
+      }
+    },
+    {
+      "id": "deepswe:config:mini_swe_agent_gpt_6_astra_xhigh",
+      "creator": "OpenAI",
+      "displayName": "GPT-6 Astra (xhigh)",
+      "checkpoint": "gpt-6-astra",
+      "quantization": null,
+      "reasoning": {
+        "label": "xhigh"
+      },
+      "metrics": {
+        "smart": 0.7411504424778761,
+        "fast": 1132.4004424778761,
+        "cheap": 6.52377356460177
+      },
+      "metricOrigins": {
+        "smart": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "fast": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "cheap": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        }
+      },
+      "aliases": [],
+      "provenance": {
+        "source": "DeepSWE",
+        "sourceConfig": "mini_swe_agent_gpt_6_astra_xhigh",
+        "sourceModel": "gpt-6-astra",
+        "sourceProvider": "openai",
+        "harness": "mini-swe-agent",
+        "attempted": 452,
+        "passed": 335,
+        "tasksAttempted": 113,
+        "runs": 4,
+        "smartConfidenceInterval95": [
+          0.7124964807371247,
+          0.7698044042186275
         ],
         "smartAggregation": "pass_at_1",
         "fastAggregation": "mean_duration_seconds",
