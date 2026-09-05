@@ -1,6 +1,7 @@
 {
   "schemaVersion": 1,
   "variants": {
+    "deepswe:config:mini_swe_agent_gpt_6_astra_xhigh": [],
     "deepswe:config:mini_swe_agent_gemini_3_8_flash_high": [
       {
         "provider": "openrouter",
@@ -41,12 +42,6 @@
         "equivalence": "verified"
       },
       {
-        "provider": "anthropic",
-        "modelId": "claude-opus-5",
-        "piThinkingLevel": "max",
-        "equivalence": "verified"
-      },
-      {
         "provider": "cloudflare-ai-gateway",
         "modelId": "claude-opus-5",
         "piThinkingLevel": "max",
@@ -66,12 +61,6 @@
       },
       {
         "provider": "openrouter",
-        "modelId": "anthropic/claude-opus-5",
-        "piThinkingLevel": "max",
-        "equivalence": "verified"
-      },
-      {
-        "provider": "openrouter",
         "modelId": "anthropic/claude-opus-5:batch",
         "piThinkingLevel": "max",
         "equivalence": "verified"
@@ -83,6 +72,8 @@
         "equivalence": "verified"
       }
     ],
+    "deepswe:config:mini_swe_agent_gpt_6_astra_high": [],
+    "deepswe:config:mini_swe_agent_gpt_6_astra_max": [],
     "deepswe:config:mini_swe_agent_claude_opus_5_xhigh": [
       {
         "provider": "amazon-bedrock",
@@ -115,12 +106,6 @@
         "equivalence": "verified"
       },
       {
-        "provider": "anthropic",
-        "modelId": "claude-opus-5",
-        "piThinkingLevel": "xhigh",
-        "equivalence": "verified"
-      },
-      {
         "provider": "cloudflare-ai-gateway",
         "modelId": "claude-opus-5",
         "piThinkingLevel": "xhigh",
@@ -135,12 +120,6 @@
       {
         "provider": "opencode",
         "modelId": "claude-opus-5",
-        "piThinkingLevel": "xhigh",
-        "equivalence": "verified"
-      },
-      {
-        "provider": "openrouter",
-        "modelId": "anthropic/claude-opus-5",
         "piThinkingLevel": "xhigh",
         "equivalence": "verified"
       },
@@ -189,12 +168,6 @@
         "equivalence": "verified"
       },
       {
-        "provider": "anthropic",
-        "modelId": "claude-opus-5",
-        "piThinkingLevel": "high",
-        "equivalence": "verified"
-      },
-      {
         "provider": "cloudflare-ai-gateway",
         "modelId": "claude-opus-5",
         "piThinkingLevel": "high",
@@ -214,12 +187,6 @@
       },
       {
         "provider": "openrouter",
-        "modelId": "anthropic/claude-opus-5",
-        "piThinkingLevel": "high",
-        "equivalence": "verified"
-      },
-      {
-        "provider": "openrouter",
         "modelId": "anthropic/claude-opus-5:batch",
         "piThinkingLevel": "high",
         "equivalence": "verified"
@@ -231,6 +198,7 @@
         "equivalence": "verified"
       }
     ],
+    "deepswe:config:mini_swe_agent_gpt_6_astra_medium": [],
     "deepswe:config:mini_swe_agent_gpt_5_6_sol_max": [
       {
         "provider": "azure-openai-responses",
@@ -408,12 +376,6 @@
       },
       {
         "provider": "openrouter",
-        "modelId": "anthropic/claude-fable-5",
-        "piThinkingLevel": "xhigh",
-        "equivalence": "verified"
-      },
-      {
-        "provider": "openrouter",
         "modelId": "anthropic/claude-fable-5:batch",
         "piThinkingLevel": "xhigh",
         "equivalence": "verified"
@@ -471,12 +433,6 @@
       {
         "provider": "opencode",
         "modelId": "claude-fable-5",
-        "piThinkingLevel": "max",
-        "equivalence": "verified"
-      },
-      {
-        "provider": "openrouter",
-        "modelId": "anthropic/claude-fable-5",
         "piThinkingLevel": "max",
         "equivalence": "verified"
       },
@@ -681,12 +637,6 @@
         "equivalence": "verified"
       },
       {
-        "provider": "anthropic",
-        "modelId": "claude-opus-5",
-        "piThinkingLevel": "medium",
-        "equivalence": "verified"
-      },
-      {
         "provider": "cloudflare-ai-gateway",
         "modelId": "claude-opus-5",
         "piThinkingLevel": "medium",
@@ -701,12 +651,6 @@
       {
         "provider": "opencode",
         "modelId": "claude-opus-5",
-        "piThinkingLevel": "medium",
-        "equivalence": "verified"
-      },
-      {
-        "provider": "openrouter",
-        "modelId": "anthropic/claude-opus-5",
         "piThinkingLevel": "medium",
         "equivalence": "verified"
       },
@@ -769,12 +713,6 @@
       {
         "provider": "opencode",
         "modelId": "claude-fable-5",
-        "piThinkingLevel": "high",
-        "equivalence": "verified"
-      },
-      {
-        "provider": "openrouter",
-        "modelId": "anthropic/claude-fable-5",
         "piThinkingLevel": "high",
         "equivalence": "verified"
       },
@@ -1009,6 +947,7 @@
         "equivalence": "verified"
       }
     ],
+    "deepswe:config:mini_swe_agent_gpt_6_astra_low": [],
     "deepswe:config:mini_swe_agent_grok_4_6_xhigh": [
       {
         "provider": "github-copilot",
@@ -1131,12 +1070,6 @@
       {
         "provider": "opencode",
         "modelId": "claude-fable-5",
-        "piThinkingLevel": "medium",
-        "equivalence": "verified"
-      },
-      {
-        "provider": "openrouter",
-        "modelId": "anthropic/claude-fable-5",
         "piThinkingLevel": "medium",
         "equivalence": "verified"
       },
@@ -1371,24 +1304,6 @@
         "modelId": "deepseek-v4-pro",
         "piThinkingLevel": "max",
         "equivalence": "verified"
-      },
-      {
-        "provider": "qwen-token-plan",
-        "modelId": "deepseek-v4-pro",
-        "piThinkingLevel": "max",
-        "equivalence": "verified"
-      },
-      {
-        "provider": "qwen-token-plan-cn",
-        "modelId": "deepseek-v4-pro",
-        "piThinkingLevel": "max",
-        "equivalence": "verified"
-      },
-      {
-        "provider": "qwen-token-plan-individual",
-        "modelId": "deepseek-v4-pro",
-        "piThinkingLevel": "max",
-        "equivalence": "verified"
       }
     ],
     "deepswe:config:mini_swe_agent_gpt_5_6_sol_medium": [
@@ -1578,12 +1493,6 @@
       },
       {
         "provider": "openrouter",
-        "modelId": "anthropic/claude-fable-5",
-        "piThinkingLevel": "low",
-        "equivalence": "verified"
-      },
-      {
-        "provider": "openrouter",
         "modelId": "anthropic/claude-fable-5:batch",
         "piThinkingLevel": "low",
         "equivalence": "verified"
@@ -1664,12 +1573,6 @@
       },
       {
         "provider": "openrouter",
-        "modelId": "anthropic/claude-opus-4.8",
-        "piThinkingLevel": "max",
-        "equivalence": "verified"
-      },
-      {
-        "provider": "openrouter",
         "modelId": "anthropic/claude-opus-4.8:batch",
         "piThinkingLevel": "max",
         "equivalence": "verified"
@@ -1713,12 +1616,6 @@
         "equivalence": "verified"
       },
       {
-        "provider": "anthropic",
-        "modelId": "claude-opus-5",
-        "piThinkingLevel": "low",
-        "equivalence": "verified"
-      },
-      {
         "provider": "cloudflare-ai-gateway",
         "modelId": "claude-opus-5",
         "piThinkingLevel": "low",
@@ -1733,12 +1630,6 @@
       {
         "provider": "opencode",
         "modelId": "claude-opus-5",
-        "piThinkingLevel": "low",
-        "equivalence": "verified"
-      },
-      {
-        "provider": "openrouter",
-        "modelId": "anthropic/claude-opus-5",
         "piThinkingLevel": "low",
         "equivalence": "verified"
       },
@@ -1765,24 +1656,6 @@
       {
         "provider": "openrouter",
         "modelId": "qwen/qwen3.8-max",
-        "piThinkingLevel": "xhigh",
-        "equivalence": "verified"
-      },
-      {
-        "provider": "qwen-token-plan",
-        "modelId": "qwen3.8-max",
-        "piThinkingLevel": "xhigh",
-        "equivalence": "verified"
-      },
-      {
-        "provider": "qwen-token-plan-cn",
-        "modelId": "qwen3.8-max",
-        "piThinkingLevel": "xhigh",
-        "equivalence": "verified"
-      },
-      {
-        "provider": "qwen-token-plan-individual",
-        "modelId": "qwen3.8-max",
         "piThinkingLevel": "xhigh",
         "equivalence": "verified"
       }
@@ -1944,12 +1817,6 @@
       },
       {
         "provider": "openrouter",
-        "modelId": "anthropic/claude-opus-4.8",
-        "piThinkingLevel": "xhigh",
-        "equivalence": "verified"
-      },
-      {
-        "provider": "openrouter",
         "modelId": "anthropic/claude-opus-4.8:batch",
         "piThinkingLevel": "xhigh",
         "equivalence": "verified"
@@ -2081,12 +1948,6 @@
       {
         "provider": "opencode",
         "modelId": "claude-sonnet-5",
-        "piThinkingLevel": "max",
-        "equivalence": "verified"
-      },
-      {
-        "provider": "openrouter",
-        "modelId": "anthropic/claude-sonnet-5",
         "piThinkingLevel": "max",
         "equivalence": "verified"
       },
@@ -2277,18 +2138,6 @@
         "modelId": "deepseek-v4-flash",
         "piThinkingLevel": "max",
         "equivalence": "verified"
-      },
-      {
-        "provider": "qwen-token-plan",
-        "modelId": "deepseek-v4-flash",
-        "piThinkingLevel": "max",
-        "equivalence": "verified"
-      },
-      {
-        "provider": "qwen-token-plan-cn",
-        "modelId": "deepseek-v4-flash",
-        "piThinkingLevel": "max",
-        "equivalence": "verified"
       }
     ],
     "deepswe:config:mini_swe_agent_muse_spark_1_1_xhigh": [
@@ -2363,12 +2212,6 @@
       {
         "provider": "opencode",
         "modelId": "claude-opus-4-8",
-        "piThinkingLevel": "high",
-        "equivalence": "verified"
-      },
-      {
-        "provider": "openrouter",
-        "modelId": "anthropic/claude-opus-4.8",
         "piThinkingLevel": "high",
         "equivalence": "verified"
       },
@@ -2510,12 +2353,6 @@
       },
       {
         "provider": "openrouter",
-        "modelId": "anthropic/claude-sonnet-5",
-        "piThinkingLevel": "xhigh",
-        "equivalence": "verified"
-      },
-      {
-        "provider": "openrouter",
         "modelId": "anthropic/claude-sonnet-5:batch",
         "piThinkingLevel": "xhigh",
         "equivalence": "verified"
@@ -2596,12 +2433,6 @@
       },
       {
         "provider": "openrouter",
-        "modelId": "anthropic/claude-opus-4.8",
-        "piThinkingLevel": "medium",
-        "equivalence": "verified"
-      },
-      {
-        "provider": "openrouter",
         "modelId": "anthropic/claude-opus-4.8:batch",
         "piThinkingLevel": "medium",
         "equivalence": "verified"
@@ -2671,12 +2502,6 @@
       {
         "provider": "opencode",
         "modelId": "claude-sonnet-5",
-        "piThinkingLevel": "high",
-        "equivalence": "verified"
-      },
-      {
-        "provider": "openrouter",
-        "modelId": "anthropic/claude-sonnet-5",
         "piThinkingLevel": "high",
         "equivalence": "verified"
       },
@@ -2881,12 +2706,6 @@
     ],
     "deepswe:config:mini_swe_agent_glm_5_2_max": [
       {
-        "provider": "baseten",
-        "modelId": "zai-org/GLM-5.2",
-        "piThinkingLevel": "max",
-        "equivalence": "verified"
-      },
-      {
         "provider": "opencode",
         "modelId": "glm-5.2",
         "piThinkingLevel": "max",
@@ -2894,24 +2713,6 @@
       },
       {
         "provider": "opencode-go",
-        "modelId": "glm-5.2",
-        "piThinkingLevel": "max",
-        "equivalence": "verified"
-      },
-      {
-        "provider": "qwen-token-plan",
-        "modelId": "glm-5.2",
-        "piThinkingLevel": "max",
-        "equivalence": "verified"
-      },
-      {
-        "provider": "qwen-token-plan-cn",
-        "modelId": "glm-5.2",
-        "piThinkingLevel": "max",
-        "equivalence": "verified"
-      },
-      {
-        "provider": "qwen-token-plan-individual",
         "modelId": "glm-5.2",
         "piThinkingLevel": "max",
         "equivalence": "verified"
@@ -3042,12 +2843,6 @@
       },
       {
         "provider": "openrouter",
-        "modelId": "anthropic/claude-opus-4.8",
-        "piThinkingLevel": "low",
-        "equivalence": "verified"
-      },
-      {
-        "provider": "openrouter",
         "modelId": "anthropic/claude-opus-4.8:batch",
         "piThinkingLevel": "low",
         "equivalence": "verified"
@@ -3122,12 +2917,6 @@
       },
       {
         "provider": "openrouter",
-        "modelId": "anthropic/claude-sonnet-5",
-        "piThinkingLevel": "medium",
-        "equivalence": "verified"
-      },
-      {
-        "provider": "openrouter",
         "modelId": "anthropic/claude-sonnet-5:batch",
         "piThinkingLevel": "medium",
         "equivalence": "verified"
@@ -3140,12 +2929,6 @@
       }
     ],
     "deepswe:config:mini_swe_agent_glm_5_2_high": [
-      {
-        "provider": "baseten",
-        "modelId": "zai-org/GLM-5.2",
-        "piThinkingLevel": "high",
-        "equivalence": "verified"
-      },
       {
         "provider": "cloudflare-ai-gateway",
         "modelId": "workers-ai/@cf/zai-org/glm-5.2",
@@ -3191,24 +2974,6 @@
       {
         "provider": "openrouter",
         "modelId": "z-ai/glm-5.2:batch",
-        "piThinkingLevel": "high",
-        "equivalence": "verified"
-      },
-      {
-        "provider": "qwen-token-plan",
-        "modelId": "glm-5.2",
-        "piThinkingLevel": "high",
-        "equivalence": "verified"
-      },
-      {
-        "provider": "qwen-token-plan-cn",
-        "modelId": "glm-5.2",
-        "piThinkingLevel": "high",
-        "equivalence": "verified"
-      },
-      {
-        "provider": "qwen-token-plan-individual",
-        "modelId": "glm-5.2",
         "piThinkingLevel": "high",
         "equivalence": "verified"
       },
@@ -3413,12 +3178,6 @@
       },
       {
         "provider": "openrouter",
-        "modelId": "anthropic/claude-sonnet-5",
-        "piThinkingLevel": "low",
-        "equivalence": "verified"
-      },
-      {
-        "provider": "openrouter",
         "modelId": "anthropic/claude-sonnet-5:batch",
         "piThinkingLevel": "low",
         "equivalence": "verified"
@@ -3494,12 +3253,6 @@
       {
         "provider": "opencode",
         "modelId": "claude-sonnet-4-6",
-        "piThinkingLevel": "high",
-        "equivalence": "verified"
-      },
-      {
-        "provider": "openrouter",
-        "modelId": "anthropic/claude-sonnet-4.6",
         "piThinkingLevel": "high",
         "equivalence": "verified"
       },
