@@ -1,0 +1,32 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  catalog-contract-compatibility:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Check out canonical catalog contract
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          repository: speedshop/pi-pareto-model
+          ref: b8cee5aaf8b9a07b67be9fb8a650d80cb17530b9
+          path: canonical/pi-pareto-model
+          persist-credentials: false
+
+      - name: Check vendored catalog contract
+        run: |
+          cmp --silent schema/model-selection-catalog.schema.json \
+            canonical/pi-pareto-model/schema/model-selection-catalog.schema.json

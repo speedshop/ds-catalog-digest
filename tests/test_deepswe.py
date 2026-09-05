@@ -41,6 +41,12 @@ class DeepSweTest(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "mean_cost_usd"):
             validate_leaderboard({"rows": [row]})
 
+    def test_rejects_nonpositive_duration(self):
+        row = self.row()
+        row["mean_duration_seconds"] = 0
+        with self.assertRaisesRegex(ValueError, "not a Complete Variant"):
+            validate_leaderboard({"rows": [row]})
+
     def test_checks_artifact_hash(self):
         with tempfile.TemporaryDirectory() as directory:
             path = Path(directory) / "source.json"

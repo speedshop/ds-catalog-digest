@@ -12,11 +12,11 @@ The catalog contains three metrics:
 - **Fast** is the mean task time in seconds. A lower value is better.
 - **Cheap** is the mean reported task cost in US dollars. A lower value is better.
 
-Each Model Variant identifies one model checkpoint and one reasoning effort. Its provenance records the source provider, the mini-swe-agent harness, trial counts, and the confidence interval.
+Each Model Variant identifies one model checkpoint and one reasoning effort. Smart, Fast, and Cheap record source metric origins for the DeepSWE release; these measurements are not adjusted. Variant provenance records the source provider, the mini-swe-agent harness, trial counts, and the confidence interval.
 
 The catalog also contains verified Pi Provider Routes. A route identifies a provider, model ID, and thinking level.
 
-Read the stable catalog at [`catalog/model-selection-catalog.json`](catalog/model-selection-catalog.json). Read [`CONTRACT.md`](CONTRACT.md) for the schema rules.
+Read the stable catalog at [`catalog/model-selection-catalog.json`](catalog/model-selection-catalog.json). The vendored [`schema/model-selection-catalog.schema.json`](schema/model-selection-catalog.schema.json) exactly matches the canonical catalog-v1 schema owned by `speedshop/pi-pareto-model`; [`CONTRACT.md`](CONTRACT.md) documents this producer's mapping.
 
 ## Installation
 

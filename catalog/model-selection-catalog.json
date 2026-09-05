@@ -148,6 +148,20 @@
         "smartAggregation": "pass_at_1",
         "fastAggregation": "mean_duration_seconds",
         "cheapAggregation": "mean_cost_usd"
+      },
+      "metricOrigins": {
+        "smart": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "fast": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "cheap": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        }
       }
     },
     {
@@ -249,6 +263,20 @@
         "smartAggregation": "pass_at_1",
         "fastAggregation": "mean_duration_seconds",
         "cheapAggregation": "mean_cost_usd"
+      },
+      "metricOrigins": {
+        "smart": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "fast": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "cheap": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        }
       }
     },
     {
@@ -350,6 +378,20 @@
         "smartAggregation": "pass_at_1",
         "fastAggregation": "mean_duration_seconds",
         "cheapAggregation": "mean_cost_usd"
+      },
+      "metricOrigins": {
+        "smart": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "fast": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "cheap": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        }
       }
     },
     {
@@ -451,6 +493,20 @@
         "smartAggregation": "pass_at_1",
         "fastAggregation": "mean_duration_seconds",
         "cheapAggregation": "mean_cost_usd"
+      },
+      "metricOrigins": {
+        "smart": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "fast": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "cheap": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        }
       }
     },
     {
@@ -552,6 +608,20 @@
         "smartAggregation": "pass_at_1",
         "fastAggregation": "mean_duration_seconds",
         "cheapAggregation": "mean_cost_usd"
+      },
+      "metricOrigins": {
+        "smart": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "fast": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "cheap": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        }
       }
     },
     {
@@ -671,6 +741,20 @@
         "smartAggregation": "pass_at_1",
         "fastAggregation": "mean_duration_seconds",
         "cheapAggregation": "mean_cost_usd"
+      },
+      "metricOrigins": {
+        "smart": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "fast": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "cheap": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        }
       }
     },
     {
@@ -790,6 +874,20 @@
         "smartAggregation": "pass_at_1",
         "fastAggregation": "mean_duration_seconds",
         "cheapAggregation": "mean_cost_usd"
+      },
+      "metricOrigins": {
+        "smart": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "fast": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "cheap": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        }
       }
     },
     {
@@ -909,6 +1007,20 @@
         "smartAggregation": "pass_at_1",
         "fastAggregation": "mean_duration_seconds",
         "cheapAggregation": "mean_cost_usd"
+      },
+      "metricOrigins": {
+        "smart": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "fast": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "cheap": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        }
       }
     },
     {
@@ -1028,6 +1140,20 @@
         "smartAggregation": "pass_at_1",
         "fastAggregation": "mean_duration_seconds",
         "cheapAggregation": "mean_cost_usd"
+      },
+      "metricOrigins": {
+        "smart": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "fast": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "cheap": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        }
       }
     },
     {
@@ -1147,6 +1273,20 @@
         "smartAggregation": "pass_at_1",
         "fastAggregation": "mean_duration_seconds",
         "cheapAggregation": "mean_cost_usd"
+      },
+      "metricOrigins": {
+        "smart": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "fast": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "cheap": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        }
       }
     },
     {
@@ -1254,6 +1394,20 @@
         "smartAggregation": "pass_at_1",
         "fastAggregation": "mean_duration_seconds",
         "cheapAggregation": "mean_cost_usd"
+      },
+      "metricOrigins": {
+        "smart": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "fast": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "cheap": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        }
       }
     },
     {
@@ -1361,6 +1515,20 @@
         "smartAggregation": "pass_at_1",
         "fastAggregation": "mean_duration_seconds",
         "cheapAggregation": "mean_cost_usd"
+      },
+      "metricOrigins": {
+        "smart": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "fast": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "cheap": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        }
       }
     },
     {
@@ -1468,6 +1636,20 @@
         "smartAggregation": "pass_at_1",
         "fastAggregation": "mean_duration_seconds",
         "cheapAggregation": "mean_cost_usd"
+      },
+      "metricOrigins": {
+        "smart": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "fast": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "cheap": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        }
       }
     },
     {
@@ -1575,6 +1757,20 @@
         "smartAggregation": "pass_at_1",
         "fastAggregation": "mean_duration_seconds",
         "cheapAggregation": "mean_cost_usd"
+      },
+      "metricOrigins": {
+        "smart": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "fast": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "cheap": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        }
       }
     },
     {
@@ -1682,6 +1878,20 @@
         "smartAggregation": "pass_at_1",
         "fastAggregation": "mean_duration_seconds",
         "cheapAggregation": "mean_cost_usd"
+      },
+      "metricOrigins": {
+        "smart": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "fast": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "cheap": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        }
       }
     },
     {
@@ -1801,6 +2011,20 @@
         "smartAggregation": "pass_at_1",
         "fastAggregation": "mean_duration_seconds",
         "cheapAggregation": "mean_cost_usd"
+      },
+      "metricOrigins": {
+        "smart": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "fast": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "cheap": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        }
       }
     },
     {
@@ -1914,6 +2138,20 @@
         "smartAggregation": "pass_at_1",
         "fastAggregation": "mean_duration_seconds",
         "cheapAggregation": "mean_cost_usd"
+      },
+      "metricOrigins": {
+        "smart": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "fast": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "cheap": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        }
       }
     },
     {
@@ -2027,6 +2265,20 @@
         "smartAggregation": "pass_at_1",
         "fastAggregation": "mean_duration_seconds",
         "cheapAggregation": "mean_cost_usd"
+      },
+      "metricOrigins": {
+        "smart": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "fast": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "cheap": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        }
       }
     },
     {
@@ -2140,6 +2392,20 @@
         "smartAggregation": "pass_at_1",
         "fastAggregation": "mean_duration_seconds",
         "cheapAggregation": "mean_cost_usd"
+      },
+      "metricOrigins": {
+        "smart": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "fast": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "cheap": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        }
       }
     },
     {
@@ -2253,6 +2519,20 @@
         "smartAggregation": "pass_at_1",
         "fastAggregation": "mean_duration_seconds",
         "cheapAggregation": "mean_cost_usd"
+      },
+      "metricOrigins": {
+        "smart": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "fast": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "cheap": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        }
       }
     },
     {
@@ -2366,6 +2646,20 @@
         "smartAggregation": "pass_at_1",
         "fastAggregation": "mean_duration_seconds",
         "cheapAggregation": "mean_cost_usd"
+      },
+      "metricOrigins": {
+        "smart": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "fast": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "cheap": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        }
       }
     },
     {
@@ -2431,6 +2725,20 @@
         "smartAggregation": "pass_at_1",
         "fastAggregation": "mean_duration_seconds",
         "cheapAggregation": "mean_cost_usd"
+      },
+      "metricOrigins": {
+        "smart": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "fast": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "cheap": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        }
       }
     },
     {
@@ -2508,6 +2816,20 @@
         "smartAggregation": "pass_at_1",
         "fastAggregation": "mean_duration_seconds",
         "cheapAggregation": "mean_cost_usd"
+      },
+      "metricOrigins": {
+        "smart": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "fast": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "cheap": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        }
       }
     },
     {
@@ -2579,6 +2901,20 @@
         "smartAggregation": "pass_at_1",
         "fastAggregation": "mean_duration_seconds",
         "cheapAggregation": "mean_cost_usd"
+      },
+      "metricOrigins": {
+        "smart": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "fast": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "cheap": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        }
       }
     },
     {
@@ -2656,6 +2992,20 @@
         "smartAggregation": "pass_at_1",
         "fastAggregation": "mean_duration_seconds",
         "cheapAggregation": "mean_cost_usd"
+      },
+      "metricOrigins": {
+        "smart": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "fast": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "cheap": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        }
       }
     },
     {
@@ -2733,6 +3083,20 @@
         "smartAggregation": "pass_at_1",
         "fastAggregation": "mean_duration_seconds",
         "cheapAggregation": "mean_cost_usd"
+      },
+      "metricOrigins": {
+        "smart": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "fast": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "cheap": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        }
       }
     },
     {
@@ -2810,6 +3174,20 @@
         "smartAggregation": "pass_at_1",
         "fastAggregation": "mean_duration_seconds",
         "cheapAggregation": "mean_cost_usd"
+      },
+      "metricOrigins": {
+        "smart": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "fast": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "cheap": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        }
       }
     },
     {
@@ -2887,6 +3265,20 @@
         "smartAggregation": "pass_at_1",
         "fastAggregation": "mean_duration_seconds",
         "cheapAggregation": "mean_cost_usd"
+      },
+      "metricOrigins": {
+        "smart": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "fast": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "cheap": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        }
       }
     },
     {
@@ -2964,6 +3356,20 @@
         "smartAggregation": "pass_at_1",
         "fastAggregation": "mean_duration_seconds",
         "cheapAggregation": "mean_cost_usd"
+      },
+      "metricOrigins": {
+        "smart": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "fast": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "cheap": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        }
       }
     },
     {
@@ -3005,6 +3411,20 @@
         "smartAggregation": "pass_at_1",
         "fastAggregation": "mean_duration_seconds",
         "cheapAggregation": "mean_cost_usd"
+      },
+      "metricOrigins": {
+        "smart": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "fast": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "cheap": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        }
       }
     },
     {
@@ -3046,6 +3466,20 @@
         "smartAggregation": "pass_at_1",
         "fastAggregation": "mean_duration_seconds",
         "cheapAggregation": "mean_cost_usd"
+      },
+      "metricOrigins": {
+        "smart": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "fast": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "cheap": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        }
       }
     },
     {
@@ -3177,6 +3611,20 @@
         "smartAggregation": "pass_at_1",
         "fastAggregation": "mean_duration_seconds",
         "cheapAggregation": "mean_cost_usd"
+      },
+      "metricOrigins": {
+        "smart": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "fast": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "cheap": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        }
       }
     },
     {
@@ -3260,6 +3708,20 @@
         "smartAggregation": "pass_at_1",
         "fastAggregation": "mean_duration_seconds",
         "cheapAggregation": "mean_cost_usd"
+      },
+      "metricOrigins": {
+        "smart": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "fast": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "cheap": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        }
       }
     },
     {
@@ -3337,6 +3799,20 @@
         "smartAggregation": "pass_at_1",
         "fastAggregation": "mean_duration_seconds",
         "cheapAggregation": "mean_cost_usd"
+      },
+      "metricOrigins": {
+        "smart": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "fast": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "cheap": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        }
       }
     },
     {
@@ -3408,6 +3884,20 @@
         "smartAggregation": "pass_at_1",
         "fastAggregation": "mean_duration_seconds",
         "cheapAggregation": "mean_cost_usd"
+      },
+      "metricOrigins": {
+        "smart": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "fast": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "cheap": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        }
       }
     },
     {
@@ -3503,6 +3993,20 @@
         "smartAggregation": "pass_at_1",
         "fastAggregation": "mean_duration_seconds",
         "cheapAggregation": "mean_cost_usd"
+      },
+      "metricOrigins": {
+        "smart": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "fast": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "cheap": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        }
       }
     },
     {
@@ -3598,6 +4102,20 @@
         "smartAggregation": "pass_at_1",
         "fastAggregation": "mean_duration_seconds",
         "cheapAggregation": "mean_cost_usd"
+      },
+      "metricOrigins": {
+        "smart": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "fast": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "cheap": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        }
       }
     },
     {
@@ -3693,6 +4211,20 @@
         "smartAggregation": "pass_at_1",
         "fastAggregation": "mean_duration_seconds",
         "cheapAggregation": "mean_cost_usd"
+      },
+      "metricOrigins": {
+        "smart": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "fast": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "cheap": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        }
       }
     },
     {
@@ -3788,6 +4320,20 @@
         "smartAggregation": "pass_at_1",
         "fastAggregation": "mean_duration_seconds",
         "cheapAggregation": "mean_cost_usd"
+      },
+      "metricOrigins": {
+        "smart": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "fast": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "cheap": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        }
       }
     },
     {
@@ -3883,6 +4429,20 @@
         "smartAggregation": "pass_at_1",
         "fastAggregation": "mean_duration_seconds",
         "cheapAggregation": "mean_cost_usd"
+      },
+      "metricOrigins": {
+        "smart": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "fast": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "cheap": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        }
       }
     },
     {
@@ -3990,6 +4550,20 @@
         "smartAggregation": "pass_at_1",
         "fastAggregation": "mean_duration_seconds",
         "cheapAggregation": "mean_cost_usd"
+      },
+      "metricOrigins": {
+        "smart": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "fast": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "cheap": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        }
       }
     },
     {
@@ -4097,6 +4671,20 @@
         "smartAggregation": "pass_at_1",
         "fastAggregation": "mean_duration_seconds",
         "cheapAggregation": "mean_cost_usd"
+      },
+      "metricOrigins": {
+        "smart": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "fast": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "cheap": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        }
       }
     },
     {
@@ -4186,6 +4774,20 @@
         "smartAggregation": "pass_at_1",
         "fastAggregation": "mean_duration_seconds",
         "cheapAggregation": "mean_cost_usd"
+      },
+      "metricOrigins": {
+        "smart": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "fast": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "cheap": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        }
       }
     },
     {
@@ -4293,6 +4895,20 @@
         "smartAggregation": "pass_at_1",
         "fastAggregation": "mean_duration_seconds",
         "cheapAggregation": "mean_cost_usd"
+      },
+      "metricOrigins": {
+        "smart": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "fast": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "cheap": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        }
       }
     },
     {
@@ -4400,6 +5016,20 @@
         "smartAggregation": "pass_at_1",
         "fastAggregation": "mean_duration_seconds",
         "cheapAggregation": "mean_cost_usd"
+      },
+      "metricOrigins": {
+        "smart": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "fast": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "cheap": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        }
       }
     },
     {
@@ -4501,6 +5131,20 @@
         "smartAggregation": "pass_at_1",
         "fastAggregation": "mean_duration_seconds",
         "cheapAggregation": "mean_cost_usd"
+      },
+      "metricOrigins": {
+        "smart": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "fast": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "cheap": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        }
       }
     },
     {
@@ -4602,6 +5246,20 @@
         "smartAggregation": "pass_at_1",
         "fastAggregation": "mean_duration_seconds",
         "cheapAggregation": "mean_cost_usd"
+      },
+      "metricOrigins": {
+        "smart": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "fast": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "cheap": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        }
       }
     },
     {
@@ -4685,6 +5343,20 @@
         "smartAggregation": "pass_at_1",
         "fastAggregation": "mean_duration_seconds",
         "cheapAggregation": "mean_cost_usd"
+      },
+      "metricOrigins": {
+        "smart": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "fast": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "cheap": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        }
       }
     },
     {
@@ -4786,6 +5458,20 @@
         "smartAggregation": "pass_at_1",
         "fastAggregation": "mean_duration_seconds",
         "cheapAggregation": "mean_cost_usd"
+      },
+      "metricOrigins": {
+        "smart": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "fast": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "cheap": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        }
       }
     },
     {
@@ -4887,6 +5573,20 @@
         "smartAggregation": "pass_at_1",
         "fastAggregation": "mean_duration_seconds",
         "cheapAggregation": "mean_cost_usd"
+      },
+      "metricOrigins": {
+        "smart": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "fast": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "cheap": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        }
       }
     },
     {
@@ -4988,6 +5688,20 @@
         "smartAggregation": "pass_at_1",
         "fastAggregation": "mean_duration_seconds",
         "cheapAggregation": "mean_cost_usd"
+      },
+      "metricOrigins": {
+        "smart": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "fast": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "cheap": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        }
       }
     },
     {
@@ -5089,6 +5803,20 @@
         "smartAggregation": "pass_at_1",
         "fastAggregation": "mean_duration_seconds",
         "cheapAggregation": "mean_cost_usd"
+      },
+      "metricOrigins": {
+        "smart": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "fast": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "cheap": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        }
       }
     },
     {
@@ -5172,6 +5900,20 @@
         "smartAggregation": "pass_at_1",
         "fastAggregation": "mean_duration_seconds",
         "cheapAggregation": "mean_cost_usd"
+      },
+      "metricOrigins": {
+        "smart": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "fast": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "cheap": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        }
       }
     },
     {
@@ -5273,6 +6015,20 @@
         "smartAggregation": "pass_at_1",
         "fastAggregation": "mean_duration_seconds",
         "cheapAggregation": "mean_cost_usd"
+      },
+      "metricOrigins": {
+        "smart": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "fast": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "cheap": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        }
       }
     },
     {
@@ -5374,6 +6130,20 @@
         "smartAggregation": "pass_at_1",
         "fastAggregation": "mean_duration_seconds",
         "cheapAggregation": "mean_cost_usd"
+      },
+      "metricOrigins": {
+        "smart": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "fast": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "cheap": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        }
       }
     },
     {
@@ -5451,6 +6221,20 @@
         "smartAggregation": "pass_at_1",
         "fastAggregation": "mean_duration_seconds",
         "cheapAggregation": "mean_cost_usd"
+      },
+      "metricOrigins": {
+        "smart": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "fast": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "cheap": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        }
       }
     },
     {
@@ -5528,6 +6312,20 @@
         "smartAggregation": "pass_at_1",
         "fastAggregation": "mean_duration_seconds",
         "cheapAggregation": "mean_cost_usd"
+      },
+      "metricOrigins": {
+        "smart": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "fast": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "cheap": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        }
       }
     },
     {
@@ -5605,6 +6403,20 @@
         "smartAggregation": "pass_at_1",
         "fastAggregation": "mean_duration_seconds",
         "cheapAggregation": "mean_cost_usd"
+      },
+      "metricOrigins": {
+        "smart": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "fast": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "cheap": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        }
       }
     },
     {
@@ -5682,6 +6494,20 @@
         "smartAggregation": "pass_at_1",
         "fastAggregation": "mean_duration_seconds",
         "cheapAggregation": "mean_cost_usd"
+      },
+      "metricOrigins": {
+        "smart": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "fast": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "cheap": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        }
       }
     },
     {
@@ -5747,6 +6573,20 @@
         "smartAggregation": "pass_at_1",
         "fastAggregation": "mean_duration_seconds",
         "cheapAggregation": "mean_cost_usd"
+      },
+      "metricOrigins": {
+        "smart": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "fast": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "cheap": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        }
       }
     },
     {
@@ -5779,6 +6619,20 @@
         "smartAggregation": "pass_at_1",
         "fastAggregation": "mean_duration_seconds",
         "cheapAggregation": "mean_cost_usd"
+      },
+      "metricOrigins": {
+        "smart": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "fast": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "cheap": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        }
       }
     },
     {
@@ -5868,6 +6722,20 @@
         "smartAggregation": "pass_at_1",
         "fastAggregation": "mean_duration_seconds",
         "cheapAggregation": "mean_cost_usd"
+      },
+      "metricOrigins": {
+        "smart": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "fast": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "cheap": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        }
       }
     },
     {
@@ -5909,6 +6777,20 @@
         "smartAggregation": "pass_at_1",
         "fastAggregation": "mean_duration_seconds",
         "cheapAggregation": "mean_cost_usd"
+      },
+      "metricOrigins": {
+        "smart": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "fast": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "cheap": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        }
       }
     },
     {
@@ -5956,6 +6838,20 @@
         "smartAggregation": "pass_at_1",
         "fastAggregation": "mean_duration_seconds",
         "cheapAggregation": "mean_cost_usd"
+      },
+      "metricOrigins": {
+        "smart": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "fast": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "cheap": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        }
       }
     },
     {
@@ -6021,6 +6917,20 @@
         "smartAggregation": "pass_at_1",
         "fastAggregation": "mean_duration_seconds",
         "cheapAggregation": "mean_cost_usd"
+      },
+      "metricOrigins": {
+        "smart": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "fast": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        },
+        "cheap": {
+          "kind": "source",
+          "benchmarkVersion": "v1.1"
+        }
       }
     }
   ]

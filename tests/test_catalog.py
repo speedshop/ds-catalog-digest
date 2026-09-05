@@ -48,12 +48,20 @@ class CatalogTest(unittest.TestCase):
         catalog, _, _, _ = build_catalog(leaderboard, manifest, pi_catalog, {}, "2026-09-03T00:00:00Z")
         variant = catalog["variants"][0]
         self.assertEqual({"smart": 0.5, "fast": 10.0, "cheap": 1.25}, variant["metrics"])
+        self.assertEqual(
+            {
+                "smart": {"kind": "source", "benchmarkVersion": "v1.1"},
+                "fast": {"kind": "source", "benchmarkVersion": "v1.1"},
+                "cheap": {"kind": "source", "benchmarkVersion": "v1.1"},
+            },
+            variant["metricOrigins"],
+        )
         self.assertEqual("deepswe:config:mini_swe_agent_gpt_5_5_low", variant["id"])
         self.assertEqual("openai", variant["provenance"]["sourceProvider"])
         self.assertEqual("https://example.com/trials", catalog["catalog"]["provenance"]["trialsUrl"])
 
     def test_published_catalog_validates(self):
-        schema = json.loads((ROOT / "schema/model-selection-catalog-v1.schema.json").read_text())
+        schema = json.loads((ROOT / "schema/model-selection-catalog.schema.json").read_text())
         catalog = json.loads((ROOT / "catalog/model-selection-catalog.json").read_text())
         Draft202012Validator(schema, format_checker=FormatChecker()).validate(catalog)
         self.assertEqual(65, len(catalog["variants"]))
