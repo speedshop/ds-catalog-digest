@@ -56,7 +56,7 @@ jobs:
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           repository: speedshop/pi-pareto-model
-          ref: b8cee5aaf8b9a07b67be9fb8a650d80cb17530b9
+          ref: catalog-v1
           path: canonical/pi-pareto-model
           persist-credentials: false
 

@@ -6,7 +6,8 @@ import json
 import math
 from pathlib import Path
 
-from jsonschema import Draft202012Validator, FormatChecker
+from jsonschema import FormatChecker
+from jsonschema.validators import validator_for
 
 
 def reject_json_constant(value):
@@ -21,8 +22,9 @@ def main():
 
     catalog = json.loads(args.catalog.read_text(), parse_constant=reject_json_constant)
     schema = json.loads(args.schema.read_text(), parse_constant=reject_json_constant)
-    Draft202012Validator.check_schema(schema)
-    Draft202012Validator(schema, format_checker=FormatChecker()).validate(catalog)
+    validator_class = validator_for(schema)
+    validator_class.check_schema(schema)
+    validator_class(schema, format_checker=FormatChecker()).validate(catalog)
 
     for variant in catalog["variants"]:
         if not all(math.isfinite(variant["metrics"][name]) for name in ("smart", "fast", "cheap")):

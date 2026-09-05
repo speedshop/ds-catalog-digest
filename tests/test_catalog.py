@@ -3,7 +3,8 @@ import sys
 import unittest
 from pathlib import Path
 
-from jsonschema import Draft202012Validator, FormatChecker
+from jsonschema import FormatChecker
+from jsonschema.validators import validator_for
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
@@ -64,7 +65,8 @@ class CatalogTest(unittest.TestCase):
     def test_published_catalog_validates(self):
         schema = json.loads((ROOT / "schema/model-selection-catalog.schema.json").read_text())
         catalog = json.loads((ROOT / "catalog/model-selection-catalog.json").read_text())
-        Draft202012Validator(schema, format_checker=FormatChecker()).validate(catalog)
+        validator_class = validator_for(schema)
+        validator_class(schema, format_checker=FormatChecker()).validate(catalog)
         self.assertEqual(65, len(catalog["variants"]))
 
     def test_published_catalog_matches_deterministic_rebuild(self):
