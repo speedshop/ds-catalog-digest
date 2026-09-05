@@ -73,7 +73,7 @@ def creator(model):
     return CREATORS[prefix]
 
 
-def normalize_variant(row, aliases):
+def normalize_variant(row, aliases, benchmark_version):
     effort = row.get("reasoning_effort")
     return {
         "id": variant_id(row),
@@ -86,6 +86,11 @@ def normalize_variant(row, aliases):
             "smart": row["pass_at_1"],
             "fast": row["mean_duration_seconds"],
             "cheap": row["mean_cost_usd"],
+        },
+        "metricOrigins": {
+            "smart": {"kind": "source", "benchmarkVersion": benchmark_version},
+            "fast": {"kind": "source", "benchmarkVersion": benchmark_version},
+            "cheap": {"kind": "source", "benchmarkVersion": benchmark_version},
         },
         "aliases": aliases[variant_id(row)],
         "provenance": {
@@ -110,7 +115,10 @@ def build_catalog(leaderboard, manifest, pi_catalog, decisions, generated_at=Non
     rows = leaderboard["rows"]
     aliases, stale = compile_aliases(rows, pi_catalog, decisions)
     timestamp = generated_at or datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
-    variants = sorted((normalize_variant(row, aliases) for row in rows), key=lambda item: item["id"])
+    variants = sorted(
+        (normalize_variant(row, aliases, manifest["release"]) for row in rows),
+        key=lambda item: item["id"],
+    )
     catalog = {
         "schemaVersion": 1,
         "catalog": {
@@ -184,7 +192,7 @@ def main():
     write_json(args.output_dir / "model-aliases.json", {"schemaVersion": 1, "variants": aliases})
     write_json(args.output_dir / "route-candidates.json", candidates)
     write_json(args.output_dir / "pi-catalog-diff.json", pi_catalog_diff(previous_pi_catalog, pi_catalog))
-    (args.output_dir / "schema.json").write_text((ROOT / "schema/model-selection-catalog-v1.schema.json").read_text())
+    (args.output_dir / "schema.json").write_text((ROOT / "schema/model-selection-catalog.schema.json").read_text())
     routed = sum(bool(value) for value in aliases.values())
     audit = [
         "# Pi Provider Route audit",

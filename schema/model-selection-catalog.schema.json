@@ -1,0 +1,157 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/speedshop/pi-pareto-model/catalog-v1/schema/model-selection-catalog.schema.json",
+  "title": "Pi Pareto Model Selection Catalog",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "catalog", "variants"],
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "catalog": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "name", "version", "generatedAt", "sourceUpdatedAt", "distribution", "metricDefinitions", "provenance"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "name": { "type": "string", "minLength": 1 },
+        "version": { "type": "string", "minLength": 1 },
+        "generatedAt": { "type": "string", "format": "date-time" },
+        "sourceUpdatedAt": { "type": ["string", "null"], "format": "date-time" },
+        "distribution": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["classification", "termsUrl", "attribution", "allowRedistribution"],
+          "properties": {
+            "classification": { "enum": ["restricted", "redistributable"] },
+            "termsUrl": { "type": ["string", "null"], "format": "uri" },
+            "attribution": { "type": ["string", "null"] },
+            "allowRedistribution": { "type": "boolean" }
+          }
+        },
+        "metricDefinitions": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["smart", "fast", "cheap"],
+          "properties": {
+            "smart": { "$ref": "#/definitions/metricDefinitionHigher" },
+            "fast": { "$ref": "#/definitions/metricDefinitionLower" },
+            "cheap": { "$ref": "#/definitions/metricDefinitionLower" }
+          }
+        },
+        "provenance": { "type": "object" }
+      }
+    },
+    "variants": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/variant" }
+    }
+  },
+  "definitions": {
+    "metricDefinitionBase": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["unit", "better", "task", "methodologyUrl"],
+      "properties": {
+        "unit": { "type": "string", "minLength": 1 },
+        "better": { "enum": ["higher", "lower"] },
+        "task": { "type": "string", "minLength": 1 },
+        "methodologyUrl": { "type": ["string", "null"], "format": "uri" }
+      }
+    },
+    "metricDefinitionHigher": {
+      "allOf": [
+        { "$ref": "#/definitions/metricDefinitionBase" },
+        { "properties": { "better": { "const": "higher" } } }
+      ]
+    },
+    "metricDefinitionLower": {
+      "allOf": [
+        { "$ref": "#/definitions/metricDefinitionBase" },
+        { "properties": { "better": { "const": "lower" } } }
+      ]
+    },
+    "alias": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["provider", "modelId", "equivalence"],
+      "properties": {
+        "provider": { "type": "string", "minLength": 1 },
+        "modelId": { "type": "string", "minLength": 1 },
+        "piThinkingLevel": { "enum": ["off", "minimal", "low", "medium", "high", "xhigh", "max"] },
+        "equivalence": { "enum": ["verified", "probable"] }
+      }
+    },
+    "sourceMetricOrigin": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "benchmarkVersion"],
+      "properties": {
+        "kind": { "const": "source" },
+        "benchmarkVersion": { "type": "string", "minLength": 1 }
+      }
+    },
+    "adjustedMetricOrigin": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "benchmarkVersion", "sourceBenchmarkVersion", "method", "factor"],
+      "properties": {
+        "kind": { "const": "adjusted" },
+        "benchmarkVersion": { "type": "string", "minLength": 1 },
+        "sourceBenchmarkVersion": { "type": "string", "minLength": 1 },
+        "method": { "const": "median-overlap-ratio" },
+        "factor": { "type": "number", "exclusiveMinimum": 0 }
+      }
+    },
+    "metricOrigins": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["smart", "fast", "cheap"],
+      "properties": {
+        "smart": { "$ref": "#/definitions/sourceMetricOrigin" },
+        "fast": {
+          "oneOf": [
+            { "$ref": "#/definitions/sourceMetricOrigin" },
+            { "$ref": "#/definitions/adjustedMetricOrigin" }
+          ]
+        },
+        "cheap": {
+          "oneOf": [
+            { "$ref": "#/definitions/sourceMetricOrigin" },
+            { "$ref": "#/definitions/adjustedMetricOrigin" }
+          ]
+        }
+      }
+    },
+    "variant": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "creator", "displayName", "checkpoint", "quantization", "metrics", "metricOrigins", "aliases", "provenance"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "creator": { "type": "string", "minLength": 1 },
+        "displayName": { "type": "string", "minLength": 1 },
+        "checkpoint": { "type": ["string", "null"] },
+        "quantization": { "type": ["string", "null"] },
+        "reasoning": {
+          "type": ["object", "null"],
+          "additionalProperties": false,
+          "required": ["label"],
+          "properties": { "label": { "type": "string", "minLength": 1 } }
+        },
+        "metrics": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["smart", "fast", "cheap"],
+          "properties": {
+            "smart": { "type": "number" },
+            "fast": { "type": "number", "exclusiveMinimum": 0 },
+            "cheap": { "type": "number", "minimum": 0 }
+          }
+        },
+        "metricOrigins": { "$ref": "#/definitions/metricOrigins" },
+        "aliases": { "type": "array", "items": { "$ref": "#/definitions/alias" } },
+        "provenance": { "type": "object" }
+      }
+    }
+  }
+}

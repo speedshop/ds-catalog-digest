@@ -89,5 +89,5 @@ def validate_leaderboard(document):
                 raise ValueError(f"{row['config']} has invalid {field}")
         if not 0 <= row["pass_at_1"] <= 1:
             raise ValueError(f"{row['config']} has invalid pass_at_1")
-        if row["mean_duration_seconds"] < 0 or row["mean_cost_usd"] <= 0:
+        if row["mean_duration_seconds"] <= 0 or row["mean_cost_usd"] <= 0:
             raise ValueError(f"{row['config']} is not a Complete Variant")
