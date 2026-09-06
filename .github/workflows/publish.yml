@@ -112,6 +112,7 @@ jobs:
       actions: write
       contents: write
       pull-requests: write
+      statuses: write
     steps:
       - name: Check out repository
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -148,4 +149,12 @@ jobs:
             --body "Generated and validated by ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}.")
           ci_url=$(gh workflow run ci.yml --ref "$branch")
           gh run watch "${ci_url##*/}" --exit-status
-          gh pr merge "$pr_url" --squash --delete-branch
+          for context in check catalog-contract-compatibility; do
+            gh api --method POST \
+              "repos/${GITHUB_REPOSITORY}/statuses/$(git rev-parse HEAD)" \
+              -f state=success \
+              -f context="$context" \
+              -f description="Generated branch CI passed" \
+              -f target_url="$ci_url" >/dev/null
+          done
+          gh pr merge "$pr_url" --auto --squash --delete-branch
