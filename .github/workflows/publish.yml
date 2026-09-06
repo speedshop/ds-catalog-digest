@@ -107,9 +107,11 @@ jobs:
   publish:
     needs: [build, notify]
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 10
     permissions:
+      actions: write
       contents: write
+      pull-requests: write
     steps:
       - name: Check out repository
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -120,8 +122,12 @@ jobs:
           name: ds-catalog-digest-${{ github.run_id }}
           path: dist
 
-      - name: Update stable artifacts
+      - name: Publish validated artifacts through a pull request
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
+          branch="catalog-publish-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
+          git switch -c "$branch"
           cp dist/model-selection-catalog.json catalog/model-selection-catalog.json
           cp dist/model-aliases.json mappings/model-aliases.json
           cp dist/ALIAS_AUDIT.md mappings/ALIAS_AUDIT.md
@@ -129,5 +135,17 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add catalog/model-selection-catalog.json mappings/model-aliases.json mappings/ALIAS_AUDIT.md mappings/pi-model-catalog.json
-          git diff --cached --quiet || git commit --no-gpg-sign -m "Update catalog and Pi Provider Routes"
-          git push
+          if git diff --cached --quiet; then
+            echo "Stable artifacts are already current."
+            exit 0
+          fi
+          git commit --no-gpg-sign -m "Update catalog and Pi Provider Routes"
+          git push --set-upstream origin "$branch"
+          pr_url=$(gh pr create \
+            --base main \
+            --head "$branch" \
+            --title "Update catalog and Pi Provider Routes" \
+            --body "Generated and validated by ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}.")
+          ci_url=$(gh workflow run ci.yml --ref "$branch")
+          gh run watch "${ci_url##*/}" --exit-status
+          gh pr merge "$pr_url" --squash --delete-branch
