@@ -4,7 +4,7 @@
     "id": "deepswe-v1.1",
     "name": "DeepSWE v1.1",
     "version": "v1.1",
-    "generatedAt": "2026-09-07T06:49:56.398740Z",
+    "generatedAt": "2026-09-08T06:39:47.441899Z",
     "sourceUpdatedAt": "2026-09-03T22:24:37.984682+00:00",
     "distribution": {
       "classification": "redistributable",
@@ -6892,12 +6892,6 @@
         {
           "provider": "opencode-go",
           "modelId": "qwen3.8-max",
-          "piThinkingLevel": "xhigh",
-          "equivalence": "verified"
-        },
-        {
-          "provider": "openrouter",
-          "modelId": "qwen/qwen3.8-max",
           "piThinkingLevel": "xhigh",
           "equivalence": "verified"
         }

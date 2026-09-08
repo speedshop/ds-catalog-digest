@@ -1652,12 +1652,6 @@
         "modelId": "qwen3.8-max",
         "piThinkingLevel": "xhigh",
         "equivalence": "verified"
-      },
-      {
-        "provider": "openrouter",
-        "modelId": "qwen/qwen3.8-max",
-        "piThinkingLevel": "xhigh",
-        "equivalence": "verified"
       }
     ],
     "deepswe:config:mini_swe_agent_gpt_5_6_luna_xhigh": [
