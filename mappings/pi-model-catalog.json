@@ -8,7 +8,7 @@
     "modelsConfigHash": "sha256:30a0741487ebd78fe1c02248beb4286ceb8334dfc14847a1a314b3df5e2687cc",
     "extensions": []
   },
-  "catalogHash": "sha256:e1cd0d6957a882c20727a76da20665bfcaa5a5ad7fbb29c94f02185581738660",
+  "catalogHash": "sha256:62cbe9884db4d948a937bcfb401e0d551b9235569ece60a8ef2c4749a21d33f4",
   "routes": [
     {
       "api": "bedrock-converse-stream",
@@ -391,6 +391,65 @@
     {
       "api": "bedrock-converse-stream",
       "compatibility": {},
+      "contextWindow": 300000,
+      "deploymentFingerprint": "sha256:97cb5ad8c19d447c6067182ac9f1e53c288888378ffbf4bd4c2696fd8df2c2b8",
+      "input": [
+        "image",
+        "text"
+      ],
+      "maxTokens": 8192,
+      "modelId": "apac.amazon.nova-lite-v1:0",
+      "name": "Nova Lite (APAC)",
+      "provider": "amazon-bedrock",
+      "reasoning": false,
+      "supportedThinkingLevels": [
+        "off"
+      ],
+      "thinkingLevelMap": {},
+      "fingerprint": "sha256:9d62a542b18df0a9809bc2756dca2afc943da153f8886ddda9769d88eee13679"
+    },
+    {
+      "api": "bedrock-converse-stream",
+      "compatibility": {},
+      "contextWindow": 128000,
+      "deploymentFingerprint": "sha256:97cb5ad8c19d447c6067182ac9f1e53c288888378ffbf4bd4c2696fd8df2c2b8",
+      "input": [
+        "text"
+      ],
+      "maxTokens": 8192,
+      "modelId": "apac.amazon.nova-micro-v1:0",
+      "name": "Nova Micro (APAC)",
+      "provider": "amazon-bedrock",
+      "reasoning": false,
+      "supportedThinkingLevels": [
+        "off"
+      ],
+      "thinkingLevelMap": {},
+      "fingerprint": "sha256:41d4a3243f925b5c1e200fa655c625f3dd2decadf393449351ab994a19b9e937"
+    },
+    {
+      "api": "bedrock-converse-stream",
+      "compatibility": {},
+      "contextWindow": 300000,
+      "deploymentFingerprint": "sha256:97cb5ad8c19d447c6067182ac9f1e53c288888378ffbf4bd4c2696fd8df2c2b8",
+      "input": [
+        "image",
+        "text"
+      ],
+      "maxTokens": 8192,
+      "modelId": "apac.amazon.nova-pro-v1:0",
+      "name": "Nova Pro (APAC)",
+      "provider": "amazon-bedrock",
+      "reasoning": false,
+      "supportedThinkingLevels": [
+        "off"
+      ],
+      "thinkingLevelMap": {},
+      "fingerprint": "sha256:1ca63c474d83b733ac3f35c13b1b068f56a1fabad55e8336ebf5ec40bd03b238"
+    },
+    {
+      "api": "bedrock-converse-stream",
+      "compatibility": {},
       "contextWindow": 200000,
       "deploymentFingerprint": "sha256:97cb5ad8c19d447c6067182ac9f1e53c288888378ffbf4bd4c2696fd8df2c2b8",
       "input": [
@@ -438,6 +497,35 @@
         "max": "max"
       },
       "fingerprint": "sha256:7e1a97ec1358745c8172c18f75fb66d026fc5018665529eabba05476e378e0dc"
+    },
+    {
+      "api": "bedrock-converse-stream",
+      "compatibility": {},
+      "contextWindow": 1000000,
+      "deploymentFingerprint": "sha256:97cb5ad8c19d447c6067182ac9f1e53c288888378ffbf4bd4c2696fd8df2c2b8",
+      "input": [
+        "image",
+        "text"
+      ],
+      "maxTokens": 128000,
+      "modelId": "au.anthropic.claude-opus-4-7",
+      "name": "Claude Opus 4.7 (AU)",
+      "provider": "amazon-bedrock",
+      "reasoning": true,
+      "supportedThinkingLevels": [
+        "off",
+        "minimal",
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max"
+      ],
+      "thinkingLevelMap": {
+        "max": "max",
+        "xhigh": "xhigh"
+      },
+      "fingerprint": "sha256:fa9f41f60478f74cf86d705531b6368585f9e274053e5e0eefae1711ba5a531c"
     },
     {
       "api": "bedrock-converse-stream",
@@ -580,6 +668,26 @@
     {
       "api": "bedrock-converse-stream",
       "compatibility": {},
+      "contextWindow": 300000,
+      "deploymentFingerprint": "sha256:97cb5ad8c19d447c6067182ac9f1e53c288888378ffbf4bd4c2696fd8df2c2b8",
+      "input": [
+        "image",
+        "text"
+      ],
+      "maxTokens": 8192,
+      "modelId": "ca.amazon.nova-lite-v1:0",
+      "name": "Nova Lite (CA)",
+      "provider": "amazon-bedrock",
+      "reasoning": false,
+      "supportedThinkingLevels": [
+        "off"
+      ],
+      "thinkingLevelMap": {},
+      "fingerprint": "sha256:bd3334d03564c60dae4bfaf5cb1cd06cb5cec92611d5494be31b6925529e3546"
+    },
+    {
+      "api": "bedrock-converse-stream",
+      "compatibility": {},
       "contextWindow": 128000,
       "deploymentFingerprint": "sha256:97cb5ad8c19d447c6067182ac9f1e53c288888378ffbf4bd4c2696fd8df2c2b8",
       "input": [
@@ -645,6 +753,89 @@
       ],
       "thinkingLevelMap": {},
       "fingerprint": "sha256:408367fa48d907d17a2c55c61182ddc0f0befb5dd7f9d17cd6d0db9be2d029f0"
+    },
+    {
+      "api": "bedrock-converse-stream",
+      "compatibility": {},
+      "contextWindow": 1000000,
+      "deploymentFingerprint": "sha256:d25d096bd236d61a13a719b03b6c9c7ff75f346b27fde1c6d002fc47dd2f6b12",
+      "input": [
+        "image",
+        "text"
+      ],
+      "maxTokens": 64000,
+      "modelId": "eu.amazon.nova-2-lite-v1:0",
+      "name": "Nova 2 Lite (EU)",
+      "provider": "amazon-bedrock",
+      "reasoning": true,
+      "supportedThinkingLevels": [
+        "off",
+        "minimal",
+        "low",
+        "medium",
+        "high"
+      ],
+      "thinkingLevelMap": {},
+      "fingerprint": "sha256:ce55a2212b8bbe2289fdf610e9d2dfcd23341007cada842c772935cf7b706b72"
+    },
+    {
+      "api": "bedrock-converse-stream",
+      "compatibility": {},
+      "contextWindow": 300000,
+      "deploymentFingerprint": "sha256:d25d096bd236d61a13a719b03b6c9c7ff75f346b27fde1c6d002fc47dd2f6b12",
+      "input": [
+        "image",
+        "text"
+      ],
+      "maxTokens": 8192,
+      "modelId": "eu.amazon.nova-lite-v1:0",
+      "name": "Nova Lite (EU)",
+      "provider": "amazon-bedrock",
+      "reasoning": false,
+      "supportedThinkingLevels": [
+        "off"
+      ],
+      "thinkingLevelMap": {},
+      "fingerprint": "sha256:39dfe35962641de2390731907447546615aa29e63197c3151f32f5291a596706"
+    },
+    {
+      "api": "bedrock-converse-stream",
+      "compatibility": {},
+      "contextWindow": 128000,
+      "deploymentFingerprint": "sha256:d25d096bd236d61a13a719b03b6c9c7ff75f346b27fde1c6d002fc47dd2f6b12",
+      "input": [
+        "text"
+      ],
+      "maxTokens": 8192,
+      "modelId": "eu.amazon.nova-micro-v1:0",
+      "name": "Nova Micro (EU)",
+      "provider": "amazon-bedrock",
+      "reasoning": false,
+      "supportedThinkingLevels": [
+        "off"
+      ],
+      "thinkingLevelMap": {},
+      "fingerprint": "sha256:30a21a2b337b2819031919be2a6407ca4ff9c61d3006f144ad91affe09b67eab"
+    },
+    {
+      "api": "bedrock-converse-stream",
+      "compatibility": {},
+      "contextWindow": 300000,
+      "deploymentFingerprint": "sha256:d25d096bd236d61a13a719b03b6c9c7ff75f346b27fde1c6d002fc47dd2f6b12",
+      "input": [
+        "image",
+        "text"
+      ],
+      "maxTokens": 8192,
+      "modelId": "eu.amazon.nova-pro-v1:0",
+      "name": "Nova Pro (EU)",
+      "provider": "amazon-bedrock",
+      "reasoning": false,
+      "supportedThinkingLevels": [
+        "off"
+      ],
+      "thinkingLevelMap": {},
+      "fingerprint": "sha256:d9a0da765dd856fa0f595c8fa4ee727d73af56c9c31430dc01655887cdc4b77b"
     },
     {
       "api": "bedrock-converse-stream",
@@ -916,6 +1107,50 @@
         "xhigh": "xhigh"
       },
       "fingerprint": "sha256:753e8e77811238fa1ac91d201b5b91c1c937b5ae4f6331fb7917ff98cdf5f222"
+    },
+    {
+      "api": "bedrock-converse-stream",
+      "compatibility": {},
+      "contextWindow": 128000,
+      "deploymentFingerprint": "sha256:d25d096bd236d61a13a719b03b6c9c7ff75f346b27fde1c6d002fc47dd2f6b12",
+      "input": [
+        "image",
+        "text"
+      ],
+      "maxTokens": 8192,
+      "modelId": "eu.mistral.pixtral-large-2502-v1:0",
+      "name": "Pixtral Large (25.02) (EU)",
+      "provider": "amazon-bedrock",
+      "reasoning": false,
+      "supportedThinkingLevels": [
+        "off"
+      ],
+      "thinkingLevelMap": {},
+      "fingerprint": "sha256:d0434cd1a76afdb928b7c297d74e6ac1e7cc408be327d624eb93dd6dee261a72"
+    },
+    {
+      "api": "bedrock-converse-stream",
+      "compatibility": {},
+      "contextWindow": 1000000,
+      "deploymentFingerprint": "sha256:97cb5ad8c19d447c6067182ac9f1e53c288888378ffbf4bd4c2696fd8df2c2b8",
+      "input": [
+        "image",
+        "text"
+      ],
+      "maxTokens": 64000,
+      "modelId": "global.amazon.nova-2-lite-v1:0",
+      "name": "Nova 2 Lite (Global)",
+      "provider": "amazon-bedrock",
+      "reasoning": true,
+      "supportedThinkingLevels": [
+        "off",
+        "minimal",
+        "low",
+        "medium",
+        "high"
+      ],
+      "thinkingLevelMap": {},
+      "fingerprint": "sha256:411d13f3fda3e317ac665fcc1e8a609412ad55728b8631242e2ef098e563592d"
     },
     {
       "api": "bedrock-converse-stream",
@@ -1301,6 +1536,33 @@
     {
       "api": "bedrock-converse-stream",
       "compatibility": {},
+      "contextWindow": 1050000,
+      "deploymentFingerprint": "sha256:97cb5ad8c19d447c6067182ac9f1e53c288888378ffbf4bd4c2696fd8df2c2b8",
+      "input": [
+        "image",
+        "text"
+      ],
+      "maxTokens": 128000,
+      "modelId": "global.openai.gpt-6-astra",
+      "name": "GPT-6 Astra (Global)",
+      "provider": "amazon-bedrock",
+      "reasoning": true,
+      "supportedThinkingLevels": [
+        "off",
+        "minimal",
+        "low",
+        "medium",
+        "high",
+        "xhigh"
+      ],
+      "thinkingLevelMap": {
+        "xhigh": "xhigh"
+      },
+      "fingerprint": "sha256:02acf22183c813b464fe441f1367a947e65bd983ce1b5c9a7a4fa90eb8e1c51a"
+    },
+    {
+      "api": "bedrock-converse-stream",
+      "compatibility": {},
       "contextWindow": 500000,
       "deploymentFingerprint": "sha256:97cb5ad8c19d447c6067182ac9f1e53c288888378ffbf4bd4c2696fd8df2c2b8",
       "input": [
@@ -1361,6 +1623,30 @@
       ],
       "thinkingLevelMap": {},
       "fingerprint": "sha256:2e6f28e5b9e0151c698ce5e5cb66f3f0deab267dc7e902e555c6755a712ea472"
+    },
+    {
+      "api": "bedrock-converse-stream",
+      "compatibility": {},
+      "contextWindow": 1000000,
+      "deploymentFingerprint": "sha256:97cb5ad8c19d447c6067182ac9f1e53c288888378ffbf4bd4c2696fd8df2c2b8",
+      "input": [
+        "image",
+        "text"
+      ],
+      "maxTokens": 64000,
+      "modelId": "jp.amazon.nova-2-lite-v1:0",
+      "name": "Nova 2 Lite (JP)",
+      "provider": "amazon-bedrock",
+      "reasoning": true,
+      "supportedThinkingLevels": [
+        "off",
+        "minimal",
+        "low",
+        "medium",
+        "high"
+      ],
+      "thinkingLevelMap": {},
+      "fingerprint": "sha256:a4ff223b744bf79d3b6251b0f6b2eaee5827f041d6f8854a24f617ad2660eb01"
     },
     {
       "api": "bedrock-converse-stream",
@@ -2168,6 +2454,33 @@
     {
       "api": "bedrock-converse-stream",
       "compatibility": {},
+      "contextWindow": 1050000,
+      "deploymentFingerprint": "sha256:97cb5ad8c19d447c6067182ac9f1e53c288888378ffbf4bd4c2696fd8df2c2b8",
+      "input": [
+        "image",
+        "text"
+      ],
+      "maxTokens": 128000,
+      "modelId": "openai.gpt-6-astra",
+      "name": "GPT-6 Astra",
+      "provider": "amazon-bedrock",
+      "reasoning": true,
+      "supportedThinkingLevels": [
+        "off",
+        "minimal",
+        "low",
+        "medium",
+        "high",
+        "xhigh"
+      ],
+      "thinkingLevelMap": {
+        "xhigh": "xhigh"
+      },
+      "fingerprint": "sha256:ef369a766d87972032e9cb0ccff1156bbbda4e20b7cdef9ce3e0aa34b9e81e0b"
+    },
+    {
+      "api": "bedrock-converse-stream",
+      "compatibility": {},
       "contextWindow": 128000,
       "deploymentFingerprint": "sha256:97cb5ad8c19d447c6067182ac9f1e53c288888378ffbf4bd4c2696fd8df2c2b8",
       "input": [
@@ -2436,6 +2749,89 @@
       ],
       "thinkingLevelMap": {},
       "fingerprint": "sha256:5e79e00b03658aea6bff0ba32cbe61fa95bd7540cf3b1b424e18a05246c7f255"
+    },
+    {
+      "api": "bedrock-converse-stream",
+      "compatibility": {},
+      "contextWindow": 1000000,
+      "deploymentFingerprint": "sha256:97cb5ad8c19d447c6067182ac9f1e53c288888378ffbf4bd4c2696fd8df2c2b8",
+      "input": [
+        "image",
+        "text"
+      ],
+      "maxTokens": 64000,
+      "modelId": "us.amazon.nova-2-lite-v1:0",
+      "name": "Nova 2 Lite (US)",
+      "provider": "amazon-bedrock",
+      "reasoning": true,
+      "supportedThinkingLevels": [
+        "off",
+        "minimal",
+        "low",
+        "medium",
+        "high"
+      ],
+      "thinkingLevelMap": {},
+      "fingerprint": "sha256:4256fb0beadbc3a6669d8c66fa89a2573528f3eb57cde65d5c6f7bee4092cbeb"
+    },
+    {
+      "api": "bedrock-converse-stream",
+      "compatibility": {},
+      "contextWindow": 300000,
+      "deploymentFingerprint": "sha256:97cb5ad8c19d447c6067182ac9f1e53c288888378ffbf4bd4c2696fd8df2c2b8",
+      "input": [
+        "image",
+        "text"
+      ],
+      "maxTokens": 8192,
+      "modelId": "us.amazon.nova-lite-v1:0",
+      "name": "Nova Lite (US)",
+      "provider": "amazon-bedrock",
+      "reasoning": false,
+      "supportedThinkingLevels": [
+        "off"
+      ],
+      "thinkingLevelMap": {},
+      "fingerprint": "sha256:3e66022ca5d4d306ce8e5eaac23b316d1c4a38fc1d1d34e5048ee50daec8d542"
+    },
+    {
+      "api": "bedrock-converse-stream",
+      "compatibility": {},
+      "contextWindow": 128000,
+      "deploymentFingerprint": "sha256:97cb5ad8c19d447c6067182ac9f1e53c288888378ffbf4bd4c2696fd8df2c2b8",
+      "input": [
+        "text"
+      ],
+      "maxTokens": 8192,
+      "modelId": "us.amazon.nova-micro-v1:0",
+      "name": "Nova Micro (US)",
+      "provider": "amazon-bedrock",
+      "reasoning": false,
+      "supportedThinkingLevels": [
+        "off"
+      ],
+      "thinkingLevelMap": {},
+      "fingerprint": "sha256:c3e1f1b0f0b00c225e71493cffac1ae71fc16b4abf7623c3bbc8335f1dfe3944"
+    },
+    {
+      "api": "bedrock-converse-stream",
+      "compatibility": {},
+      "contextWindow": 300000,
+      "deploymentFingerprint": "sha256:97cb5ad8c19d447c6067182ac9f1e53c288888378ffbf4bd4c2696fd8df2c2b8",
+      "input": [
+        "image",
+        "text"
+      ],
+      "maxTokens": 8192,
+      "modelId": "us.amazon.nova-pro-v1:0",
+      "name": "Nova Pro (US)",
+      "provider": "amazon-bedrock",
+      "reasoning": false,
+      "supportedThinkingLevels": [
+        "off"
+      ],
+      "thinkingLevelMap": {},
+      "fingerprint": "sha256:41201b080054bcb93b64334dc058e369302a1e765dd7cab03ea8dae1efda8124"
     },
     {
       "api": "bedrock-converse-stream",
@@ -2787,6 +3183,63 @@
     {
       "api": "bedrock-converse-stream",
       "compatibility": {},
+      "contextWindow": 128000,
+      "deploymentFingerprint": "sha256:97cb5ad8c19d447c6067182ac9f1e53c288888378ffbf4bd4c2696fd8df2c2b8",
+      "input": [
+        "text"
+      ],
+      "maxTokens": 4096,
+      "modelId": "us.meta.llama3-1-70b-instruct-v1:0",
+      "name": "Llama 3.1 70B Instruct (US)",
+      "provider": "amazon-bedrock",
+      "reasoning": false,
+      "supportedThinkingLevels": [
+        "off"
+      ],
+      "thinkingLevelMap": {},
+      "fingerprint": "sha256:55b026969238b1494a8303234b84f26ccff79cea432b6549befe46f9c2cd6efc"
+    },
+    {
+      "api": "bedrock-converse-stream",
+      "compatibility": {},
+      "contextWindow": 128000,
+      "deploymentFingerprint": "sha256:97cb5ad8c19d447c6067182ac9f1e53c288888378ffbf4bd4c2696fd8df2c2b8",
+      "input": [
+        "text"
+      ],
+      "maxTokens": 4096,
+      "modelId": "us.meta.llama3-1-8b-instruct-v1:0",
+      "name": "Llama 3.1 8B Instruct (US)",
+      "provider": "amazon-bedrock",
+      "reasoning": false,
+      "supportedThinkingLevels": [
+        "off"
+      ],
+      "thinkingLevelMap": {},
+      "fingerprint": "sha256:4e08dd160b047600bb7329c77b079d249b8fe9ce29a16f152cfa9d0b38cd1608"
+    },
+    {
+      "api": "bedrock-converse-stream",
+      "compatibility": {},
+      "contextWindow": 128000,
+      "deploymentFingerprint": "sha256:97cb5ad8c19d447c6067182ac9f1e53c288888378ffbf4bd4c2696fd8df2c2b8",
+      "input": [
+        "text"
+      ],
+      "maxTokens": 4096,
+      "modelId": "us.meta.llama3-3-70b-instruct-v1:0",
+      "name": "Llama 3.3 70B Instruct (US)",
+      "provider": "amazon-bedrock",
+      "reasoning": false,
+      "supportedThinkingLevels": [
+        "off"
+      ],
+      "thinkingLevelMap": {},
+      "fingerprint": "sha256:793f227033a4f4f0ccb4c3454b3c17f7b217828165180ad1e59a575f69684485"
+    },
+    {
+      "api": "bedrock-converse-stream",
+      "compatibility": {},
       "contextWindow": 1000000,
       "deploymentFingerprint": "sha256:97cb5ad8c19d447c6067182ac9f1e53c288888378ffbf4bd4c2696fd8df2c2b8",
       "input": [
@@ -2823,6 +3276,180 @@
       ],
       "thinkingLevelMap": {},
       "fingerprint": "sha256:ca90fa93d8b79f768e813cfae3444d19f26db86d0d4e3218ce38784295122988"
+    },
+    {
+      "api": "bedrock-converse-stream",
+      "compatibility": {},
+      "contextWindow": 128000,
+      "deploymentFingerprint": "sha256:97cb5ad8c19d447c6067182ac9f1e53c288888378ffbf4bd4c2696fd8df2c2b8",
+      "input": [
+        "image",
+        "text"
+      ],
+      "maxTokens": 8192,
+      "modelId": "us.mistral.pixtral-large-2502-v1:0",
+      "name": "Pixtral Large (25.02) (US)",
+      "provider": "amazon-bedrock",
+      "reasoning": false,
+      "supportedThinkingLevels": [
+        "off"
+      ],
+      "thinkingLevelMap": {},
+      "fingerprint": "sha256:4313bf1da73329e7b66499058a032c63f49b8625fbb14fe80b0a2d46d9600268"
+    },
+    {
+      "api": "bedrock-converse-stream",
+      "compatibility": {},
+      "contextWindow": 1050000,
+      "deploymentFingerprint": "sha256:97cb5ad8c19d447c6067182ac9f1e53c288888378ffbf4bd4c2696fd8df2c2b8",
+      "input": [
+        "image",
+        "text"
+      ],
+      "maxTokens": 128000,
+      "modelId": "us.openai.gpt-5.6-luna",
+      "name": "GPT-5.6 Luna (US)",
+      "provider": "amazon-bedrock",
+      "reasoning": true,
+      "supportedThinkingLevels": [
+        "off",
+        "minimal",
+        "low",
+        "medium",
+        "high",
+        "xhigh"
+      ],
+      "thinkingLevelMap": {
+        "xhigh": "xhigh"
+      },
+      "fingerprint": "sha256:40f890b8b5a81efe1a3180c53d6ad4a61f5a20a648cd3f887fbadb33c44f8329"
+    },
+    {
+      "api": "bedrock-converse-stream",
+      "compatibility": {},
+      "contextWindow": 1050000,
+      "deploymentFingerprint": "sha256:97cb5ad8c19d447c6067182ac9f1e53c288888378ffbf4bd4c2696fd8df2c2b8",
+      "input": [
+        "image",
+        "text"
+      ],
+      "maxTokens": 128000,
+      "modelId": "us.openai.gpt-5.6-sol",
+      "name": "GPT-5.6 Sol (US)",
+      "provider": "amazon-bedrock",
+      "reasoning": true,
+      "supportedThinkingLevels": [
+        "off",
+        "minimal",
+        "low",
+        "medium",
+        "high",
+        "xhigh"
+      ],
+      "thinkingLevelMap": {
+        "xhigh": "xhigh"
+      },
+      "fingerprint": "sha256:394b84aeb6ab1969969f7e68caa85c8a8e151dd161962a173f91a82eaf6a1c88"
+    },
+    {
+      "api": "bedrock-converse-stream",
+      "compatibility": {},
+      "contextWindow": 1050000,
+      "deploymentFingerprint": "sha256:97cb5ad8c19d447c6067182ac9f1e53c288888378ffbf4bd4c2696fd8df2c2b8",
+      "input": [
+        "image",
+        "text"
+      ],
+      "maxTokens": 128000,
+      "modelId": "us.openai.gpt-5.6-terra",
+      "name": "GPT-5.6 Terra (US)",
+      "provider": "amazon-bedrock",
+      "reasoning": true,
+      "supportedThinkingLevels": [
+        "off",
+        "minimal",
+        "low",
+        "medium",
+        "high",
+        "xhigh"
+      ],
+      "thinkingLevelMap": {
+        "xhigh": "xhigh"
+      },
+      "fingerprint": "sha256:668428b42d6e5356b75295c09a9e3db38e6509460d4b1d98a04adf34b2d69fa5"
+    },
+    {
+      "api": "bedrock-converse-stream",
+      "compatibility": {},
+      "contextWindow": 1050000,
+      "deploymentFingerprint": "sha256:97cb5ad8c19d447c6067182ac9f1e53c288888378ffbf4bd4c2696fd8df2c2b8",
+      "input": [
+        "image",
+        "text"
+      ],
+      "maxTokens": 128000,
+      "modelId": "us.openai.gpt-6-astra",
+      "name": "GPT-6 Astra (US)",
+      "provider": "amazon-bedrock",
+      "reasoning": true,
+      "supportedThinkingLevels": [
+        "off",
+        "minimal",
+        "low",
+        "medium",
+        "high",
+        "xhigh"
+      ],
+      "thinkingLevelMap": {
+        "xhigh": "xhigh"
+      },
+      "fingerprint": "sha256:483365f51d4fd5d770964875566855bd8447b59c13f27f038a127ebf2d2a4f9a"
+    },
+    {
+      "api": "bedrock-converse-stream",
+      "compatibility": {},
+      "contextWindow": 122880,
+      "deploymentFingerprint": "sha256:97cb5ad8c19d447c6067182ac9f1e53c288888378ffbf4bd4c2696fd8df2c2b8",
+      "input": [
+        "text"
+      ],
+      "maxTokens": 8192,
+      "modelId": "us.writer.palmyra-x4-v1:0",
+      "name": "Palmyra X4 (US)",
+      "provider": "amazon-bedrock",
+      "reasoning": true,
+      "supportedThinkingLevels": [
+        "off",
+        "minimal",
+        "low",
+        "medium",
+        "high"
+      ],
+      "thinkingLevelMap": {},
+      "fingerprint": "sha256:865a631c8ece561491def55aad8c1b5ecb6904bcd5fa3bba4a5cfc6c932ec34e"
+    },
+    {
+      "api": "bedrock-converse-stream",
+      "compatibility": {},
+      "contextWindow": 1040000,
+      "deploymentFingerprint": "sha256:97cb5ad8c19d447c6067182ac9f1e53c288888378ffbf4bd4c2696fd8df2c2b8",
+      "input": [
+        "text"
+      ],
+      "maxTokens": 8192,
+      "modelId": "us.writer.palmyra-x5-v1:0",
+      "name": "Palmyra X5 (US)",
+      "provider": "amazon-bedrock",
+      "reasoning": true,
+      "supportedThinkingLevels": [
+        "off",
+        "minimal",
+        "low",
+        "medium",
+        "high"
+      ],
+      "thinkingLevelMap": {},
+      "fingerprint": "sha256:edf74385f475c434f51e70a2464b56af58d9ed81a4fcdc8051e04d6747d151d4"
     },
     {
       "api": "bedrock-converse-stream",
@@ -19558,7 +20185,7 @@
         "image",
         "text"
       ],
-      "maxTokens": 131072,
+      "maxTokens": 943718,
       "modelId": "~z-ai/glm-flash-latest",
       "name": "Z.ai: GLM Flash Latest",
       "provider": "openrouter",
@@ -19585,12 +20212,12 @@
         "supportsDeveloperRole": false,
         "thinkingFormat": "openrouter"
       },
-      "contextWindow": 1048576,
+      "contextWindow": 1024000,
       "deploymentFingerprint": "sha256:e08186e0c8c6074c97ee0f4211ebd491d6848f2f12f4b761fb51ce23ad641cfa",
       "input": [
         "text"
       ],
-      "maxTokens": 943718,
+      "maxTokens": 128000,
       "modelId": "~z-ai/glm-latest",
       "name": "Z.ai: GLM Latest",
       "provider": "openrouter",
@@ -21385,7 +22012,7 @@
         "image",
         "text"
       ],
-      "maxTokens": 384000,
+      "maxTokens": 943718,
       "modelId": "deepseek/deepseek-v4-flash-vision-exp",
       "name": "DeepSeek: DeepSeek V4 Flash Vision Exp",
       "provider": "openrouter",
@@ -21405,6 +22032,39 @@
         "xhigh": "xhigh"
       },
       "fingerprint": "sha256:ce31bdb4df590912698f6f3e94fccfd0b7cc67624b9459c006c8a5fbe49955a9"
+    },
+    {
+      "api": "openai-completions",
+      "compatibility": {
+        "supportsDeveloperRole": false,
+        "thinkingFormat": "openrouter"
+      },
+      "contextWindow": 1048576,
+      "deploymentFingerprint": "sha256:e08186e0c8c6074c97ee0f4211ebd491d6848f2f12f4b761fb51ce23ad641cfa",
+      "input": [
+        "image",
+        "text"
+      ],
+      "maxTokens": 943718,
+      "modelId": "deepseek/deepseek-v4-flash-vision-exp:batch",
+      "name": "DeepSeek: DeepSeek V4 Flash Vision Exp (batch)",
+      "provider": "openrouter",
+      "reasoning": true,
+      "supportedThinkingLevels": [
+        "off",
+        "high",
+        "xhigh"
+      ],
+      "thinkingLevelMap": {
+        "high": "high",
+        "low": null,
+        "max": null,
+        "medium": null,
+        "minimal": null,
+        "off": "none",
+        "xhigh": "xhigh"
+      },
+      "fingerprint": "sha256:6af888b372f0b00f6f3cd404d965661c0f812c2b470f64235bf3cac2e49337ca"
     },
     {
       "api": "openai-completions",
@@ -22666,8 +23326,8 @@
         "text"
       ],
       "maxTokens": 65536,
-      "modelId": "inception/mercury-2.5-preview",
-      "name": "Inception: Mercury 2.5 Preview",
+      "modelId": "inception/mercury-2.5",
+      "name": "Inception: Mercury 2.5",
       "provider": "openrouter",
       "reasoning": true,
       "supportedThinkingLevels": [
@@ -22684,7 +23344,7 @@
         "off": null,
         "xhigh": null
       },
-      "fingerprint": "sha256:1a77b5958ef08782a6abb0a4fbb26abb2d4e08586a345321d113b2b3c2c77ed5"
+      "fingerprint": "sha256:f0349bccb29587a4c3d18c1b5a3146f4947ff5932acfc5a37b06648fc4e03da9"
     },
     {
       "api": "openai-completions",
@@ -24217,7 +24877,7 @@
         "image",
         "text"
       ],
-      "maxTokens": 235929,
+      "maxTokens": 262144,
       "modelId": "nex-agi/nex-n2-mini",
       "name": "Nex AGI: Nex-N2-Mini",
       "provider": "openrouter",
@@ -24244,7 +24904,7 @@
         "image",
         "text"
       ],
-      "maxTokens": 235929,
+      "maxTokens": 262144,
       "modelId": "nex-agi/nex-n2-pro",
       "name": "Nex AGI: Nex-N2-Pro",
       "provider": "openrouter",
@@ -24258,6 +24918,71 @@
       ],
       "thinkingLevelMap": {},
       "fingerprint": "sha256:3e36a79d2f999778511fe250c10dc716599c3d8607f16e505a45607dd4f3197e"
+    },
+    {
+      "api": "openai-completions",
+      "compatibility": {
+        "supportsDeveloperRole": false,
+        "thinkingFormat": "openrouter"
+      },
+      "contextWindow": 262144,
+      "deploymentFingerprint": "sha256:e08186e0c8c6074c97ee0f4211ebd491d6848f2f12f4b761fb51ce23ad641cfa",
+      "input": [
+        "text"
+      ],
+      "maxTokens": 235929,
+      "modelId": "nex-agi/nex-n2.5-mini:free",
+      "name": "Nex AGI: Nex-N2.5-Mini (free)",
+      "provider": "openrouter",
+      "reasoning": true,
+      "supportedThinkingLevels": [
+        "off",
+        "medium",
+        "high"
+      ],
+      "thinkingLevelMap": {
+        "high": "high",
+        "low": null,
+        "max": null,
+        "medium": "medium",
+        "minimal": null,
+        "off": "none",
+        "xhigh": null
+      },
+      "fingerprint": "sha256:94b3c0be2549bc586592952bd64ec380938ebd5ed926d61d6970e6d5a189415c"
+    },
+    {
+      "api": "openai-completions",
+      "compatibility": {
+        "supportsDeveloperRole": false,
+        "thinkingFormat": "openrouter"
+      },
+      "contextWindow": 262144,
+      "deploymentFingerprint": "sha256:e08186e0c8c6074c97ee0f4211ebd491d6848f2f12f4b761fb51ce23ad641cfa",
+      "input": [
+        "image",
+        "text"
+      ],
+      "maxTokens": 235929,
+      "modelId": "nex-agi/nex-n2.5-pro:free",
+      "name": "Nex AGI: Nex-N2.5-Pro (free)",
+      "provider": "openrouter",
+      "reasoning": true,
+      "supportedThinkingLevels": [
+        "off",
+        "medium",
+        "high"
+      ],
+      "thinkingLevelMap": {
+        "high": "high",
+        "low": null,
+        "max": null,
+        "medium": "medium",
+        "minimal": null,
+        "off": "none",
+        "xhigh": null
+      },
+      "fingerprint": "sha256:4c2d61dfcb4bc278f0fa5a3e10e27eb465109cd23714f4c39626fda8b7df1487"
     },
     {
       "api": "openai-completions",
@@ -28000,7 +28725,7 @@
       "input": [
         "text"
       ],
-      "maxTokens": 235929,
+      "maxTokens": 16384,
       "modelId": "qwen/qwen3-next-80b-a3b-instruct",
       "name": "Qwen: Qwen3 Next 80B A3B Instruct",
       "provider": "openrouter",
@@ -28682,7 +29407,7 @@
       "input": [
         "text"
       ],
-      "maxTokens": 262144,
+      "maxTokens": 131072,
       "modelId": "qwen/qwen3.8-2.4t-a95b",
       "name": "Qwen: Qwen3.8 2.4T A95B",
       "provider": "openrouter",
@@ -29764,12 +30489,12 @@
         "supportsDeveloperRole": false,
         "thinkingFormat": "openrouter"
       },
-      "contextWindow": 204800,
+      "contextWindow": 198000,
       "deploymentFingerprint": "sha256:e08186e0c8c6074c97ee0f4211ebd491d6848f2f12f4b761fb51ce23ad641cfa",
       "input": [
         "text"
       ],
-      "maxTokens": 131072,
+      "maxTokens": 16384,
       "modelId": "z-ai/glm-4.6",
       "name": "Z.ai: GLM 4.6",
       "provider": "openrouter",
@@ -29979,25 +30704,31 @@
         "supportsDeveloperRole": false,
         "thinkingFormat": "openrouter"
       },
-      "contextWindow": 512000,
+      "contextWindow": 1048576,
       "deploymentFingerprint": "sha256:e08186e0c8c6074c97ee0f4211ebd491d6848f2f12f4b761fb51ce23ad641cfa",
       "input": [
         "text"
       ],
-      "maxTokens": 4096,
+      "maxTokens": 943718,
       "modelId": "z-ai/glm-5.2:batch",
       "name": "Z.ai: GLM 5.2 (batch)",
       "provider": "openrouter",
       "reasoning": true,
       "supportedThinkingLevels": [
         "off",
-        "minimal",
-        "low",
-        "medium",
-        "high"
+        "high",
+        "xhigh"
       ],
-      "thinkingLevelMap": {},
-      "fingerprint": "sha256:3f1b7319e550a2749d11bb3050cb5c10bcaed5bd983c3d681eabd9a5d8a2c33c"
+      "thinkingLevelMap": {
+        "high": "high",
+        "low": null,
+        "max": null,
+        "medium": null,
+        "minimal": null,
+        "off": "none",
+        "xhigh": "xhigh"
+      },
+      "fingerprint": "sha256:588074afa2b5d989d2a03e54fdf5f0adcda4e0a4e5a03dcefa857cbe989d3c30"
     },
     {
       "api": "openai-completions",
@@ -30070,13 +30801,13 @@
         "supportsDeveloperRole": false,
         "thinkingFormat": "openrouter"
       },
-      "contextWindow": 1048575,
+      "contextWindow": 1048576,
       "deploymentFingerprint": "sha256:e08186e0c8c6074c97ee0f4211ebd491d6848f2f12f4b761fb51ce23ad641cfa",
       "input": [
         "image",
         "text"
       ],
-      "maxTokens": 943717,
+      "maxTokens": 943718,
       "modelId": "z-ai/glm-5.3-flash:batch",
       "name": "Z.ai: GLM 5.3 Flash (batch)",
       "provider": "openrouter",
@@ -30096,6 +30827,38 @@
         "xhigh": null
       },
       "fingerprint": "sha256:0169b05a2998af714f912fc2ca51d974987fdf4b830f820348f3e21d9cdf206e"
+    },
+    {
+      "api": "openai-completions",
+      "compatibility": {
+        "supportsDeveloperRole": false,
+        "thinkingFormat": "openrouter"
+      },
+      "contextWindow": 1048576,
+      "deploymentFingerprint": "sha256:e08186e0c8c6074c97ee0f4211ebd491d6848f2f12f4b761fb51ce23ad641cfa",
+      "input": [
+        "text"
+      ],
+      "maxTokens": 943718,
+      "modelId": "z-ai/glm-5.3:batch",
+      "name": "Z.ai: GLM 5.3 (batch)",
+      "provider": "openrouter",
+      "reasoning": true,
+      "supportedThinkingLevels": [
+        "low",
+        "high",
+        "max"
+      ],
+      "thinkingLevelMap": {
+        "high": "high",
+        "low": "low",
+        "max": "max",
+        "medium": null,
+        "minimal": null,
+        "off": null,
+        "xhigh": null
+      },
+      "fingerprint": "sha256:8b4af1e17786ae90db11085638509ec774f302632e6ffb2528373c0f6a0300f6"
     },
     {
       "api": "openai-completions",
@@ -33679,6 +34442,30 @@
         "image",
         "text"
       ],
+      "maxTokens": 384000,
+      "modelId": "deepseek/deepseek-v4.1-flash-beta",
+      "name": "DeepSeek V4.1 Flash Beta",
+      "provider": "vercel-ai-gateway",
+      "reasoning": true,
+      "supportedThinkingLevels": [
+        "off",
+        "minimal",
+        "low",
+        "medium",
+        "high"
+      ],
+      "thinkingLevelMap": {},
+      "fingerprint": "sha256:fe7bb046f8d159e4a4071065e2b39995d6df16536029ee55b48b49b0338b60ac"
+    },
+    {
+      "api": "anthropic-messages",
+      "compatibility": {},
+      "contextWindow": 1000000,
+      "deploymentFingerprint": "sha256:f41d7415fd061e57db3e476e90a872b5c48f2603ca1ad61cbb99793e6424a01f",
+      "input": [
+        "image",
+        "text"
+      ],
       "maxTokens": 65536,
       "modelId": "google/gemini-2.5-flash",
       "name": "Gemini 2.5 Flash",
@@ -34004,6 +34791,29 @@
       ],
       "thinkingLevelMap": {},
       "fingerprint": "sha256:7fa495495f76c71e1a530f5a9646c25418c63bc4f3272659f99ee5ea84c9733f"
+    },
+    {
+      "api": "anthropic-messages",
+      "compatibility": {},
+      "contextWindow": 260000,
+      "deploymentFingerprint": "sha256:f41d7415fd061e57db3e476e90a872b5c48f2603ca1ad61cbb99793e6424a01f",
+      "input": [
+        "text"
+      ],
+      "maxTokens": 65536,
+      "modelId": "inception/mercury-2.5",
+      "name": "Mercury 2.5",
+      "provider": "vercel-ai-gateway",
+      "reasoning": true,
+      "supportedThinkingLevels": [
+        "off",
+        "minimal",
+        "low",
+        "medium",
+        "high"
+      ],
+      "thinkingLevelMap": {},
+      "fingerprint": "sha256:f5b336b4faf02b58273516e0b8652c4eefe92d49a9beb2c7f5ed16e446974300"
     },
     {
       "api": "anthropic-messages",
@@ -37562,29 +38372,6 @@
     {
       "api": "anthropic-messages",
       "compatibility": {},
-      "contextWindow": 1048576,
-      "deploymentFingerprint": "sha256:f41d7415fd061e57db3e476e90a872b5c48f2603ca1ad61cbb99793e6424a01f",
-      "input": [
-        "text"
-      ],
-      "maxTokens": 131072,
-      "modelId": "xiaomi/mimo-v2.5-pro-ultraspeed",
-      "name": "MiMo V2.5 Pro UltraSpeed",
-      "provider": "vercel-ai-gateway",
-      "reasoning": true,
-      "supportedThinkingLevels": [
-        "off",
-        "minimal",
-        "low",
-        "medium",
-        "high"
-      ],
-      "thinkingLevelMap": {},
-      "fingerprint": "sha256:32677a97428eb1f0c7091702029842c16ea2d532ea474147bde1b0ea98580a8e"
-    },
-    {
-      "api": "anthropic-messages",
-      "compatibility": {},
       "contextWindow": 128000,
       "deploymentFingerprint": "sha256:f41d7415fd061e57db3e476e90a872b5c48f2603ca1ad61cbb99793e6424a01f",
       "input": [
@@ -37976,29 +38763,6 @@
       ],
       "thinkingLevelMap": {},
       "fingerprint": "sha256:f7c24565bd1a934f6e78f283bf02c958ae358b2df5f1a2e28db135575bb90d28"
-    },
-    {
-      "api": "anthropic-messages",
-      "compatibility": {},
-      "contextWindow": 1048576,
-      "deploymentFingerprint": "sha256:f41d7415fd061e57db3e476e90a872b5c48f2603ca1ad61cbb99793e6424a01f",
-      "input": [
-        "text"
-      ],
-      "maxTokens": 1048576,
-      "modelId": "zai/glm-5.3-promo-50",
-      "name": "GLM 5.3 (50% off)",
-      "provider": "vercel-ai-gateway",
-      "reasoning": true,
-      "supportedThinkingLevels": [
-        "off",
-        "minimal",
-        "low",
-        "medium",
-        "high"
-      ],
-      "thinkingLevelMap": {},
-      "fingerprint": "sha256:8064af83a7bca389a8795eacdf7f90a2d7b2cfda59d4424a98b2e8d66df99929"
     },
     {
       "api": "anthropic-messages",

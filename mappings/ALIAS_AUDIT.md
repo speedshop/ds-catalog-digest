@@ -3,9 +3,9 @@
 - DeepSWE release: v1.1
 - Complete Variants: 70
 - Variants with verified Provider Routes: 64
-- Verified Provider Routes: 574
+- Verified Provider Routes: 573
 - Route Candidates: 36
-- Stale accepted routes: 43
+- Stale accepted routes: 44
 
 ## Unresolved configurations
 
