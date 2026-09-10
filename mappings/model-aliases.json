@@ -2966,12 +2966,6 @@
         "equivalence": "verified"
       },
       {
-        "provider": "openrouter",
-        "modelId": "z-ai/glm-5.2:batch",
-        "piThinkingLevel": "high",
-        "equivalence": "verified"
-      },
-      {
         "provider": "together",
         "modelId": "zai-org/GLM-5.2",
         "piThinkingLevel": "high",
