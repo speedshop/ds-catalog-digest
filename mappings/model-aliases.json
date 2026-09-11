@@ -737,12 +737,6 @@
         "equivalence": "verified"
       },
       {
-        "provider": "fireworks",
-        "modelId": "accounts/fireworks/models/kimi-k3",
-        "piThinkingLevel": "max",
-        "equivalence": "verified"
-      },
-      {
         "provider": "huggingface",
         "modelId": "moonshotai/Kimi-K3",
         "piThinkingLevel": "max",
@@ -1246,12 +1240,6 @@
       {
         "provider": "huggingface",
         "modelId": "zai-org/GLM-5.3-Flash",
-        "piThinkingLevel": "max",
-        "equivalence": "verified"
-      },
-      {
-        "provider": "opencode-go",
-        "modelId": "glm-5.3-flash",
         "piThinkingLevel": "max",
         "equivalence": "verified"
       },
