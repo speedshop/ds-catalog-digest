@@ -4,7 +4,7 @@
     "id": "deepswe-v1.1",
     "name": "DeepSWE v1.1",
     "version": "v1.1",
-    "generatedAt": "2026-09-11T06:39:27.065036Z",
+    "generatedAt": "2026-09-12T06:36:13.026577Z",
     "sourceUpdatedAt": "2026-09-03T22:24:37.984682+00:00",
     "distribution": {
       "classification": "redistributable",
@@ -3598,12 +3598,6 @@
         }
       },
       "aliases": [
-        {
-          "provider": "baseten",
-          "modelId": "zai-org/GLM-5.3",
-          "piThinkingLevel": "max",
-          "equivalence": "verified"
-        },
         {
           "provider": "huggingface",
           "modelId": "zai-org/GLM-5.3",
