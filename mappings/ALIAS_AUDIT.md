@@ -3,9 +3,9 @@
 - DeepSWE release: v1.1
 - Complete Variants: 70
 - Variants with verified Provider Routes: 64
-- Verified Provider Routes: 571
+- Verified Provider Routes: 570
 - Route Candidates: 37
-- Stale accepted routes: 46
+- Stale accepted routes: 47
 
 ## Unresolved configurations
 
@@ -22,7 +22,7 @@
 | `mini_swe_agent_gemini_3_8_flash_medium` | route_discovered |
 | `mini_swe_agent_claude_fable_5_xhigh` | route_changed |
 | `mini_swe_agent_claude_fable_5_max` | route_changed |
-| `mini_swe_agent_glm_5_3_max` | route_discovered |
+| `mini_swe_agent_glm_5_3_max` | route_changed |
 | `mini_swe_agent_claude_opus_5_medium` | route_changed |
 | `mini_swe_agent_claude_fable_5_high` | route_changed |
 | `mini_swe_agent_kimi_k3_max` | route_changed |

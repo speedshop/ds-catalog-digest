@@ -8,18 +8,18 @@
     "modelsConfigHash": "sha256:30a0741487ebd78fe1c02248beb4286ceb8334dfc14847a1a314b3df5e2687cc",
     "extensions": []
   },
-  "catalogHash": "sha256:a3b597ed3572a589ac8f007153229529222d80daf0b9ef2677ea870feb2025ba",
+  "catalogHash": "sha256:72640d1d23d935cb8c7bdecc2b3c1e1238c40a6b2226e4901d955506d30931fa",
   "routes": [
     {
       "api": "bedrock-converse-stream",
       "compatibility": {},
-      "contextWindow": 128000,
+      "contextWindow": 1000000,
       "deploymentFingerprint": "sha256:97cb5ad8c19d447c6067182ac9f1e53c288888378ffbf4bd4c2696fd8df2c2b8",
       "input": [
         "image",
         "text"
       ],
-      "maxTokens": 4096,
+      "maxTokens": 65535,
       "modelId": "amazon.nova-2-lite-v1:0",
       "name": "Nova 2 Lite",
       "provider": "amazon-bedrock",
@@ -43,7 +43,7 @@
         "image",
         "text"
       ],
-      "maxTokens": 8192,
+      "maxTokens": 10000,
       "modelId": "amazon.nova-lite-v1:0",
       "name": "Nova Lite",
       "provider": "amazon-bedrock",
@@ -62,7 +62,7 @@
       "input": [
         "text"
       ],
-      "maxTokens": 8192,
+      "maxTokens": 10000,
       "modelId": "amazon.nova-micro-v1:0",
       "name": "Nova Micro",
       "provider": "amazon-bedrock",
@@ -82,7 +82,7 @@
         "image",
         "text"
       ],
-      "maxTokens": 8192,
+      "maxTokens": 10000,
       "modelId": "amazon.nova-pro-v1:0",
       "name": "Nova Pro",
       "provider": "amazon-bedrock",
@@ -397,7 +397,7 @@
         "image",
         "text"
       ],
-      "maxTokens": 8192,
+      "maxTokens": 10000,
       "modelId": "apac.amazon.nova-lite-v1:0",
       "name": "Nova Lite (APAC)",
       "provider": "amazon-bedrock",
@@ -416,7 +416,7 @@
       "input": [
         "text"
       ],
-      "maxTokens": 8192,
+      "maxTokens": 10000,
       "modelId": "apac.amazon.nova-micro-v1:0",
       "name": "Nova Micro (APAC)",
       "provider": "amazon-bedrock",
@@ -436,7 +436,7 @@
         "image",
         "text"
       ],
-      "maxTokens": 8192,
+      "maxTokens": 10000,
       "modelId": "apac.amazon.nova-pro-v1:0",
       "name": "Nova Pro (APAC)",
       "provider": "amazon-bedrock",
@@ -674,7 +674,7 @@
         "image",
         "text"
       ],
-      "maxTokens": 8192,
+      "maxTokens": 10000,
       "modelId": "ca.amazon.nova-lite-v1:0",
       "name": "Nova Lite (CA)",
       "provider": "amazon-bedrock",
@@ -763,7 +763,7 @@
         "image",
         "text"
       ],
-      "maxTokens": 64000,
+      "maxTokens": 65535,
       "modelId": "eu.amazon.nova-2-lite-v1:0",
       "name": "Nova 2 Lite (EU)",
       "provider": "amazon-bedrock",
@@ -787,7 +787,7 @@
         "image",
         "text"
       ],
-      "maxTokens": 8192,
+      "maxTokens": 10000,
       "modelId": "eu.amazon.nova-lite-v1:0",
       "name": "Nova Lite (EU)",
       "provider": "amazon-bedrock",
@@ -806,7 +806,7 @@
       "input": [
         "text"
       ],
-      "maxTokens": 8192,
+      "maxTokens": 10000,
       "modelId": "eu.amazon.nova-micro-v1:0",
       "name": "Nova Micro (EU)",
       "provider": "amazon-bedrock",
@@ -826,7 +826,7 @@
         "image",
         "text"
       ],
-      "maxTokens": 8192,
+      "maxTokens": 10000,
       "modelId": "eu.amazon.nova-pro-v1:0",
       "name": "Nova Pro (EU)",
       "provider": "amazon-bedrock",
@@ -1137,7 +1137,7 @@
         "image",
         "text"
       ],
-      "maxTokens": 64000,
+      "maxTokens": 65535,
       "modelId": "global.amazon.nova-2-lite-v1:0",
       "name": "Nova 2 Lite (Global)",
       "provider": "amazon-bedrock",
@@ -1627,13 +1627,139 @@
     {
       "api": "bedrock-converse-stream",
       "compatibility": {},
+      "contextWindow": 262144,
+      "deploymentFingerprint": "sha256:97cb5ad8c19d447c6067182ac9f1e53c288888378ffbf4bd4c2696fd8df2c2b8",
+      "input": [
+        "image",
+        "text"
+      ],
+      "maxTokens": 32768,
+      "modelId": "google.gemma-4-26b-a4b",
+      "name": "Gemma 4 26B A4B IT",
+      "provider": "amazon-bedrock",
+      "reasoning": true,
+      "supportedThinkingLevels": [
+        "off",
+        "minimal",
+        "low",
+        "medium",
+        "high"
+      ],
+      "thinkingLevelMap": {},
+      "fingerprint": "sha256:c0b1b4a73f85f4bd6df498fd4849ee7adcdb26ffc9fa830527ada1f08499f91f"
+    },
+    {
+      "api": "bedrock-converse-stream",
+      "compatibility": {},
+      "contextWindow": 262144,
+      "deploymentFingerprint": "sha256:97cb5ad8c19d447c6067182ac9f1e53c288888378ffbf4bd4c2696fd8df2c2b8",
+      "input": [
+        "image",
+        "text"
+      ],
+      "maxTokens": 32768,
+      "modelId": "google.gemma-4-31b",
+      "name": "Gemma 4 31B IT",
+      "provider": "amazon-bedrock",
+      "reasoning": true,
+      "supportedThinkingLevels": [
+        "off",
+        "minimal",
+        "low",
+        "medium",
+        "high"
+      ],
+      "thinkingLevelMap": {},
+      "fingerprint": "sha256:c21afe874a7aefc3b650c59ae58018a888e872351571a349f90cc9811650ede1"
+    },
+    {
+      "api": "bedrock-converse-stream",
+      "compatibility": {},
+      "contextWindow": 131072,
+      "deploymentFingerprint": "sha256:97cb5ad8c19d447c6067182ac9f1e53c288888378ffbf4bd4c2696fd8df2c2b8",
+      "input": [
+        "image",
+        "text"
+      ],
+      "maxTokens": 8192,
+      "modelId": "google.gemma-4-e2b",
+      "name": "Gemma 4 E2B IT",
+      "provider": "amazon-bedrock",
+      "reasoning": true,
+      "supportedThinkingLevels": [
+        "off",
+        "minimal",
+        "low",
+        "medium",
+        "high"
+      ],
+      "thinkingLevelMap": {},
+      "fingerprint": "sha256:25aea8e9a7d1c512fda405a56c1ba95b9cdf69318ac8794bfba48eda94ff5f2f"
+    },
+    {
+      "api": "bedrock-converse-stream",
+      "compatibility": {},
+      "contextWindow": 1050000,
+      "deploymentFingerprint": "sha256:97cb5ad8c19d447c6067182ac9f1e53c288888378ffbf4bd4c2696fd8df2c2b8",
+      "input": [
+        "image",
+        "text"
+      ],
+      "maxTokens": 128000,
+      "modelId": "in.openai.gpt-5.6-luna",
+      "name": "GPT-5.6 Luna (India)",
+      "provider": "amazon-bedrock",
+      "reasoning": true,
+      "supportedThinkingLevels": [
+        "off",
+        "minimal",
+        "low",
+        "medium",
+        "high",
+        "xhigh"
+      ],
+      "thinkingLevelMap": {
+        "xhigh": "xhigh"
+      },
+      "fingerprint": "sha256:4a955cad4f04cdee22c87d927c8367a96502beb2f7961160b9eedee7f2bc2896"
+    },
+    {
+      "api": "bedrock-converse-stream",
+      "compatibility": {},
+      "contextWindow": 1050000,
+      "deploymentFingerprint": "sha256:97cb5ad8c19d447c6067182ac9f1e53c288888378ffbf4bd4c2696fd8df2c2b8",
+      "input": [
+        "image",
+        "text"
+      ],
+      "maxTokens": 128000,
+      "modelId": "in.openai.gpt-5.6-terra",
+      "name": "GPT-5.6 Terra (India)",
+      "provider": "amazon-bedrock",
+      "reasoning": true,
+      "supportedThinkingLevels": [
+        "off",
+        "minimal",
+        "low",
+        "medium",
+        "high",
+        "xhigh"
+      ],
+      "thinkingLevelMap": {
+        "xhigh": "xhigh"
+      },
+      "fingerprint": "sha256:69f9c72030827d365cd71d875a541b2c6c76f5fea46162abea27adc413f076d5"
+    },
+    {
+      "api": "bedrock-converse-stream",
+      "compatibility": {},
       "contextWindow": 1000000,
       "deploymentFingerprint": "sha256:97cb5ad8c19d447c6067182ac9f1e53c288888378ffbf4bd4c2696fd8df2c2b8",
       "input": [
         "image",
         "text"
       ],
-      "maxTokens": 64000,
+      "maxTokens": 65535,
       "modelId": "jp.amazon.nova-2-lite-v1:0",
       "name": "Nova 2 Lite (JP)",
       "provider": "amazon-bedrock",
@@ -2582,12 +2708,16 @@
       "modelId": "openai.gpt-oss-safeguard-120b",
       "name": "GPT OSS Safeguard 120B",
       "provider": "amazon-bedrock",
-      "reasoning": false,
+      "reasoning": true,
       "supportedThinkingLevels": [
-        "off"
+        "off",
+        "minimal",
+        "low",
+        "medium",
+        "high"
       ],
       "thinkingLevelMap": {},
-      "fingerprint": "sha256:d15af83066f2cbc6a0bf7515ba0cb7bac5449a239f614503c99b5b0fe8e20453"
+      "fingerprint": "sha256:44b338c389fd008baa68950c40ef9ca789d836dfc92880eec90687c48a3ff055"
     },
     {
       "api": "bedrock-converse-stream",
@@ -2601,12 +2731,16 @@
       "modelId": "openai.gpt-oss-safeguard-20b",
       "name": "GPT OSS Safeguard 20B",
       "provider": "amazon-bedrock",
-      "reasoning": false,
+      "reasoning": true,
       "supportedThinkingLevels": [
-        "off"
+        "off",
+        "minimal",
+        "low",
+        "medium",
+        "high"
       ],
       "thinkingLevelMap": {},
-      "fingerprint": "sha256:564fc3f714cbdcd60021542f72d13242633349ab393b6ab252031012823b7671"
+      "fingerprint": "sha256:bcebee9dea244781c675fcf4914f8ecfec61d9a4b7be35e393c93176d73a5e27"
     },
     {
       "api": "bedrock-converse-stream",
@@ -2753,13 +2887,59 @@
     {
       "api": "bedrock-converse-stream",
       "compatibility": {},
+      "contextWindow": 128000,
+      "deploymentFingerprint": "sha256:97cb5ad8c19d447c6067182ac9f1e53c288888378ffbf4bd4c2696fd8df2c2b8",
+      "input": [
+        "text"
+      ],
+      "maxTokens": 16384,
+      "modelId": "us-gov.openai.gpt-oss-120b-1:0",
+      "name": "gpt-oss-120b (GovCloud)",
+      "provider": "amazon-bedrock",
+      "reasoning": true,
+      "supportedThinkingLevels": [
+        "off",
+        "minimal",
+        "low",
+        "medium",
+        "high"
+      ],
+      "thinkingLevelMap": {},
+      "fingerprint": "sha256:edb00daffffa60da1d8fb50b44060bf1b0fcb090f7754ef12e48ddba686b8f2e"
+    },
+    {
+      "api": "bedrock-converse-stream",
+      "compatibility": {},
+      "contextWindow": 128000,
+      "deploymentFingerprint": "sha256:97cb5ad8c19d447c6067182ac9f1e53c288888378ffbf4bd4c2696fd8df2c2b8",
+      "input": [
+        "text"
+      ],
+      "maxTokens": 16384,
+      "modelId": "us-gov.openai.gpt-oss-20b-1:0",
+      "name": "gpt-oss-20b (GovCloud)",
+      "provider": "amazon-bedrock",
+      "reasoning": true,
+      "supportedThinkingLevels": [
+        "off",
+        "minimal",
+        "low",
+        "medium",
+        "high"
+      ],
+      "thinkingLevelMap": {},
+      "fingerprint": "sha256:39922f9e33cf42987f834f0b4898c2ba97cd9ffd23b2876079c571d35539a770"
+    },
+    {
+      "api": "bedrock-converse-stream",
+      "compatibility": {},
       "contextWindow": 1000000,
       "deploymentFingerprint": "sha256:97cb5ad8c19d447c6067182ac9f1e53c288888378ffbf4bd4c2696fd8df2c2b8",
       "input": [
         "image",
         "text"
       ],
-      "maxTokens": 64000,
+      "maxTokens": 65535,
       "modelId": "us.amazon.nova-2-lite-v1:0",
       "name": "Nova 2 Lite (US)",
       "provider": "amazon-bedrock",
@@ -2783,7 +2963,7 @@
         "image",
         "text"
       ],
-      "maxTokens": 8192,
+      "maxTokens": 10000,
       "modelId": "us.amazon.nova-lite-v1:0",
       "name": "Nova Lite (US)",
       "provider": "amazon-bedrock",
@@ -2802,7 +2982,7 @@
       "input": [
         "text"
       ],
-      "maxTokens": 8192,
+      "maxTokens": 10000,
       "modelId": "us.amazon.nova-micro-v1:0",
       "name": "Nova Micro (US)",
       "provider": "amazon-bedrock",
@@ -2816,13 +2996,33 @@
     {
       "api": "bedrock-converse-stream",
       "compatibility": {},
+      "contextWindow": 1000000,
+      "deploymentFingerprint": "sha256:97cb5ad8c19d447c6067182ac9f1e53c288888378ffbf4bd4c2696fd8df2c2b8",
+      "input": [
+        "image",
+        "text"
+      ],
+      "maxTokens": 10000,
+      "modelId": "us.amazon.nova-premier-v1:0",
+      "name": "Nova Premier (US)",
+      "provider": "amazon-bedrock",
+      "reasoning": false,
+      "supportedThinkingLevels": [
+        "off"
+      ],
+      "thinkingLevelMap": {},
+      "fingerprint": "sha256:7d43678b1f50c80bf18853b50ea947eecf2e6bf529a3c18a2ab50bef918447da"
+    },
+    {
+      "api": "bedrock-converse-stream",
+      "compatibility": {},
       "contextWindow": 300000,
       "deploymentFingerprint": "sha256:97cb5ad8c19d447c6067182ac9f1e53c288888378ffbf4bd4c2696fd8df2c2b8",
       "input": [
         "image",
         "text"
       ],
-      "maxTokens": 8192,
+      "maxTokens": 10000,
       "modelId": "us.amazon.nova-pro-v1:0",
       "name": "Nova Pro (US)",
       "provider": "amazon-bedrock",
@@ -5717,6 +5917,7 @@
       "contextWindow": 1048576,
       "deploymentFingerprint": "sha256:00f6881b691fd48644c58c6ef8319d43e3077aae9205618026fc8f78c2a2fec0",
       "input": [
+        "image",
         "text"
       ],
       "maxTokens": 262144,
@@ -5738,7 +5939,7 @@
         "off": null,
         "xhigh": null
       },
-      "fingerprint": "sha256:714820c82ac56c71a2da101aed097b87c09086a151de4ab3796827af6fe7d7da"
+      "fingerprint": "sha256:2102d2a42e8f35635f5c1a78ed2a33d2f383155db2852e22dafedb2030778df9"
     },
     {
       "api": "openai-completions",
@@ -8631,6 +8832,39 @@
       "fingerprint": "sha256:9df61e5c7ad9fe3d2982616076598f563770d14a24e953080e5e5e66a139e276"
     },
     {
+      "api": "anthropic-messages",
+      "compatibility": {
+        "forceAdaptiveThinking": true
+      },
+      "contextWindow": 1000000,
+      "deploymentFingerprint": "sha256:788df56b6bc8813d6527098da088ccc4d4d121b945edb860aeda87369d7620ba",
+      "input": [
+        "image",
+        "text"
+      ],
+      "maxTokens": 384000,
+      "modelId": "accounts/fireworks/models/deepseek-v4p1-flash",
+      "name": "DeepSeek V4.1 Flash",
+      "provider": "fireworks",
+      "reasoning": true,
+      "supportedThinkingLevels": [
+        "off",
+        "low",
+        "high",
+        "max"
+      ],
+      "thinkingLevelMap": {
+        "high": "high",
+        "low": "low",
+        "max": "max",
+        "medium": null,
+        "minimal": null,
+        "off": "none",
+        "xhigh": null
+      },
+      "fingerprint": "sha256:0778f4a3ab9e2c23d6bf6e0bda6cb800775b3f0f5a31e82797624f9b915cf13c"
+    },
+    {
       "api": "openai-completions",
       "compatibility": {
         "supportsDeveloperRole": false
@@ -8937,6 +9171,26 @@
         "xhigh": null
       },
       "fingerprint": "sha256:a24c037b8d2d9ebf7f04ad4ff78764c3e7f6b564c3147a1f8e71b9852acd17b2"
+    },
+    {
+      "api": "anthropic-messages",
+      "compatibility": {},
+      "contextWindow": 262144,
+      "deploymentFingerprint": "sha256:788df56b6bc8813d6527098da088ccc4d4d121b945edb860aeda87369d7620ba",
+      "input": [
+        "image",
+        "text"
+      ],
+      "maxTokens": 262144,
+      "modelId": "accounts/fireworks/models/mistral-large-3-fp8",
+      "name": "Mistral Large 3 675B Instruct 2512",
+      "provider": "fireworks",
+      "reasoning": false,
+      "supportedThinkingLevels": [
+        "off"
+      ],
+      "thinkingLevelMap": {},
+      "fingerprint": "sha256:5871e4a6964e45fb26d7b702435fc9e01bafbda025af09dd53d7fc3873cec214"
     },
     {
       "api": "anthropic-messages",
@@ -11731,6 +11985,106 @@
         "xhigh": null
       },
       "fingerprint": "sha256:5b13f6bd55601ee8be6542e3bfdd6ae003d262b59b6c6ee8a05d2d1da908c245"
+    },
+    {
+      "api": "openai-completions",
+      "compatibility": {
+        "supportsDeveloperRole": false
+      },
+      "contextWindow": 1048576,
+      "deploymentFingerprint": "sha256:98fbd34a52ceee9319ded2a3ee4b3ff00b68d589bf576d812f2e59fc6d98ab29",
+      "input": [
+        "image",
+        "text"
+      ],
+      "maxTokens": 384000,
+      "modelId": "deepseek-ai/DeepSeek-V4.1-Flash",
+      "name": "DeepSeek V4.1 Flash",
+      "provider": "huggingface",
+      "reasoning": true,
+      "supportedThinkingLevels": [
+        "off",
+        "low",
+        "high",
+        "xhigh",
+        "max"
+      ],
+      "thinkingLevelMap": {
+        "high": "high",
+        "low": "low",
+        "max": "max",
+        "medium": null,
+        "minimal": null,
+        "off": "none",
+        "xhigh": "xhigh"
+      },
+      "fingerprint": "sha256:b748d564048a490052ea682209f24f8dc47c85d80c869aff03010a8257132c70"
+    },
+    {
+      "api": "openai-completions",
+      "compatibility": {
+        "supportsDeveloperRole": false
+      },
+      "contextWindow": 131072,
+      "deploymentFingerprint": "sha256:98fbd34a52ceee9319ded2a3ee4b3ff00b68d589bf576d812f2e59fc6d98ab29",
+      "input": [
+        "image",
+        "text"
+      ],
+      "maxTokens": 131072,
+      "modelId": "google/gemma-3-12b-it",
+      "name": "Gemma 3 12B IT",
+      "provider": "huggingface",
+      "reasoning": false,
+      "supportedThinkingLevels": [
+        "off"
+      ],
+      "thinkingLevelMap": {},
+      "fingerprint": "sha256:7c499c9ef1adc7bfd4f3c9f4ac5eb708eebe50fa58ff46c9651d29c074af92ef"
+    },
+    {
+      "api": "openai-completions",
+      "compatibility": {
+        "supportsDeveloperRole": false
+      },
+      "contextWindow": 131072,
+      "deploymentFingerprint": "sha256:98fbd34a52ceee9319ded2a3ee4b3ff00b68d589bf576d812f2e59fc6d98ab29",
+      "input": [
+        "image",
+        "text"
+      ],
+      "maxTokens": 131072,
+      "modelId": "google/gemma-3-27b-it",
+      "name": "Gemma 3 27B IT",
+      "provider": "huggingface",
+      "reasoning": false,
+      "supportedThinkingLevels": [
+        "off"
+      ],
+      "thinkingLevelMap": {},
+      "fingerprint": "sha256:ca047cb536b56875b33adf9dd6c242db7fac94c1a78545318711c1b93ee9cbf8"
+    },
+    {
+      "api": "openai-completions",
+      "compatibility": {
+        "supportsDeveloperRole": false
+      },
+      "contextWindow": 131072,
+      "deploymentFingerprint": "sha256:98fbd34a52ceee9319ded2a3ee4b3ff00b68d589bf576d812f2e59fc6d98ab29",
+      "input": [
+        "image",
+        "text"
+      ],
+      "maxTokens": 131072,
+      "modelId": "google/gemma-3-4b-it",
+      "name": "Gemma 3 4B IT",
+      "provider": "huggingface",
+      "reasoning": false,
+      "supportedThinkingLevels": [
+        "off"
+      ],
+      "thinkingLevelMap": {},
+      "fingerprint": "sha256:7616b8f61d04ea80dab8596315116e8590fa39e090dcf5e8b629113bbafce0f4"
     },
     {
       "api": "openai-completions",
@@ -19054,39 +19408,6 @@
       "api": "openai-completions",
       "compatibility": {
         "maxTokensField": "max_tokens",
-        "supportsDeveloperRole": false
-      },
-      "contextWindow": 1000000,
-      "deploymentFingerprint": "sha256:2bede0bbf6dca4658edb6fb335c276a35d0c6f19b621d029b4642c4d1055717a",
-      "input": [
-        "image",
-        "text"
-      ],
-      "maxTokens": 384000,
-      "modelId": "deepseek-flash",
-      "name": "DeepSeek V4.1 Flash",
-      "provider": "opencode-go",
-      "reasoning": true,
-      "supportedThinkingLevels": [
-        "low",
-        "high",
-        "max"
-      ],
-      "thinkingLevelMap": {
-        "high": "high",
-        "low": "low",
-        "max": "max",
-        "medium": null,
-        "minimal": null,
-        "off": null,
-        "xhigh": null
-      },
-      "fingerprint": "sha256:16d78f041ffc19b392fc8ba3820625a152562e298ed510e2bd720a2e3a597a6c"
-    },
-    {
-      "api": "openai-completions",
-      "compatibility": {
-        "maxTokensField": "max_tokens",
         "supportsDeveloperRole": false,
         "thinkingFormat": "deepseek"
       },
@@ -19178,6 +19499,38 @@
         "minimal": null
       },
       "fingerprint": "sha256:9fe49295c8a59670542725bfb5fd25a57a9d77cc7efd5139fa323a0e579e6099"
+    },
+    {
+      "api": "openai-completions",
+      "compatibility": {
+        "maxTokensField": "max_tokens",
+        "supportsDeveloperRole": false,
+        "thinkingFormat": "deepseek"
+      },
+      "contextWindow": 1000000,
+      "deploymentFingerprint": "sha256:2bede0bbf6dca4658edb6fb335c276a35d0c6f19b621d029b4642c4d1055717a",
+      "input": [
+        "image",
+        "text"
+      ],
+      "maxTokens": 384000,
+      "modelId": "deepseek-v4.1-flash",
+      "name": "DeepSeek V4.1 Flash",
+      "provider": "opencode-go",
+      "reasoning": true,
+      "supportedThinkingLevels": [
+        "off",
+        "high",
+        "max"
+      ],
+      "thinkingLevelMap": {
+        "high": "high",
+        "low": null,
+        "max": "max",
+        "medium": null,
+        "minimal": null
+      },
+      "fingerprint": "sha256:f35dc8df44a8fe13dd29eacf3404253bbf1aef7f4ca79c94f4fbc68ba2dda395"
     },
     {
       "api": "openai-completions",
@@ -20286,12 +20639,12 @@
         "supportsDeveloperRole": false,
         "thinkingFormat": "openrouter"
       },
-      "contextWindow": 262144,
+      "contextWindow": 1048576,
       "deploymentFingerprint": "sha256:e08186e0c8c6074c97ee0f4211ebd491d6848f2f12f4b761fb51ce23ad641cfa",
       "input": [
         "text"
       ],
-      "maxTokens": 235929,
+      "maxTokens": 943718,
       "modelId": "~z-ai/glm-latest",
       "name": "Z.ai: GLM Latest",
       "provider": "openrouter",
@@ -22178,12 +22531,12 @@
         "supportsDeveloperRole": false,
         "thinkingFormat": "openrouter"
       },
-      "contextWindow": 1024000,
+      "contextWindow": 1048576,
       "deploymentFingerprint": "sha256:e08186e0c8c6074c97ee0f4211ebd491d6848f2f12f4b761fb51ce23ad641cfa",
       "input": [
         "text"
       ],
-      "maxTokens": 384000,
+      "maxTokens": 943718,
       "modelId": "deepseek/deepseek-v4-pro-0813",
       "name": "DeepSeek: DeepSeek V4 Pro 0813",
       "provider": "openrouter",
@@ -23206,13 +23559,13 @@
         "supportsDeveloperRole": false,
         "thinkingFormat": "openrouter"
       },
-      "contextWindow": 262144,
+      "contextWindow": 131072,
       "deploymentFingerprint": "sha256:e08186e0c8c6074c97ee0f4211ebd491d6848f2f12f4b761fb51ce23ad641cfa",
       "input": [
         "image",
         "text"
       ],
-      "maxTokens": 16384,
+      "maxTokens": 32768,
       "modelId": "google/gemma-4-26b-a4b-it",
       "name": "Google: Gemma 4 26B A4B ",
       "provider": "openrouter",
@@ -23600,6 +23953,33 @@
       ],
       "thinkingLevelMap": {},
       "fingerprint": "sha256:76f0369cfb0d7de4abf9a301d5b95c34d2b8c93b11082dfa53ce171057050e4a"
+    },
+    {
+      "api": "openai-completions",
+      "compatibility": {
+        "supportsDeveloperRole": false,
+        "thinkingFormat": "openrouter"
+      },
+      "contextWindow": 262144,
+      "deploymentFingerprint": "sha256:e08186e0c8c6074c97ee0f4211ebd491d6848f2f12f4b761fb51ce23ad641cfa",
+      "input": [
+        "image",
+        "text"
+      ],
+      "maxTokens": 32768,
+      "modelId": "inclusionai/ling-3.0-flash-vl:free",
+      "name": "inclusionAI: Ling 3.0 Flash VL (free)",
+      "provider": "openrouter",
+      "reasoning": true,
+      "supportedThinkingLevels": [
+        "off",
+        "minimal",
+        "low",
+        "medium",
+        "high"
+      ],
+      "thinkingLevelMap": {},
+      "fingerprint": "sha256:807d88a2289bbdaf3b1b589c3b65f262d598fc714d80288cc6692a6b5673e7cc"
     },
     {
       "api": "openai-completions",
@@ -28692,12 +29072,12 @@
         "supportsDeveloperRole": false,
         "thinkingFormat": "openrouter"
       },
-      "contextWindow": 128000,
+      "contextWindow": 262144,
       "deploymentFingerprint": "sha256:e08186e0c8c6074c97ee0f4211ebd491d6848f2f12f4b761fb51ce23ad641cfa",
       "input": [
         "text"
       ],
-      "maxTokens": 32000,
+      "maxTokens": 235929,
       "modelId": "qwen/qwen3-30b-a3b-instruct-2507",
       "name": "Qwen: Qwen3 30B A3B Instruct 2507",
       "provider": "openrouter",
@@ -29872,6 +30252,39 @@
         "text"
       ],
       "maxTokens": 128000,
+      "modelId": "sakana/fugu-max",
+      "name": "Sakana: Fugu Max",
+      "provider": "openrouter",
+      "reasoning": true,
+      "supportedThinkingLevels": [
+        "high",
+        "xhigh",
+        "max"
+      ],
+      "thinkingLevelMap": {
+        "high": "high",
+        "low": null,
+        "max": "max",
+        "medium": null,
+        "minimal": null,
+        "off": null,
+        "xhigh": "xhigh"
+      },
+      "fingerprint": "sha256:eb83fb5e7fe3f9ea653d39b29ab850743a0e36daa97ccba51475540d921de410"
+    },
+    {
+      "api": "openai-completions",
+      "compatibility": {
+        "supportsDeveloperRole": false,
+        "thinkingFormat": "openrouter"
+      },
+      "contextWindow": 1000000,
+      "deploymentFingerprint": "sha256:e08186e0c8c6074c97ee0f4211ebd491d6848f2f12f4b761fb51ce23ad641cfa",
+      "input": [
+        "image",
+        "text"
+      ],
+      "maxTokens": 128000,
       "modelId": "sakana/fugu-ultra",
       "name": "Sakana: Fugu Ultra",
       "provider": "openrouter",
@@ -29891,6 +30304,39 @@
         "xhigh": "xhigh"
       },
       "fingerprint": "sha256:8b8868fb87b63da5fcf3259ae0aedcefb864199034b68d3092772c6114a8df85"
+    },
+    {
+      "api": "openai-completions",
+      "compatibility": {
+        "supportsDeveloperRole": false,
+        "thinkingFormat": "openrouter"
+      },
+      "contextWindow": 1000000,
+      "deploymentFingerprint": "sha256:e08186e0c8c6074c97ee0f4211ebd491d6848f2f12f4b761fb51ce23ad641cfa",
+      "input": [
+        "image",
+        "text"
+      ],
+      "maxTokens": 128000,
+      "modelId": "sakana/fugu-ultra-v2",
+      "name": "Sakana: Fugu Ultra v2",
+      "provider": "openrouter",
+      "reasoning": true,
+      "supportedThinkingLevels": [
+        "high",
+        "xhigh",
+        "max"
+      ],
+      "thinkingLevelMap": {
+        "high": "high",
+        "low": null,
+        "max": "max",
+        "medium": null,
+        "minimal": null,
+        "off": null,
+        "xhigh": "xhigh"
+      },
+      "fingerprint": "sha256:623b8897fd4ce71ef515e49bbd6a4459ceb3f87dc2b56356e79684e974222357"
     },
     {
       "api": "openai-completions",
@@ -33715,30 +34161,6 @@
     {
       "api": "anthropic-messages",
       "compatibility": {},
-      "contextWindow": 1048576,
-      "deploymentFingerprint": "sha256:f41d7415fd061e57db3e476e90a872b5c48f2603ca1ad61cbb99793e6424a01f",
-      "input": [
-        "image",
-        "text"
-      ],
-      "maxTokens": 1048576,
-      "modelId": "alibaba/qwen3.8-flash-next",
-      "name": "Qwen 3.8 Flash Next",
-      "provider": "vercel-ai-gateway",
-      "reasoning": true,
-      "supportedThinkingLevels": [
-        "off",
-        "minimal",
-        "low",
-        "medium",
-        "high"
-      ],
-      "thinkingLevelMap": {},
-      "fingerprint": "sha256:673bcd32b5d640cae8517ae4265bbf7e696469f098af9344d2cc21174e997c9c"
-    },
-    {
-      "api": "anthropic-messages",
-      "compatibility": {},
       "contextWindow": 1000000,
       "deploymentFingerprint": "sha256:f41d7415fd061e57db3e476e90a872b5c48f2603ca1ad61cbb99793e6424a01f",
       "input": [
@@ -34667,13 +35089,13 @@
     {
       "api": "anthropic-messages",
       "compatibility": {},
-      "contextWindow": 1000000,
+      "contextWindow": 1048576,
       "deploymentFingerprint": "sha256:f41d7415fd061e57db3e476e90a872b5c48f2603ca1ad61cbb99793e6424a01f",
       "input": [
         "image",
         "text"
       ],
-      "maxTokens": 384000,
+      "maxTokens": 32768,
       "modelId": "deepseek/deepseek-v4.1-flash",
       "name": "DeepSeek V4.1 Flash",
       "provider": "vercel-ai-gateway",
