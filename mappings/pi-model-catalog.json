@@ -8,7 +8,7 @@
     "modelsConfigHash": "sha256:30a0741487ebd78fe1c02248beb4286ceb8334dfc14847a1a314b3df5e2687cc",
     "extensions": []
   },
-  "catalogHash": "sha256:ea6453f61232c4ed60630834e12bc5691707265fdfe54b86b4b3f82235df08fe",
+  "catalogHash": "sha256:bf74c0c8af8fd15bc988123734e8ef2014fe73a2d714fa1e0450a5feee1384d8",
   "routes": [
     {
       "api": "bedrock-converse-stream",
@@ -9182,7 +9182,6 @@
       "contextWindow": 512000,
       "deploymentFingerprint": "sha256:788df56b6bc8813d6527098da088ccc4d4d121b945edb860aeda87369d7620ba",
       "input": [
-        "image",
         "text"
       ],
       "maxTokens": 512000,
@@ -9204,7 +9203,7 @@
         "off": null,
         "xhigh": null
       },
-      "fingerprint": "sha256:a24c037b8d2d9ebf7f04ad4ff78764c3e7f6b564c3147a1f8e71b9852acd17b2"
+      "fingerprint": "sha256:56396109b5fc75982d02a4f5eb7e15f9b1934dfb3866b8be48904ec60dba6890"
     },
     {
       "api": "anthropic-messages",
@@ -9378,6 +9377,7 @@
       "contextWindow": 262144,
       "deploymentFingerprint": "sha256:788df56b6bc8813d6527098da088ccc4d4d121b945edb860aeda87369d7620ba",
       "input": [
+        "image",
         "text"
       ],
       "maxTokens": 131072,
@@ -9400,7 +9400,7 @@
         "off": "none",
         "xhigh": "xhigh"
       },
-      "fingerprint": "sha256:40854923e2b973cb3b9549ff51a616b01890cd3778ccbafbd30a64a07fc40a49"
+      "fingerprint": "sha256:b8c37959931a134ef4116229a79a5a913eed92b373d77cf84d39208e7377b4fe"
     },
     {
       "api": "openai-completions",
@@ -13753,7 +13753,7 @@
       "compatibility": {
         "forceAdaptiveThinking": true
       },
-      "contextWindow": 262144,
+      "contextWindow": 1048576,
       "deploymentFingerprint": "sha256:75f93b04dc7db1f673989f84b16948e5754071dce341a92c6cf5fe80515e024f",
       "input": [
         "image",
@@ -13761,18 +13761,24 @@
       ],
       "maxTokens": 32768,
       "modelId": "kimi-for-coding",
-      "name": "Kimi K2.7 Code",
+      "name": "kimi-for-coding",
       "provider": "kimi-coding",
       "reasoning": true,
       "supportedThinkingLevels": [
-        "off",
-        "minimal",
         "low",
-        "medium",
-        "high"
+        "high",
+        "max"
       ],
-      "thinkingLevelMap": {},
-      "fingerprint": "sha256:c561b57697430f220fb0d585eb061e62f72f1b3221625dcce0c853520811d661"
+      "thinkingLevelMap": {
+        "high": "high",
+        "low": "low",
+        "max": "max",
+        "medium": null,
+        "minimal": null,
+        "off": null,
+        "xhigh": null
+      },
+      "fingerprint": "sha256:d84a3a95f1f81ddfeb1132612872b6eb9fa06cfd3d0d1223173c48144a030063"
     },
     {
       "api": "anthropic-messages",
@@ -20402,6 +20408,73 @@
       "contextWindow": 1048576,
       "deploymentFingerprint": "sha256:e08186e0c8c6074c97ee0f4211ebd491d6848f2f12f4b761fb51ce23ad641cfa",
       "input": [
+        "image",
+        "text"
+      ],
+      "maxTokens": 943718,
+      "modelId": "~deepseek/deepseek-flash-latest",
+      "name": "DeepSeek: DeepSeek Flash Latest",
+      "provider": "openrouter",
+      "reasoning": true,
+      "supportedThinkingLevels": [
+        "off",
+        "low",
+        "high",
+        "max"
+      ],
+      "thinkingLevelMap": {
+        "high": "high",
+        "low": "low",
+        "max": "max",
+        "medium": null,
+        "minimal": null,
+        "off": "none",
+        "xhigh": null
+      },
+      "fingerprint": "sha256:3267274e9bb6334df7609a7bbc08b8d5eda626ba8c94d36407b419da1351ed56"
+    },
+    {
+      "api": "openai-completions",
+      "compatibility": {
+        "supportsDeveloperRole": false,
+        "thinkingFormat": "openrouter"
+      },
+      "contextWindow": 1048576,
+      "deploymentFingerprint": "sha256:e08186e0c8c6074c97ee0f4211ebd491d6848f2f12f4b761fb51ce23ad641cfa",
+      "input": [
+        "text"
+      ],
+      "maxTokens": 384000,
+      "modelId": "~deepseek/deepseek-pro-latest",
+      "name": "DeepSeek: DeepSeek Pro Latest",
+      "provider": "openrouter",
+      "reasoning": true,
+      "supportedThinkingLevels": [
+        "off",
+        "low",
+        "high",
+        "max"
+      ],
+      "thinkingLevelMap": {
+        "high": "high",
+        "low": "low",
+        "max": "max",
+        "medium": null,
+        "minimal": null,
+        "off": "none",
+        "xhigh": null
+      },
+      "fingerprint": "sha256:a7abdb3b4545676e198df9acdc65f642554892062bc24a111b87ec40d39b666c"
+    },
+    {
+      "api": "openai-completions",
+      "compatibility": {
+        "supportsDeveloperRole": false,
+        "thinkingFormat": "openrouter"
+      },
+      "contextWindow": 1048576,
+      "deploymentFingerprint": "sha256:e08186e0c8c6074c97ee0f4211ebd491d6848f2f12f4b761fb51ce23ad641cfa",
+      "input": [
         "text"
       ],
       "maxTokens": 393216,
@@ -20803,12 +20876,12 @@
         "supportsDeveloperRole": false,
         "thinkingFormat": "openrouter"
       },
-      "contextWindow": 1048576,
+      "contextWindow": 262144,
       "deploymentFingerprint": "sha256:e08186e0c8c6074c97ee0f4211ebd491d6848f2f12f4b761fb51ce23ad641cfa",
       "input": [
         "text"
       ],
-      "maxTokens": 943718,
+      "maxTokens": 235929,
       "modelId": "~z-ai/glm-latest",
       "name": "Z.ai: GLM Latest",
       "provider": "openrouter",
@@ -22995,15 +23068,14 @@
       "provider": "openrouter",
       "reasoning": true,
       "supportedThinkingLevels": [
+        "off",
         "minimal",
         "low",
         "medium",
         "high"
       ],
-      "thinkingLevelMap": {
-        "off": null
-      },
-      "fingerprint": "sha256:3f3e80c42b6d09b56177f1dcac8757f29b49fcc129eca61668571ad23f000012"
+      "thinkingLevelMap": {},
+      "fingerprint": "sha256:0dede4a5cbc14cf7fd83d6907b5892401da9ca71e8a52d0e368d30a1a21072c6"
     },
     {
       "api": "openai-completions",
@@ -24395,7 +24467,7 @@
         "image",
         "text"
       ],
-      "maxTokens": 115200,
+      "maxTokens": 16384,
       "modelId": "meta-llama/llama-4-maverick",
       "name": "Meta: Llama 4 Maverick",
       "provider": "openrouter",
@@ -29544,12 +29616,12 @@
         "supportsDeveloperRole": false,
         "thinkingFormat": "openrouter"
       },
-      "contextWindow": 262144,
+      "contextWindow": 131072,
       "deploymentFingerprint": "sha256:e08186e0c8c6074c97ee0f4211ebd491d6848f2f12f4b761fb51ce23ad641cfa",
       "input": [
         "text"
       ],
-      "maxTokens": 235929,
+      "maxTokens": 32768,
       "modelId": "qwen/qwen3-next-80b-a3b-thinking",
       "name": "Qwen: Qwen3 Next 80B A3B Thinking",
       "provider": "openrouter",
@@ -29801,13 +29873,13 @@
         "supportsDeveloperRole": false,
         "thinkingFormat": "openrouter"
       },
-      "contextWindow": 256000,
+      "contextWindow": 262144,
       "deploymentFingerprint": "sha256:e08186e0c8c6074c97ee0f4211ebd491d6848f2f12f4b761fb51ce23ad641cfa",
       "input": [
         "image",
         "text"
       ],
-      "maxTokens": 16384,
+      "maxTokens": 65536,
       "modelId": "qwen/qwen3.5-35b-a3b",
       "name": "Qwen: Qwen3.5-35B-A3B",
       "provider": "openrouter",
@@ -31545,7 +31617,7 @@
       "input": [
         "text"
       ],
-      "maxTokens": 131072,
+      "maxTokens": 128000,
       "modelId": "z-ai/glm-5.2",
       "name": "Z.ai: GLM 5.2",
       "provider": "openrouter",
@@ -32450,6 +32522,39 @@
         "xhigh": null
       },
       "fingerprint": "sha256:01c59dc40172a7bf9873850bca6b27bcd86090d7d57825b22ce0bd5dec8eb673"
+    },
+    {
+      "api": "openai-completions",
+      "compatibility": {
+        "supportsDeveloperRole": false,
+        "supportsReasoningEffort": true,
+        "thinkingFormat": "qwen"
+      },
+      "contextWindow": 1000000,
+      "deploymentFingerprint": "sha256:6f6f34b23ea97da4846dcc12d7c9cee29a55a4718f89aedb709f032509e72bbe",
+      "input": [
+        "image",
+        "text"
+      ],
+      "maxTokens": 384000,
+      "modelId": "deepseek-v4.1-flash",
+      "name": "DeepSeek V4.1 Flash",
+      "provider": "qwen-token-plan-cn",
+      "reasoning": true,
+      "supportedThinkingLevels": [
+        "high",
+        "max"
+      ],
+      "thinkingLevelMap": {
+        "high": "high",
+        "low": null,
+        "max": "max",
+        "medium": null,
+        "minimal": null,
+        "off": null,
+        "xhigh": null
+      },
+      "fingerprint": "sha256:60fadff8dfce5f79cdb645a4d54e761ef5c1dc5ba6f3b347e623aae49f8f59d3"
     },
     {
       "api": "openai-completions",
