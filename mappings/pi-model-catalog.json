@@ -8,7 +8,7 @@
     "modelsConfigHash": "sha256:30a0741487ebd78fe1c02248beb4286ceb8334dfc14847a1a314b3df5e2687cc",
     "extensions": []
   },
-  "catalogHash": "sha256:bf74c0c8af8fd15bc988123734e8ef2014fe73a2d714fa1e0450a5feee1384d8",
+  "catalogHash": "sha256:a8b5c7011f1b02905aae2b8caee8b7b7d61989b6c932632f6f27541fbcdd7d4c",
   "routes": [
     {
       "api": "bedrock-converse-stream",
@@ -341,7 +341,7 @@
         "image",
         "text"
       ],
-      "maxTokens": 64000,
+      "maxTokens": 128000,
       "modelId": "anthropic.claude-sonnet-4-6",
       "name": "Claude Sonnet 4.6",
       "provider": "amazon-bedrock",
@@ -446,6 +446,30 @@
       ],
       "thinkingLevelMap": {},
       "fingerprint": "sha256:1ca63c474d83b733ac3f35c13b1b068f56a1fabad55e8336ebf5ec40bd03b238"
+    },
+    {
+      "api": "bedrock-converse-stream",
+      "compatibility": {},
+      "contextWindow": 200000,
+      "deploymentFingerprint": "sha256:97cb5ad8c19d447c6067182ac9f1e53c288888378ffbf4bd4c2696fd8df2c2b8",
+      "input": [
+        "image",
+        "text"
+      ],
+      "maxTokens": 64000,
+      "modelId": "apac.anthropic.claude-sonnet-4-20250514-v1:0",
+      "name": "Claude Sonnet 4 (APAC)",
+      "provider": "amazon-bedrock",
+      "reasoning": true,
+      "supportedThinkingLevels": [
+        "off",
+        "minimal",
+        "low",
+        "medium",
+        "high"
+      ],
+      "thinkingLevelMap": {},
+      "fingerprint": "sha256:3a1286aa4c92bbd804d3cbc549b37766024cef6cdc1a488eb3188bfe9fbe91c5"
     },
     {
       "api": "bedrock-converse-stream",
@@ -1038,6 +1062,30 @@
         "text"
       ],
       "maxTokens": 64000,
+      "modelId": "eu.anthropic.claude-sonnet-4-20250514-v1:0",
+      "name": "Claude Sonnet 4 (EU)",
+      "provider": "amazon-bedrock",
+      "reasoning": true,
+      "supportedThinkingLevels": [
+        "off",
+        "minimal",
+        "low",
+        "medium",
+        "high"
+      ],
+      "thinkingLevelMap": {},
+      "fingerprint": "sha256:c134911541d6fdde29e53904d02ce079aed0a5043552e713184805d4e810c471"
+    },
+    {
+      "api": "bedrock-converse-stream",
+      "compatibility": {},
+      "contextWindow": 200000,
+      "deploymentFingerprint": "sha256:d25d096bd236d61a13a719b03b6c9c7ff75f346b27fde1c6d002fc47dd2f6b12",
+      "input": [
+        "image",
+        "text"
+      ],
+      "maxTokens": 64000,
       "modelId": "eu.anthropic.claude-sonnet-4-5-20250929-v1:0",
       "name": "Claude Sonnet 4.5 (EU)",
       "provider": "amazon-bedrock",
@@ -1061,7 +1109,7 @@
         "image",
         "text"
       ],
-      "maxTokens": 64000,
+      "maxTokens": 128000,
       "modelId": "eu.anthropic.claude-sonnet-4-6",
       "name": "Claude Sonnet 4.6 (EU)",
       "provider": "amazon-bedrock",
@@ -1382,6 +1430,30 @@
         "text"
       ],
       "maxTokens": 64000,
+      "modelId": "global.anthropic.claude-sonnet-4-20250514-v1:0",
+      "name": "Claude Sonnet 4 (Global)",
+      "provider": "amazon-bedrock",
+      "reasoning": true,
+      "supportedThinkingLevels": [
+        "off",
+        "minimal",
+        "low",
+        "medium",
+        "high"
+      ],
+      "thinkingLevelMap": {},
+      "fingerprint": "sha256:98330e81444fb2cac1baba72198d47291129c05813bff146f943a67c8105d56a"
+    },
+    {
+      "api": "bedrock-converse-stream",
+      "compatibility": {},
+      "contextWindow": 200000,
+      "deploymentFingerprint": "sha256:97cb5ad8c19d447c6067182ac9f1e53c288888378ffbf4bd4c2696fd8df2c2b8",
+      "input": [
+        "image",
+        "text"
+      ],
+      "maxTokens": 64000,
       "modelId": "global.anthropic.claude-sonnet-4-5-20250929-v1:0",
       "name": "Claude Sonnet 4.5 (Global)",
       "provider": "amazon-bedrock",
@@ -1405,7 +1477,7 @@
         "image",
         "text"
       ],
-      "maxTokens": 64000,
+      "maxTokens": 128000,
       "modelId": "global.anthropic.claude-sonnet-4-6",
       "name": "Claude Sonnet 4.6 (Global)",
       "provider": "amazon-bedrock",
@@ -1918,7 +1990,7 @@
         "image",
         "text"
       ],
-      "maxTokens": 64000,
+      "maxTokens": 128000,
       "modelId": "jp.anthropic.claude-sonnet-4-6",
       "name": "Claude Sonnet 4.6 (JP)",
       "provider": "amazon-bedrock",
@@ -3285,6 +3357,30 @@
         "text"
       ],
       "maxTokens": 64000,
+      "modelId": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+      "name": "Claude Sonnet 4 (US)",
+      "provider": "amazon-bedrock",
+      "reasoning": true,
+      "supportedThinkingLevels": [
+        "off",
+        "minimal",
+        "low",
+        "medium",
+        "high"
+      ],
+      "thinkingLevelMap": {},
+      "fingerprint": "sha256:8c9136394770fe3c1b9ab88ff7d357eb03fa7f69d2726d6acd574524c9a9bb8e"
+    },
+    {
+      "api": "bedrock-converse-stream",
+      "compatibility": {},
+      "contextWindow": 200000,
+      "deploymentFingerprint": "sha256:97cb5ad8c19d447c6067182ac9f1e53c288888378ffbf4bd4c2696fd8df2c2b8",
+      "input": [
+        "image",
+        "text"
+      ],
+      "maxTokens": 64000,
       "modelId": "us.anthropic.claude-sonnet-4-5-20250929-v1:0",
       "name": "Claude Sonnet 4.5 (US)",
       "provider": "amazon-bedrock",
@@ -3308,7 +3404,7 @@
         "image",
         "text"
       ],
-      "maxTokens": 64000,
+      "maxTokens": 128000,
       "modelId": "us.anthropic.claude-sonnet-4-6",
       "name": "Claude Sonnet 4.6 (US)",
       "provider": "amazon-bedrock",
@@ -8812,7 +8908,9 @@
     },
     {
       "api": "anthropic-messages",
-      "compatibility": {},
+      "compatibility": {
+        "forceAdaptiveThinking": true
+      },
       "contextWindow": 1000000,
       "deploymentFingerprint": "sha256:788df56b6bc8813d6527098da088ccc4d4d121b945edb860aeda87369d7620ba",
       "input": [
@@ -8825,13 +8923,19 @@
       "reasoning": true,
       "supportedThinkingLevels": [
         "off",
-        "minimal",
-        "low",
-        "medium",
-        "high"
+        "high",
+        "max"
       ],
-      "thinkingLevelMap": {},
-      "fingerprint": "sha256:4e8a6db3c9635396e7a14c6e94b9fc1ba6a6d02c4b64e780479a99e17f2b679d"
+      "thinkingLevelMap": {
+        "high": "high",
+        "low": null,
+        "max": "max",
+        "medium": null,
+        "minimal": null,
+        "off": "none",
+        "xhigh": null
+      },
+      "fingerprint": "sha256:f746f459089be4a2b1eeaa3f35683f66d0e07d91ac632cf40ddf9ee933b1a69a"
     },
     {
       "api": "anthropic-messages",
@@ -9153,26 +9257,34 @@
     },
     {
       "api": "anthropic-messages",
-      "compatibility": {},
+      "compatibility": {
+        "forceAdaptiveThinking": true
+      },
       "contextWindow": 196608,
       "deploymentFingerprint": "sha256:788df56b6bc8813d6527098da088ccc4d4d121b945edb860aeda87369d7620ba",
       "input": [
         "text"
       ],
-      "maxTokens": 196608,
+      "maxTokens": 131072,
       "modelId": "accounts/fireworks/models/minimax-m2p7",
       "name": "MiniMax-M2.7",
       "provider": "fireworks",
       "reasoning": true,
       "supportedThinkingLevels": [
-        "off",
-        "minimal",
         "low",
         "medium",
         "high"
       ],
-      "thinkingLevelMap": {},
-      "fingerprint": "sha256:3cb609c5116648b28a59ab108929b144d0878c33b4431be8215ec857240eacff"
+      "thinkingLevelMap": {
+        "high": "high",
+        "low": "low",
+        "max": null,
+        "medium": "medium",
+        "minimal": null,
+        "off": null,
+        "xhigh": null
+      },
+      "fingerprint": "sha256:56d163af131ddf87ab62c96e20d0c0a9ed79280a24677c66a1aeeb7de55eada8"
     },
     {
       "api": "anthropic-messages",
@@ -9403,6 +9515,70 @@
       "fingerprint": "sha256:b8c37959931a134ef4116229a79a5a913eed92b373d77cf84d39208e7377b4fe"
     },
     {
+      "api": "anthropic-messages",
+      "compatibility": {
+        "forceAdaptiveThinking": true
+      },
+      "contextWindow": 1000000,
+      "deploymentFingerprint": "sha256:788df56b6bc8813d6527098da088ccc4d4d121b945edb860aeda87369d7620ba",
+      "input": [
+        "image",
+        "text"
+      ],
+      "maxTokens": 384000,
+      "modelId": "accounts/fireworks/routers/deepseek-flash-latest",
+      "name": "DeepSeek Flash Latest",
+      "provider": "fireworks",
+      "reasoning": true,
+      "supportedThinkingLevels": [
+        "off",
+        "low",
+        "high",
+        "max"
+      ],
+      "thinkingLevelMap": {
+        "high": "high",
+        "low": "low",
+        "max": "max",
+        "medium": null,
+        "minimal": null,
+        "off": "none",
+        "xhigh": null
+      },
+      "fingerprint": "sha256:c937e6ceb329d0e905fa7c97430bcd6280c06fc19c765d1dc4c944a7208acc5c"
+    },
+    {
+      "api": "anthropic-messages",
+      "compatibility": {
+        "forceAdaptiveThinking": true
+      },
+      "contextWindow": 1000000,
+      "deploymentFingerprint": "sha256:788df56b6bc8813d6527098da088ccc4d4d121b945edb860aeda87369d7620ba",
+      "input": [
+        "text"
+      ],
+      "maxTokens": 384000,
+      "modelId": "accounts/fireworks/routers/deepseek-pro-latest",
+      "name": "DeepSeek Pro Latest",
+      "provider": "fireworks",
+      "reasoning": true,
+      "supportedThinkingLevels": [
+        "off",
+        "high",
+        "max"
+      ],
+      "thinkingLevelMap": {
+        "high": "high",
+        "low": null,
+        "max": "max",
+        "medium": null,
+        "minimal": null,
+        "off": "none",
+        "xhigh": null
+      },
+      "fingerprint": "sha256:e4a431ee0e447c38f1d1768cb12eba37eec295c13ca024c1ab151624f3cf3220"
+    },
+    {
       "api": "openai-completions",
       "compatibility": {
         "supportsDeveloperRole": false
@@ -9463,6 +9639,134 @@
         "xhigh": null
       },
       "fingerprint": "sha256:3ec6fac0244f3d1f9c6544bedb402e1da4655efc0e6703f9dbd6dc0d0aa80af2"
+    },
+    {
+      "api": "openai-completions",
+      "compatibility": {
+        "supportsDeveloperRole": false
+      },
+      "contextWindow": 1048572,
+      "deploymentFingerprint": "sha256:a8fc07ee9c597f4a5ebade25a4418ebfb788e8e616539e928c45d07e9027d5cf",
+      "input": [
+        "text"
+      ],
+      "maxTokens": 262144,
+      "modelId": "accounts/fireworks/routers/glm-fast-latest",
+      "name": "GLM 5.3 Fast (Latest)",
+      "provider": "fireworks",
+      "reasoning": true,
+      "supportedThinkingLevels": [
+        "low",
+        "high",
+        "max"
+      ],
+      "thinkingLevelMap": {
+        "high": "high",
+        "low": "low",
+        "max": "max",
+        "medium": null,
+        "minimal": null,
+        "off": null,
+        "xhigh": null
+      },
+      "fingerprint": "sha256:dc8eb2c55ac5f669b7c2b3dc556dbf3dbe7a2c9692678aa5f5449d4a27244058"
+    },
+    {
+      "api": "openai-completions",
+      "compatibility": {
+        "supportsDeveloperRole": false
+      },
+      "contextWindow": 1048573,
+      "deploymentFingerprint": "sha256:a8fc07ee9c597f4a5ebade25a4418ebfb788e8e616539e928c45d07e9027d5cf",
+      "input": [
+        "image",
+        "text"
+      ],
+      "maxTokens": 131072,
+      "modelId": "accounts/fireworks/routers/glm-flash-latest",
+      "name": "GLM Flash Latest (GLM 5.3 Flash)",
+      "provider": "fireworks",
+      "reasoning": true,
+      "supportedThinkingLevels": [
+        "low",
+        "high",
+        "max"
+      ],
+      "thinkingLevelMap": {
+        "high": "high",
+        "low": "low",
+        "max": "max",
+        "medium": null,
+        "minimal": null,
+        "off": null,
+        "xhigh": null
+      },
+      "fingerprint": "sha256:8722e8e89eba9bf666419227e5e223e801bd866d47dfd7fc745979fe14f6810e"
+    },
+    {
+      "api": "openai-completions",
+      "compatibility": {
+        "supportsDeveloperRole": false
+      },
+      "contextWindow": 1048573,
+      "deploymentFingerprint": "sha256:a8fc07ee9c597f4a5ebade25a4418ebfb788e8e616539e928c45d07e9027d5cf",
+      "input": [
+        "text"
+      ],
+      "maxTokens": 262144,
+      "modelId": "accounts/fireworks/routers/glm-latest",
+      "name": "GLM Latest",
+      "provider": "fireworks",
+      "reasoning": true,
+      "supportedThinkingLevels": [
+        "low",
+        "high",
+        "max"
+      ],
+      "thinkingLevelMap": {
+        "high": "high",
+        "low": "low",
+        "max": "max",
+        "medium": null,
+        "minimal": null,
+        "off": null,
+        "xhigh": null
+      },
+      "fingerprint": "sha256:78e80053d54005e1aade89efadf2eba5e07ade1f30d9d4eceac624eec790d8fc"
+    },
+    {
+      "api": "anthropic-messages",
+      "compatibility": {
+        "forceAdaptiveThinking": true
+      },
+      "contextWindow": 1048576,
+      "deploymentFingerprint": "sha256:788df56b6bc8813d6527098da088ccc4d4d121b945edb860aeda87369d7620ba",
+      "input": [
+        "image",
+        "text"
+      ],
+      "maxTokens": 131072,
+      "modelId": "accounts/fireworks/routers/kimi-fast-latest",
+      "name": "Kimi Fast Latest",
+      "provider": "fireworks",
+      "reasoning": true,
+      "supportedThinkingLevels": [
+        "off",
+        "low",
+        "medium",
+        "high",
+        "max"
+      ],
+      "thinkingLevelMap": {
+        "high": "high",
+        "low": "low",
+        "max": "max",
+        "medium": "medium",
+        "minimal": null,
+        "off": "none",
+        "xhigh": null
+      },
+      "fingerprint": "sha256:3b335ded8e390536b0fa7eb2b4633fd8455f39e821f8455f4f51b00b9b32ce26"
     },
     {
       "api": "anthropic-messages",
@@ -9568,6 +9872,95 @@
         "xhigh": null
       },
       "fingerprint": "sha256:5da5309132bbda7564486dd429f18b9a1359a3cd8379e3bf4d68dafbedfa0ad7"
+    },
+    {
+      "api": "anthropic-messages",
+      "compatibility": {
+        "forceAdaptiveThinking": true
+      },
+      "contextWindow": 1048576,
+      "deploymentFingerprint": "sha256:788df56b6bc8813d6527098da088ccc4d4d121b945edb860aeda87369d7620ba",
+      "input": [
+        "image",
+        "text"
+      ],
+      "maxTokens": 131072,
+      "modelId": "accounts/fireworks/routers/kimi-latest",
+      "name": "Kimi Latest",
+      "provider": "fireworks",
+      "reasoning": true,
+      "supportedThinkingLevels": [
+        "off",
+        "low",
+        "medium",
+        "high",
+        "max"
+      ],
+      "thinkingLevelMap": {
+        "high": "high",
+        "low": "low",
+        "max": "max",
+        "medium": "medium",
+        "minimal": null,
+        "off": "none",
+        "xhigh": null
+      },
+      "fingerprint": "sha256:9245849eedf630c08f241ea0508abdf5f36a5e694a29b6a9f6dca48f88f3db45"
+    },
+    {
+      "api": "anthropic-messages",
+      "compatibility": {
+        "forceAdaptiveThinking": true
+      },
+      "contextWindow": 512000,
+      "deploymentFingerprint": "sha256:788df56b6bc8813d6527098da088ccc4d4d121b945edb860aeda87369d7620ba",
+      "input": [
+        "text"
+      ],
+      "maxTokens": 512000,
+      "modelId": "accounts/fireworks/routers/minimax-latest",
+      "name": "MiniMax Latest",
+      "provider": "fireworks",
+      "reasoning": true,
+      "supportedThinkingLevels": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "thinkingLevelMap": {
+        "high": "high",
+        "low": "low",
+        "max": null,
+        "medium": "medium",
+        "minimal": null,
+        "off": null,
+        "xhigh": null
+      },
+      "fingerprint": "sha256:c39a42fb94f03973f7647359420b6d449e082d4188fbe4a7ee14a0cff462889d"
+    },
+    {
+      "api": "anthropic-messages",
+      "compatibility": {},
+      "contextWindow": 262144,
+      "deploymentFingerprint": "sha256:788df56b6bc8813d6527098da088ccc4d4d121b945edb860aeda87369d7620ba",
+      "input": [
+        "image",
+        "text"
+      ],
+      "maxTokens": 131072,
+      "modelId": "accounts/fireworks/routers/qwen-max-latest",
+      "name": "Qwen Max Latest (Qwen3.8 Max)",
+      "provider": "fireworks",
+      "reasoning": true,
+      "supportedThinkingLevels": [
+        "off",
+        "minimal",
+        "low",
+        "medium",
+        "high"
+      ],
+      "thinkingLevelMap": {},
+      "fingerprint": "sha256:b3eac12deedd4d17d125275ec1b6e04e5a8cabbdbb4fa9e0a12e6d10386b2b2b"
     },
     {
       "api": "anthropic-messages",
@@ -21736,7 +22129,7 @@
       ],
       "maxTokens": 128000,
       "modelId": "anthropic/claude-opus-5",
-      "name": "Claude Opus 5",
+      "name": "Anthropic: Claude Opus 5",
       "provider": "openrouter",
       "reasoning": true,
       "supportedThinkingLevels": [
@@ -21755,7 +22148,7 @@
         "off": null,
         "xhigh": "xhigh"
       },
-      "fingerprint": "sha256:4d4b3c9e2bad0c61ff8371494eb43960d610b54d9a4163d0ed796b911869f747"
+      "fingerprint": "sha256:7672f0b33597ef2db21e9aa729d8fe6dd4519bbf3495970860b50cad751a4546"
     },
     {
       "api": "openai-completions",
@@ -21801,7 +22194,7 @@
       ],
       "maxTokens": 128000,
       "modelId": "anthropic/claude-opus-5:batch",
-      "name": "Claude Opus 5 (batch)",
+      "name": "Anthropic: Claude Opus 5 (batch)",
       "provider": "openrouter",
       "reasoning": true,
       "supportedThinkingLevels": [
@@ -21821,7 +22214,7 @@
         "off": "none",
         "xhigh": "xhigh"
       },
-      "fingerprint": "sha256:d3795550bfca3f2c9470675f02f9436364ed6c7d9893a2b1103024e3ba483cef"
+      "fingerprint": "sha256:034f44b413f2cd59020d0e00ef6259f65a3bafb56b9ac17b36a6f54f3463dff1"
     },
     {
       "api": "anthropic-messages",
@@ -23882,33 +24275,6 @@
         "image",
         "text"
       ],
-      "maxTokens": 235929,
-      "modelId": "google/gemma-4-31b-it:batch",
-      "name": "Google: Gemma 4 31B (batch)",
-      "provider": "openrouter",
-      "reasoning": true,
-      "supportedThinkingLevels": [
-        "off",
-        "minimal",
-        "low",
-        "medium",
-        "high"
-      ],
-      "thinkingLevelMap": {},
-      "fingerprint": "sha256:fddc1945e257f583b5784a7e25ca2773da904f5ec2b71282dcb6eb523703f669"
-    },
-    {
-      "api": "openai-completions",
-      "compatibility": {
-        "supportsDeveloperRole": false,
-        "thinkingFormat": "openrouter"
-      },
-      "contextWindow": 262144,
-      "deploymentFingerprint": "sha256:e08186e0c8c6074c97ee0f4211ebd491d6848f2f12f4b761fb51ce23ad641cfa",
-      "input": [
-        "image",
-        "text"
-      ],
       "maxTokens": 32768,
       "modelId": "google/gemma-4-31b-it:free",
       "name": "Google: Gemma 4 31B (free)",
@@ -25429,7 +25795,7 @@
         "supportsDeveloperRole": false,
         "thinkingFormat": "openrouter"
       },
-      "contextWindow": 128000,
+      "contextWindow": 256000,
       "deploymentFingerprint": "sha256:e08186e0c8c6074c97ee0f4211ebd491d6848f2f12f4b761fb51ce23ad641cfa",
       "input": [
         "image",
@@ -26007,12 +26373,12 @@
         "supportsDeveloperRole": false,
         "thinkingFormat": "openrouter"
       },
-      "contextWindow": 202800,
+      "contextWindow": 256000,
       "deploymentFingerprint": "sha256:e08186e0c8c6074c97ee0f4211ebd491d6848f2f12f4b761fb51ce23ad641cfa",
       "input": [
         "text"
       ],
-      "maxTokens": 182520,
+      "maxTokens": 32768,
       "modelId": "nvidia/nemotron-3-ultra-550b-a55b",
       "name": "NVIDIA: Nemotron 3 Ultra",
       "provider": "openrouter",
@@ -30822,7 +31188,7 @@
       "input": [
         "text"
       ],
-      "maxTokens": 819200,
+      "maxTokens": 1024000,
       "modelId": "thedrummer/unslopnemo-12b",
       "name": "TheDrummer: UnslopNemo 12B",
       "provider": "openrouter",
@@ -30904,42 +31270,6 @@
         "xhigh": null
       },
       "fingerprint": "sha256:7b10f0c8b5b3c1259b8e7562659683ed097fcd58b37d2ef231194d58fd6fa595"
-    },
-    {
-      "api": "openai-completions",
-      "compatibility": {
-        "supportsDeveloperRole": false,
-        "thinkingFormat": "openrouter"
-      },
-      "contextWindow": 524288,
-      "deploymentFingerprint": "sha256:e08186e0c8c6074c97ee0f4211ebd491d6848f2f12f4b761fb51ce23ad641cfa",
-      "input": [
-        "image",
-        "text"
-      ],
-      "maxTokens": 471859,
-      "modelId": "thinkingmachines/inkling-small:batch",
-      "name": "Thinking Machines: Inkling Small (batch)",
-      "provider": "openrouter",
-      "reasoning": true,
-      "supportedThinkingLevels": [
-        "off",
-        "minimal",
-        "low",
-        "medium",
-        "high",
-        "max"
-      ],
-      "thinkingLevelMap": {
-        "high": "high",
-        "low": "low",
-        "max": "max",
-        "medium": "medium",
-        "minimal": "minimal",
-        "off": "none",
-        "xhigh": null
-      },
-      "fingerprint": "sha256:3b7af61dbd38a8404e947d4b2927fb288f520c6ce5f9e8c62973da7110037827"
     },
     {
       "api": "openai-completions",
@@ -31981,6 +32311,39 @@
         "xhigh": null
       },
       "fingerprint": "sha256:687f974ed60b2b8d67313e5f9740623be1c2b6910cad377c69d57cc6a2782822"
+    },
+    {
+      "api": "openai-completions",
+      "compatibility": {
+        "supportsDeveloperRole": false,
+        "supportsReasoningEffort": true,
+        "thinkingFormat": "qwen"
+      },
+      "contextWindow": 1000000,
+      "deploymentFingerprint": "sha256:75fe921bf870433a55e44ba30ab484707770f60413185a15bca40f886b14e8b6",
+      "input": [
+        "image",
+        "text"
+      ],
+      "maxTokens": 384000,
+      "modelId": "deepseek-v4.1-flash",
+      "name": "DeepSeek V4.1 Flash",
+      "provider": "qwen-token-plan",
+      "reasoning": true,
+      "supportedThinkingLevels": [
+        "high",
+        "max"
+      ],
+      "thinkingLevelMap": {
+        "high": "high",
+        "low": null,
+        "max": "max",
+        "medium": null,
+        "minimal": null,
+        "off": null,
+        "xhigh": null
+      },
+      "fingerprint": "sha256:da53f2f59bd403436bc6201dae32f2765ac9d1961881e6e51047827712a63573"
     },
     {
       "api": "openai-completions",
@@ -36649,7 +37012,7 @@
     {
       "api": "anthropic-messages",
       "compatibility": {},
-      "contextWindow": 256000,
+      "contextWindow": 262144,
       "deploymentFingerprint": "sha256:f41d7415fd061e57db3e476e90a872b5c48f2603ca1ad61cbb99793e6424a01f",
       "input": [
         "image",
@@ -36669,7 +37032,7 @@
     {
       "api": "anthropic-messages",
       "compatibility": {},
-      "contextWindow": 128000,
+      "contextWindow": 131072,
       "deploymentFingerprint": "sha256:f41d7415fd061e57db3e476e90a872b5c48f2603ca1ad61cbb99793e6424a01f",
       "input": [
         "image",
@@ -36689,7 +37052,7 @@
     {
       "api": "anthropic-messages",
       "compatibility": {},
-      "contextWindow": 128000,
+      "contextWindow": 262144,
       "deploymentFingerprint": "sha256:f41d7415fd061e57db3e476e90a872b5c48f2603ca1ad61cbb99793e6424a01f",
       "input": [
         "image",
@@ -36709,7 +37072,7 @@
     {
       "api": "anthropic-messages",
       "compatibility": {},
-      "contextWindow": 256000,
+      "contextWindow": 262144,
       "deploymentFingerprint": "sha256:f41d7415fd061e57db3e476e90a872b5c48f2603ca1ad61cbb99793e6424a01f",
       "input": [
         "image",
@@ -36749,7 +37112,7 @@
     {
       "api": "anthropic-messages",
       "compatibility": {},
-      "contextWindow": 256000,
+      "contextWindow": 262144,
       "deploymentFingerprint": "sha256:f41d7415fd061e57db3e476e90a872b5c48f2603ca1ad61cbb99793e6424a01f",
       "input": [
         "image",
@@ -36773,13 +37136,12 @@
     {
       "api": "anthropic-messages",
       "compatibility": {},
-      "contextWindow": 128000,
+      "contextWindow": 60288,
       "deploymentFingerprint": "sha256:f41d7415fd061e57db3e476e90a872b5c48f2603ca1ad61cbb99793e6424a01f",
       "input": [
-        "image",
         "text"
       ],
-      "maxTokens": 128000,
+      "maxTokens": 16000,
       "modelId": "mistral/mistral-nemo",
       "name": "Mistral Nemo 12B",
       "provider": "vercel-ai-gateway",
@@ -36788,12 +37150,12 @@
         "off"
       ],
       "thinkingLevelMap": {},
-      "fingerprint": "sha256:98bcd07ba9f9311f0f628ab1d4d982da5cad328201bb5dadfdc0be8ddf5fa048"
+      "fingerprint": "sha256:7fd7f98f39308f6bad1666dc8908f578b785713926474fae7e9eb5a8df7b2045"
     },
     {
       "api": "anthropic-messages",
       "compatibility": {},
-      "contextWindow": 32000,
+      "contextWindow": 262144,
       "deploymentFingerprint": "sha256:f41d7415fd061e57db3e476e90a872b5c48f2603ca1ad61cbb99793e6424a01f",
       "input": [
         "image",
