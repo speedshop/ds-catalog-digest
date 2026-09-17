@@ -60,12 +60,6 @@
         "equivalence": "verified"
       },
       {
-        "provider": "openrouter",
-        "modelId": "anthropic/claude-opus-5:batch",
-        "piThinkingLevel": "max",
-        "equivalence": "verified"
-      },
-      {
         "provider": "vercel-ai-gateway",
         "modelId": "anthropic/claude-opus-5",
         "piThinkingLevel": "max",
@@ -124,12 +118,6 @@
         "equivalence": "verified"
       },
       {
-        "provider": "openrouter",
-        "modelId": "anthropic/claude-opus-5:batch",
-        "piThinkingLevel": "xhigh",
-        "equivalence": "verified"
-      },
-      {
         "provider": "vercel-ai-gateway",
         "modelId": "anthropic/claude-opus-5",
         "piThinkingLevel": "xhigh",
@@ -182,12 +170,6 @@
       {
         "provider": "opencode",
         "modelId": "claude-opus-5",
-        "piThinkingLevel": "high",
-        "equivalence": "verified"
-      },
-      {
-        "provider": "openrouter",
-        "modelId": "anthropic/claude-opus-5:batch",
         "piThinkingLevel": "high",
         "equivalence": "verified"
       },
@@ -645,12 +627,6 @@
       {
         "provider": "opencode",
         "modelId": "claude-opus-5",
-        "piThinkingLevel": "medium",
-        "equivalence": "verified"
-      },
-      {
-        "provider": "openrouter",
-        "modelId": "anthropic/claude-opus-5:batch",
         "piThinkingLevel": "medium",
         "equivalence": "verified"
       },
@@ -1612,12 +1588,6 @@
       {
         "provider": "opencode",
         "modelId": "claude-opus-5",
-        "piThinkingLevel": "low",
-        "equivalence": "verified"
-      },
-      {
-        "provider": "openrouter",
-        "modelId": "anthropic/claude-opus-5:batch",
         "piThinkingLevel": "low",
         "equivalence": "verified"
       },
