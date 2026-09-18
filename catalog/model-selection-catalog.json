@@ -4,7 +4,7 @@
     "id": "deepswe-v1.1",
     "name": "DeepSWE v1.1",
     "version": "v1.1",
-    "generatedAt": "2026-09-17T06:41:48.601442Z",
+    "generatedAt": "2026-09-18T06:40:22.478935Z",
     "sourceUpdatedAt": "2026-09-03T22:24:37.984682+00:00",
     "distribution": {
       "classification": "redistributable",
@@ -2652,18 +2652,6 @@
           "equivalence": "verified"
         },
         {
-          "provider": "google",
-          "modelId": "gemini-3.1-pro-preview",
-          "piThinkingLevel": "high",
-          "equivalence": "verified"
-        },
-        {
-          "provider": "google-vertex",
-          "modelId": "gemini-3.1-pro-preview",
-          "piThinkingLevel": "high",
-          "equivalence": "verified"
-        },
-        {
           "provider": "openrouter",
           "modelId": "google/gemini-3.1-pro-preview",
           "piThinkingLevel": "high",
@@ -2732,24 +2720,6 @@
       "aliases": [
         {
           "provider": "github-copilot",
-          "modelId": "gemini-3.5-flash",
-          "piThinkingLevel": "high",
-          "equivalence": "verified"
-        },
-        {
-          "provider": "google",
-          "modelId": "gemini-3.5-flash",
-          "piThinkingLevel": "high",
-          "equivalence": "verified"
-        },
-        {
-          "provider": "google-vertex",
-          "modelId": "gemini-3.5-flash",
-          "piThinkingLevel": "high",
-          "equivalence": "verified"
-        },
-        {
-          "provider": "opencode",
           "modelId": "gemini-3.5-flash",
           "piThinkingLevel": "high",
           "equivalence": "verified"
@@ -2828,24 +2798,6 @@
           "equivalence": "verified"
         },
         {
-          "provider": "google",
-          "modelId": "gemini-3.6-flash",
-          "piThinkingLevel": "high",
-          "equivalence": "verified"
-        },
-        {
-          "provider": "google-vertex",
-          "modelId": "gemini-3.6-flash",
-          "piThinkingLevel": "high",
-          "equivalence": "verified"
-        },
-        {
-          "provider": "opencode",
-          "modelId": "gemini-3.6-flash",
-          "piThinkingLevel": "high",
-          "equivalence": "verified"
-        },
-        {
           "provider": "openrouter",
           "modelId": "google/gemini-3.6-flash",
           "piThinkingLevel": "high",
@@ -2914,24 +2866,6 @@
       "aliases": [
         {
           "provider": "github-copilot",
-          "modelId": "gemini-3.7-flash",
-          "piThinkingLevel": "high",
-          "equivalence": "verified"
-        },
-        {
-          "provider": "google",
-          "modelId": "gemini-3.7-flash",
-          "piThinkingLevel": "high",
-          "equivalence": "verified"
-        },
-        {
-          "provider": "google-vertex",
-          "modelId": "gemini-3.7-flash",
-          "piThinkingLevel": "high",
-          "equivalence": "verified"
-        },
-        {
-          "provider": "opencode",
           "modelId": "gemini-3.7-flash",
           "piThinkingLevel": "high",
           "equivalence": "verified"
@@ -3010,24 +2944,6 @@
           "equivalence": "verified"
         },
         {
-          "provider": "google",
-          "modelId": "gemini-3.7-flash",
-          "piThinkingLevel": "low",
-          "equivalence": "verified"
-        },
-        {
-          "provider": "google-vertex",
-          "modelId": "gemini-3.7-flash",
-          "piThinkingLevel": "low",
-          "equivalence": "verified"
-        },
-        {
-          "provider": "opencode",
-          "modelId": "gemini-3.7-flash",
-          "piThinkingLevel": "low",
-          "equivalence": "verified"
-        },
-        {
           "provider": "openrouter",
           "modelId": "google/gemini-3.7-flash",
           "piThinkingLevel": "low",
@@ -3096,24 +3012,6 @@
       "aliases": [
         {
           "provider": "github-copilot",
-          "modelId": "gemini-3.7-flash",
-          "piThinkingLevel": "medium",
-          "equivalence": "verified"
-        },
-        {
-          "provider": "google",
-          "modelId": "gemini-3.7-flash",
-          "piThinkingLevel": "medium",
-          "equivalence": "verified"
-        },
-        {
-          "provider": "google-vertex",
-          "modelId": "gemini-3.7-flash",
-          "piThinkingLevel": "medium",
-          "equivalence": "verified"
-        },
-        {
-          "provider": "opencode",
           "modelId": "gemini-3.7-flash",
           "piThinkingLevel": "medium",
           "equivalence": "verified"
