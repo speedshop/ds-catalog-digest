@@ -8,7 +8,7 @@
     "modelsConfigHash": "sha256:30a0741487ebd78fe1c02248beb4286ceb8334dfc14847a1a314b3df5e2687cc",
     "extensions": []
   },
-  "catalogHash": "sha256:a4f49d9b119bdbda73e750617caa0c782118243181fe41959e91f9e38b08a54c",
+  "catalogHash": "sha256:d5f54396d9904c83a380ccc0cf820167e81609842d05fdf32b28067d644b6aa3",
   "routes": [
     {
       "api": "bedrock-converse-stream",
@@ -7552,6 +7552,38 @@
         "xhigh": "xhigh"
       },
       "fingerprint": "sha256:f1249604ed48de8eda943763bc1c3b9fe9058f915d43a2ee41dec6d8a2c1fbe6"
+    },
+    {
+      "api": "openai-responses",
+      "compatibility": {},
+      "contextWindow": 1050000,
+      "deploymentFingerprint": "sha256:d95a798cfe6e1034351eda34520c5cee5dc697c95fccd6a0e02162728202cc31",
+      "input": [
+        "image",
+        "text"
+      ],
+      "maxTokens": 128000,
+      "modelId": "gpt-6-astra",
+      "name": "GPT-6 Astra",
+      "provider": "cloudflare-ai-gateway",
+      "reasoning": true,
+      "supportedThinkingLevels": [
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max"
+      ],
+      "thinkingLevelMap": {
+        "high": "high",
+        "low": "low",
+        "max": "max",
+        "medium": "medium",
+        "minimal": null,
+        "off": null,
+        "xhigh": "xhigh"
+      },
+      "fingerprint": "sha256:691014f60704c3fced244106b6986f0c9062b8bfdbfe9839709a5e54a202d1c2"
     },
     {
       "api": "openai-responses",
@@ -15105,6 +15137,29 @@
       "fingerprint": "sha256:1f62eb0b40a1abe84100eb255d1c0b7a856c2532d180b0d8962d34211b58c9c3"
     },
     {
+      "api": "mistral-conversations",
+      "compatibility": {},
+      "contextWindow": 1000000,
+      "deploymentFingerprint": "sha256:019390849047450bba0e2cd60c0b1eb7908033808d99c9a4db8d5befdb2fe090",
+      "input": [
+        "text"
+      ],
+      "maxTokens": 131072,
+      "modelId": "zai-glm-5-3",
+      "name": "GLM-5.3",
+      "provider": "mistral",
+      "reasoning": true,
+      "supportedThinkingLevels": [
+        "off",
+        "minimal",
+        "low",
+        "medium",
+        "high"
+      ],
+      "thinkingLevelMap": {},
+      "fingerprint": "sha256:2f429168880336c9fec063709206bde77cfe16fbfe9c85380216e4ef63407046"
+    },
+    {
       "api": "openai-completions",
       "compatibility": {
         "maxTokensField": "max_tokens",
@@ -19297,7 +19352,7 @@
       ],
       "maxTokens": 128000,
       "modelId": "gpt-5.6-sol",
-      "name": "GPT-5.6 Sol (50% Off)",
+      "name": "GPT-5.6 Sol",
       "provider": "opencode",
       "reasoning": true,
       "supportedThinkingLevels": [
@@ -19316,7 +19371,7 @@
         "off": null,
         "xhigh": "xhigh"
       },
-      "fingerprint": "sha256:e6571cc7456e146d05bb2d58e5483de0e32e3c36c221e85ebb35ba81d130c5fd"
+      "fingerprint": "sha256:20fa117daa700adde5f57a630845a4c9653492c1fae23caea48ca12bdaae0a0d"
     },
     {
       "api": "openai-responses",
@@ -20010,30 +20065,6 @@
       "fingerprint": "sha256:3fe0ad831bd49d7a58b1f893808c267b933185f249826c48b4a19473c38b673b"
     },
     {
-      "api": "anthropic-messages",
-      "compatibility": {},
-      "contextWindow": 262144,
-      "deploymentFingerprint": "sha256:d32aea549ad50808304fede142071628cd4173faddf682467b09d963e0ea9a9a",
-      "input": [
-        "image",
-        "text"
-      ],
-      "maxTokens": 131072,
-      "modelId": "union-alpha",
-      "name": "Union Alpha Free",
-      "provider": "opencode",
-      "reasoning": true,
-      "supportedThinkingLevels": [
-        "off",
-        "minimal",
-        "low",
-        "medium",
-        "high"
-      ],
-      "thinkingLevelMap": {},
-      "fingerprint": "sha256:1c5e1dcc301c3c89854186d380c6c335d34a3b6f178e366dbe7307a8b308c19b"
-    },
-    {
       "api": "openai-completions",
       "compatibility": {
         "maxTokensField": "max_tokens",
@@ -20148,18 +20179,20 @@
       "provider": "opencode-go",
       "reasoning": true,
       "supportedThinkingLevels": [
-        "off",
+        "low",
         "high",
         "max"
       ],
       "thinkingLevelMap": {
         "high": "high",
-        "low": null,
+        "low": "low",
         "max": "max",
         "medium": null,
-        "minimal": null
+        "minimal": null,
+        "off": null,
+        "xhigh": null
       },
-      "fingerprint": "sha256:f35dc8df44a8fe13dd29eacf3404253bbf1aef7f4ca79c94f4fbc68ba2dda395"
+      "fingerprint": "sha256:93055f4eeba7434128e55e155f8cca7a4d4a37b3053cb9813b3d8f254d0faf8b"
     },
     {
       "api": "openai-completions",
@@ -20859,30 +20892,6 @@
       "fingerprint": "sha256:54e28ee089d00a9a151588895a27c5a758c8d398ebb86e5c99482465c2287b81"
     },
     {
-      "api": "anthropic-messages",
-      "compatibility": {},
-      "contextWindow": 262144,
-      "deploymentFingerprint": "sha256:eee0767ae6ed0a0b5876b0a098d6f98e57a4f85b5db4996541db0faa3102c094",
-      "input": [
-        "image",
-        "text"
-      ],
-      "maxTokens": 131072,
-      "modelId": "union-alpha",
-      "name": "Union Alpha Free",
-      "provider": "opencode-go",
-      "reasoning": true,
-      "supportedThinkingLevels": [
-        "off",
-        "minimal",
-        "low",
-        "medium",
-        "high"
-      ],
-      "thinkingLevelMap": {},
-      "fingerprint": "sha256:e92fd1ed5a2a9ba588af622f9a5e8f9a3f2b446df8cc8184fa601d0007ab2263"
-    },
-    {
       "api": "openai-completions",
       "compatibility": {
         "supportsDeveloperRole": false,
@@ -21094,26 +21103,27 @@
       "input": [
         "text"
       ],
-      "maxTokens": 393216,
+      "maxTokens": 943718,
       "modelId": "~deepseek/deepseek-v4-flash-latest",
       "name": "DeepSeek: DeepSeek V4 Flash Latest",
       "provider": "openrouter",
       "reasoning": true,
       "supportedThinkingLevels": [
         "off",
+        "low",
         "high",
-        "xhigh"
+        "max"
       ],
       "thinkingLevelMap": {
         "high": "high",
-        "low": null,
-        "max": null,
+        "low": "low",
+        "max": "max",
         "medium": null,
         "minimal": null,
         "off": "none",
-        "xhigh": "xhigh"
+        "xhigh": null
       },
-      "fingerprint": "sha256:437189dabac558f7dc79176f69351a54f8357b40bbe243eb2da3ba769d07b986"
+      "fingerprint": "sha256:2ecbc738fcf7ee975a32d7351a247d16d769d6b468cdf4cacf88e9b3b52dabe9"
     },
     {
       "api": "openai-completions",
@@ -22990,12 +23000,12 @@
         "supportsDeveloperRole": false,
         "thinkingFormat": "openrouter"
       },
-      "contextWindow": 128000,
+      "contextWindow": 163840,
       "deploymentFingerprint": "sha256:e08186e0c8c6074c97ee0f4211ebd491d6848f2f12f4b761fb51ce23ad641cfa",
       "input": [
         "text"
       ],
-      "maxTokens": 16000,
+      "maxTokens": 16384,
       "modelId": "deepseek/deepseek-chat",
       "name": "DeepSeek: DeepSeek V3",
       "provider": "openrouter",
@@ -23236,19 +23246,20 @@
       "reasoning": true,
       "supportedThinkingLevels": [
         "off",
+        "low",
         "high",
-        "xhigh"
+        "max"
       ],
       "thinkingLevelMap": {
         "high": "high",
-        "low": null,
-        "max": null,
+        "low": "low",
+        "max": "max",
         "medium": null,
         "minimal": null,
         "off": "none",
-        "xhigh": "xhigh"
+        "xhigh": null
       },
-      "fingerprint": "sha256:589a17fdedda7d57b28f2a2436b6eff60af17298f22e7ac3644540a15d5f4ed6"
+      "fingerprint": "sha256:d11f619190f710393c8e402fb5c5a1ed1e67c6e934f3021a3eb5e29e2fdf86a7"
     },
     {
       "api": "openai-completions",
@@ -23268,19 +23279,53 @@
       "reasoning": true,
       "supportedThinkingLevels": [
         "off",
+        "low",
         "high",
-        "xhigh"
+        "max"
       ],
       "thinkingLevelMap": {
         "high": "high",
-        "low": null,
-        "max": null,
+        "low": "low",
+        "max": "max",
         "medium": null,
         "minimal": null,
         "off": "none",
-        "xhigh": "xhigh"
+        "xhigh": null
       },
-      "fingerprint": "sha256:aab889386c7c52eabbf4354c1f08b9d24388f7b05a9bc80c24683168ca4bc010"
+      "fingerprint": "sha256:c1dea6c6e741b030862729d04c6a8260a5e34385261cd7e24668f3c3595426c3"
+    },
+    {
+      "api": "openai-completions",
+      "compatibility": {
+        "supportsDeveloperRole": false,
+        "thinkingFormat": "openrouter"
+      },
+      "contextWindow": 1048576,
+      "deploymentFingerprint": "sha256:e08186e0c8c6074c97ee0f4211ebd491d6848f2f12f4b761fb51ce23ad641cfa",
+      "input": [
+        "text"
+      ],
+      "maxTokens": 393216,
+      "modelId": "deepseek/deepseek-v4-flash-0731:free",
+      "name": "DeepSeek: DeepSeek V4 Flash 0731 (free)",
+      "provider": "openrouter",
+      "reasoning": true,
+      "supportedThinkingLevels": [
+        "off",
+        "low",
+        "high",
+        "max"
+      ],
+      "thinkingLevelMap": {
+        "high": "high",
+        "low": "low",
+        "max": "max",
+        "medium": null,
+        "minimal": null,
+        "off": "none",
+        "xhigh": null
+      },
+      "fingerprint": "sha256:ca351448a39537be385c5ad2145c59e538d9e4e1451b638414466ab439267553"
     },
     {
       "api": "openai-completions",
@@ -23294,26 +23339,27 @@
         "image",
         "text"
       ],
-      "maxTokens": 943718,
+      "maxTokens": 262144,
       "modelId": "deepseek/deepseek-v4-flash-vision-exp",
       "name": "DeepSeek: DeepSeek V4 Flash Vision Exp",
       "provider": "openrouter",
       "reasoning": true,
       "supportedThinkingLevels": [
         "off",
+        "low",
         "high",
-        "xhigh"
+        "max"
       ],
       "thinkingLevelMap": {
         "high": "high",
-        "low": null,
-        "max": null,
+        "low": "low",
+        "max": "max",
         "medium": null,
         "minimal": null,
         "off": "none",
-        "xhigh": "xhigh"
+        "xhigh": null
       },
-      "fingerprint": "sha256:ce31bdb4df590912698f6f3e94fccfd0b7cc67624b9459c006c8a5fbe49955a9"
+      "fingerprint": "sha256:a9eb3b07afa433f5c5123c32661290ef08c1125d9feadfee4b8ad195388702c2"
     },
     {
       "api": "openai-completions",
@@ -23334,19 +23380,20 @@
       "reasoning": true,
       "supportedThinkingLevels": [
         "off",
+        "low",
         "high",
-        "xhigh"
+        "max"
       ],
       "thinkingLevelMap": {
         "high": "high",
-        "low": null,
-        "max": null,
+        "low": "low",
+        "max": "max",
         "medium": null,
         "minimal": null,
         "off": "none",
-        "xhigh": "xhigh"
+        "xhigh": null
       },
-      "fingerprint": "sha256:6af888b372f0b00f6f3cd404d965661c0f812c2b470f64235bf3cac2e49337ca"
+      "fingerprint": "sha256:19bb4349b81e2b54e95a0a835f9ff00d2fd726ac7e33de41efbabd90528c0dc1"
     },
     {
       "api": "openai-completions",
@@ -23398,19 +23445,20 @@
       "reasoning": true,
       "supportedThinkingLevels": [
         "off",
+        "low",
         "high",
-        "xhigh"
+        "max"
       ],
       "thinkingLevelMap": {
         "high": "high",
-        "low": null,
-        "max": null,
+        "low": "low",
+        "max": "max",
         "medium": null,
         "minimal": null,
         "off": "none",
-        "xhigh": "xhigh"
+        "xhigh": null
       },
-      "fingerprint": "sha256:e1ce23ff1ad231ac7cf99de28173999b4c11841918560885f2b8ed8f9bd808b4"
+      "fingerprint": "sha256:38d71207087cd56b589a5585bfde48d7b9bc3938a3727c28266f56761dafe9a9"
     },
     {
       "api": "openai-completions",
@@ -23430,19 +23478,20 @@
       "reasoning": true,
       "supportedThinkingLevels": [
         "off",
+        "low",
         "high",
-        "xhigh"
+        "max"
       ],
       "thinkingLevelMap": {
         "high": "high",
-        "low": null,
-        "max": null,
+        "low": "low",
+        "max": "max",
         "medium": null,
         "minimal": null,
         "off": "none",
-        "xhigh": "xhigh"
+        "xhigh": null
       },
-      "fingerprint": "sha256:6ce14c0b2843e566ce49a12f85b38eba947e317b2625db6b7c4f920ae14c876d"
+      "fingerprint": "sha256:e1afe1e158ac968ff4816bc7743a102d7a19301778575d28c77f21ab95becb4d"
     },
     {
       "api": "openai-completions",
@@ -23463,19 +23512,20 @@
       "reasoning": true,
       "supportedThinkingLevels": [
         "off",
+        "low",
         "high",
-        "xhigh"
+        "max"
       ],
       "thinkingLevelMap": {
         "high": "high",
-        "low": null,
-        "max": null,
+        "low": "low",
+        "max": "max",
         "medium": null,
         "minimal": null,
         "off": "none",
-        "xhigh": "xhigh"
+        "xhigh": null
       },
-      "fingerprint": "sha256:1dd99f5e9ddbae7a8c96c73171140ad31f20cf0daeb9ec2f86e96a76c6d00039"
+      "fingerprint": "sha256:90ec9141d156ec61d11584fa933ea173ba2d6cc1965ad51052914cf7478bb6ab"
     },
     {
       "api": "openai-completions",
@@ -25739,7 +25789,7 @@
         "image",
         "text"
       ],
-      "maxTokens": 209715,
+      "maxTokens": 4096,
       "modelId": "mistralai/mistral-large-2512",
       "name": "Mistral: Mistral Large 3 2512",
       "provider": "openrouter",
@@ -28966,7 +29016,7 @@
       "input": [
         "text"
       ],
-      "maxTokens": 117964,
+      "maxTokens": 65536,
       "modelId": "openai/gpt-oss-120b",
       "name": "OpenAI: gpt-oss-120b",
       "provider": "openrouter",
@@ -30965,6 +31015,40 @@
         "supportsDeveloperRole": false,
         "thinkingFormat": "openrouter"
       },
+      "contextWindow": 262144,
+      "deploymentFingerprint": "sha256:e08186e0c8c6074c97ee0f4211ebd491d6848f2f12f4b761fb51ce23ad641cfa",
+      "input": [
+        "image",
+        "text"
+      ],
+      "maxTokens": 235929,
+      "modelId": "qwen/qwen3.8-27b:free",
+      "name": "Qwen: Qwen3.8 27B (free)",
+      "provider": "openrouter",
+      "reasoning": true,
+      "supportedThinkingLevels": [
+        "off",
+        "low",
+        "medium",
+        "xhigh"
+      ],
+      "thinkingLevelMap": {
+        "high": null,
+        "low": "low",
+        "max": null,
+        "medium": "medium",
+        "minimal": null,
+        "off": "none",
+        "xhigh": "xhigh"
+      },
+      "fingerprint": "sha256:62b68ff8a13920b6dc7aabf2eb51257407e4bfb58013d331a2550a7dad15e1e7"
+    },
+    {
+      "api": "openai-completions",
+      "compatibility": {
+        "supportsDeveloperRole": false,
+        "thinkingFormat": "openrouter"
+      },
       "contextWindow": 1000000,
       "deploymentFingerprint": "sha256:e08186e0c8c6074c97ee0f4211ebd491d6848f2f12f4b761fb51ce23ad641cfa",
       "input": [
@@ -31245,29 +31329,6 @@
       ],
       "thinkingLevelMap": {},
       "fingerprint": "sha256:3db27f08354ac716e17e6e55dd85d4226bb952d7b2a9fca03dabadb3b1032847"
-    },
-    {
-      "api": "openai-completions",
-      "compatibility": {
-        "supportsDeveloperRole": false,
-        "thinkingFormat": "openrouter"
-      },
-      "contextWindow": 262144,
-      "deploymentFingerprint": "sha256:e08186e0c8c6074c97ee0f4211ebd491d6848f2f12f4b761fb51ce23ad641cfa",
-      "input": [
-        "image",
-        "text"
-      ],
-      "maxTokens": 131072,
-      "modelId": "stealth/union-alpha",
-      "name": "Union Alpha",
-      "provider": "openrouter",
-      "reasoning": false,
-      "supportedThinkingLevels": [
-        "off"
-      ],
-      "thinkingLevelMap": {},
-      "fingerprint": "sha256:76a17ca17256bb39e9ea6754f53b04a1a64a328a5e92138877b01d7aeb73fdc7"
     },
     {
       "api": "openai-completions",
@@ -31626,6 +31687,29 @@
         "xhigh": null
       },
       "fingerprint": "sha256:9709e87dcc04a87dacfd248e90c513d72f7adf578b6c4fdf87c6931de16665e0"
+    },
+    {
+      "api": "openai-completions",
+      "compatibility": {
+        "supportsDeveloperRole": false,
+        "thinkingFormat": "openrouter"
+      },
+      "contextWindow": 262144,
+      "deploymentFingerprint": "sha256:e08186e0c8c6074c97ee0f4211ebd491d6848f2f12f4b761fb51ce23ad641cfa",
+      "input": [
+        "image",
+        "text"
+      ],
+      "maxTokens": 131072,
+      "modelId": "unbiased/pareto",
+      "name": "Pareto",
+      "provider": "openrouter",
+      "reasoning": false,
+      "supportedThinkingLevels": [
+        "off"
+      ],
+      "thinkingLevelMap": {},
+      "fingerprint": "sha256:2ca538336d41aba25a5646e9d6ebf7e2480887e4845a01850ffe6b94be4fb656"
     },
     {
       "api": "openai-completions",
@@ -32195,7 +32279,7 @@
       "input": [
         "text"
       ],
-      "maxTokens": 131072,
+      "maxTokens": 163840,
       "modelId": "z-ai/glm-5.2",
       "name": "Z.ai: GLM 5.2",
       "provider": "openrouter",
@@ -32579,19 +32663,20 @@
       "provider": "qwen-token-plan",
       "reasoning": true,
       "supportedThinkingLevels": [
+        "low",
         "high",
         "max"
       ],
       "thinkingLevelMap": {
         "high": "high",
-        "low": null,
+        "low": "low",
         "max": "max",
         "medium": null,
         "minimal": null,
         "off": null,
         "xhigh": null
       },
-      "fingerprint": "sha256:da53f2f59bd403436bc6201dae32f2765ac9d1961881e6e51047827712a63573"
+      "fingerprint": "sha256:377650fb35ef70db3f12fd1c26349bfe50fed43a4be201e5d1f78a1181b2d23b"
     },
     {
       "api": "openai-completions",
@@ -32688,6 +32773,39 @@
         "xhigh": null
       },
       "fingerprint": "sha256:890872269e5a93f78d45ee883b0022564129ea2cadbf919bf222e99d2a2d3ba9"
+    },
+    {
+      "api": "openai-completions",
+      "compatibility": {
+        "supportsDeveloperRole": false,
+        "supportsReasoningEffort": true,
+        "thinkingFormat": "qwen"
+      },
+      "contextWindow": 1000000,
+      "deploymentFingerprint": "sha256:75fe921bf870433a55e44ba30ab484707770f60413185a15bca40f886b14e8b6",
+      "input": [
+        "text"
+      ],
+      "maxTokens": 131072,
+      "modelId": "glm-5.3",
+      "name": "GLM-5.3",
+      "provider": "qwen-token-plan",
+      "reasoning": true,
+      "supportedThinkingLevels": [
+        "low",
+        "high",
+        "max"
+      ],
+      "thinkingLevelMap": {
+        "high": "high",
+        "low": "low",
+        "max": "max",
+        "medium": null,
+        "minimal": null,
+        "off": null,
+        "xhigh": null
+      },
+      "fingerprint": "sha256:ee596951ae84b0b3544ff51ebcefb80ba4642c221acc4687b381ab0d6c2cbd64"
     },
     {
       "api": "openai-completions",
@@ -33153,19 +33271,20 @@
       "provider": "qwen-token-plan-cn",
       "reasoning": true,
       "supportedThinkingLevels": [
+        "low",
         "high",
         "max"
       ],
       "thinkingLevelMap": {
         "high": "high",
-        "low": null,
+        "low": "low",
         "max": "max",
         "medium": null,
         "minimal": null,
         "off": null,
         "xhigh": null
       },
-      "fingerprint": "sha256:60fadff8dfce5f79cdb645a4d54e761ef5c1dc5ba6f3b347e623aae49f8f59d3"
+      "fingerprint": "sha256:361cdb09a3578bdd5b95c3589f3314d5e75e89886f7a3d7b8b92e70f43bd0ad2"
     },
     {
       "api": "openai-completions",
@@ -33262,6 +33381,39 @@
         "xhigh": null
       },
       "fingerprint": "sha256:f2e5b156ff78e960f794231b12374d8702518b3529e105f7d1a791fda54ac2c4"
+    },
+    {
+      "api": "openai-completions",
+      "compatibility": {
+        "supportsDeveloperRole": false,
+        "supportsReasoningEffort": true,
+        "thinkingFormat": "qwen"
+      },
+      "contextWindow": 1000000,
+      "deploymentFingerprint": "sha256:6f6f34b23ea97da4846dcc12d7c9cee29a55a4718f89aedb709f032509e72bbe",
+      "input": [
+        "text"
+      ],
+      "maxTokens": 131072,
+      "modelId": "glm-5.3",
+      "name": "GLM-5.3",
+      "provider": "qwen-token-plan-cn",
+      "reasoning": true,
+      "supportedThinkingLevels": [
+        "low",
+        "high",
+        "max"
+      ],
+      "thinkingLevelMap": {
+        "high": "high",
+        "low": "low",
+        "max": "max",
+        "medium": null,
+        "minimal": null,
+        "off": null,
+        "xhigh": null
+      },
+      "fingerprint": "sha256:d5c09929ea599da8a056218916889e77aabfa02f9486095df9f6ce847ab1df6e"
     },
     {
       "api": "openai-completions",
@@ -35142,6 +35294,30 @@
       ],
       "thinkingLevelMap": {},
       "fingerprint": "sha256:6263001afcfde5683dcfbc64080f8f41856ea24fc7f060ba131d4559d55e0991"
+    },
+    {
+      "api": "anthropic-messages",
+      "compatibility": {},
+      "contextWindow": 1000000,
+      "deploymentFingerprint": "sha256:f41d7415fd061e57db3e476e90a872b5c48f2603ca1ad61cbb99793e6424a01f",
+      "input": [
+        "image",
+        "text"
+      ],
+      "maxTokens": 131072,
+      "modelId": "alibaba/qwen3.8-omni-flash",
+      "name": "Qwen 3.8 Omni Flash",
+      "provider": "vercel-ai-gateway",
+      "reasoning": true,
+      "supportedThinkingLevels": [
+        "off",
+        "minimal",
+        "low",
+        "medium",
+        "high"
+      ],
+      "thinkingLevelMap": {},
+      "fingerprint": "sha256:dc59078caf6feeb08d05f8fceb5d13a246aa411c94e9123c26286d2446f17c47"
     },
     {
       "api": "anthropic-messages",
@@ -40476,6 +40652,30 @@
     {
       "api": "anthropic-messages",
       "compatibility": {},
+      "contextWindow": 1000000,
+      "deploymentFingerprint": "sha256:f41d7415fd061e57db3e476e90a872b5c48f2603ca1ad61cbb99793e6424a01f",
+      "input": [
+        "image",
+        "text"
+      ],
+      "maxTokens": 131072,
+      "modelId": "zai/glm-5.3-flashx",
+      "name": "GLM 5.3 FlashX",
+      "provider": "vercel-ai-gateway",
+      "reasoning": true,
+      "supportedThinkingLevels": [
+        "off",
+        "minimal",
+        "low",
+        "medium",
+        "high"
+      ],
+      "thinkingLevelMap": {},
+      "fingerprint": "sha256:62d6910b2d7723541274baaeee2ba4c3b9f8d39e0efedf91b78d42a5764bb5aa"
+    },
+    {
+      "api": "anthropic-messages",
+      "compatibility": {},
       "contextWindow": 200000,
       "deploymentFingerprint": "sha256:f41d7415fd061e57db3e476e90a872b5c48f2603ca1ad61cbb99793e6424a01f",
       "input": [
@@ -41313,34 +41513,6 @@
       "compatibility": {
         "maxTokensField": "max_tokens",
         "supportsDeveloperRole": false,
-        "supportsReasoningEffort": false,
-        "thinkingFormat": "zai"
-      },
-      "contextWindow": 200000,
-      "deploymentFingerprint": "sha256:d46144191de45d3a3685eb5b77813abcd39dfe03af72c6e7bab55395990beecb",
-      "input": [
-        "text"
-      ],
-      "maxTokens": 131072,
-      "modelId": "glm-5.1",
-      "name": "GLM-5.1",
-      "provider": "zai-coding-cn",
-      "reasoning": true,
-      "supportedThinkingLevels": [
-        "off",
-        "minimal",
-        "low",
-        "medium",
-        "high"
-      ],
-      "thinkingLevelMap": {},
-      "fingerprint": "sha256:ffc297ae59a783a5e78b7e1f2fd8670136e0942b5788428b2600b86c6989361c"
-    },
-    {
-      "api": "openai-completions",
-      "compatibility": {
-        "maxTokensField": "max_tokens",
-        "supportsDeveloperRole": false,
         "supportsReasoningEffort": true,
         "thinkingFormat": "zai"
       },
@@ -41356,26 +41528,26 @@
       "reasoning": true,
       "supportedThinkingLevels": [
         "off",
+        "low",
+        "medium",
         "high",
         "max"
       ],
       "thinkingLevelMap": {
         "high": "high",
-        "low": null,
+        "low": "high",
         "max": "max",
-        "medium": null,
-        "minimal": null,
-        "off": "none",
-        "xhigh": null
+        "medium": "high",
+        "minimal": null
       },
-      "fingerprint": "sha256:015dae966d328e65be26fa1e9e4eb42c5b0a675c72fe004863349a2d09e7c833"
+      "fingerprint": "sha256:173afebfe0202c4190bd12e9e57fafa6bf7043722d17521ba01b28f223d324bd"
     },
     {
       "api": "openai-completions",
       "compatibility": {
         "maxTokensField": "max_tokens",
         "supportsDeveloperRole": false,
-        "supportsReasoningEffort": true,
+        "supportsReasoningEffort": false,
         "thinkingFormat": "zai"
       },
       "contextWindow": 1000000,
@@ -41390,19 +41562,13 @@
       "reasoning": true,
       "supportedThinkingLevels": [
         "off",
-        "high",
-        "max"
+        "minimal",
+        "low",
+        "medium",
+        "high"
       ],
-      "thinkingLevelMap": {
-        "high": "high",
-        "low": null,
-        "max": "max",
-        "medium": null,
-        "minimal": null,
-        "off": "none",
-        "xhigh": null
-      },
-      "fingerprint": "sha256:e0b0ce52769e2a1a397b06444d9ec44896c2464cd85ac0c1b66d0acd4f5d7ae0"
+      "thinkingLevelMap": {},
+      "fingerprint": "sha256:9cb895ab4980133bfeaa9b629092d08991b80bffa3e46eeaf5017570649dc7f7"
     },
     {
       "api": "openai-completions",
@@ -41506,35 +41672,6 @@
         "xhigh": null
       },
       "fingerprint": "sha256:bfb239f698e23226d04f56a684fcdc8f6c283bc8b8c2a834255979d43df9dba8"
-    },
-    {
-      "api": "openai-completions",
-      "compatibility": {
-        "maxTokensField": "max_tokens",
-        "supportsDeveloperRole": false,
-        "supportsReasoningEffort": false,
-        "thinkingFormat": "zai"
-      },
-      "contextWindow": 200000,
-      "deploymentFingerprint": "sha256:d46144191de45d3a3685eb5b77813abcd39dfe03af72c6e7bab55395990beecb",
-      "input": [
-        "image",
-        "text"
-      ],
-      "maxTokens": 131072,
-      "modelId": "glm-5v-turbo",
-      "name": "GLM-5V-Turbo",
-      "provider": "zai-coding-cn",
-      "reasoning": true,
-      "supportedThinkingLevels": [
-        "off",
-        "minimal",
-        "low",
-        "medium",
-        "high"
-      ],
-      "thinkingLevelMap": {},
-      "fingerprint": "sha256:a0cc9d215462cf6363308ea25a29331fb5e77e282db7ed556d68fc2625403836"
     }
   ]
 }
