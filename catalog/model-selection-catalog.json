@@ -4,7 +4,7 @@
     "id": "deepswe-v1.1",
     "name": "DeepSWE v1.1",
     "version": "v1.1",
-    "generatedAt": "2026-09-18T06:40:22.478935Z",
+    "generatedAt": "2026-09-19T06:36:50.611917Z",
     "sourceUpdatedAt": "2026-09-03T22:24:37.984682+00:00",
     "distribution": {
       "classification": "redistributable",
@@ -3252,12 +3252,6 @@
           "modelId": "glm-5.2",
           "piThinkingLevel": "high",
           "equivalence": "verified"
-        },
-        {
-          "provider": "zai-coding-cn",
-          "modelId": "glm-5.2",
-          "piThinkingLevel": "high",
-          "equivalence": "verified"
         }
       ],
       "provenance": {
@@ -3322,12 +3316,6 @@
         },
         {
           "provider": "zai",
-          "modelId": "glm-5.2",
-          "piThinkingLevel": "max",
-          "equivalence": "verified"
-        },
-        {
-          "provider": "zai-coding-cn",
           "modelId": "glm-5.2",
           "piThinkingLevel": "max",
           "equivalence": "verified"
@@ -4720,12 +4708,6 @@
           "equivalence": "verified"
         },
         {
-          "provider": "opencode",
-          "modelId": "gpt-5.6-sol",
-          "piThinkingLevel": "high",
-          "equivalence": "verified"
-        },
-        {
           "provider": "openrouter",
           "modelId": "openai/gpt-5.6-sol",
           "piThinkingLevel": "high",
@@ -4835,12 +4817,6 @@
           "equivalence": "verified"
         },
         {
-          "provider": "opencode",
-          "modelId": "gpt-5.6-sol",
-          "piThinkingLevel": "low",
-          "equivalence": "verified"
-        },
-        {
           "provider": "openrouter",
           "modelId": "openai/gpt-5.6-sol",
           "piThinkingLevel": "low",
@@ -4933,12 +4909,6 @@
         },
         {
           "provider": "openai-codex",
-          "modelId": "gpt-5.6-sol",
-          "piThinkingLevel": "max",
-          "equivalence": "verified"
-        },
-        {
-          "provider": "opencode",
           "modelId": "gpt-5.6-sol",
           "piThinkingLevel": "max",
           "equivalence": "verified"
@@ -5042,12 +5012,6 @@
         },
         {
           "provider": "openai-codex",
-          "modelId": "gpt-5.6-sol",
-          "piThinkingLevel": "medium",
-          "equivalence": "verified"
-        },
-        {
-          "provider": "opencode",
           "modelId": "gpt-5.6-sol",
           "piThinkingLevel": "medium",
           "equivalence": "verified"
@@ -5157,12 +5121,6 @@
         },
         {
           "provider": "openai-codex",
-          "modelId": "gpt-5.6-sol",
-          "piThinkingLevel": "xhigh",
-          "equivalence": "verified"
-        },
-        {
-          "provider": "opencode",
           "modelId": "gpt-5.6-sol",
           "piThinkingLevel": "xhigh",
           "equivalence": "verified"

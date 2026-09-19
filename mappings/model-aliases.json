@@ -213,12 +213,6 @@
         "equivalence": "verified"
       },
       {
-        "provider": "opencode",
-        "modelId": "gpt-5.6-sol",
-        "piThinkingLevel": "max",
-        "equivalence": "verified"
-      },
-      {
         "provider": "openrouter",
         "modelId": "openai/gpt-5.6-sol",
         "piThinkingLevel": "max",
@@ -278,12 +272,6 @@
       },
       {
         "provider": "openai-codex",
-        "modelId": "gpt-5.6-sol",
-        "piThinkingLevel": "xhigh",
-        "equivalence": "verified"
-      },
-      {
-        "provider": "opencode",
         "modelId": "gpt-5.6-sol",
         "piThinkingLevel": "xhigh",
         "equivalence": "verified"
@@ -520,12 +508,6 @@
       },
       {
         "provider": "openai-codex",
-        "modelId": "gpt-5.6-sol",
-        "piThinkingLevel": "high",
-        "equivalence": "verified"
-      },
-      {
-        "provider": "opencode",
         "modelId": "gpt-5.6-sol",
         "piThinkingLevel": "high",
         "equivalence": "verified"
@@ -1267,12 +1249,6 @@
       },
       {
         "provider": "openai-codex",
-        "modelId": "gpt-5.6-sol",
-        "piThinkingLevel": "medium",
-        "equivalence": "verified"
-      },
-      {
-        "provider": "opencode",
         "modelId": "gpt-5.6-sol",
         "piThinkingLevel": "medium",
         "equivalence": "verified"
@@ -2480,12 +2456,6 @@
         "equivalence": "verified"
       },
       {
-        "provider": "opencode",
-        "modelId": "gpt-5.6-sol",
-        "piThinkingLevel": "low",
-        "equivalence": "verified"
-      },
-      {
         "provider": "openrouter",
         "modelId": "openai/gpt-5.6-sol",
         "piThinkingLevel": "low",
@@ -2593,12 +2563,6 @@
       },
       {
         "provider": "zai",
-        "modelId": "glm-5.2",
-        "piThinkingLevel": "max",
-        "equivalence": "verified"
-      },
-      {
-        "provider": "zai-coding-cn",
         "modelId": "glm-5.2",
         "piThinkingLevel": "max",
         "equivalence": "verified"
@@ -2859,12 +2823,6 @@
       },
       {
         "provider": "zai",
-        "modelId": "glm-5.2",
-        "piThinkingLevel": "high",
-        "equivalence": "verified"
-      },
-      {
-        "provider": "zai-coding-cn",
         "modelId": "glm-5.2",
         "piThinkingLevel": "high",
         "equivalence": "verified"
