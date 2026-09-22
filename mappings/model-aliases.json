@@ -723,12 +723,6 @@
         "modelId": "moonshotai/kimi-k3",
         "piThinkingLevel": "max",
         "equivalence": "verified"
-      },
-      {
-        "provider": "openrouter",
-        "modelId": "moonshotai/kimi-k3:batch",
-        "piThinkingLevel": "max",
-        "equivalence": "verified"
       }
     ],
     "deepswe:config:mini_swe_agent_grok_4_6_medium": [
@@ -2770,12 +2764,6 @@
       {
         "provider": "cloudflare-ai-gateway",
         "modelId": "workers-ai/@cf/zai-org/glm-5.2",
-        "piThinkingLevel": "high",
-        "equivalence": "verified"
-      },
-      {
-        "provider": "cloudflare-workers-ai",
-        "modelId": "@cf/zai-org/glm-5.2",
         "piThinkingLevel": "high",
         "equivalence": "verified"
       },
