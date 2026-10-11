@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
-"""Build the public model-selection catalog from a pinned DeepSWE release."""
+"""Build the public metrics catalog from the current official DeepSWE release."""
 
 import argparse
 import json
 from datetime import datetime, timezone
 from pathlib import Path
 
-from deepswe import fetch_release, load_manifest
-from route_mappings import candidate_queue, compile_aliases, load_decisions, route_fingerprint, variant_id
+from deepswe import complete_metrics, discover_release, fetch_release, load_manifest
+from maintenance import prepare_publication, write_json
 
 ROOT = Path(__file__).resolve().parents[1]
 CREATORS = {
@@ -43,7 +43,6 @@ MODEL_NAMES = {
     "gpt-5-6-luna": "GPT-5.6 Luna",
     "gpt-5-6-sol": "GPT-5.6 Sol",
     "gpt-5-6-terra": "GPT-5.6 Terra",
-    "gpt-6-astra": "GPT-6 Astra",
     "grok-4-5": "Grok 4.5",
     "grok-4-6": "Grok 4.6",
     "kimi-k2-7-code": "Kimi K2.7 Code",
@@ -57,29 +56,26 @@ MODEL_NAMES = {
 def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument("--output-dir", default=ROOT / "dist", type=Path)
-    parser.add_argument("--manifest", default=ROOT / "sources/deepswe-v1.1.json", type=Path)
+    parser.add_argument("--config", default=ROOT / "sources/deepswe.json", type=Path)
+    parser.add_argument("--manifest", type=Path, help="Replay a recorded release with checksum verification")
     parser.add_argument("--source", type=Path, help="Use a local leaderboard artifact")
     parser.add_argument("--trials", type=Path, help="Use a local trials artifact")
-    parser.add_argument("--pi-catalog", default=ROOT / "mappings/pi-model-catalog.json", type=Path)
-    parser.add_argument("--route-decisions", default=ROOT / "mappings/route-decisions.json", type=Path)
-    parser.add_argument("--previous-pi-catalog", default=ROOT / "mappings/pi-model-catalog.json", type=Path)
+    parser.add_argument("--previous-catalog", default=ROOT / "catalog/model-selection-catalog.json", type=Path)
     parser.add_argument("--generated-at")
     return parser.parse_args()
 
 
 def creator(model):
     prefix = model.split("-")[0]
-    if prefix not in CREATORS:
-        raise ValueError(f"Unknown creator for {model}")
-    return CREATORS[prefix]
+    return CREATORS.get(prefix, "Unknown")
 
 
-def normalize_variant(row, aliases, benchmark_version):
+def normalize_variant(row, release):
     effort = row.get("reasoning_effort")
     return {
-        "id": variant_id(row),
+        "id": f"deepswe:config:{row['config']}",
         "creator": creator(row["model"]),
-        "displayName": f"{MODEL_NAMES[row['model']]} ({effort})" if effort else MODEL_NAMES[row["model"]],
+        "displayName": f"{MODEL_NAMES.get(row['model'], row['model'])} ({effort})" if effort else MODEL_NAMES.get(row["model"], row["model"]),
         "checkpoint": row["model"],
         "quantization": None,
         "reasoning": {"label": effort} if effort else None,
@@ -88,17 +84,13 @@ def normalize_variant(row, aliases, benchmark_version):
             "fast": row["mean_duration_seconds"],
             "cheap": row["mean_cost_usd"],
         },
-        "metricOrigins": {
-            "smart": {"kind": "source", "benchmarkVersion": benchmark_version},
-            "fast": {"kind": "source", "benchmarkVersion": benchmark_version},
-            "cheap": {"kind": "source", "benchmarkVersion": benchmark_version},
-        },
-        "aliases": aliases[variant_id(row)],
+        "metricOrigins": {name: {"kind": "source", "benchmarkVersion": release} for name in ("smart", "fast", "cheap")},
         "provenance": {
             "source": "DeepSWE",
             "sourceConfig": row["config"],
             "sourceModel": row["model"],
             "sourceProvider": row["provider"],
+            "sourceProviders": row.get("providers", [row["provider"]]),
             "harness": row["harness"],
             "attempted": row["n_attempted"],
             "passed": row["n_passed"],
@@ -112,19 +104,15 @@ def normalize_variant(row, aliases, benchmark_version):
     }
 
 
-def build_catalog(leaderboard, manifest, pi_catalog, decisions, generated_at=None):
+def build_catalog(leaderboard, manifest, generated_at=None):
     rows = leaderboard["rows"]
-    aliases, stale = compile_aliases(rows, pi_catalog, decisions)
     timestamp = generated_at or datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
-    variants = sorted(
-        (normalize_variant(row, aliases, manifest["release"]) for row in rows),
-        key=lambda item: item["id"],
-    )
+    variants = sorted((normalize_variant(row, manifest["release"]) for row in rows if complete_metrics(row)), key=lambda item: item["id"])
     catalog = {
-        "schemaVersion": 1,
+        "schemaVersion": 2,
         "catalog": {
-            "id": "deepswe-v1.1",
-            "name": "DeepSWE v1.1",
+            "id": "deepswe",
+            "name": f"DeepSWE {manifest['release']}",
             "version": manifest["release"],
             "generatedAt": timestamp,
             "sourceUpdatedAt": leaderboard["generated_at"],
@@ -149,70 +137,31 @@ def build_catalog(leaderboard, manifest, pi_catalog, decisions, generated_at=Non
                 "release": manifest["release"],
                 "license": manifest["license"],
                 "configurationCount": len(rows),
+                "sourceModelCount": len(rows),
+                "excludedVariantCount": len(rows) - len(variants),
                 "taskCount": leaderboard["n_tasks_in_set"],
                 "harnesses": sorted({row["harness"] for row in rows}),
             },
         },
         "variants": variants,
     }
-    return catalog, aliases, candidate_queue(rows, pi_catalog, decisions, stale), stale
-
-
-def write_json(path, value):
-    path.write_text(json.dumps(value, indent=2, sort_keys=False) + "\n")
-
-
-def pi_catalog_diff(previous, current):
-    def indexed(document):
-        return {(route["provider"], route["modelId"]): route for route in document["routes"]}
-
-    old = indexed(previous)
-    new = indexed(current)
-    return {
-        "schemaVersion": 1,
-        "added": [{"provider": key[0], "modelId": key[1]} for key in sorted(new.keys() - old.keys())],
-        "removed": [{"provider": key[0], "modelId": key[1]} for key in sorted(old.keys() - new.keys())],
-        "changed": [
-            {"provider": key[0], "modelId": key[1]}
-            for key in sorted(old.keys() & new.keys())
-            if route_fingerprint(old[key]) != route_fingerprint(new[key])
-        ],
-    }
+    return catalog
 
 
 def main():
     args = parse_args()
-    manifest = load_manifest(args.manifest)
-    leaderboard = fetch_release(manifest, args.source, args.trials)
-    pi_catalog = json.loads(args.pi_catalog.read_text())
-    decisions = load_decisions(args.route_decisions)
-    previous_pi_catalog = json.loads(args.previous_pi_catalog.read_text())
-    catalog, aliases, candidates, stale = build_catalog(leaderboard, manifest, pi_catalog, decisions, args.generated_at)
-    args.output_dir.mkdir(parents=True, exist_ok=True)
-    write_json(args.output_dir / "model-selection-catalog.json", catalog)
-    write_json(args.output_dir / "model-aliases.json", {"schemaVersion": 1, "variants": aliases})
-    write_json(args.output_dir / "route-candidates.json", candidates)
-    write_json(args.output_dir / "pi-catalog-diff.json", pi_catalog_diff(previous_pi_catalog, pi_catalog))
-    (args.output_dir / "schema.json").write_text((ROOT / "schema/model-selection-catalog.schema.json").read_text())
-    routed = sum(bool(value) for value in aliases.values())
-    audit = [
-        "# Pi Provider Route audit",
-        "",
-        f"- DeepSWE release: {manifest['release']}",
-        f"- Complete Variants: {len(catalog['variants'])}",
-        f"- Variants with verified Provider Routes: {routed}",
-        f"- Verified Provider Routes: {sum(map(len, aliases.values()))}",
-        f"- Route Candidates: {len(candidates['candidates'])}",
-        f"- Stale accepted routes: {len(stale)}",
-        "",
-        "## Unresolved configurations",
-        "",
-        "| Configuration | Reason |",
-        "|---|---|",
-        *[f"| `{item['sourceConfig']}` | {item['reason']} |" for item in candidates["candidates"]],
-        "",
-    ]
-    (args.output_dir / "ALIAS_AUDIT.md").write_text("\n".join(audit))
+    if args.manifest:
+        manifest = load_manifest(args.manifest)
+        leaderboard = fetch_release(manifest, args.source, args.trials)
+    else:
+        if args.source or args.trials:
+            raise SystemExit("--source and --trials require --manifest")
+        leaderboard, manifest = discover_release(json.loads(args.config.read_text()))
+    catalog = build_catalog(leaderboard, manifest, args.generated_at)
+    previous = json.loads(args.previous_catalog.read_text()) if args.previous_catalog.is_file() else None
+    prepare_publication(catalog, previous, args.output_dir)
+    write_json(args.output_dir / "source-manifest.json", manifest)
+    (args.output_dir / "schema.json").write_text((ROOT / "schema/model-metrics-catalog.schema.json").read_text())
     print(f"Wrote {len(catalog['variants'])} Complete Variants from DeepSWE {manifest['release']}")
 
 
