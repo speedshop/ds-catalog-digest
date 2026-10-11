@@ -32,7 +32,11 @@ elif args[:2] == ["pr", "edit"]:
 elif args[:2] == ["workflow", "run"]:
     pass
 elif args[:2] == ["run", "list"]:
+    head = subprocess.check_output(["git", "rev-parse", "HEAD"], text=True).strip()
+    assert args[args.index("--commit") + 1] == head
     print("100")
+elif args[:2] == ["run", "view"]:
+    print("stale-sha" if os.environ.get("PUBLICATION_STALE_CI") == "true" else subprocess.check_output(["git", "rev-parse", "HEAD"], text=True).strip())
 elif args[:2] == ["run", "watch"]:
     if os.environ.get("PUBLICATION_CI_FAIL") == "true":
         raise SystemExit("Simulated CI failure")
@@ -127,9 +131,14 @@ with tempfile.TemporaryDirectory() as directory:
     state["auto"] = True
     state_path.write_text(json.dumps(state))
     environment["PUBLICATION_CI_FAIL"] = "false"
+    environment["PUBLICATION_STALE_CI"] = "true"
+    publish(succeeds=False)
+    assert git(work, "--git-dir", str(remote), "rev-parse", "main") == initial
+    assert json.loads(state_path.read_text())["attestations"] == 0
+    environment["PUBLICATION_STALE_CI"] = "false"
     publish()
     state = json.loads(state_path.read_text())
-    assert state["creates"] == 1 and state["edits"] == 1 and state["disables"] == 1 and state["state"] == "MERGED"
+    assert state["creates"] == 1 and state["edits"] == 2 and state["disables"] == 1 and state["state"] == "MERGED"
     updated = git(work, "--git-dir", str(remote), "rev-parse", "main")
     assert updated != initial
     published = json.loads(git(work, "--git-dir", str(remote), "show", "main:catalog/model-selection-catalog.json"))
