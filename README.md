@@ -1,101 +1,52 @@
 # DeepSWE Catalog Digest
 
-This repository publishes a public model-selection catalog. The catalog uses data from the official DeepSWE leaderboard.
+A public, metric-only publisher for the official DeepSWE leaderboard.
 
-Use the catalog to compare model configurations and select a Pi Provider Route.
+## Metrics
 
-## Features
+- **Smart:** attempt pass@1; higher is better.
+- **Fast:** mean end-to-end trial duration in seconds per task; lower is better.
+- **Cheap:** mean reported inference cost in USD per task; lower is better.
 
-The catalog contains three metrics:
+Each Model Variant identifies an evaluated configuration. Provenance records the model checkpoint, reasoning effort, source providers, harness, trial counts, confidence interval, release, and artifact checksums. Only Complete Variants are published; missing measurements are never inferred.
 
-- **Smart** is the DeepSWE pass@1 score. A higher value is better.
-- **Fast** is the mean task time in seconds. A lower value is better.
-- **Cheap** is the mean reported task cost in US dollars. A lower value is better.
-
-Each Model Variant identifies one model checkpoint and one reasoning effort. Smart, Fast, and Cheap record source metric origins for the DeepSWE release; these measurements are not adjusted. Variant provenance records the source provider, the mini-swe-agent harness, trial counts, and the confidence interval.
-
-The catalog also contains verified Pi Provider Routes. A route identifies a provider, model ID, and thinking level.
-
-Read the stable catalog at [`catalog/model-selection-catalog.json`](catalog/model-selection-catalog.json). The vendored [`schema/model-selection-catalog.schema.json`](schema/model-selection-catalog.schema.json) exactly matches the canonical catalog-v1 schema owned by `speedshop/pi-pareto-model`; [`CONTRACT.md`](CONTRACT.md) documents this producer's mapping.
-
-## Installation
-
-Install these tools:
-
-- Python 3.13 or later
-- Node.js 22 or later
-- [mise](https://mise.jdx.dev/)
-
-Then run these commands:
-
-```fish
-git clone https://github.com/speedshop/ds-catalog-digest.git
-cd ds-catalog-digest
-mise install
-mise run install
-```
-
-The build does not require API credentials.
-
-## Usage
-
-Build the catalog:
-
-```console
-$ mise run build
-```
-
-Validate the catalog:
-
-```fish
-python scripts/validate_catalog.py \
-  dist/model-selection-catalog.json \
-  dist/schema.json
-```
-
-The build writes these files:
-
-- `dist/model-selection-catalog.json`
-- `dist/model-aliases.json`
-- `dist/pi-model-catalog.json`
-- `dist/pi-catalog-diff.json`
-- `dist/route-candidates.json`
-- `dist/ALIAS_AUDIT.md`
-
-## Source control
-
-[`sources/deepswe-v1.1.json`](sources/deepswe-v1.1.json) identifies the source release. It also records each artifact URL and SHA-256 checksum.
-
-The build verifies each checksum. The build stops if an artifact changed.
-
-The daily workflow performs these tasks:
-
-1. Refresh the public Pi Provider Route catalog.
-2. Build and validate the model-selection catalog.
-3. Check the generated files for restricted source data and secrets.
-4. Publish the stable files.
-5. Open an issue for each unresolved or changed route.
+The stable document is [`catalog/model-selection-catalog.json`](catalog/model-selection-catalog.json). The metric-only contract uses numeric `schemaVersion: 2`; see [`CONTRACT.md`](CONTRACT.md).
 
 ## Development
 
-Run all checks before you submit a change:
+Requirements: Python 3.13+ and [mise](https://mise.jdx.dev/). No API credentials are needed to build.
 
 ```fish
+mise install
+mise run install
 mise run test
 mise run lint
 mise run build
 ```
 
-Record Route Decisions in [`mappings/route-decisions.json`](mappings/route-decisions.json). The publisher accepts a route only while its fingerprint matches the current Pi catalog.
+The build writes the catalog, schema, acquired source manifest, and acquisition report under `dist/`. To replay a recorded release, use `--manifest catalog/source-manifest.json`. Optional `--source PATH --trials PATH` inputs verify local artifacts against that manifest's checksums.
 
-Preserve the exact checkpoint and reasoning effort. Do not infer a missing score. Do not replace one reasoning effort with another effort.
+## Automatic maintenance
 
-## Contributing
+The daily and manually dispatched workflow:
 
-Submit a focused pull request. Include tests for behavior changes. Preserve source checksums, provenance, and attribution.
+1. Discovers the latest release linked from the official DeepSWE page.
+2. Checks the dataset's declared CC BY 4.0 license and the configured scoring, aggregation, and harness definitions.
+3. Downloads the current leaderboard and trials, validates their structure and provider provenance, and records their actual SHA-256 checksums.
+4. Builds the Complete Variants and validates the metric-only contract.
+5. Checks the public-source boundary and scans generated artifacts for secrets.
+6. Publishes the catalog and source manifest atomically through a CI-checked, automatically merged PR, preserving the repository's required status checks.
 
-## License
+[`sources/deepswe.json`](sources/deepswe.json) defines the source interface and accepted metric semantics. Checksums record adopted bytes for reproducibility; they do not prevent automatic adoption of ordinary artifact updates or new releases.
 
-The repository code uses the MIT License. The generated DeepSWE data uses the CC BY 4.0 license.
+New configurations publish automatically, including previously unknown model names. Removed or incomplete configurations are excluded and reported. A greater-than-20% decrease in source or complete-variant count compared with the last-known-good catalog fails closed as suspicious coverage loss.
 
-Read [`DATA_LICENSE.md`](DATA_LICENSE.md) for the required attribution and distribution terms.
+Unchanged data preserves `generatedAt` and causes no publication commit. Acquisition reports record the actual observation time, additions, removals, and updates; workflow history records successful refreshes even when publication is unnecessary. Reports are retained for 90 days.
+
+Transient HTTP errors are retried three times with bounded backoff. Failed acquisition, validation, or publication leaves the last-known-good catalog available. A separate notification workflow opens one issue for an ongoing maintenance incident and closes it on recovery; notification failures cannot block publication.
+
+Source-interface, scoring, aggregation, harness, licensing, schema, and suspicious coverage changes require investigation. Automatic code repair is not part of this publisher.
+
+## Distribution
+
+Catalog data is redistributable under CC BY 4.0. Consumers must preserve the embedded attribution and license metadata. Repository code is MIT-licensed. See [`DATA_LICENSE.md`](DATA_LICENSE.md).

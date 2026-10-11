@@ -1,0 +1,9 @@
+{
+  "methodologyUrl": "https://deepswe.datacurve.ai/",
+  "datasetUrl": "https://huggingface.co/datasets/datacurve/deep-swe-leaderboard",
+  "datasetMetadataUrl": "https://huggingface.co/api/datasets/datacurve/deep-swe-leaderboard",
+  "attribution": "DeepSWE leaderboard data by Datacurve, licensed under CC BY 4.0",
+  "allowedHarnesses": ["mini-swe-agent"],
+  "expectedScope": "Every DeepSWE rollout across imported Pier jobs, grouped by configuration (harness + model + reasoning effort)",
+  "expectedUnit": "pass@1 is attempt pass rate over scored rollout attempts. pass@4 is tasks with at least one passing rollout divided by tasks attempted. Context-window failures and agent timeouts are scored failures; provider/verifier/network errors are excluded. Efficiency aggregates are over every scored attempt."
+}

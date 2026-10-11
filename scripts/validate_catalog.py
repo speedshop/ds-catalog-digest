@@ -1,13 +1,12 @@
 #!/usr/bin/env python3
-"""Validate a picker catalog against the shared JSON Schema."""
+"""Validate a public metrics catalog against the shared JSON Schema."""
 
 import argparse
 import json
 import math
 from pathlib import Path
 
-from jsonschema import FormatChecker
-from jsonschema.validators import validator_for
+from jsonschema import Draft202012Validator, FormatChecker
 
 
 def reject_json_constant(value):
@@ -22,21 +21,21 @@ def main():
 
     catalog = json.loads(args.catalog.read_text(), parse_constant=reject_json_constant)
     schema = json.loads(args.schema.read_text(), parse_constant=reject_json_constant)
-    validator_class = validator_for(schema)
-    validator_class.check_schema(schema)
-    validator_class(schema, format_checker=FormatChecker()).validate(catalog)
+    Draft202012Validator.check_schema(schema)
+    Draft202012Validator(schema, format_checker=FormatChecker()).validate(catalog)
 
+    distribution = catalog["catalog"]["distribution"]
+    if distribution["classification"] != "redistributable" or distribution["allowRedistribution"] is not True:
+        raise ValueError("DeepSWE catalog must remain redistributable")
+    if catalog["catalog"]["provenance"]["license"] != "CC-BY-4.0":
+        raise ValueError("DeepSWE license changed")
     for variant in catalog["variants"]:
         if not all(math.isfinite(variant["metrics"][name]) for name in ("smart", "fast", "cheap")):
             raise ValueError(f"Variant contains a non-finite metric: {variant['id']}")
-        if any(alias["piThinkingLevel"] is None for alias in variant["aliases"]):
-            raise ValueError(f"Variant alias has no Pi thinking level: {variant['id']}")
-        aliases = [
-            (alias["provider"], alias["modelId"], alias["piThinkingLevel"])
-            for alias in variant["aliases"]
-        ]
-        if len(aliases) != len(set(aliases)):
-            raise ValueError(f"Variant contains duplicate aliases: {variant['id']}")
+        if variant["metrics"]["cheap"] <= 0:
+            raise ValueError(f"Variant has unavailable Cheap metric: {variant['id']}")
+        if any(origin != {"kind": "source", "benchmarkVersion": catalog["catalog"]["version"]} for origin in variant["metricOrigins"].values()):
+            raise ValueError(f"DeepSWE metrics must come from the recorded release: {variant['id']}")
 
     ids = [variant["id"] for variant in catalog["variants"]]
     if len(ids) != len(set(ids)):

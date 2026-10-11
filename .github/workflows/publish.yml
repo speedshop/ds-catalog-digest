@@ -17,97 +17,64 @@ jobs:
       contents: read
     steps:
       - name: Check out repository
-        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
         with:
           persist-credentials: false
-
+      - name: Check out canonical consumer contract
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          repository: speedshop/pi-pareto-model
+          ref: 04e7446f4fd3eada7151a19e25d97203d2a961de
+          path: canonical-consumer
+          persist-credentials: false
+          sparse-checkout: /schema/model-metrics-catalog.schema.json
+          sparse-checkout-cone-mode: false
+      - name: Verify canonical catalog schema
+        run: cmp --silent schema/model-metrics-catalog.schema.json canonical-consumer/schema/model-metrics-catalog.schema.json
       - name: Set up gitleaks
-        uses: jdx/mise-action@5228313ee0372e111a38da051671ca30fc5a96db # v3
+        uses: jdx/mise-action@5228313ee0372e111a38da051671ca30fc5a96db
         with:
           version: "2026.8.10"
           install_args: gitleaks
-
       - name: Set up Python
-        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
         with:
           python-version: "3.13"
-
-      - name: Set up Node
-        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
-        with:
-          node-version: "22.22.3"
-          cache: npm
-
       - name: Install dependencies
-        run: |
-          python -m pip install --disable-pip-version-check -r requirements.txt
-          npm ci --ignore-scripts
-
+        run: python -m pip install --disable-pip-version-check -r requirements.txt
       - name: Test
-        run: python -m unittest discover -s tests
-
+        run: python -m unittest discover -s tests && python tests/system_maintenance.py && python tests/system_incidents.py && python tests/system_publication.py
       - name: Check public-source boundary
         run: python scripts/check_forbidden_source.py
-
-      - name: Export Pi Provider Routes
-        run: node scripts/export_pi_catalog.mjs --output dist/pi-model-catalog.json
-
-      - name: Build catalog and route artifacts
-        run: python scripts/build_catalog.py --output-dir dist --pi-catalog dist/pi-model-catalog.json
-
-      - name: Check generated public-source boundary
-        run: python scripts/check_forbidden_source.py
-
-      - name: Validate published contract
-        run: python scripts/validate_catalog.py dist/model-selection-catalog.json dist/schema.json
-
+      - name: Build and validate catalog
+        run: |
+          python scripts/build_catalog.py --output-dir dist
+          python scripts/check_forbidden_source.py
+          python scripts/validate_catalog.py dist/model-selection-catalog.json dist/schema.json
       - name: Scan generated artifacts for secrets
-        run: mise exec -- gitleaks dir --redact=75 --no-banner --no-color --max-target-megabytes 5 dist
-
-      - name: Upload diagnostics
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        run: mise exec -- gitleaks dir --redact=100 --no-banner --no-color --max-target-megabytes 5 dist
+      - name: Upload validated catalog
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
         with:
-          name: ds-catalog-digest-${{ github.run_id }}
-          path: dist/
-          if-no-files-found: error
-          retention-days: 90
-
-      - name: Upload candidate queue
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
-        with:
-          name: route-candidates-${{ github.run_id }}
-          path: dist/route-candidates.json
+          name: validated-catalog-${{ github.run_id }}
+          path: |
+            dist/model-selection-catalog.json
+            dist/source-manifest.json
           if-no-files-found: error
           retention-days: 7
-
-  notify:
-    needs: build
-    runs-on: ubuntu-latest
-    timeout-minutes: 5
-    permissions:
-      contents: read
-      issues: write
-    steps:
-      - name: Check out repository
-        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Upload acquisition report
+        if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
         with:
-          persist-credentials: false
-
-      - name: Download candidate queue
-        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
-        with:
-          name: route-candidates-${{ github.run_id }}
-          path: dist
-
-      - name: Synchronize managed candidate issues
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: python scripts/sync_candidate_issues.py dist/route-candidates.json
+          name: acquisition-report-${{ github.run_id }}
+          path: dist/acquisition-report.json
+          if-no-files-found: ignore
+          retention-days: 90
 
   publish:
-    needs: [build, notify]
+    needs: build
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 15
     permissions:
       actions: write
       contents: write
@@ -115,46 +82,55 @@ jobs:
       statuses: write
     steps:
       - name: Check out repository
-        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
-
-      - name: Download validated artifacts
-        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      - name: Download validated catalog
+        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c
         with:
-          name: ds-catalog-digest-${{ github.run_id }}
+          name: validated-catalog-${{ github.run_id }}
           path: dist
-
-      - name: Publish validated artifacts through a pull request
+      - name: Publish validated catalog and source manifest atomically through a pull request
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
+          git fetch origin main
+          test "$(git rev-parse origin/main)" = "$GITHUB_SHA"
           branch="catalog-publish-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
           git switch -c "$branch"
           cp dist/model-selection-catalog.json catalog/model-selection-catalog.json
-          cp dist/model-aliases.json mappings/model-aliases.json
-          cp dist/ALIAS_AUDIT.md mappings/ALIAS_AUDIT.md
-          cp dist/pi-model-catalog.json mappings/pi-model-catalog.json
+          cp dist/source-manifest.json catalog/source-manifest.json
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add catalog/model-selection-catalog.json mappings/model-aliases.json mappings/ALIAS_AUDIT.md mappings/pi-model-catalog.json
+          git add catalog/model-selection-catalog.json catalog/source-manifest.json
           if git diff --cached --quiet; then
-            echo "Stable artifacts are already current."
+            echo "Catalog data is unchanged; acquisition succeeded."
             exit 0
           fi
-          git commit --no-gpg-sign -m "Update catalog and Pi Provider Routes"
+          git commit --no-gpg-sign -m "Update benchmark metrics"
           git push --set-upstream origin "$branch"
-          pr_url=$(gh pr create \
-            --base main \
-            --head "$branch" \
-            --title "Update catalog and Pi Provider Routes" \
-            --body "Generated and validated by ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}.")
+          pr_url=$(gh pr create --base main --head "$branch" --title "Update benchmark metrics" --body "Generated and validated by ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}.")
           ci_url=$(gh workflow run ci.yml --ref "$branch")
-          gh run watch "${ci_url##*/}" --exit-status
+          ci_run="${ci_url##*/}"
+          if ! [[ "$ci_run" =~ ^[0-9]+$ ]]; then
+            for attempt in $(seq 1 12); do
+              ci_run=$(gh run list --workflow ci.yml --branch "$branch" --event workflow_dispatch --limit 1 --json databaseId --jq '.[0].databaseId // empty')
+              if test -n "$ci_run"; then
+                break
+              fi
+              sleep 5
+            done
+            test -n "$ci_run"
+            ci_url="${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${ci_run}"
+          fi
+          gh run watch "$ci_run" --exit-status
           for context in check catalog-contract-compatibility; do
-            gh api --method POST \
-              "repos/${GITHUB_REPOSITORY}/statuses/$(git rev-parse HEAD)" \
-              -f state=success \
-              -f context="$context" \
-              -f description="Generated branch CI passed" \
-              -f target_url="$ci_url" >/dev/null
+            gh api --method POST "repos/${GITHUB_REPOSITORY}/statuses/$(git rev-parse HEAD)" -f state=success -f context="$context" -f description="Generated branch CI passed" -f target_url="$ci_url" >/dev/null
           done
           gh pr merge "$pr_url" --auto --squash --delete-branch
+          for attempt in $(seq 1 30); do
+            if test "$(gh pr view "$pr_url" --json state --jq .state)" = MERGED; then
+              exit 0
+            fi
+            sleep 10
+          done
+          echo "Validated publication did not merge within five minutes."
+          exit 1
