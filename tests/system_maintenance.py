@@ -82,7 +82,7 @@ try:
         assert published.read_bytes() == original
         manifest_before = json.loads((output / "source-manifest.json").read_text())
         state["release"] = "v1.2"
-        leaderboard["rows"][0]["mean_cost_usd"] = 2
+        leaderboard["rows"][2]["mean_cost_usd"] = 2
         leaderboard["rows"][1]["mean_cost_usd"] = None
         leaderboard["rows"] = leaderboard["rows"][1:] + [dict(copy.deepcopy(row), config="new-config")]
         build("2030-01-03T00:00:00Z")
@@ -91,6 +91,8 @@ try:
         ids = {variant["id"] for variant in catalog["variants"]}
         assert "deepswe:config:config-0" not in ids and "deepswe:config:new-config" in ids
         assert "deepswe:config:config-1" not in ids
+        updated = next(variant for variant in catalog["variants"] if variant["id"] == "deepswe:config:config-2")
+        assert updated["metrics"]["cheap"] == 2
         assert all("aliases" not in variant for variant in catalog["variants"])
         manifest_after = json.loads((output / "source-manifest.json").read_text())
         assert manifest_after["release"] == "v1.2"
