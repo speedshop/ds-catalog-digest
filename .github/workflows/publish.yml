@@ -122,11 +122,12 @@ jobs:
           else
             pr_url=$(gh pr create --base main --head "$branch" --title "Update benchmark metrics" --body "$body")
           fi
+          candidate_sha=$(git rev-parse HEAD)
           ci_url=$(gh workflow run ci.yml --ref "$branch")
           ci_run="${ci_url##*/}"
           if ! [[ "$ci_run" =~ ^[0-9]+$ ]]; then
             for attempt in $(seq 1 12); do
-              ci_run=$(gh run list --workflow ci.yml --branch "$branch" --event workflow_dispatch --limit 1 --json databaseId --jq '.[0].databaseId // empty')
+              ci_run=$(gh run list --workflow ci.yml --branch "$branch" --commit "$candidate_sha" --event workflow_dispatch --limit 1 --json databaseId --jq '.[0].databaseId // empty')
               if test -n "$ci_run"; then
                 break
               fi
@@ -135,6 +136,7 @@ jobs:
             test -n "$ci_run"
             ci_url="${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${ci_run}"
           fi
+          test "$(gh run view "$ci_run" --json headSha --jq .headSha)" = "$candidate_sha"
           gh run watch "$ci_run" --exit-status
           for context in check catalog-contract-compatibility; do
             gh api --method POST "repos/${GITHUB_REPOSITORY}/statuses/$(git rev-parse HEAD)" -f state=success -f context="$context" -f description="Generated branch CI passed" -f target_url="$ci_url" >/dev/null
