@@ -94,8 +94,9 @@ jobs:
         run: |
           git fetch origin main
           test "$(git rev-parse origin/main)" = "$GITHUB_SHA"
-          branch="catalog-publish-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
-          git switch -c "$branch"
+          branch="catalog-publish"
+          existing_pr=$(gh pr list --head "$branch" --state open --limit 1 --json url --jq '.[0].url // empty')
+          git switch -C "$branch" "$GITHUB_SHA"
           cp dist/model-selection-catalog.json catalog/model-selection-catalog.json
           cp dist/source-manifest.json catalog/source-manifest.json
           git config user.name "github-actions[bot]"
@@ -103,11 +104,24 @@ jobs:
           git add catalog/model-selection-catalog.json catalog/source-manifest.json
           if git diff --cached --quiet; then
             echo "Catalog data is unchanged; acquisition succeeded."
+            if test -n "$existing_pr"; then
+              gh pr close "$existing_pr" --delete-branch --comment "Validated source matches the published catalog; this pending update is obsolete."
+            fi
             exit 0
           fi
           git commit --no-gpg-sign -m "Update benchmark metrics"
-          git push --set-upstream origin "$branch"
-          pr_url=$(gh pr create --base main --head "$branch" --title "Update benchmark metrics" --body "Generated and validated by ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}.")
+          if test -n "$existing_pr" && test "$(gh pr view "$existing_pr" --json autoMergeRequest --jq '.autoMergeRequest != null')" = true; then
+            gh pr merge "$existing_pr" --disable-auto
+          fi
+          remote_head=$(git ls-remote --heads origin "refs/heads/$branch" | cut -f1)
+          git push --force-with-lease="refs/heads/$branch:$remote_head" --set-upstream origin "$branch"
+          body="Generated and validated by ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}."
+          if test -n "$existing_pr"; then
+            gh pr edit "$existing_pr" --title "Update benchmark metrics" --body "$body"
+            pr_url="$existing_pr"
+          else
+            pr_url=$(gh pr create --base main --head "$branch" --title "Update benchmark metrics" --body "$body")
+          fi
           ci_url=$(gh workflow run ci.yml --ref "$branch")
           ci_run="${ci_url##*/}"
           if ! [[ "$ci_run" =~ ^[0-9]+$ ]]; then

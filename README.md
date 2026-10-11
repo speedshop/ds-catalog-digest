@@ -41,6 +41,8 @@ The daily and manually dispatched workflow:
 
 New configurations publish automatically, including previously unknown model names. Removed or incomplete configurations are excluded and reported. A greater-than-20% decrease in source or complete-variant count compared with the last-known-good catalog fails closed as suspicious coverage loss.
 
+The publisher owns the `catalog-publish` branch and reuses its single open PR across retries, updating it with a lease-protected push only after acquisition and validation succeed. It disables pending auto-merge before replacement and closes obsolete pending updates when the validated source already matches the published catalog.
+
 Unchanged data preserves `generatedAt` and causes no publication commit. Acquisition reports record the actual observation time, additions, removals, and updates; workflow history records successful refreshes even when publication is unnecessary. Reports are retained for 90 days.
 
 Transient HTTP errors are retried three times with bounded backoff. Failed acquisition, validation, or publication leaves the last-known-good catalog available. A separate notification workflow opens one issue for an ongoing maintenance incident and closes it on recovery; notification failures cannot block publication.
