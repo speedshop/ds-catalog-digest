@@ -22,7 +22,7 @@ jobs:
           import os
           from urllib.error import HTTPError
           from urllib.request import Request, urlopen
-          request = Request("https://api.githubcopilot.com/models", headers={"Authorization": "Bearer " + os.environ["GH_TOKEN"], "Accept": "application/json", "Editor-Version": "vscode/1.99.0", "Editor-Plugin-Version": "copilot-chat/0.26.0"})
+          request = Request("https://api.githubcopilot.com/models", headers={"Authorization": "Bearer " + os.environ["GH_TOKEN"], "Accept": "application/json", "Copilot-Integration-Id": "copilot-cli", "Editor-Version": "vscode/1.99.0", "Editor-Plugin-Version": "copilot-chat/0.26.0"})
           report = {"dmsSecretConfigured": os.environ["DMS_CONFIGURED"] == "true", "inferenceRequests": 0}
           try:
               with urlopen(request, timeout=30) as response:
@@ -31,6 +31,11 @@ jobs:
                   report["lunaModels"] = [model["id"] for model in data.get("data", []) if "luna" in model.get("id", "").lower()]
           except HTTPError as error:
               report["modelCatalogStatus"] = error.code
+              try:
+                  failure = json.load(error)
+                  report["catalogError"] = str(failure.get("message", failure.get("error", "No structured error")))[:500].replace(os.environ["GH_TOKEN"], "[redacted]")
+              except (ValueError, AttributeError):
+                  report["catalogError"] = "No structured error"
               report["lunaModels"] = []
           print(json.dumps(report, sort_keys=True))
           with open(os.environ["GITHUB_STEP_SUMMARY"], "a") as summary:
