@@ -53,3 +53,29 @@ jobs:
           copilot --version
           copilot --help > /tmp/copilot-help.txt
           grep -A 8 -B 2 -- "--model" /tmp/copilot-help.txt || true
+      - name: Native model catalog without inference
+        timeout-minutes: 2
+        env:
+          COPILOT_GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          mkdir /tmp/copilot-model-probe
+          cd /tmp/copilot-model-probe
+          VERSION=$(npm view @github/copilot-sdk version)
+          npm install --save-exact "@github/copilot-sdk@$VERSION"
+          cat > probe.mjs <<'JS'
+          import { CopilotClient } from "@github/copilot-sdk";
+          const client = new CopilotClient({ cliPath: "/usr/local/bin/copilot", useStdio: true, logLevel: "error" });
+          const timer = setTimeout(() => process.exit(2), 60000);
+          try {
+            await client.start();
+            const models = await client.listModels();
+            console.log(JSON.stringify({ nativeModelCatalog: "ok", inferenceRequests: 0, lunaModels: models.filter(x => /luna/i.test(x.id)).map(x => ({ id: x.id, name: x.name, billing: x.billing })) }));
+          } catch (error) {
+            console.log(JSON.stringify({ nativeModelCatalog: "error", inferenceRequests: 0, message: String(error.message).replaceAll(process.env.COPILOT_GITHUB_TOKEN, "[redacted]").slice(0, 1000) }));
+            process.exitCode = 1;
+          } finally {
+            await client.stop();
+            clearTimeout(timer);
+          }
+          JS
+          node probe.mjs
