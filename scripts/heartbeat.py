@@ -11,9 +11,18 @@ def main():
     from sync_incident import gh
 
     run = json.loads(Path(os.environ["GITHUB_EVENT_PATH"]).read_text())["workflow_run"]
-    latest = json.loads(gh("run", "list", "--repo", os.environ["GITHUB_REPOSITORY"], "--workflow", "publish.yml", "--branch", "main", "--status", "completed", "--limit", "1", "--json", "databaseId"))
-    if run["conclusion"] != "success" or not latest or latest[0]["databaseId"] != run["id"]:
+    if run["conclusion"] != "success":
         return
+    for attempt in range(12):
+        latest = json.loads(gh("run", "list", "--repo", os.environ["GITHUB_REPOSITORY"], "--workflow", "publish.yml", "--branch", "main", "--limit", "1", "--json", "databaseId"))
+        if latest and latest[0]["databaseId"] > run["id"]:
+            print("A newer production refresh superseded this heartbeat; no check-in sent")
+            return
+        if latest and latest[0]["databaseId"] == run["id"]:
+            break
+        if attempt == 11:
+            raise SystemExit("Could not confirm current production refresh after bounded API retries")
+        time.sleep(2)
     url = os.environ.get("DMS_CHECK_IN_URL", "")
     parsed = urlsplit(url)
     if parsed.scheme != "https" or parsed.hostname != "nosnch.in" or parsed.username or parsed.password or not parsed.path.strip("/"):
@@ -21,9 +30,10 @@ def main():
     for attempt in range(3):
         try:
             with urlopen(Request(url, headers={"User-Agent": "catalog-maintenance-heartbeat"}), timeout=15) as response:
-                if response.status != 200:
-                    raise SystemExit("Dead Man's Snitch check-in was not accepted")
-            print("Successful catalog refresh acknowledged by Dead Man's Snitch")
+                if not 200 <= response.status < 300:
+                    raise SystemExit(f"Dead Man's Snitch check-in was not accepted (HTTP {response.status})")
+                status = response.status
+            print(f"Successful catalog refresh acknowledged by Dead Man's Snitch (HTTP {status})")
             return
         except (HTTPError, URLError, TimeoutError):
             if attempt == 2:

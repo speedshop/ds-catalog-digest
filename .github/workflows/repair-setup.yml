@@ -5,34 +5,36 @@ on:
 
 permissions:
   contents: read
-  copilot-requests: write
 
 jobs:
   probe:
     runs-on: ubuntu-latest
     timeout-minutes: 3
     steps:
-      - name: Check GitHub-billed model access without inference
+      - name: Check existing Codex credentials without inference
         env:
-          GH_TOKEN: ${{ github.token }}
-          DMS_CONFIGURED: ${{ secrets.DMS_CHECK_IN_URL != '' }}
+          CODEX_API_KEY: ${{ secrets.CODEX_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: |
           python3 - <<'PY'
           import json
           import os
-          from urllib.error import HTTPError
+          from urllib.error import HTTPError, URLError
           from urllib.request import Request, urlopen
-          request = Request("https://api.githubcopilot.com/models", headers={"Authorization": "Bearer " + os.environ["GH_TOKEN"], "Accept": "application/json", "Editor-Version": "vscode/1.99.0", "Editor-Plugin-Version": "copilot-chat/0.26.0"})
-          report = {"dmsSecretConfigured": os.environ["DMS_CONFIGURED"] == "true", "inferenceRequests": 0}
-          try:
-              with urlopen(request, timeout=30) as response:
-                  data = json.load(response)
-                  report["modelCatalogStatus"] = response.status
-                  report["lunaModels"] = [model["id"] for model in data.get("data", []) if "luna" in model.get("id", "").lower()]
-          except HTTPError as error:
-              report["modelCatalogStatus"] = error.code
-              report["lunaModels"] = []
+          codex = os.environ.get("CODEX_API_KEY", "")
+          openai = os.environ.get("OPENAI_API_KEY", "")
+          report = {"codexSecretConfigured": bool(codex), "openaiSecretConfigured": bool(openai), "inferenceRequests": 0, "model": "gpt-5.6-luna"}
+          key = codex or openai
+          if key:
+              request = Request("https://api.openai.com/v1/models/gpt-5.6-luna", headers={"Authorization": "Bearer " + key})
+              try:
+                  with urlopen(request, timeout=20) as response:
+                      report["modelMetadataStatus"] = response.status
+              except HTTPError as error:
+                  report["modelMetadataStatus"] = error.code
+              except URLError:
+                  report["modelMetadataStatus"] = "unreachable"
           print(json.dumps(report, sort_keys=True))
           with open(os.environ["GITHUB_STEP_SUMMARY"], "a") as summary:
-              summary.write("Zero-inference repair setup probe\n\n```json\n" + json.dumps(report, indent=2) + "\n```\n")
+              summary.write("Zero-inference Codex setup probe\n\n```json\n" + json.dumps(report, indent=2) + "\n```\n")
           PY

@@ -23,18 +23,16 @@ concurrency:
 permissions:
   actions: read
   contents: read
-  copilot-requests: write
 engine:
   id: codex
-  model-provider: github
   args:
     - -c
-    - model_reasoning_effort="high"
+    - model_reasoning_effort="max"
     - -c
     - tool_output_token_limit=4096
 env:
   GH_AW_CODEX_CONTEXT_REBUILD_CIRCUIT_BREAKER: "false"
-model: gpt-6-luna
+model: gpt-5.6-luna
 timeout-minutes: 20
 max-turns: 20
 max-ai-credits: 200
@@ -74,6 +72,12 @@ tools:
 safe-outputs:
   threat-detection:
     max-ai-credits: 25
+    engine:
+      id: codex
+      model: gpt-5.6-luna
+      args:
+        - " -c"
+        - model_reasoning_effort="max"
   create-pull-request:
     draft: false
     base-branch: main
