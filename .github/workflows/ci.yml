@@ -25,7 +25,7 @@ jobs:
       - name: Install dependencies
         run: python -m pip install --disable-pip-version-check -r requirements.txt
       - name: Test
-        run: python -m unittest discover -s tests && python tests/system_maintenance.py && python tests/system_incidents.py && python tests/system_publication.py
+        run: python -m unittest discover -s tests && python tests/system_maintenance.py && python tests/system_incidents.py && python tests/system_publication.py && python tests/system_heartbeat.py
       - name: Check public-source boundary
         run: python scripts/check_forbidden_source.py
       - name: Validate committed catalog
