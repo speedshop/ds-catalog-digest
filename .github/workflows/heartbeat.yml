@@ -1,0 +1,28 @@
+name: Catalog freshness heartbeat
+
+on:
+  workflow_run:
+    workflows: [Publish catalog digest]
+    types: [completed]
+    branches: [main]
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  heartbeat:
+    if: github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.head_repository.full_name == github.repository
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Check out trusted heartbeat code
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          ref: main
+          persist-credentials: false
+      - name: Acknowledge successful production refresh
+        env:
+          GH_TOKEN: ${{ github.token }}
+          DMS_CHECK_IN_URL: ${{ secrets.DMS_CHECK_IN_URL }}
+        run: python3 scripts/heartbeat.py
