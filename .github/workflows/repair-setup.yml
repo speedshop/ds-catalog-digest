@@ -41,3 +41,15 @@ jobs:
           with open(os.environ["GITHUB_STEP_SUMMARY"], "a") as summary:
               summary.write("Zero-inference repair setup probe\n\n```json\n" + json.dumps(report, indent=2) + "\n```\n")
           PY
+      - name: Set up native Copilot CLI diagnostics
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: "24"
+      - name: Discover native CLI model options without inference
+        env:
+          COPILOT_GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          npm install --global @github/copilot@1.0.80
+          copilot --version
+          copilot --help > /tmp/copilot-help.txt
+          grep -A 8 -B 2 -- "--model" /tmp/copilot-help.txt || true
