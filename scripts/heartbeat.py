@@ -21,9 +21,10 @@ def main():
     for attempt in range(3):
         try:
             with urlopen(Request(url, headers={"User-Agent": "catalog-maintenance-heartbeat"}), timeout=15) as response:
-                if response.status != 200:
-                    raise SystemExit("Dead Man's Snitch check-in was not accepted")
-            print("Successful catalog refresh acknowledged by Dead Man's Snitch")
+                if not 200 <= response.status < 300:
+                    raise SystemExit(f"Dead Man's Snitch check-in was not accepted (HTTP {response.status})")
+                status = response.status
+            print(f"Successful catalog refresh acknowledged by Dead Man's Snitch (HTTP {status})")
             return
         except (HTTPError, URLError, TimeoutError):
             if attempt == 2:
