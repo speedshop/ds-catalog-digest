@@ -1,0 +1,150 @@
+name: Verify catalog repair
+run-name: "Verify ${{ github.event.workflow_run.display_title }}"
+
+on:
+  workflow_run:
+    workflows: [Catalog Luna repair]
+    types: [completed]
+    branches: [main]
+
+permissions:
+  contents: read
+  actions: read
+
+concurrency:
+  group: catalog-repair-verification
+  cancel-in-progress: false
+
+jobs:
+  select:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    outputs:
+      active: ${{ steps.select.outputs.active }}
+      has_patch: ${{ steps.select.outputs.has_patch }}
+      incident: ${{ steps.select.outputs.incident }}
+      attempt: ${{ steps.select.outputs.attempt }}
+      base: ${{ steps.select.outputs.base }}
+      head: ${{ steps.select.outputs.head }}
+      branch: ${{ steps.select.outputs.branch }}
+      pr: ${{ steps.select.outputs.pr }}
+    steps:
+      - name: Check out trusted gate
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          ref: main
+          persist-credentials: false
+      - name: Select reserved Luna output
+        id: select
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 scripts/repair_gate.py select
+
+  verify:
+    needs: select
+    if: needs.select.outputs.active == 'true' && needs.select.outputs.has_patch == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Check out immutable gate baseline
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          ref: ${{ needs.select.outputs.base }}
+          path: trusted
+          persist-credentials: false
+          fetch-depth: 0
+      - name: Check out exact candidate
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          ref: ${{ needs.select.outputs.head }}
+          path: candidate
+          persist-credentials: false
+          fetch-depth: 0
+      - name: Set up Python
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
+        with:
+          python-version: "3.13"
+      - name: Verify fixed gate and live acquisition
+        env:
+          BASE: ${{ needs.select.outputs.base }}
+          HEAD: ${{ needs.select.outputs.head }}
+        run: python trusted/scripts/repair_gate.py verify trusted candidate "$BASE" "$HEAD"
+      - name: Set up secret scanning
+        uses: jdx/mise-action@5228313ee0372e111a38da051671ca30fc5a96db
+        with:
+          version: "2026.8.10"
+          install_args: gitleaks
+      - name: Scan candidate and acquired artifacts
+        run: mise exec -- gitleaks dir --redact=100 --no-banner --no-color --max-target-megabytes 5 candidate
+
+      - name: Preserve acquired metrics for independent validation
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        with:
+          name: repair-catalog-${{ needs.select.outputs.head }}
+          path: candidate/dist/model-selection-catalog.json
+          if-no-files-found: error
+          retention-days: 1
+
+  validate:
+    needs: [select, verify]
+    if: needs.select.outputs.active == 'true' && needs.select.outputs.has_patch == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out immutable validator in an independent runner
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          ref: ${{ needs.select.outputs.base }}
+          persist-credentials: false
+      - name: Set up Python
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
+        with:
+          python-version: "3.13"
+      - name: Install only trusted validator dependencies
+        run: python -m pip install --disable-pip-version-check -r requirements.txt
+      - name: Download metrics without executing candidate code
+        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c
+        with:
+          name: repair-catalog-${{ needs.select.outputs.head }}
+          path: acquired
+      - name: Independently enforce schema, meaning, distribution and coverage
+        run: python scripts/repair_gate.py validate-artifact acquired
+      - name: Set up secret scanning
+        uses: jdx/mise-action@5228313ee0372e111a38da051671ca30fc5a96db
+        with:
+          version: "2026.8.10"
+          install_args: gitleaks
+      - name: Independently scan acquired metrics
+        run: mise exec -- gitleaks dir --redact=100 --no-banner --no-color --max-target-megabytes 5 acquired
+
+  merge:
+    needs: [select, verify, validate]
+    if: always() && needs.select.result == 'success' && needs.select.outputs.active == 'true' && (needs.select.outputs.has_patch == 'false' || (needs.verify.result == 'success' && needs.validate.result == 'success'))
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write
+      actions: write
+      pull-requests: write
+      statuses: write
+    steps:
+      - name: Check out trusted merge controller
+        if: needs.select.outputs.has_patch == 'true'
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          ref: ${{ needs.select.outputs.base }}
+          persist-credentials: false
+      - name: Merge only the independently verified exact commit
+        if: needs.select.outputs.has_patch == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPAIR_INCIDENT: ${{ needs.select.outputs.incident }}
+          REPAIR_ATTEMPT: ${{ needs.select.outputs.attempt }}
+          REPAIR_PR: ${{ needs.select.outputs.pr }}
+          REPAIR_HEAD: ${{ needs.select.outputs.head }}
+          REPAIR_BRANCH: ${{ needs.select.outputs.branch }}
+          REPAIR_REQUIRED_CONTEXTS: check catalog-contract-compatibility
+        run: python3 scripts/merge_repair.py
+      - name: Retry transient failures without a patch
+        if: needs.select.outputs.has_patch == 'false'
+        run: echo "Luna completed without a patch; the controller will retry production publication"

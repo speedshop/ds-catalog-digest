@@ -45,9 +45,15 @@ The publisher owns the `catalog-publish` branch and reuses its single open PR ac
 
 Unchanged data preserves `generatedAt` and causes no publication commit. Acquisition reports record the actual observation time, additions, removals, and updates; workflow history records successful refreshes even when publication is unnecessary. Reports are retained for 90 days.
 
-Transient HTTP errors are retried three times with bounded backoff. Failed acquisition, validation, or publication leaves the last-known-good catalog available. A separate notification workflow opens one issue for an ongoing maintenance incident and closes it on recovery; notification failures cannot block publication.
+Transient HTTP errors are retried three times with bounded backoff. Failed acquisition, validation, or publication leaves the last-known-good catalog available and triggers bounded Luna repair instead of immediately notifying a human.
 
-Source-interface, scoring, aggregation, harness, licensing, schema, and suspicious coverage changes require investigation. Automatic code repair is not part of this publisher.
+The controller reserves at most two agent runs per incident in the managed `catalog-maintenance-state` branch. Failed daily runs and duplicate deliveries do not reset that budget. Luna proposes acquisition or dependency fixes in a PR; a separate trusted gate preserves existing tests, schemas, metric definitions, licensing and coverage policies, validates live acquisition, and requires CI for the exact candidate commit before merging. Acquired metrics then pass schema, meaning, distribution, coverage and secret checks on a separate runner using only immutable baseline code and dependencies; candidate dependency changes cannot replace the final validator. A merged repair triggers production publication. Only successful production publication resets the budget and establishes recovery.
+
+An exhausted budget, failed launch, expired repair or refresh deadline, or controller failure opens one `catalog-maintenance` issue mentioning `@nateberkopec`. An independent hourly watchdog detects stalled callbacks: a repair reservation expires after two hours, and its production refresh expires after one hour. Expired reservations cannot authorize inference or merge. The issue closes automatically after production recovery. Repair and notification failures cannot block valid data publication.
+
+The independent freshness workflow checks in with Dead Man's Snitch only after the latest successful production refresh, including no-op refreshes. Configure this repository's HTTPS check-in URL as the Actions secret `DMS_CHECK_IN_URL`. A daily snitch detects a missing successful refresh even if Actions or notification delivery stops entirely; allow enough grace for both bounded repair attempts. The URL is never sent to Luna or printed in logs.
+
+Source-interface, scoring, aggregation, harness, licensing, schema, and suspicious coverage changes remain red until compatibility is established. Luna can investigate but cannot weaken these gates; unresolved cases escalate after bounded repair.
 
 ## Distribution
 
