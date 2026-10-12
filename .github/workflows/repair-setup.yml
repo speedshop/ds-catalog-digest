@@ -64,7 +64,7 @@ jobs:
           npm install --save-exact "@github/copilot-sdk@$VERSION"
           cat > probe.mjs <<'JS'
           import { CopilotClient } from "@github/copilot-sdk";
-          const client = new CopilotClient({ cliPath: "/usr/local/bin/copilot", useStdio: true, logLevel: "error" });
+          const client = new CopilotClient({ cliPath: process.env.COPILOT_CLI_PATH, useStdio: true, logLevel: "error" });
           const timer = setTimeout(() => process.exit(2), 60000);
           try {
             await client.start();
@@ -78,4 +78,4 @@ jobs:
             clearTimeout(timer);
           }
           JS
-          node probe.mjs
+          COPILOT_CLI_PATH=$(command -v copilot) node probe.mjs
