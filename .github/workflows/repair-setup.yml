@@ -1,0 +1,38 @@
+name: Catalog repair setup check
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  copilot-requests: write
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Check GitHub-billed model access without inference
+        env:
+          GH_TOKEN: ${{ github.token }}
+          DMS_CONFIGURED: ${{ secrets.DMS_CHECK_IN_URL != '' }}
+        run: |
+          python3 - <<'PY'
+          import json
+          import os
+          from urllib.error import HTTPError
+          from urllib.request import Request, urlopen
+          request = Request("https://api.githubcopilot.com/models", headers={"Authorization": "Bearer " + os.environ["GH_TOKEN"], "Accept": "application/json", "Editor-Version": "vscode/1.99.0", "Editor-Plugin-Version": "copilot-chat/0.26.0"})
+          report = {"dmsSecretConfigured": os.environ["DMS_CONFIGURED"] == "true", "inferenceRequests": 0}
+          try:
+              with urlopen(request, timeout=30) as response:
+                  data = json.load(response)
+                  report["modelCatalogStatus"] = response.status
+                  report["lunaModels"] = [model["id"] for model in data.get("data", []) if "luna" in model.get("id", "").lower()]
+          except HTTPError as error:
+              report["modelCatalogStatus"] = error.code
+              report["lunaModels"] = []
+          print(json.dumps(report, sort_keys=True))
+          with open(os.environ["GITHUB_STEP_SUMMARY"], "a") as summary:
+              summary.write("Zero-inference repair setup probe\n\n```json\n" + json.dumps(report, indent=2) + "\n```\n")
+          PY
